@@ -57,15 +57,19 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav mx-auto py-0">
-                            <a href="#home" class="nav-item nav-link active">Home</a>
-                            <a href="#about" class="nav-item nav-link">About</a>
-                            <a href="#feature" class="nav-item nav-link">Feature</a>
-                            <a href="#screenshot" class="nav-item nav-link">App Preview</a>
-                            <a href="#download" class="nav-item nav-link">Download</a>
-                            <a href="#contact" class="nav-item nav-link">Contact</a>
+                            <a href="#home" class="nav-item nav-link active" data-translate="home">Home</a>
+                            <a href="#about" class="nav-item nav-link" data-translate="about">About</a>
+                            <a href="#feature" class="nav-item nav-link" data-translate="feature">Features</a>
+                            <a href="#screenshot" class="nav-item nav-link" data-translate="appPreview">App Preview</a>
+                            <a href="#download" class="nav-item nav-link" data-translate="download">Download</a>
+                            <a href="#contact" class="nav-item nav-link" data-translate="contact">Contact</a>
                         </div>
-                        <a href="#download" class="btn btn-primary-gradient py-2 px-4 ms-3 d-none d-lg-block">Download
-                            Now</a>
+                        <div class="d-flex align-items-center">
+                            <button id="languageSwitcher" class="btn btn-outline-light me-3"
+                                    onclick="switchLanguage(currentLanguage === 'en' ? 'fr' : 'en')">FR</button>
+                            <a href="#download" class="btn btn-primary-gradient py-2 px-4 d-none d-lg-block"
+                               data-translate="downloadNow">Download Now</a>
+                        </div>
                     </div>
                 </nav>
 
@@ -73,17 +77,41 @@
                     <div class="container px-lg-5">
                         <div class="row g-5">
                             <div class="col-lg-8 text-center text-lg-start">
-                                <h1 class="text-white mb-4 animated slideInDown">Shop Globally, Pay Locally</h1>
-                                <p class="text-white pb-3 animated slideInDown">GlobalBuy24 makes international shopping
-                                    accessible to everyone. Browse products from global marketplaces, get instant
-                                    quotes, and receive your items with our trusted delivery service - all with local
-                                    payment options.</p>
+                                <h5 class="text-primary-gradient fw-medium" data-translate="heroSubtitle">Your Gateway
+                                    to International Shopping</h5>
+                                <h1 class="text-white mb-4 animated slideInDown" data-translate="heroTitle">Shop
+                                    Globally, Pay Locally</h1>
+                                <p class="text-white pb-3 animated slideInDown" data-translate="heroDescription">Browse,
+                                    save, and purchase products from any global marketplace with ease. We handle the
+                                    international logistics while you enjoy local payment methods.</p>
+                                <div class="row g-4 mb-4">
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center">
+                                            <i class="fa fa-check-circle text-primary-gradient me-3 fa-2x"></i>
+                                            <div>
+                                                <h6 class="mb-1" data-translate="globalShopping">Global Shopping Made
+                                                    Easy</h6>
+                                                <p class="mb-0" data-translate="globalShoppingDesc">Browse and save
+                                                    products from any global marketplace</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center">
+                                            <i class="fa fa-check-circle text-primary-gradient me-3 fa-2x"></i>
+                                            <div>
+                                                <h6 class="mb-1" data-translate="instantQuotes">Instant Quotes</h6>
+                                                <p class="mb-0" data-translate="instantQuotesDesc">Get real-time pricing
+                                                    including all costs</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <a href="#download"
-                                   class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill me-3 animated slideInLeft">Download
-                                    App</a>
-                                <a href="#how-it-works"
-                                   class="btn btn-secondary-gradient py-sm-3 px-4 px-sm-5 rounded-pill animated slideInRight">How
-                                    It Works</a>
+                                   class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill me-3"
+                                   data-translate="getStarted">Get Started</a>
+                                <a href="#about" class="btn btn-outline-primary py-sm-3 px-4 px-sm-5 rounded-pill"
+                                   data-translate="learnMore">Learn More</a>
                             </div>
                             <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp"
                                  data-wow-delay="0.3s">
@@ -510,8 +538,7 @@
         <script src="lib/waypoints/waypoints.min.js"></script>
         <script src="lib/counterup/counterup.min.js"></script>
         <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-        <!-- Template Javascript -->
+        <script src="js/language.js"></script>
         <script src="js/main.js"></script>
     </body>
 
