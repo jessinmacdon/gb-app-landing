@@ -5,14 +5,14 @@ const translations = {
         about: "About",
         feature: "Features",
         appPreview: "App Preview",
-        download: "Download",
         contact: "Contact",
         downloadNow: "Download Now",
+        downloadApp: "Download App",
 
         // Hero Section
         heroTitle: "Shop Globally, Pay Locally",
         heroSubtitle: "Your Gateway to International Shopping",
-        heroDescription: "Browse, save, and purchase products from any global marketplace with ease. We handle the international logistics while you enjoy local payment methods.",
+        heroDescription: "GlobalBuy24 bridges the gap between international e-commerce and local markets. We make it simple and secure to shop from global marketplaces, even when local payment options or shipping access are limited.",
         getStarted: "Get Started",
         learnMore: "Learn More",
 
@@ -21,9 +21,34 @@ const translations = {
         aboutSubtitle: "Your Global Shopping Companion",
         aboutDescription: "GlobalBuy24 simplifies international shopping by connecting you with global marketplaces while handling all the complexities of international shipping and payments.",
 
+        //how it works
+        howItWorksHeading: "How GlobalBuy24 Works",
+        step1: "Find Products",
+        step1Desc: "Browse international online stores and add product links to your GlobalBuy24 basket",
+        step2: "Get Quote",
+        step2Desc: "Receive a detailed quote including product cost, service fee, and shipping charges",
+        step3: "Pick up Order",
+        step3Desc: "Once we receive your payment, we'll purchase and ship your items to our nearest agency.",
+
+        //key features
+        featureHeading: "",
+        feature1: "Global Marketplace Access",
+        feature1Desc: "Shop from any international online store, even those that don't ship to your region or accept local payment methods.",
+        feature2: "Secure Transactions",
+        feature2Desc: "Your purchases are protected with our secure payment system and product condition verification.",
+        feature3: "Reliable Delivery",
+        feature3Desc: "We handle international shipping and customs clearance, ensuring your items arrive safely at your doorstep.",
+        feature4: "Transparent Pricing",
+        feature4Desc: "Get instant quotes including all costs - product price, service fee, and shipping - with no hidden charges.",
+        feature5: "Product Verification",
+        feature5Desc: "We verify product quality and authenticity before shipping to ensure you receive exactly what you ordered.",
+        feature6: "Dedicated Customer Support",
+        feature6Desc: "Our dedicated support team is available to assist with any questions or concerns.",
+
+
         // Features Section
         featuresTitle: "Why Choose GlobalBuy24",
-        globalShopping: "Global Shopping Made Easy",
+        globalShopping: "Easy product search",
         globalShoppingDesc: "Browse and save products from any global marketplace",
         instantQuotes: "Instant Quotes",
         instantQuotesDesc: "Get real-time pricing including all costs",
@@ -41,6 +66,12 @@ const translations = {
         downloadSubtitle: "Start Shopping Globally Today",
         downloadDescription: "Available for both iOS and Android devices. Download now and start your global shopping journey.",
 
+        //button text
+        appStore1: "Coming Soon on",
+        appStore2: "App Store",
+        android1: "Get it on",
+        android2: "Google Play",
+
         // Contact Section
         contactTitle: "Get In Touch",
         contactSubtitle: "Contact Us For Any Query",
@@ -53,6 +84,7 @@ const translations = {
         // Footer
         contactUs: "Contact Us",
         quickLinks: "Quick Links",
+        features: "Features",
         support: "Support",
         helpCenter: "Help Center",
         shippingPolicy: "Shipping Policy",
@@ -67,9 +99,9 @@ const translations = {
         about: "À propos",
         feature: "Fonctionnalités",
         appPreview: "Aperçu de l'App",
-        download: "Télécharger",
         contact: "Contact",
         downloadNow: "Télécharger Maintenant",
+        downloadApp: "Télécharger",
 
         // Hero Section
         heroTitle: "Achetez Globalement, Payez Localement",
@@ -83,6 +115,22 @@ const translations = {
         aboutSubtitle: "Votre Compagnon d'Achats Mondiaux",
         aboutDescription: "GlobalBuy24 simplifie les achats internationaux en vous connectant aux marchés mondiaux tout en gérant toutes les complexités de l'expédition et des paiements internationaux.",
 
+
+        //key features
+        featureHeading: "",
+        feature1: "Accès au marché mondial",
+        feature1Desc: "Achetez depuis n'importe quelle boutique en ligne internationale, même celles qui ne livrent pas dans votre région ou n'acceptent pas les méthodes de paiement locales.",
+        feature2: "Transactions sécurisées",
+        feature2Desc: "Vos achats sont protégés par notre système de paiement sécurisé et la vérification de l'état du produit.",
+        feature3: "Livraison fiable",
+        feature3Desc: "Nous prenons en charge l'expédition internationale et le dédouanement, garantissant que vos articles arrivent en toute sécurité entre vos mains.",
+        feature4: "Tarification transparente",
+        feature4Desc: "Obtenez des devis instantanés incluant tous les coûts - prix du produit, frais de service et expédition - sans frais cachés.",
+        feature5: "Vérification du produit",
+        feature5Desc: "Nous vérifions l'état du produit à son arrivée à notre centre de Berlin pour nous assurer que vous recevez exactement ce que vous avez commandé.",
+        feature6: "Service client dédié",
+        feature6Desc: "Notre équipe d'assistance dédiée est disponible 24h/24 pour répondre à toutes vos questions ou préoccupations.",
+
         // Features Section
         featuresTitle: "Pourquoi Choisir GlobalBuy24",
         globalShopping: "Achats Mondiaux Simplifiés",
@@ -94,6 +142,15 @@ const translations = {
         realtimeTracking: "Suivi en Temps Réel",
         realtimeTrackingDesc: "Surveillez votre commande de l'achat à la livraison",
 
+        //how it works
+        howItWorksHeading: "Comment fonctionne GlobalBuy24",
+        step1: "Trouver des produits",
+        step1Desc: "Parcourez les boutiques en ligne internationales et ajoutez les liens des produits à votre panier GlobalBuy24",
+        step2: "Obtenir un devis",
+        step2Desc: "Recevez un devis détaillé incluant le coût du produit, les frais de service et les frais d'expédition",
+        step3: "Récupération en agence",
+        step3Desc: "Une fois votre paiement reçu, nous achèterons et expédierons vos articles à notre agence la plus proche pour retrait.",
+
         // App Preview Section
         appPreviewTitle: "Expérience d'Achat Simple, Sécurisée et Conviviale",
         appPreviewDesc: "Découvrez la commodité des achats mondiaux au bout de vos doigts. Notre interface intuitive rend les achats internationaux aussi simples que les achats locaux.",
@@ -102,6 +159,12 @@ const translations = {
         downloadTitle: "Téléchargez Notre Application",
         downloadSubtitle: "Commencez à Acheter Globalement Aujourd'hui",
         downloadDescription: "Disponible pour les appareils iOS et Android. Téléchargez maintenant et commencez votre voyage d'achat mondial.",
+
+        //button text
+        appStore1: "Bientôt disponible sur",
+        appStore2: "l'App Store",
+        android1: "Disponible sur",
+        android2: "Google Play",
 
         // Contact Section
         contactTitle: "Contactez-nous",
@@ -116,8 +179,9 @@ const translations = {
         contactUs: "Contactez-nous",
         quickLinks: "Liens Rapides",
         support: "Support",
+        process: "Processus",
+        features: "Caractéristiques",
         helpCenter: "Centre d'Aide",
-        shippingPolicy: "Politique d'Expédition",
         paymentMethods: "Méthodes de Paiement",
         returnsRefunds: "Retours et Remboursements",
         faq: "FAQ",
