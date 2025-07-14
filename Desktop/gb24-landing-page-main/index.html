@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <!-- Google Fonts: Roboto & Poppins -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+        <meta charset="utf-8">
+        <title>GlobalBuy24</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap"
+              rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+        <div class="container-xxl bg-white p-0">
+            <!-- Spinner Start -->
+            <div id="spinner"
+                 class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+                <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <!-- Spinner End -->
+
+
+            <!-- Navbar & Hero Start -->
+            <div class="container-xxl position-relative p-0" id="home">
+                <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="img/logo/logo_transparent_bg.png" alt="GlobalBuy24 Logo" class="logo-white">
+                        <img src="img/logo/logo_blue_primary.jpg" alt="GlobalBuy24 Logo" class="logo-black">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto py-0">
+                            <a href="#home" class="nav-item nav-link active" data-translate="home">Home</a>
+                            <a href="#how-it-works" class="nav-item nav-link" data-translate="howItWorks">How It Works</a>
+                            <a href="#appPreview" class="nav-item nav-link" data-translate="appPreview">App Preview</a>
+                            <a href="#ourBenefits" class="nav-item nav-link" data-translate="ourBenefits">Our Benefits</a>
+                            <a href="#support" class="nav-item nav-link" data-translate="support">Support</a>
+                            <a id="languageSwitcher" class="btn nav-link"
+                            onclick="switchLanguage(currentLanguage === 'en' ? 'fr' : 'en')">FR</a>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <a href="#download"
+                               class="btn btn-primary-gradient btn-outline-light py-2 px-4 d-none d-lg-block"
+                               data-translate="downloadNow">Download Now</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="container-xxl hero-header">
+                    <div class="container px-lg-5">
+                        <div class="row g-5">
+                            <div class="col-lg-8 text-center text-lg-start">
+                                <h1 class="mb-4 animated slideInDown">Shop the world - Without the hassle</h1>
+                                <p class="pb-3 animated slideInDown">Buy from any online store worldwide. Just paste a link and GlobalBuy24 handles the rest from purchase to pickup in your city.</p>
+                                <a href="#download" class="btn btn-primary py-sm-3 px-4 px-sm-5 rounded-pill me-3"
+                                   data-translate="getStarted">Google Play</a>
+                                <a href="#about" class="btn btn-primary py-sm-3 px-4 px-sm-5 rounded-pill"
+                                   data-translate="learnMore">App Store</a>
+                            </div>
+                            <div class="d-flex justify-content-center wow fadeInUp"
+                                 data-wow-delay="0.3s">
+                                <div class="owl-carousel screenshot-carousel">
+                                    <img class="img-fluid" src="img/screenshot-1.png" alt="GlobalBuy24 App Interface">
+                                    <img class="img-fluid" src="img/screenshot-2.png" alt="Product Search">
+                                    <img class="img-fluid" src="img/screenshot-3.png" alt="Quote Calculator">
+                                    <img class="img-fluid" src="img/screenshot-4.png" alt="Order Tracking">
+                                    <img class="img-fluid" src="img/screenshot-5.png" alt="Delivery Updates">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Navbar & Hero End -->
+
+
+            <!-- About Start -->
+            <div class="container-xxl py-5" id="about">
+                <div class="container py-5 px-lg-5">
+                    <div class="row g-5 align-items-center">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <h5 class="fw-medium" data-translate="aboutTitle">About GlobalBuy24
+                            </h5>
+                            <h1 class="mb-4" data-translate="heroSubtitle">Your Gateway to Global Shopping</h1>
+                            <p class="mb-4" data-translate="heroDescription">GlobalBuy24 bridges the gap between
+                                international e-commerce and local
+                                markets. We make it simple and secure to shop from global marketplaces, even when local
+                                payment options or shipping access are limited.</p>
+
+                            <a href="#how-it-works"
+                               class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3"
+                               data-translate="learnMore">Learn More</a>
+                        </div>
+                        <div class="col-lg-6">
+                            <img class="img-fluid wow fadeInUp" data-wow-delay="0.5s" src="img/about.png"
+                                 alt="GlobalBuy24 Shopping Experience">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About End -->
+
+
+            <!-- Features Start -->
+            <div class="container-xxl py-5" id="feature">
+                <div class="container py-5 px-lg-5">
+                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <h5 class="fw-medium">Key Features</h5>
+                        <h1 class="mb-5" data-translate="featuresTitle">Why Choose GlobalBuy24</h1>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="feature-item bg-light rounded p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
+                                     style="width: 60px; height: 60px;">
+                                    <i class="fa fa-globe  fs-4"></i>
+                                </div>
+                                <h5 class="mb-3" data-translate="feature1">Global Marketplace Access</h5>
+                                <p class="m-0" data-translate="feature1Desc">Shop from any international online store,
+                                    even those that don't ship to
+                                    your region or accept local payment methods.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="feature-item bg-light rounded p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4"
+                                     style="width: 60px; height: 60px;">
+                                    <i class="fa fa-shield-alt text-white fs-4"></i>
+                                </div>
+                                <h5 class="mb-3" data-translate="feature2">Secure Transactions</h5>
+                                <p class="m-0" data-translate="feature2Desc">Your purchases are protected with our
+                                    secure payment system and product condition verification.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="feature-item bg-light rounded p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
+                                     style="width: 60px; height: 60px;">
+                                    <i class="fa fa-truck text-white fs-4"></i>
+                                </div>
+                                <h5 class="mb-3" data-translate="feature3">Reliable Delivery</h5>
+                                <p class="m-0" data-translate="feature3Desc">We handle international shipping and
+                                    customs clearance, ensuring your
+                                    items arrive safely at your doorstep.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="feature-item bg-light rounded p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4"
+                                     style="width: 60px; height: 60px;">
+                                    <i class="fa fa-calculator text-white fs-4"></i>
+                                </div>
+                                <h5 class="mb-3" data-translate="feature4">Transparent Pricing</h5>
+                                <p class="m-0" data-translate="feature4Desc">Get instant quotes including all costs -
+                                    product price, service fee, and
+                                    shipping - with no hidden charges.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="feature-item bg-light rounded p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
+                                     style="width: 60px; height: 60px;">
+                                    <i class="fa fa-search text-white fs-4"></i>
+                                </div>
+                                <h5 class="mb-3" data-translate="feature5">Product Verification</h5>
+                                <p class="m-0" data-translate="feature5Desc">We verify product quality and authenticity
+                                    before shipping to ensure you
+                                    receive exactly what you ordered.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="feature-item bg-light rounded p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4"
+                                     style="width: 60px; height: 60px;">
+                                    <i class="fa fa-headset text-white fs-4"></i>
+                                </div>
+                                <h5 class="mb-3" data-translate="feature6">Dedicated Customer Support</h5>
+                                <p class="m-0" data-translate="feature6Desc">Our dedicated support team is available
+                                    around the clock to assist with
+                                    any questions or concerns.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Features End -->
+
+
+            <!-- Screenshot Start -->
+            <div class="container-xxl py-5" id="screenshot">
+                <div class="container py-5 px-lg-5">
+                    <div class="row g-5 align-items-center">
+                        <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
+                            <h5 class="text-primary-gradient fw-medium">App Interface</h5>
+                            <h1 class="mb-4" data-translate="appPreviewTitle">Simple, Secure, and User-Friendly Shopping
+                                Experience</h1>
+                            <p class="mb-4" data-translate="appPreviewDesc">Experience the convenience of global
+                                shopping at your fingertips. Our
+                                intuitive interface makes international shopping as easy as local shopping.</p>
+                            <div class="row g-4 mb-4">
+                                <div class="col-sm-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fa fa-check-circle text-primary-gradient me-3 fa-2x"></i>
+                                        <div>
+                                            <h6 class="mb-1" data-translate="globalShopping">Easy Product Search</h6>
+                                            <p class="mb-0" data-translate="globalShoppingDesc">Browse and save products
+                                                from any global marketplace</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fa fa-check-circle text-primary-gradient me-3 fa-2x"></i>
+                                        <div>
+                                            <h6 class="mb-1" data-translate="instantQuotes">Instant Quotes</h6>
+                                            <p class="mb-0" data-translate="instantQuotesDesc">Get real-time pricing
+                                                including all costs</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fa fa-check-circle text-primary-gradient me-3 fa-2x"></i>
+                                        <div>
+                                            <h6 class="mb-1" data-translate="securePayments">Secure Payments</h6>
+                                            <p class="mb-0" data-translate="securePaymentsDesc">Pay with your preferred
+                                                local payment method</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fa fa-check-circle text-primary-gradient me-3 fa-2x"></i>
+                                        <div>
+                                            <h6 class="mb-1" data-translate="realtimeTracking">Real-time Tracking</h6>
+                                            <p class="mb-0" data-translate="realtimeTrackingDesc">Monitor your order
+                                                from purchase to delivery</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#download"
+                               class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3"
+                               data-translate="downloadApp">Download App</a>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp"
+                             data-wow-delay="0.3s">
+                            <div class="owl-carousel screenshot-carousel">
+                                <img class="img-fluid" src="img/screenshot-1.png" alt="GlobalBuy24 App Home Screen">
+                                <img class="img-fluid" src="img/screenshot-2.png" alt="Product Search Interface">
+                                <img class="img-fluid" src="img/screenshot-3.png" alt="Quote Calculator">
+                                <img class="img-fluid" src="img/screenshot-4.png" alt="Order Tracking">
+                                <img class="img-fluid" src="img/screenshot-5.png" alt="Delivery Updates">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Screenshot End -->
+
+
+            <!-- Process Start -->
+            <div class="container-xxl py-5" id="how-it-works">
+                <div class="container py-5 px-lg-5">
+                    <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <h5 class="text-primary-gradient fw-medium">Simple Process</h5>
+                        <h1 class="mb-5" data-translate="howItWorksHeading">How GlobalBuy24 Works</h1>
+                    </div>
+                    <div class="row gy-5 gx-4 justify-content-center">
+                        <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+                                     style="width: 100px; height: 100px;">
+                                    <i class="fa fa-search fa-3x text-white"></i>
+                                </div>
+                                <h5 class="mt-4 mb-3" data-translate="step1">Find Products</h5>
+                                <p class="mb-0" data-translate="step1Desc">Browse international online stores and add
+                                    product links to your
+                                    GlobalBuy24 basket.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+                                     style="width: 100px; height: 100px;">
+                                    <i class="fa fa-calculator fa-3x text-white"></i>
+                                </div>
+                                <h5 class="mt-4 mb-3" data-translate="step2">Get Quote</h5>
+                                <p class="mb-0" data-translate="step2Desc">Receive a detailed quote including product
+                                    cost, service fee, and
+                                    shipping charges
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+                                     style="width: 100px; height: 100px;">
+                                    <i class="fa fa-truck fa-3x text-white"></i>
+                                </div>
+                                <h5 class="mt-4 mb-3" data-translate="step3">Pick up</h5>
+                                <p class="mb-0" data-translate="step3Desc">Once we receive your payment, we'll purchase
+                                    and ship your items to our nearest agency..</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Process Start -->
+
+
+            <!-- Download Start -->
+            <div class="container-xxl py-5" id="download">
+                <div class="container py-5 px-lg-5">
+                    <div class="row g-5 align-items-center">
+                        <div class="col-lg-6">
+                            <img class="img-fluid wow fadeInUp" data-wow-delay="0.1s" src="img/about.png"
+                                 alt="GlobalBuy24 Mobile App">
+                        </div>
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <h5 class="text-primary-gradient fw-medium" data-translate="downloadTitle">Get Started</h5>
+                            <h1 class="mb-4" data-translate="downloadSubtitle">Download GlobalBuy24 Today</h1>
+                            <p class="mb-4" data-translate="downloadDescription">Join thousands of satisfied customers
+                                who are already shopping globally with
+                                ease. Our app makes international shopping simple, secure, and accessible to everyone.
+                            </p>
+                            <div class="row g-4">
+                                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                                    <a href="#" class="d-flex bg-primary-gradient rounded py-3 px-4">
+                                        <i class="fab fa-apple fa-3x text-white flex-shrink-0"></i>
+                                        <div class="ms-3">
+                                            <p class="text-white mb-0" data-translate="appStore1">Coming Soon on</p>
+                                            <h5 class="text-white mb-0" data-translate="appStore2">App Store</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                                    <a href="#" class="d-flex bg-secondary-gradient rounded py-3 px-4">
+                                        <i class="fab fa-google-play fa-3x text-white flex-shrink-0"></i>
+                                        <div class="ms-3">
+                                            <p class="text-white mb-0" data-translate="android1">Get it on</p>
+                                            <h5 class="text-white mb-0" data-translate="android2">Google Play</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial Start -->
+            <div class="container-xxl py-5" id="review">
+                <div class="container py-5 px-lg-5">
+                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <h5 class="text-primary-gradient fw-medium">Customer Reviews</h5>
+                        <h1 class="mb-5">Coming Soon</h1>
+                        <p class="mb-4">We're excited to share our customers' experiences with GlobalBuy24. Check back
+                            soon to read real stories from our users about their international shopping journey.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial End -->
+
+
+            <!-- Contact Start -->
+            <div class="container-xxl py-5" id="contact">
+                <div class="container py-5 px-lg-5">
+                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <h5 class="text-primary-gradient fw-medium">Get in Touch</h5>
+                        <h1 class="mb-5" data-translate="contactTitle">Contact Us</h1>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-9">
+                            <div class="wow fadeInUp" data-wow-delay="0.3s">
+                                <p class="text-center mb-4" data-translate="contactSubtitle">Have questions about our
+                                    service? Our team is here to help
+                                    you with any inquiries about international shopping, delivery, or payment options.
+                                </p>
+                                <form>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="name"
+                                                       placeholder="Your Name">
+                                                <label for="name" data-translate="name">Your Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="email" class="form-control" id="email"
+                                                       placeholder="Your Email">
+                                                <label for="email" data-translate="email">Your Email</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="subject"
+                                                       placeholder="Subject">
+                                                <label for="subject" data-translate="subject">Subject</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <textarea class="form-control" placeholder="Leave a message here"
+                                                          id="message" style="height: 150px"></textarea>
+                                                <label for="message" data-translate="message">Your Message</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 text-center">
+                                            <button class="btn btn-primary-gradient rounded-pill py-3 px-5"
+                                                    type="submit" data-translate="sendMessage">Send Message</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact End -->
+
+
+            <!-- Footer Start -->
+            <div class="container-fluid footer wow fadeIn" data-wow-delay="0.1s">
+                <div class="container py-5 px-lg-5">
+                        <img src="images/logo.png" alt="GlobalBuy24 Logo">
+                        <div class="nav-links">
+                            <a class="btn nav-link" href="#home" data-translate="home">Home</a>
+                            <a class="btn nav-link" href="#how-it-works" data-translate="process">How It Works</a>
+                            <a class="btn nav-link" href="#appPreview" data-translate="appPreview">App Preview</a>
+                            <a class="btn nav-link" href="#ourBenefits" data-translate="ourBenefits">Our Benefits</a>
+                            <a class="btn nav-link" href="#support" data-translate="support">Support</a>
+                            <a id="languageSwitcher" class="btn nav-link"
+                            onclick="switchLanguage(currentLanguage === 'en' ? 'fr' : 'en')">FR</a>
+                        </div>
+                        <div>
+                            <div class=" btn-social-coontainer d-flex pt-2 ">
+                                <a class="btn  btn-social" href="#"><i
+                                       class="fab fa-twitter"></i></a>
+                                <a class="btn btn-social" href="#"><i
+                                       class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-social" href="#"><i
+                                       class="fab fa-instagram"></i></a>
+                                <a class="btn btn-social" href="#"><i
+                                       class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                </div>
+                    <div class="copyright-policy">
+                        <div class="copyright" data-translate="copyright">&copy; 2025 GlobalBuy24. All Rights Reserved.</div>
+                        <a class="btn btn-link" href="privacy.html" data-translate="privacyPolicy"  >Privacy Policy</a>                         
+                        <a class="btn btn-link" href="terms-of-seervice.html" data-translate="termsOfService">Terms of Service</a>
+                        <a class="btn btn-link" href="cookies.html" data-translate="termsOfService">Cookies</a>                                               
+                    </div>
+            </div>
+            <!-- Footer End -->
+
+
+            <!-- Back to Top -->
+            <a href="#" class="btn back-to-top"><i class="bi bi-arrow-up"></i></a>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="js/language.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+
+</html>
