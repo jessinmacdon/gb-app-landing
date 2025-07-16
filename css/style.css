@@ -1,9 +1,56 @@
 /********** Template CSS **********/
 :root {
-    --primary: #005ae0;
-    --secondary: #758ff1;
-    --light: #F0F6FF;
-    --dark: #262B47;
+    --primary-color: #005AE0;
+    --secondary-color: #970BE1;
+    --primary-bg-color: #F2F2F2;
+    --secondary-bg-color: #D9D8DA;
+    --text-color: #08010B;
+    --info-text-color: #838085;
+    --line: #D9D8DA;
+    --card-bg: #FFFFFF;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #4A90E2;
+        --secondary-color: #B36BFF;
+        --primary-bg-color: #121212;
+        --secondary-bg-color: #1E1E1E;
+        --text-color: #F5F5F5;
+        --info-text-color: #A0A0A0;
+        --line: #333333;
+        --card-bg: #1E1E1E;
+    }
+    
+    body {
+        background-color: var(--primary-bg-color);
+        color: var(--text-color);
+    }
+    
+    .bg-light {
+        background-color: var(--secondary-bg-color) !important;
+        color: var(--text-color);
+    }
+    
+    .card, .feature-item, .bg-white {
+        background-color: var(--card-bg) !important;
+        border-color: var(--line) !important;
+    }
+    
+    .text-dark {
+        color: var(--text-color) !important;
+    }
+    
+    .btn-outline-light {
+        color: var(--text-color);
+        border-color: var(--line);
+    }
+    
+    .btn-outline-light:hover {
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+    }
 }
 
 
@@ -41,6 +88,22 @@ h6,
     font-weight: 500 !important;
 }
 
+
+/*** Button Links ***/
+.btn-link,
+.btn-link:focus,
+.btn-link.focus,
+.btn-link:active,
+.btn-link.active {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    text-decoration: none;
+}
+
+.btn-link:focus-visible {
+    outline: none !important;
+}
 
 /*** Gradient Text & BG ***/
 .text-primary-gradient {
@@ -256,13 +319,6 @@ h6,
 .hero-header {
     margin-bottom: 6rem;
     padding: 16rem 0 0 0;
-    background:
-        url(../img/bg-bottom.png),
-        linear-gradient(to bottom right, var(--primary), var(--secondary));
-    background-position:
-        center bottom,
-        center top;
-    background-repeat: no-repeat;
 }
 
 @media (max-width: 991.98px) {
@@ -418,16 +474,10 @@ h6,
 
 
 /*** Footer ***/
+/*
 .footer {
     margin-top: 6rem;
     padding: 9rem 0;
-    background:
-        url(../img/bg-top.png),
-        linear-gradient(to bottom right, var(--primary), var(--secondary));
-    background-position:
-        center top,
-        center top;
-    background-repeat: no-repeat;
     min-height: 600px;
     display: flex;
     flex-direction: column;
@@ -479,14 +529,6 @@ h6,
     transition: .3s;
 }
 
-.footer .btn.btn-link::before {
-    position: relative;
-    content: "\f105";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-right: 10px;
-}
-
 .footer .btn.btn-link:hover {
     letter-spacing: 1px;
     box-shadow: none;
@@ -514,6 +556,56 @@ h6,
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+**/
+
+.footer {
+    margin-top: 6rem;
+    padding: 9rem 0;
+    min-height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.footer .btn.btn-social:hover {
+    color: var(--primary-color);
+}
+
+.footer .btn.btn-link {
+    font-size: 14px;
+    text-align: center;
+    color: var(--text-color);
+    font-weight: normal;
+}
+
+.footer .btn.btn-link:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    padding: 30px 0;
+    font-size: 14px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+    margin-top: 2rem;
 }
 
 /* Hide testimonials section */

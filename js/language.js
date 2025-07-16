@@ -209,9 +209,11 @@ function updateTextContent() {
 }
 
 function updateLanguageSwitcher() {
-    const switcher = document.getElementById('languageSwitcher');
-    if (switcher) {
-        switcher.innerHTML = currentLanguage === 'en' ? 'FR' : 'EN';
+    const switchers = document.querySelectorAll('#languageSwitcher');
+    if (switchers.length > 0) {
+        switchers.forEach(switcher => {
+            switcher.textContent = currentLanguage === 'en' ? 'Français' : 'English';
+        });
     }
 }
 
