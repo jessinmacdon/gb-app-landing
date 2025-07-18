@@ -1,473 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <title>GlobalBuy24</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta
-        content="" name="description">
+<head>
+    <meta charset="utf-8">
+    <title>GlobalBuy24</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-        <!-- Favicon -->
-        <link
-        href="img/favicon.ico" rel="icon">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
-        <!-- Icon Font Stylesheet -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-        <!-- Libraries Stylesheet -->
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link
-        href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link
-        href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
 
-    <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
-        <div
-            class="container-xxl bg-white p-0">
-            <!-- Spinner Start -->
-            <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-                <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                    <span class="sr-only">Loading...</span>
-                </div>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
             </div>
-            <!-- Spinner End -->
-
-
-            <!-- Navbar & Hero Start -->
-            <div class="container-xxl position-relative p-0" id="home">
-                <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                    <a href="index.html" class="navbar-brand">
-                        <img src="img/logo/logo_transparent_bg.png" alt="GlobalBuy24 Logo" class="logo-white">
-                        <img src="img/logo/logo_blue_primary.jpg" alt="GlobalBuy24 Logo" class="logo-black">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                        <span class="fa fa-bars"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <div class="navbar-nav mx-auto py-0">
-                            <a href="#home" class="nav-item nav-link active" data-translate="home">Home</a>
-                            <a href="#about" class="nav-item nav-link" data-translate="about">About</a>
-                            <a href="#feature" class="nav-item nav-link" data-translate="feature">Features</a>
-                            <a href="#screenshot" class="nav-item nav-link" data-translate="appPreview">App Preview</as>
-                            <a href="#contact" class="nav-item nav-link" data-translate="contact">Contact</a>
-                            <a id="languageSwitcher" class="btn nav-item nav-link" onclick="switchLanguage(currentLanguage === 'en' ? 'fr' : 'en')">French</a>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <a href="#download" class="btn btn-primary py-2 px-4 d-none d-lg-block" data-translate="downloadNow">Download Now</a>
-                        </div>
-                    </div>
-                </nav>
-                <div class="container-xxl hero-header">
-                    <div class="container px-lg-5">
-                        <div class="row g-5">
-                            <div class="col-lg-8 text-center text-lg-start">
-                                <h5 class="fw-medium" data-translate="heroSubtitle">Your Gateway to International Shopping</h5>
-                                <h1 class=" mb-4 animated slideInDown" data-translate="heroTitle">Shop Globally, Pay Locally</h1>
-                                <p class=" pb-3 animated slideInDown" data-translate="heroDescription">Browse,save, and purchase products from any global marketplace with ease. We handle the international logistics while you enjoy local payment methods.</p>
-                                <div class="row g-4 mb-4">
-                                    <div class="col-sm-6">
-                                        <div class="d-flex align-items-center">
-                                            <i class="fa fa-check-circle  me-3 fa-2x"></i>
-                                            <div>
-                                                <h6 class="mb-1 " data-translate="globalShopping">Global Shopping Made Easy</h6>
-                                                <p class="mb-0 " data-translate="globalShoppingDesc">Browse and save products from any global marketplace</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="d-flex align-items-center">
-                                            <i class="fa fa-check-circle  me-3 fa-2x"></i>
-                                            <div>
-                                                <h6 class="mb-1 " data-translate="instantQuotes">Instant Quotes</h6>
-                                                <p class="mb-0 " data-translate="instantQuotesDesc">Get real-time pricing including all costs</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="#download" class="btn btn-primary py-sm-3 px-4 px-sm-5 rounded-pill me-3" data-translate="getStarted">Get Started</a>
-                                <a href="#about" class="btn btn-primary py-sm-3 px-4 px-sm-5 rounded-pill" data-translate="learnMore">Learn More</a>
-                            </div>
-                            <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="owl-carousel screenshot-carousel">
-                                    <img class="img-fluid" src="img/screenshot-1.png" alt="GlobalBuy24 App Interface">
-                                    <img class="img-fluid" src="img/screenshot-2.png" alt="Product Search">
-                                    <img class="img-fluid" src="img/screenshot-3.png" alt="Quote Calculator">
-                                    <img class="img-fluid" src="img/screenshot-4.png" alt="Order Tracking">
-                                    <img class="img-fluid" src="img/screenshot-5.png" alt="Delivery Updates">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Navbar & Hero End -->
-
-
-            <!-- About Start -->
-            <div class="container-xxl py-5" id="about">
-                <div class="container py-5 px-lg-5">
-                    <div class="row g-5 align-items-center">
-                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <h5 class="text-primary-gradient fw-medium" data-translate="aboutTitle">About GlobalBuy24
-                            </h5>
-                            <h1 class="mb-4" data-translate="heroSubtitle">Your Gateway to Global Shopping</h1>
-                            <p class="mb-4" data-translate="heroDescription">GlobalBuy24 bridges the gap between international e-commerce and local markets. We make it simple and secure to shop from global marketplaces, even when local payment options or shipping access are limited.</p>
-                            <a href="#how-it-works" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3" data-translate="learnMore">Learn More</a>
-                        </div>
-                        <div class="col-lg-6">
-                            <img class="img-fluid wow fadeInUp" data-wow-delay="0.5s" src="img/about.png" alt="GlobalBuy24 Shopping Experience">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- About End -->
-
-
-            <!-- Features Start -->
-            <div class="container-xxl py-5" id="feature">
-                <div class="container py-5 px-lg-5">
-                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <h5 class="text-primary-gradient fw-medium">Key Features</h5>
-                        <h1 class="mb-5" data-translate="featuresTitle">Why Choose GlobalBuy24</h1>
-                    </div>
-                    <div class="row g-4">
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="feature-item bg-light rounded p-4">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
-                                    <i class="fa fa-globe fs-4"></i>
-                                </div>
-                                <h5 class="mb-3" data-translate="feature1">Global Marketplace Access</h5>
-                                <p class="m-0" data-translate="feature1Desc">Shop from any international online store, even those that don't ship to your region or accept local payment methods.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="feature-item bg-light rounded p-4">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
-                                    <i class="fa fa-shield-alt fs-4"></i>
-                                </div>
-                                <h5 class="mb-3" data-translate="feature2">Secure Transactions</h5>
-                                <p class="m-0" data-translate="feature2Desc">Your purchases are protected with our secure payment system and product condition verification.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="feature-item bg-light rounded p-4">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
-                                    <i class="fa fa-truck fs-4"></i>
-                                </div>
-                                <h5 class="mb-3" data-translate="feature3">Reliable Delivery</h5>
-                                <p class="m-0" data-translate="feature3Desc">We handle international shipping and customs clearance, ensuring your items arrive safely at your doorstep.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="feature-item bg-light rounded p-4">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
-                                    <i class="fa fa-calculator fs-4"></i>
-                                </div>
-                                <h5 class="mb-3" data-translate="feature4">Transparent Pricing</h5>
-                                <p class="m-0" data-translate="feature4Desc">Get instant quotes including all costs - product price, service fee, and shipping - with no hidden charges.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="feature-item bg-light rounded p-4">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
-                                    <i class="fa fa-search fs-4"></i>
-                                </div>
-                                <h5 class="mb-3" data-translate="feature5">Product Verification</h5>
-                                <p class="m-0" data-translate="feature5Desc">We verify product quality and authenticity before shipping to ensure you receive exactly what you ordered.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="feature-item bg-light rounded p-4">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
-                                    <i class="fa fa-headset fs-4"></i>
-                                </div>
-                                <h5 class="mb-3" data-translate="feature6">Dedicated Customer Support</h5>
-                                <p class="m-0" data-translate="feature6Desc">Our dedicated support team is available around the clock to assist with any questions or concerns.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Features End -->
-
-
-            <!-- Screenshot Start -->
-            <div class="container-xxl py-5" id="screenshot">
-                <div class="container py-5 px-lg-5">
-                    <div class="row g-5 align-items-center">
-                        <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
-                            <h5 class="text-primary-gradient fw-medium" data-translate="appPreviewTitle">Simple, Secure, and User-Friendly Shopping Experience</h5>
-                            <h1 class="mb-4" data-translate="appPreviewSubtitle">Experience the convenience of global shopping at your fingertips. Our intuitive interface makes international shopping as easy as local shopping.</h1>
-                            <p class="mb-4" data-translate="appPreviewDesc">Browse and save products from any global marketplace, get instant quotes, and track your orders in real-time.</p>
-                            <div class="row g-4 mb-4">
-                                <div class="col-sm-6">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fa fa-check-circle text-primary-gradient me-3 fa-2x"></i>
-                                        <div>
-                                            <h6 class="mb-1" data-translate="globalShopping">Easy Product Search</h6>
-                                            <p class="mb-0" data-translate="globalShoppingDesc">Browse and save products from any global marketplace</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fa fa-check-circle text-primary-gradient me-3 fa-2x"></i>
-                                        <div>
-                                            <h6 class="mb-1" data-translate="instantQuotes">Instant Quotes</h6>
-                                            <p class="mb-0" data-translate="instantQuotesDesc">Get real-time pricing including all costs</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fa fa-check-circle text-primary-gradient me-3 fa-2x"></i>
-                                        <div>
-                                            <h6 class="mb-1" data-translate="securePayments">Secure Payments</h6>
-                                            <p class="mb-0" data-translate="securePaymentsDesc">Pay with your preferred local payment method</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="d-flex align-items-center">
-                                        <i class="fa fa-check-circle text-primary-gradient me-3 fa-2x"></i>
-                                        <div>
-                                            <h6 class="mb-1" data-translate="realtimeTracking">Real-time Tracking</h6>
-                                            <p class="mb-0" data-translate="realtimeTrackingDesc">Monitor your order from purchase to delivery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#download" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3" data-translate="downloadApp">Download App</a>
-                        </div>
-                        <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="owl-carousel screenshot-carousel">
-                                <img class="img-fluid" src="img/screenshot-1.png" alt="GlobalBuy24 App Home Screen">
-                                <img class="img-fluid" src="img/screenshot-2.png" alt="Product Search Interface">
-                                <img class="img-fluid" src="img/screenshot-3.png" alt="Quote Calculator">
-                                <img class="img-fluid" src="img/screenshot-4.png" alt="Order Tracking">
-                                <img class="img-fluid" src="img/screenshot-5.png" alt="Delivery Updates">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Screenshot End -->
-
-
-            <!-- Process Start -->
-            <div class="container-xxl py-5" id="how-it-works">
-                <div class="container py-5 px-lg-5">
-                    <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <h5 class="text-primary-gradient fw-medium" data-translate="howItWorksTitle">Simple Process</h5>
-                        <h1 class="mb-5" data-translate="howItWorksHeading">How GlobalBuy24 Works</h1>
-                    </div>
-                    <div class="row gy-5 gx-4 justify-content-center">
-                        <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
-                                    <i class="fa fa-search fa-3x "></i>
-                                </div>
-                                <h5 class="mt-4 mb-3" data-translate="step1">Find Products</h5>
-                                <p class="mb-0" data-translate="step1Desc">Browse international online stores and add product links to your GlobalBuy24 basket.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
-                                    <i class="fa fa-calculator fa-3x "></i>
-                                </div>
-                                <h5 class="mt-4 mb-3" data-translate="step2">Get Quote</h5>
-                                <p class="mb-0" data-translate="step2Desc">Receive a detailed quote including product cost, service fee, and shipping charges</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
-                                    <i class="fa fa-truck fa-3x "></i>
-                                </div>
-                                <h5 class="mt-4 mb-3" data-translate="step3">Pick up</h5>
-                                <p class="mb-0" data-translate="step3Desc">Once we receive your payment, we'll purchase and ship your items to our nearest agency.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Process Start -->
-
-
-            <!-- Download Start -->
-            <div class="container-xxl py-5" id="download">
-                <div class="container py-5 px-lg-5">
-                    <div class="row g-5 align-items-center">
-                        <h5 class="text-primary-gradient fw-medium" data-translate="downloadTitle">Our Benefits</h5>
-                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                            <h1 class="mb-4" data-translate="downloadSubtitle">Why choose GlobalBuy24 for your shopping needs</h1>
-                            <p class="mb-4" data-translate="downloadDescription">
-                                GlobalBuy24 opens the door to a world of shopping possibilities. With just a few clicks, you can access top international stores and have your products delivered locally. Experience seamless shopping that caters specifically to your needs.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="benefits-card">
-                        <div class="benefits-card-icon">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <div class="benefits-card-title">Shop Globally with Ease</div>
-                        <div class="benefits-card-body">Access stores like Amazon, eBay, SHEIN, and more from anywhere in Africa.</div>
-                    </div>
-                    <div class="benefits-card">
-                        <div class="benefits-card-icon">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <div class="benefits-card-title">We Handle Your Shopping</div>
-                        <div class="benefits-card-body">No credit card? No problem. We purchase, verify, and ship on your behalf.</div>
-                    </div>
-
-                    <div class="benefits-card">
-                        <div class="benefits-card-icon">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <div class="benefits-card-title">Convenient Local Pickup Points</div>
-                        <div class="benefits-card-body">Receive your package reliably at a nearby collection point.</div>
-                    </div>
-
-                    <div class="benefits-card">
-                        <div class="benefits-card-icon">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <div class="benefits-card-title">Flexible Local Payment Options</div>
-                        <div class="benefits-card-body">You can conveniently make your payments using a variety of options, including MTN and Orange Money.</div>
-                    </div>
-
-                    <div class="benefits-card">
-                        <div class="benefits-card-icon">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <div class="benefits-card-title">Secure and Transparent Transactions</div>
-                        <div class="benefits-card-body">Get a full quote upfront with no hidden fees. Your order is in good hands.</div>
-                    </div>
-
-                    <div class="benefits-card">
-                        <div class="benefits-card-icon">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <div class="benefits-card-title">Start Your Global Shopping Journey Today!</div>
-                        <div class="benefits-card-body">Join thousands of satisfied users who trust GlobalBuy24 for their shopping needs.</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial Start -->
-            <div class="container-xxl py-5" id="benefits">
-                <div class="container py-5 px-lg-5">
-                    <div>
-                        <h2>Ready to Shop the world?</h2>
-                        <p>Start shopping the world with GlobalBuy24, where thousand of online shops are at your fingertips</p>
-                        <div>
-                            <button>Get Android App</button>
-                            <button>Get iOS App</button>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="col-lg-6">
-                            <img class="img-fluid wow fadeInUp" data-wow-delay="0.1s" src="img/about.png" alt="GlobalBuy24 Mobile App">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial End -->
-
-
-            <!-- Contact Start -->
-            <div class="container-xxl py-5" id="appPreview">
-                <div class="container py-5 px-lg-5">
-                    <div>
-                        <h2>Ready to Shop the world?</h2>
-                        <p>Start shopping the world with GlobalBuy24, where thousand of online shops are at your fingertips</p>
-                        <div>
-                            <button>Get Android App</button>
-                            <button>Get iOS App</button>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="col-lg-6">
-                            <img class="img-fluid wow fadeInUp" data-wow-delay="0.1s" src="img/about.png" alt="GlobalBuy24 Mobile App">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Contact End -->
-
-
-            <!-- Footer Start -->
-            <div class="container-fluid footer wow fadeIn" data-wow-delay="0.1s">
-                <div class="footer-top">
-                    <img src="#" alt="GlobalBuy24 Logo">
-                    <div class="col-md-6">
-                        <a class="btn btn-link" href="#about">About Us</a>
-                        <a class="btn btn-link" href="#how-it-works">How It Works</a>
-                        <a class="btn btn-link" href="#benefits">Our Benefits</a>
-                        <a class="btn btn-link" href="#appPreview">App Preview</a>
-                        <a class="btn btn-link" href="#support">Support</a>
-                        <a id="languageSwitcher" class="btn btn-link" onclick="switchLanguage(currentLanguage === 'en' ? 'fr' : 'en')">French</a>
-                    </div>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-social" href="#">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a class="btn btn-social" href="#">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a class="btn btn-social" href="#">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a class="btn btn-social" href="#">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-bottom px-lg-5">
-                    <div>&copy; 2025 GlobalBuy24. All rights reserved.</div>
-                    <a class="btn btn-link" href="#privacy.html" target="_blank">Privacy Policy</a>
-                    <a class="btn btn-link" href="#terms-of-service.html" target="_blank">Terms of Service</a>
-                    <a class="btn btn-link" href="#cookies.html" target="_blank">Cookies Settings</a>
-                </div>
-            </div>
-            <!-- Footer End -->
-
-
-            <!-- Back to Top -->
-            <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2">
-                <i class="bi bi-arrow-up "></i>
-            </a>
         </div>
+        <!-- Spinner End -->
 
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="js/language.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0" id="home">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/logo/logo_transparent_bg.png" alt="GlobalBuy24 Logo" class="logo-white">
+                    <img src="img/logo/logo_blue_primary.jpg" alt="GlobalBuy24 Logo" class="logo-black"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="#home" class="nav-item nav-link active" data-translate="home">Home</a>
+                        <a href="#about" class="nav-item nav-link" data-translate="about">About</a>
+                        <a href="#feature" class="nav-item nav-link" data-translate="feature">Features</a>
+                        <a href="#screenshot" class="nav-item nav-link" data-translate="appPreview">App Preview</a>
+                        <a href="#contact" class="nav-item nav-link" data-translate="contact">Contact</a>
+                        <a id="languageSwitcher" class="btn nav-item nav-link"
+                            onclick="switchLanguage(currentLanguage === 'en' ? 'fr' : 'en')">French</a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <a href="#download" class="btn btn-primary py-2 px-4 d-none d-lg-block"
+                            data-translate="downloadNow">Download Now</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="container-xxl hero-header">
+                <div class="container px-lg-5">
+                    <div class="row g-5">
+                        <div class="col-lg-8 text-center text-lg-start">
+                            <h5 class="fw-medium" data-translate="heroSubtitle">
+                                Shop the World — Without the Hassle
+                            </h5>
+                            <h1 class=" mb-4 animated slideInDown" data-translate="heroTitle">
+                                Shop Globally, Pay Locally
+                            </h1>
+                            <p class=" pb-3 animated slideInDown" data-translate="#">Buy from
+                                any online
+                                store worldwide. Just paste the link, and GlobalBuy24 handles
+                                the rest from purchase to
+                                pickup in your city.</p>
+
+                            <a href="#download" class="btn btn-primary py-sm-3 px-4 px-sm-5 rounded-pill me-3"
+                                data-translate="#"><i class="fab fa-android me-2"></i>Google Play</a>
+                            <a href="#about" class="btn py-sm-3 px-4 px-sm-5 rounded-pill" data-translate="#"><i
+                                    class="fab fa-apple me-2"></i>App Store</a>
+                        </div>
+                        <div class="hero-asset">
+                            <img src="#" alt="hero image">
+                        </div>
+
+                    </div>
+                    <!-- Navbar & Hero End -->
+
+
+                    <!-- How It Works -->
+                    <div class="container py-5" id="howItWorks">
+                        <div class="howItWorks">
+                            <div class="sectionHeading">How It Works</div>
+                            <div class="howItWorksTitle">Discover the Ease of Global Shopping
+                            </div>
+                            <div class="howItWorksSubtitle">GlobalBuy24 simplifies your shopping
+                                experience. Follow
+                                these easy steps to access global products effortlessly.</div>
+                            <div class="howItWorksDescription">
+                                <div class="howItWorksDesc-container">
+                                    <div class="icon">
+                                        <i class="fab fa-twitter"></i>
+                                    </div>
+                                    <div class="howItWorksDescriptionTitle">Step 1: Copy Your
+                                        Favorite Product Link
+                                    </div>
+                                    <div class="howItWorksDescriptionBody">Browse stores like
+                                        Amazon or SHEIN and copy
+                                        the link of the product you want.</div>
+                                </div>
+                                <div class="howItWorksDesc-container">
+                                    <div class="icon">
+                                        <i class="fab fa-twitter"></i>
+                                    </div>
+                                    <div class="howItWorksDescriptionTitle">Step 2: Paste &
+                                        Receive Your Quote</div>
+                                    <div class="howItWorksDescriptionBody">Paste the product
+                                        link in the app to get a
+                                        detailed quote with pricing.</div>
+                                </div>
+                                <div class="howItWorksDesc-container">
+                                    <div class="icon">
+                                        <i class="fab fa-twitter"></i>
+                                    </div>
+                                    <div class="howItWorksDescriptionTitle">Step 3: Make Your
+                                        Secure Payment</div>
+                                    <div class="howItWorksDescriptionBody">Confirm your quote
+                                        and pay using Mobile Money
+                                        or other local payment options.</div>
+                                </div>
+                                <div class="howItWorksDesc-container">
+                                    <div class="icon">
+                                        <i class="fab fa-twitter"></i>
+                                    </div>
+                                    <div class="howItWorksDescriptionTitle">Step 4: Convenient
+                                        Local Pickup</div>
+                                    <div class="howItWorksDescriptionBody">Your order will be
+                                        delivered to a nearby
+                                        pickup point for easy collection.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- App Preview -->
+                        <div class="container py-5" id="appPreview">
+                            <div class="appPreview">
+                                <div class="appPreview-content">
+                                    <h2 class="appPreviewTitle">Experience Seamless Global
+                                        Shopping with the GlobalBuy24
+                                        App</h2>
+                                    <p class="appPreviewSubtitle">Discover how easy it is to
+                                        shop from international
+                                        stores right from your phone. With our intuitive
+                                        interface, accessing global
+                                        products has never been simpler.</p>
+                                    <div class="appPreviewDescription">
+                                        <div class="appPreviewDesc-container">
+                                            <h3 class="appPreviewDescriptionTitle">User-Friendly
+                                                Design</h3>
+                                            <p class="appPreviewDescriptionBody">Navigate
+                                                effortlessly through your
+                                                shopping journey with our sleek app interface.
+                                            </p>
+                                        </div>
+                                        <div class="appPreviewDesc-container">
+                                            <h3 class="appPreviewDescriptionTitle">Real-Time
+                                                Updates</h3>
+                                            <p class="appPreviewDescriptionBody">Stay informed
+                                                with instant
+                                                notifications on your order status and pickup
+                                                details.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 appPreview-image wow fadeInUp" data-wow-delay="0.3s">
+                                    <div class="owl-carousel screenshot-carousel">
+                                        <img class="img-fluid" src="img/screenshot-1.png"
+                                            alt="GlobalBuy24 App Interface">
+                                        <img class="img-fluid" src="img/screenshot-2.png" alt="Product Search">
+                                        <img class="img-fluid" src="img/screenshot-3.png" alt="Quote Calculator">
+                                        <img class="img-fluid" src="img/screenshot-4.png" alt="Order Tracking">
+                                        <img class="img-fluid" src="img/screenshot-5.png" alt="Delivery Updates">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- App Preview End -->
+
+
+                            <!-- Download Start -->
+                            <div class="container-xxl py-5" id="download">
+                                <div class="container benefits">
+                                    <div class="benefits-intro">
+                                        <h5 class="fw-medium" data-translate="benefitsTitle">Our
+                                            Benefits</h5>
+                                        <div class="col-lg-6 beneifts-top wow fadeInUp" data-wow-delay="0.3s">
+                                            <h1 class="mb-4" data-translate="benefitsSubtitle">
+                                                Why choose GlobalBuy24
+                                                for your shopping needs</h1>
+                                            <p class="mb-4" data-translate="benefitsDescription">
+                                                GlobalBuy24 opens the door to a world of
+                                                shopping possibilities. With
+                                                just a few clicks, you can access top
+                                                international stores and have your
+                                                products delivered locally. Experience seamless
+                                                shopping that caters
+                                                specifically to your needs.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="benefit-cards">
+                                        <div class="benefits-card">
+                                            <div class="benefits-card-icon">
+                                                <i class="fa fa-search"></i>
+                                            </div>
+                                            <div class="benefits-card-title">Shop Globally with
+                                                Ease</div>
+                                            <div class="benefits-card-body">Access stores like
+                                                Amazon, eBay, SHEIN, and
+                                                more from anywhere in Africa.</div>
+                                        </div>
+                                        <div class="benefits-card">
+                                            <div class="benefits-card-icon">
+                                                <i class="fa fa-search"></i>
+                                            </div>
+                                            <div class="benefits-card-title">We Handle Your
+                                                Shopping</div>
+                                            <div class="benefits-card-body">No credit card? No
+                                                problem. We purchase,
+                                                verify, and ship on your behalf.</div>
+                                        </div>
+
+                                        <div class="benefits-card">
+                                            <div class="benefits-card-icon">
+                                                <i class="fa fa-search"></i>
+                                            </div>
+                                            <div class="benefits-card-title">Convenient Local
+                                                Pickup Points</div>
+                                            <div class="benefits-card-body">Receive your package
+                                                reliably at a nearby
+                                                collection point.</div>
+                                        </div>
+
+                                        <div class="benefits-card">
+                                            <div class="benefits-card-icon">
+                                                <i class="fa fa-search"></i>
+                                            </div>
+                                            <div class="benefits-card-title">Flexible Local
+                                                Payment Options</div>
+                                            <div class="benefits-card-body">You can conveniently
+                                                make your payments
+                                                using a variety of options, including MTN and
+                                                Orange Money.</div>
+                                        </div>
+
+                                        <div class="benefits-card">
+                                            <div class="benefits-card-icon">
+                                                <i class="fa fa-search"></i>
+                                            </div>
+                                            <div class="benefits-card-title">Secure and
+                                                Transparent Transactions</div>
+                                            <div class="benefits-card-body">Get a full quote
+                                                upfront with no hidden
+                                                fees. Your order is in good hands.</div>
+                                        </div>
+
+                                        <div class="benefits-card">
+                                            <div class="benefits-card-icon">
+                                                <i class="fa fa-search"></i>
+                                            </div>
+                                            <div class="benefits-card-title">Start Your Global
+                                                Shopping Journey Today!
+                                            </div>
+                                            <div class="benefits-card-body">Join thousands of
+                                                satisfied users who trust
+                                                GlobalBuy24 for their shopping needs.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Download App Section -->
+                            <div class="container-xxl" id="download">
+                                <div class="container download-app">
+                                    <div>
+                                        <h2>Ready to Shop the world?</h2>
+                                        <p>Start shopping the world with GlobalBuy24, where
+                                            thousand of online shops are
+                                            at your fingertips</p>
+                                        <div class="download-buttons">
+                                            <button class="btn btn-primary btn-lg me-3">
+                                                <i class="fab fa-android me-2"></i>Get Android
+                                                App
+                                            </button>
+                                            <button class="btn btn-secondary btn-lg">
+                                                <i class="fab fa-apple me-2"></i>Get iOS App
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="col-lg-6">
+                                            <img class="img-fluid wow fadeInUp" data-wow-delay="0.1s"
+                                                src="img/about.png" alt="GlobalBuy24 Mobile App">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Download App Section End -->
+
+                            <!-- Footer Start -->
+                            <div class="container-fluid footer wow fadeIn" data-wow-delay="0.1s">
+                                <div class="footer-top">
+                                    <img src="#" alt="Logo">
+                                    <div class="col-md-6">
+                                        <a class="btn btn-link" href="#home">Home</a>
+                                        <a class="btn btn-link" href="#how-it-works">How It
+                                            Works</a>
+                                        <a class="btn btn-link" href="#benefits">Why Us</a>
+                                        <a class="btn btn-link" href="#download">App Preview</a>
+                                        <a class="btn btn-link" href="#support">Support</a>
+                                        <a id="languageSwitcher" class="btn btn-link"
+                                            onclick="switchLanguage(currentLanguage === 'en' ? 'fr' : 'en')">French</a>
+                                    </div>
+                                    <div class="d-flex pt-2">
+                                        <a class="btn btn-social" href="#">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a class="btn btn-social" href="#">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                        <a class="btn btn-social" href="#">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a class="btn btn-social" href="#">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="footer-bottom px-lg-5">
+                                    <div>&copy; 2025 GlobalBuy24. All rights reserved.</div>
+                                    <a class="footer-link btn-link" href="#privacy.html" target="_blank">Privacy
+                                        Policy</a>
+                                    <a class="footer-link btn-link" href="#terms-of-service.html" target="_blank">Terms
+                                        of Service</a>
+                                    <a class="footer-link btn-link" href="#cookies.html" target="_blank">Cookies
+                                        Settings</a>
+                                </div>
+                            </div>
+                            <!-- Footer End -->
+
+
+                            <!-- Back to Top -->
+                            <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2">
+                                <i class="bi bi-arrow-up "></i>
+                            </a>
+                        </div>
+
+                        <!-- JavaScript Libraries -->
+                        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+                        <script
+                            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+                        <script src="lib/wow/wow.min.js"></script>
+                        <script src="lib/easing/easing.min.js"></script>
+                        <script src="lib/waypoints/waypoints.min.js"></script>
+                        <script src="lib/counterup/counterup.min.js"></script>
+                        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+                        <script src="js/language.js"></script>
+                        <script src="js/main.js"></script>
+</body>
 
 </html>
