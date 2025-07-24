@@ -841,37 +841,47 @@
   <!-- Footer Start -->
   <div class="container-fluid footer wow fadeIn" data-wow-delay="0.1s">
     <div class="footer-top">
-      <img src="#" alt="Logo">
-      <div class="col-md-6">
-        <a class="btn btn-link" href="#home">Home</a>
-        <a class="btn btn-link" href="#how-it-works">How It
-          Works</a>
-        <a class="btn btn-link" href="#benefits">Why Us</a>
-        <a class="btn btn-link" href="#download">App Preview</a>
-        <a class="btn btn-link" href="#support">Support</a>
-        <a id="languageSwitcher" class="btn btn-link"
-          onclick="switchLanguage(currentLanguage === 'en' ? 'fr' : 'en')">French</a>
+      <div class="footer-logo">
+        <img src="img/logo/logo_transparent_bg.png" alt="GlobalBuy24 Logo">
       </div>
-      <div class="d-flex pt-2">
-        <a class="btn btn-social" href="#">
+      
+      <div class="footer-nav">
+        <a class="btn btn-link" href="#home" data-translate="home">Home</a>
+        <a class="btn btn-link" href="#how-it-works" data-translate="howItWorks">How It Works</a>
+        <a class="btn btn-link" href="#benefits" data-translate="whyUs">Why Us</a>
+        <a class="btn btn-link" href="#download" data-translate="appPreview">App Preview</a>
+        <a class="btn btn-link" href="#support" data-translate="support">Support</a>
+        <a id="languageSwitcher" class="btn btn-link" onclick="switchLanguage(currentLanguage === 'en' ? 'fr' : 'en')">
+          <span data-translate="language">French</span>
+        </a>
+      </div>
+      
+      <div class="footer-social">
+        <a class="btn btn-social" href="#" aria-label="Facebook">
           <i class="fab fa-facebook-f"></i>
         </a>
-        <a class="btn btn-social" href="#">
+        <a class="btn btn-social" href="#" aria-label="Instagram">
           <i class="fab fa-instagram"></i>
         </a>
-        <a class="btn btn-social" href="#">
+        <a class="btn btn-social" href="#" aria-label="LinkedIn">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </div>
     </div>
-    <div class="footer-bottom px-lg-5">
-      <div>&copy; 2025 GlobalBuy24. All rights reserved.</div>
-      <a class="footer-link btn-link" href="privacy.html" target="_blank">Privacy
-        Policy</a>
-      <a class="footer-link btn-link" href="terms-of-service.html" target="_blank">Terms
-        of Service</a>
-      <a class="footer-link btn-link" href="cookies.html" target="_blank">Cookies
-        Settings</a>
+    
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+          <div class="mb-2 mb-md-0">&copy; 2025 GlobalBuy24. All rights reserved.</div>
+          <div class="d-flex flex-wrap justify-content-center">
+            <a class="footer-link btn-link mx-2" href="privacy.html">Privacy Policy</a>
+            <span class="mx-2">|</span>
+            <a class="footer-link btn-link mx-2" href="terms-of-service.html">Terms of Service</a>
+            <span class="mx-2">|</span>
+            <a class="footer-link btn-link mx-2" href="cookies.html">Cookies Settings</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <!-- Footer End -->
