@@ -212,7 +212,9 @@ function updateLanguageSwitcher() {
     const switchers = document.querySelectorAll('#languageSwitcher');
     if (switchers.length > 0) {
         switchers.forEach(switcher => {
-            switcher.textContent = currentLanguage === 'en' ? 'Français' : 'English';
+            // Capitalize first letter of the language name
+            const languageText = currentLanguage === 'en' ? 'french' : 'english';
+            switcher.textContent = languageText.charAt(0).toUpperCase() + languageText.slice(1);
         });
     }
 }

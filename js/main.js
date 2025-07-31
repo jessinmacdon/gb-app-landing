@@ -16,26 +16,36 @@
     new WOW().init();
 
 
-    // Sticky Navbar
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 45) {
-            $('.navbar').addClass('sticky-top shadow-sm');
-        } else {
-            $('.navbar').removeClass('sticky-top shadow-sm');
-        }
-    });
 
-
-    // Smooth scrolling on the navbar links
-    $(".navbar-nav a").on('click', function (event) {
-        if (this.hash !== "") {
+    // Smooth scrolling on the navbar links and button links
+    $(".navbar-nav a, .navbar .btn-link").on('click', function (event) {
+        if (this.hash !== "" && $(this.hash).length) {
             event.preventDefault();
+            
+            // Close mobile menu if open
+            $('.navbar-collapse').collapse('hide');
+            
+            // Get the target element
+            var target = $(this.hash);
+            var navbarHeight = $('.navbar').outerHeight();
+            var scrollTop = target.offset().top - navbarHeight;
+            
+            // Smooth scroll to target
+            $('html, body').animate({
+                scrollTop: scrollTop
+            }, 800, 'swing');
 
-            $('html, body').scrollTop($(this.hash).offset().top - 45);
-
+            // Update active state for nav links
             if ($(this).parents('.navbar-nav').length) {
                 $('.navbar-nav .active').removeClass('active');
-                $(this).closest('a').addClass('active');
+                $(this).closest('li').find('a').addClass('active');
+            }
+            
+            // Update URL without adding to history
+            if (history.pushState) {
+                history.pushState(null, null, this.hash);
+            } else {
+                location.hash = this.hash;
             }
         }
     });

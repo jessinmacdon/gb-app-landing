@@ -30,1253 +30,68 @@
 
   <!-- Template Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
-
-  <style>
-    .privacy-container {
-      max-width: 1200px;
-      margin: 100px auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .privacy-container h1 {
-      color: #0d6efd;
-      text-align: center;
-      margin: 30px auto;
-      width: 100%;
-      font-size: 2.5rem;
-      font-weight: 700;
-      padding-bottom: 15px;
-      border-bottom: 2px solid #f0f0f0;
-    }
-
-    .privacy-container h2 {
-      color: #0d6efd;
-      margin-top: 40px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #e9ecef;
-      font-size: 1.8rem;
-      font-weight: 600;
-    }
-
-    .privacy-container h3 {
-      color: #495057;
-      margin-top: 30px;
-      font-size: 1.4rem;
-      font-weight: 600;
-    }
-
-    .privacy-container p,
-    .privacy-container li {
-      color: #212529;
-      line-height: 1.8;
-      margin-bottom: 15px;
-      font-size: 1rem;
-    }
-
-    .privacy-container a {
-      color: #0d6efd;
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .privacy-container a:hover {
-      color: #0a58ca;
-      text-decoration: underline;
-    }
-
-    .privacy-container ul,
-    .privacy-container ol {
-      margin-left: 25px;
-      margin-bottom: 20px;
-    }
-
-    .privacy-container li {
-      margin-bottom: 10px;
-      position: relative;
-    }
-
-    .last-updated {
-      text-align: center;
-      color: #6c757d;
-      font-style: italic;
-      margin-bottom: 30px;
-      font-size: 0.95rem;
-    }
-
-    .privacy-content-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      margin-top: 20px;
-    }
-
-    .privacy-sidebar {
-      flex: 0 0 300px;
-      position: sticky;
-      top: 30px;
-      align-self: flex-start;
-      max-height: calc(100vh - 60px);
-      overflow-y: auto;
-    }
-
-    .privacy-main-content {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .table-of-contents {
-      background-color: #f8f9fa;
-      padding: 20px;
-      margin-bottom: 30px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    }
-
-    .table-of-contents h2 {
-      color: #0d6efd;
-      font-size: 1.3rem;
-      margin-top: 0;
-      margin-bottom: 15px;
-      padding-bottom: 10px;
-    }
-
-    .table-of-contents ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .table-of-contents ul li {
-      margin-bottom: 8px;
-      position: relative;
-      padding-left: 15px;
-    }
-
-    .table-of-contents ul li:before {
-      content: '•';
-      color: #0d6efd;
-      position: absolute;
-      left: 0;
-    }
-
-    .table-of-contents ul li a {
-      color: #495057;
-      text-decoration: none;
-      display: block;
-      padding: 5px 0;
-      transition: all 0.2s ease;
-      font-size: 0.95rem;
-    }
-
-    .table-of-contents ul li a:hover,
-    .table-of-contents ul li a:active,
-    .table-of-contents ul li a:focus,
-    .table-of-contents ul li a.active {
-      color: #0d6efd;
-      text-decoration: none;
-      padding-left: 5px;
-    }
-
-    .language-switcher {
-      text-align: center;
-      margin: 20px 0 30px;
-    }
-
-    .language-switcher button {
-      background: #f8f9fa;
-      border: 1px solid #dee2e6;
-      color: #0d6efd;
-      cursor: pointer;
-      font-weight: 500;
-      padding: 8px 16px;
-      border-radius: 4px;
-      transition: all 0.2s ease;
-      margin: 0 5px;
-    }
-
-    .language-switcher button:hover {
-      background-color: #e9ecef;
-      text-decoration: none;
-    }
-
-    .language-switcher button.active {
-      background-color: #0d6efd;
-      color: white;
-      border-color: #0d6efd;
-    }
-
-    .language-section {
-      display: none;
-    }
-
-    .language-section.active {
-      display: block;
-    }
-
-    @media (max-width: 992px) {
-      .privacy-content-wrapper {
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      .privacy-sidebar {
-        position: static;
-        max-height: none;
-        width: 100%;
-        margin-bottom: 20px;
-      }
-
-      .table-of-contents {
-        position: static;
-        max-height: none;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .privacy-container {
-        padding: 15px;
-        margin: 80px auto 40px;
-      }
-
-      .privacy-container h1 {
-        font-size: 2rem;
-      }
-
-      .privacy-container h2 {
-        font-size: 1.5rem;
-      }
-
-      .privacy-container h3 {
-        font-size: 1.25rem;
-      }
-
-      .privacy-sidebar {
-        margin-bottom: 20px;
-      }
-    }
-
-    .language-switcher {
-      text-align: center;
-      margin-bottom: 20px;
-      font-weight: bold;
-    }
-
-    .table-of-contents {
-      background-color: #f9f9f9;
-      padding: 15px;
-      border-radius: 5px;
-      margin-bottom: 30px;
-    }
-
-    .table-of-contents h2 {
-      margin-top: 0;
-      color: #0056b3;
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .table-of-contents ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .table-of-contents ul li a {
-      text-decoration: none;
-      color: #007bff;
-      padding: 5px 0;
-      display: block;
-    }
-
-    .table-of-contents ul li a:hover {
-      text-decoration: underline;
-      color: #0056b3;
-    }
-
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    ul {
-      list-style-type: disc;
-      margin-left: 20px;
-    }
-
-    ol {
-      list-style-type: decimal;
-      margin-left: 20px;
-    }
-
-    .language-section {
-      display: none;
-      /* Hidden by default */
-    }
-
-    .language-section.active {
-      display: block;
-    }
-  </style>
-  <script>
-    function showLanguage(lang) {
-      document.querySelectorAll('.language-section').forEach(section => {
-        section.classList.remove('active');
-      });
-      document.getElementById(lang + '-section').classList.add('active');
-    }
-    // Show English by default on load
-    document.addEventListener('DOMContentLoaded', () => {
-      showLanguage('en');
-    });
-  </script>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-    <a href="index.html" class="navbar-brand">
-      <img src="img/logo/logo_transparent_bg.png" alt="GlobalBuy24 Logo" class="logo-white">
-      <img src="img/logo/logo_blue_primary.jpg" alt="GlobalBuy24 Logo" class="logo-black">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-      <span class="fa fa-bars"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <div class="navbar-nav mx-auto py-0">
-        <a href="index.html#home" class="nav-item nav-link" data-translate="home">Home</a>
-        <a href="index.html#about" class="nav-item nav-link" data-translate="about">About</a>
-        <a href="index.html#feature" class="nav-item nav-link" data-translate="feature">Features</a>
-        <a href="index.html#screenshot" class="nav-item nav-link" data-translate="appPreview">App Preview</a>
-        <a href="index.html#contact" class="nav-item nav-link" data-translate="contact">Contact</a>
-        <a id="languageSwitcherNav" class="btn nav-item nav-link"
-          onclick="switchLanguage(currentLanguage === 'en' ? 'fr' : 'en')">
-          <span data-translate="language">French</span>
+  <!-- Navbar Start -->
+  <div class="container-fluid px-0">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light px-0">
+        <a href="index.html" class="navbar-brand">
+          <img src="img/logo/logo_transparent_bg.png" alt="GlobalBuy24 Logo" class="logo-white">
+          <img src="img/logo/logo_blue_primary.jpg" alt="GlobalBuy24 Logo" class="logo-black">
         </a>
-      </div>
-      <div class="d-flex align-items-center">
-        <a href="index.html#download" class="btn btn-primary py-2 px-4 d-none d-lg-block"
-          data-translate="downloadNow">Download Now</a>
-      </div>
-    </div>
-  </nav>
-
-  <div class="privacy-container">
-    <h1>GlobalBuy24 Terms of Service</h1>
-    <p class="last-updated">Last updated: March 1, 2025</p>
-
-    <div class="language-switcher">
-      <button class="btn btn-outline-primary btn-sm" onclick="showLanguage('en')">English</button>
-      <button class="btn btn-outline-primary btn-sm" onclick="showLanguage('fr')">Français</button>
-    </div>
-
-    <div class="row g-4 mt-4">
-      <!-- Table of Contents Column (25% width) -->
-      <div class="col-lg-3 d-none d-lg-block">
-        <div class="toc-sidebar">
-          <div class="table-of-contents">
-            <h3><i class="bi bi-list-ul me-2"></i>Table of Contents</h3>
-            <ul class="nav flex-column">
-              <li class="nav-item"><a class="nav-link" href="#en-description-of-services">1. Description of Services</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#en-acceptance-of-terms">2. Acceptance of Terms</a></li>
-              <li class="nav-item"><a class="nav-link" href="#en-changes-to-terms">3. Changes to Terms</a></li>
-              <li class="nav-item"><a class="nav-link" href="#en-eligibility">4. Eligibility</a></li>
-              <li class="nav-item"><a class="nav-link" href="#en-user-account">5. User Account</a></li>
-              <li class="nav-item"><a class="nav-link" href="#en-how-gb24-works">6. How GB24 Works</a></li>
-              <li class="nav-item"><a class="nav-link" href="#en-purchasing-and-payments">7. Purchasing and Payments</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#en-shipping-and-delivery">8. Shipping and Delivery</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#en-important-shipping-rules">9. Important Shipping
-                  Rules</a></li>
-              <li class="nav-item"><a class="nav-link" href="#en-cancellations-and-refunds">10. Cancellations &
-                  Refunds</a></li>
-              <li class="nav-item"><a class="nav-link" href="#en-disclaimers-and-no-warranties">11. Disclaimers</a></li>
-              <li class="nav-item"><a class="nav-link" href="#en-acceptable-use">12. Acceptable Use</a></li>
-              <li class="nav-item"><a class="nav-link" href="#en-intellectual-property">13. Intellectual Property</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#en-privacy-policy">14. Privacy Policy</a></li>
-              <li class="nav-item"><a class="nav-link" href="#en-limitation-of-liability">15. Limitation of
-                  Liability</a></li>
-              <li class="nav-item"><a class="nav-link" href="#en-indemnification">16. Indemnification</a></li>
-              <li class="nav-item"><a class="nav-link" href="#en-severability">17. Severability</a></li>
-              <li class="nav-item"><a class="nav-link" href="#en-entire-agreement">18. Entire Agreement</a></li>
-              <li class="nav-item"><a class="nav-link" href="#en-force-majeure">19. Force Majeure</a></li>
-              <li class="nav-item"><a class="nav-link" href="#en-governing-law">20. Governing Law</a></li>
-              <li class="nav-item"><a class="nav-link" href="#en-contact-information">21. Contact Information</a></li>
-            </ul>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link" data-translate="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="privacy.html" class="nav-link" data-translate="privacyPolicy">Privacy Policy</a>
+            </li>
+            <li class="nav-item">
+              <a href="terms-of-service.html" class="nav-link active" data-translate="termsOfService">Terms of
+                Service</a>
+            </li>
+            <li class="nav-item">
+              <a href="cookies.html" class="nav-link" data-translate="cookiesSettings">Cookies Settings</a>
+            </li>
+            <li class="nav-item">
+              <a id="languageSwitcherNav" class="nav-link"
+                onclick="switchLanguage(currentLanguage === 'en' ? 'fr' : 'en')">
+                <span data-translate="language">French</span>
+              </a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center">
+            <a href="index.html#download" class="btn btn-primary py-2 px-4 d-none d-lg-block"
+              data-translate="downloadNow">Download Now</a>
           </div>
         </div>
-      </div>
+      </nav>
 
-      <!-- Main Content Column (75% width) -->
-      <div class="col-lg-9">
-        <div class="main-content">
+      <div class="privacy-container">
+        <h1>GlobalBuy24 Terms of Service</h1>
+        <p class="last-updated">Last updated: March 1, 2025</p>
 
-          <div id="en-section" class="language-section">
-            <p>Welcome to GlobalBuy24 ("GB24"). These Terms of Service (“Terms”) govern your access to and use of the
-              GlobalBuy24 mobile application (“App”) and its associated services. By using our platform, you agree to
-              comply
-              with these Terms. If you disagree, you must discontinue using the app and services.</p>
-
-            <h2 id="en-description-of-services">1. Description of Services</h2>
-            <p>GlobalBuy24 is an innovative e-commerce facilitation platform designed to bridge the gap between users in
-              underserved markets and global online retailers. Our mission is to empower users by providing access to a
-              wide
-              range of products from international e-commerce websites and ensuring a streamlined shopping experience.
-            </p>
-            <ul>
-              <li>GB24 is not a seller; we facilitate purchases from third-party online stores.</li>
-              <li>Orders are shipped from our hub in Berlin, Germany to selected African destinations.</li>
-              <li>Users must ensure their chosen items can be delivered to our Berlin hub before placing an order.</li>
-            </ul>
-
-            <h2 id="en-acceptance-of-terms">2. Acceptance of Terms</h2>
-            <p>By downloading, installing, or using the GlobalBuy24 App, you confirm that you have read, understood, and
-              agree
-              to these Terms. If you do not agree, you must stop using the App immediately.</p>
-
-            <h2 id="en-changes-to-terms">3. Changes to Terms</h2>
-            <p>GlobalBuy24 reserves the right to update or modify these Terms at any time. Changes will be effective
-              immediately upon posting within the App or through other notifications. Your continued use of the App
-              after
-              updates constitutes acceptance of the revised Terms.</p>
-
-            <h2 id="en-eligibility">4. Eligibility</h2>
-            <p>To use GlobalBuy24, you must:</p>
-            <ul>
-              <li>Be at least 18 years old or the age of majority in your jurisdiction.</li>
-              <li>Have the legal capacity to enter into a binding agreement.</li>
-              <li>Use the platform in compliance with all applicable laws and regulations.</li>
-            </ul>
-
-            <h2 id="en-user-account">5. User Account</h2>
-            <ul>
-              <li><strong>Registration:</strong> You may be required to create an account to access certain features.
-                You
-                agree to provide accurate, current, and complete information during registration and to update such
-                information to keep it accurate and complete.</li>
-              <li><strong>Security:</strong> You are solely responsible for maintaining the confidentiality of your
-                account
-                credentials (username, password, etc.). You must take all reasonable steps to prevent unauthorized
-                access to
-                or use of your account. Notify us immediately at <a
-                  href="mailto:admin@globalbuy24.com">admin@globalbuy24.com</a> if you suspect or become aware of any
-                unauthorized access to or use of your account, or any other breach of security.</li>
-              <li><strong>Prohibited Activities:</strong> You agree not to create accounts for fraudulent, deceptive, or
-                malicious purposes, or to impersonate any other person or entity. Any such activity will result in
-                immediate
-                account termination and may lead to legal action.</li>
-              <li><strong>Account Termination:</strong> GB24 reserves the right, at its sole discretion, to suspend or
-                terminate any account that violates these Terms, engages in fraudulent activities, poses a security risk
-                to
-                the platform, or is deemed to be misused. This includes, but is not limited to, breach of any terms
-                herein,
-                providing false information, or engaging in any activity that harms the integrity or reputation of GB24
-                or its
-                users.</li>
-            </ul>
-
-            <h2 id="en-how-gb24-works">6. How GB24 Works</h2>
-            <ol>
-              <li><strong>Placing an Order:</strong> Users provide product links from third-party online stores. GB24
-                processes the request and provides a comprehensive quote including the product price, our service fee,
-                and the
-                estimated shipping cost to the final destination.</li>
-              <li><strong>Payment:</strong> Once the quote is confirmed and accepted by the user, full payment must be
-                made
-                before GB24 places the order with the third-party retailer. Payments are processed via secure
-                third-party
-                payment providers as detailed in Section 7.</li>
-              <li><strong>Shipping to GB24 Hub:</strong> The items are purchased and delivered from the original online
-                store
-                to our designated Berlin hub in Germany. Users are responsible for ensuring the retailer can ship to
-                this
-                address.</li>
-              <li><strong>Processing & Shipping:</strong> Once received at our Berlin hub, we conduct an external
-                package
-                condition check, consolidate shipments (if multiple items are ordered), and then arrange for onward
-                shipping
-                to the final destination in selected African countries.</li>
-              <li><strong>Delivery:</strong> Users collect their orders at pre-determined designated pick-up points or
-                via
-                local couriers where applicable in the destination country. Specific delivery instructions and pick-up
-                point
-                details will be communicated to the user.</li>
-            </ol>
-
-            <h2 id="en-purchasing-and-payments">7. Purchasing and Payments</h2>
-            <ul>
-              <li><strong>Pricing:</strong> The total price presented to the user includes the product cost as listed by
-                the
-                third-party retailer, GlobalBuy24's service fees for facilitation, and all applicable shipping fees from
-                Berlin to the final destination. Any additional charges such as customs duties or taxes are separate and
-                detailed below.</li>
-              <li><strong>Payments:</strong> All payments are processed securely through reputable third-party payment
-                providers. By initiating a payment through our platform, you acknowledge and agree to comply with the
-                terms
-                and conditions, as well as the privacy policies, of these third-party payment providers. GlobalBuy24
-                does not
-                store your full payment card details.</li>
-              <li><strong>Customs & Duties:</strong> Users are solely responsible for any and all applicable taxes,
-                import
-                duties, customs fees, or other governmental charges levied by the destination country. These fees are
-                not
-                included in the initial quote and must be paid by the user upon arrival or collection of the goods, as
-                required by local regulations. Failure to pay these fees may result in delays or confiscation of the
-                order.
-              </li>
-              <li><strong>Refunds & Returns:</strong> Refunds and returns are primarily subject to the policies of the
-                original third-party retailers from whom the products were purchased. While GB24 will assist in
-                facilitating
-                communication and processing requests with these retailers on your behalf, the ultimate outcome (e.g.,
-                approval of refund, acceptance of return) cannot be guaranteed by GB24. Please refer to our detailed <a
-                  href="#en-cancellations-and-refunds">Cancellation & Refunds Policy</a> below.</li>
-            </ul>
-
-            <h2 id="en-shipping-and-delivery">8. Shipping and Delivery</h2>
-            <ul>
-              <li><strong>Delivery Locations:</strong> GB24 exclusively ships orders from our Berlin, Germany hub to
-                pre-designated African destinations as specified on our platform. We do not offer shipping to other
-                locations.
-              </li>
-              <li><strong>Item Eligibility:</strong> It is the user's sole responsibility to ensure that the chosen
-                items can
-                be legally and logistically shipped from the third-party retailer to our Berlin hub before placing a
-                purchase
-                order. GB24 is not responsible for items that cannot be delivered to our Berlin hub.</li>
-              <li><strong>Packaging & Condition Check:</strong> Upon receipt at our Berlin hub, GB24 performs an
-                external
-                visual check of the package condition to identify any obvious signs of damage or tampering. However, we
-                do not
-                open sealed packages or verify the internal product quality, authenticity, or functionality.</li>
-              <li><strong>Risk of Loss:</strong> The risk of loss or damage to items transfers from GB24 to the user
-                once the
-                items arrive at their final designated pick-up point or are handed over to the local courier for final
-                delivery in the destination country.</li>
-              <li><strong>Delivery Delays:</strong> GB24 is not liable for delays in delivery caused by factors beyond
-                our
-                reasonable control, including but not limited to customs clearance procedures, unforeseen carrier
-                issues,
-                natural disasters, political unrest, strikes, or other force majeure events. We will, however, endeavor
-                to
-                keep users informed of any significant delays.</li>
-            </ul>
-
-            <h2 id="en-important-shipping-rules">9. Important Shipping Rules</h2>
-            <ul>
-              <li><strong>Weight Limit:</strong> The maximum weight per individual item is 23 kg. Items exceeding this
-                weight
-                may be subject to additional fees, rejection, or require special arrangements.</li>
-              <li><strong>Size Restrictions:</strong> Individual packages must not exceed 50 cm in width, 50 cm in
-                length, and
-                50 cm in height. All items must fit within standard international shipping guidelines. Oversized items
-                may
-                incur additional charges or be rejected.</li>
-              <li><strong>Prohibited Items:</strong> GB24 strictly prohibits the shipment of hazardous materials,
-                perishable
-                goods, illegal substances, weapons, explosives, or any other items restricted or prohibited by
-                international
-                shipping regulations or the laws of Germany or the destination country. For a comprehensive and updated
-                list
-                of prohibited items, please refer to our <a href="[LINK_TO_PROHIBITED_ITEMS_LIST]"
-                  target="_blank">Prohibited
-                  Items List</a>. It is the user's responsibility to review this list before placing an order.</li>
-            </ul>
-
-            <h2 id="en-cancellations-and-refunds">10. Cancellations & Refunds Policy</h2>
-            <p>This section outlines the specific conditions under which cancellations and refunds may be processed for
-              orders
-              placed through GlobalBuy24.</p>
-            <ul>
-              <li><strong>Order Cancellation by User:</strong> Orders cannot be cancelled once they have been packaged
-                and
-                shipped from our Berlin hub to Africa. If an order has not yet been processed by GB24 (i.e., not yet
-                purchased
-                from the retailer or not yet shipped from Berlin), users may request a cancellation. Such cancellations
-                may be
-                subject to a cancellation fee to cover administrative costs and any non-recoverable expenses incurred by
-                GB24
-                (e.g., payment processing fees). The exact fee will be communicated upon cancellation request.</li>
-              <li><strong>No Refunds After Shipment (with exceptions):</strong> Generally, refunds are not allowed once
-                orders
-                have been packaged and shipped from our Berlin hub. However, exceptions apply as detailed below. If an
-                item is
-                lost in transit or significantly delayed beyond reasonable expectations due to issues with the shipping
-                provider (and not due to customs or user-related delays), users may contact GB24 for assistance in
-                filing
-                claims with the shipping provider. The outcome of such claims is subject to the shipping provider's
-                policies.
-              </li>
-              <li><strong>Retailer Cancellations:</strong> If the original third-party retailer cancels an order for any
-                reason (e.g., out of stock, payment issue on their end), we will issue a full refund to the user for the
-                product cost, including any service fees charged by GB24 for that specific product. In such cases, users
-                will
-                be notified immediately by GB24, and refunds will be processed within 7 business days from the date of
-                the
-                retailer's cancellation confirmation.</li>
-              <li><strong>Exceptional Cases (Damaged Upon Arrival):</strong> If an order is visibly damaged upon arrival
-                at
-                the final designated pick-up point or upon receipt via local courier, users must report the issue to
-                GB24
-                within 48 hours of receipt. This report must include clear photographic evidence of the damage to the
-                package
-                and/or product. GB24 will then initiate an investigation with the shipping provider and/or retailer.
-                Refunds
-                or compensation for damaged items will be determined on a case-by-case basis, taking into account the
-                extent
-                of the damage, the investigation findings, and the policies of the relevant shipping provider and
-                retailer.
-              </li>
-            </ul>
-
-            <h2 id="en-disclaimers-and-no-warranties">11. Disclaimers and No Warranties</h2>
-            <p>GlobalBuy24 acts solely as an e-commerce facilitator. We do not sell any products directly; rather, we
-              assist
-              users in purchasing items from third-party online retailers. Therefore:</p>
-            <ul>
-              <li><strong>No Product Guarantees:</strong> GB24 does not manufacture, endorse, or guarantee the quality,
-                authenticity, fitness for a particular purpose, merchantability, or any other aspect of the products
-                purchased
-                from third-party retailers. Users must verify all product details, specifications, and authenticity
-                directly
-                with the original retailer before placing an order.</li>
-              <li><strong>"As Is" and "As Available" Basis:</strong> The Service is provided to You "AS IS" and "AS
-                AVAILABLE"
-                and with all faults and defects without warranty of any kind. To the maximum extent permitted under
-                applicable
-                law, the Company, on its own behalf and on behalf of its Affiliates and its and their respective
-                licensors and
-                service providers, expressly disclaims all warranties, whether express, implied, statutory, or
-                otherwise, with
-                respect to the Service, including all implied warranties of merchantability, fitness for a particular
-                purpose,
-                title and non-infringement, and warranties that may arise out of course of dealing, course of
-                performance,
-                usage or trade practice. Without limitation to the foregoing, the Company provides no warranty or
-                undertaking,
-                and makes no representation of any kind that the Service will meet Your requirements, achieve any
-                intended
-                results, be compatible or work with any other software, applications, systems or services, operate
-                without
-                interruption, meet any performance or reliability standards or be error free or that any errors or
-                defects can
-                or will be corrected.</li>
-              <li><strong>No Liability for Third-Party Content:</strong> GB24 is not responsible for the content,
-                accuracy, or
-                availability of third-party websites or product listings. Any issues arising from product descriptions,
-                images, or availability on external retailer sites are solely between the user and the respective
-                retailer.
-              </li>
-            </ul>
-
-            <h2 id="en-acceptable-use">12. Acceptable Use</h2>
-            <p>You agree to use GlobalBuy24 only for lawful purposes and in a manner that does not infringe the rights
-              of,
-              restrict, or inhibit anyone else's use and enjoyment of the Service. You are strictly prohibited from:</p>
-            <ul>
-              <li>Violating any applicable local, national, or international laws or regulations.</li>
-              <li>Using the platform for any fraudulent, deceptive, or misleading activities, including but not limited
-                to
-                misrepresenting your identity or payment information.</li>
-              <li>Uploading, posting, transmitting, or otherwise distributing any content that is harmful, malicious,
-                unlawful, obscene, defamatory, threatening, harassing, abusive, or otherwise objectionable.</li>
-              <li>Interfering with or disrupting the integrity or performance of the Service or the data contained
-                therein.
-              </li>
-              <li>Attempting to gain unauthorized access to the Service or its related systems or networks.</li>
-              <li>Engaging in any activity that could damage, disable, overburden, or impair the Service or interfere
-                with any
-                other party's use of the Service.</li>
-            </ul>
-
-            <h2 id="en-intellectual-property">13. Intellectual Property</h2>
-            <ul>
-              <li><strong>GB24 Ownership:</strong> All rights, title, and interest in and to the GlobalBuy24 App, its
-                content
-                (excluding user-submitted content), features, functionality, trademarks, logos, and service marks belong
-                exclusively to GlobalBuy24 or its licensors. These are protected by copyright, trademark, and other
-                intellectual property laws.</li>
-              <li><strong>User Content License:</strong> By submitting reviews, comments, feedback, or any other content
-                ("User Content") to GlobalBuy24, you grant GB24 a worldwide, non-exclusive, royalty-free, perpetual,
-                irrevocable, and sublicensable license to use, reproduce, modify, adapt, publish, translate, create
-                derivative
-                works from, distribute, and display such User Content in any media for the purpose of operating,
-                improving,
-                and promoting the Service. You represent and warrant that you own or have the necessary licenses,
-                rights,
-                consents, and permissions to grant this license.</li>
-            </ul>
-
-            <h2 id="en-privacy-policy">14. Privacy Policy</h2>
-            <p>GB24 is deeply committed to protecting your privacy. For comprehensive details on how we collect, use,
-              store,
-              and secure your personal data, as well as your rights regarding your data, please refer to our dedicated
-              <a href="[LINK_TO_PRIVACY_POLICY]" target="_blank">Privacy Policy</a>.
-            </p>
-
-            <h2 id="en-limitation-of-liability">15. Limitation of Liability</h2>
-            <p>To the maximum extent permitted by applicable law, in no event shall the Company, its Affiliates, or
-              their
-              respective directors, employees, agents, or licensors be liable for any indirect, incidental, special,
-              punitive,
-              or consequential damages whatsoever, including, but not limited to, damages for loss of profits, loss of
-              data or
-              other information, business interruption, personal injury, loss of privacy arising out of or in any way
-              related
-              to the use of or inability to use the Service, third-party software and/or third-party hardware used with
-              the
-              Service, or otherwise in connection with any provision of these Terms.</p>
-            <p>Without prejudice to the foregoing, the Company's total liability to You for all damages, losses, and
-              causes of
-              action (whether in contract, tort, including negligence, or otherwise) arising out of or in connection
-              with
-              these Terms or Your use of the Service shall in no event exceed the amount paid by You to GB24 for the
-              specific
-              service giving rise to the claim in the twelve (12) months preceding the event giving rise to the
-              liability, or
-              [INSERT SPECIFIC MONETARY CAP, e.g., 100 EUR], whichever is lower. This limitation applies even if the
-              Company
-              has been advised of the possibility of such damages.</p>
-            <p>GB24 is not liable for:</p>
-            <ul>
-              <li>Issues with product quality, authenticity, availability, or incorrect listings from third-party
-                retailers.
-              </li>
-              <li>Delays or failures caused by logistics providers, payment processors, or customs authorities.</li>
-              <li>Any direct or indirect damages arising from your reliance on information or products obtained through
-                third-party links or services.</li>
-            </ul>
-
-            <h2 id="en-indemnification">16. Indemnification</h2>
-            <p>You agree to defend, indemnify, and hold harmless GlobalBuy24, its Affiliates, licensors, and service
-              providers, and its and their respective officers, directors, employees, contractors, agents, licensors,
-              suppliers, successors, and assigns from and against any claims, liabilities, damages, judgments, awards,
-              losses,
-              costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your
-              violation of
-              these Terms or your use of the Service, including, but not limited to, your User Content, your use of any
-              information obtained from the Service, and your use of any third-party services accessed through the App.
-            </p>
-
-            <h2 id="en-severability">17. Severability</h2>
-            <p>If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed
-              and
-              interpreted to accomplish the objectives of such provision to the greatest extent possible under
-              applicable law
-              and the remaining provisions will continue in full force and effect.</p>
-
-            <h2 id="en-entire-agreement">18. Entire Agreement</h2>
-            <p>These Terms, together with the Privacy Policy and any other legal notices published by GlobalBuy24 on the
-              Service, constitute the entire agreement between you and GlobalBuy24 concerning the Service. This
-              agreement
-              supersedes all prior and contemporaneous understandings, agreements, representations, and warranties, both
-              written and oral, with respect to the Service.</p>
-
-            <h2 id="en-force-majeure">19. Force Majeure</h2>
-            <p>GlobalBuy24 shall not be liable for any delay or failure to perform its obligations hereunder if such
-              delay or
-              failure is caused by an event beyond its reasonable control, including but not limited to acts of God,
-              war,
-              terrorism, riots, embargoes, acts of civil or military authorities, fire, floods, accidents, strikes, or
-              shortages of transportation facilities, fuel, energy, labor, or materials.</p>
-
-            <h2 id="en-governing-law-and-dispute-resolution">20. Governing Law and Dispute Resolution</h2>
-            <p>These Terms are governed by and construed in accordance with the laws of Cameroon, without regard to its
-              conflict of law principles. You agree that any legal action or proceeding arising out of or relating to
-              these
-              Terms or the Service shall be instituted exclusively in the courts located in Cameroon.</p>
-            <p><strong>Important Note:</strong> While these Terms specify Cameroonian law as governing, users residing
-              outside
-              Cameroon (e.g., in the EU/Germany) may still benefit from mandatory consumer protection laws in their
-              country of
-              residence. We strongly advise you to consult with legal counsel to understand the full implications of
-              this
-              clause in your specific jurisdiction.</p>
-            <p><strong>Informal Resolution:</strong> Before resorting to formal legal action, we encourage you to
-              contact us
-              directly at <a href="mailto:admin@globalbuy24.com">admin@globalbuy24.com</a> to seek an informal
-              resolution to
-              any dispute. We will make reasonable efforts to resolve your concerns promptly.</p>
-
-            <h2 id="en-contact-information">21. Contact Information</h2>
-            <p>For any inquiries, questions, or concerns regarding these Terms of Service or the GlobalBuy24 platform,
-              please
-              contact us at:</p>
-            <ul>
-              <li><strong>Email:</strong> <a href="mailto:admin@globalbuy24.com">admin@globalbuy24.com</a></li>
-              <li><strong>Phone:</strong> +49 17632271138</li>
-              <li><strong>Berlin Address for Deliveries:</strong> Huttenstraße 25, 13353 Berlin, Germany</li>
-            </ul>
-            <p>By using GlobalBuy24, you acknowledge that you have read, understood, and agreed to these Terms of
-              Service.</p>
-          </div>
-
-          <div id="fr-section" class="language-section">
-            <h1>Conditions Générales d'Utilisation de GlobalBuy24</h1>
-            <p class="effective-date">Date d'Entrée en Vigueur : 01.03.2025</p>
-
-            <h2 id="fr-description-des-services">1. Description des Services</h2>
-            <p>GlobalBuy24 est une plateforme innovante facilitant le e-commerce, conçue pour combler le fossé entre les
-              utilisateurs des marchés sous-desservis et les commerçants en ligne internationaux. Notre mission est de
-              permettre aux utilisateurs d'accéder à une large gamme de produits provenant de sites e-commerce
-              internationaux
-              et d'assurer une expérience d'achat fluide.</p>
-            <ul>
-              <li>GB24 n'est pas un vendeur ; nous facilitons les achats effectués sur des sites tiers.</li>
-              <li>Les commandes sont expédiées depuis notre hub à Berlin, Allemagne, vers certaines destinations en
-                Afrique.
-              </li>
-              <li>Les utilisateurs doivent s'assurer que les articles choisis peuvent être livrés à notre hub de Berlin
-                avant
-                de passer commande.</li>
-            </ul>
-
-            <h2 id="fr-acceptation-des-conditions">2. Acceptation des Conditions</h2>
-            <p>En téléchargeant, installant ou utilisant l'Application GlobalBuy24, vous confirmez avoir lu, compris et
-              accepté ces Conditions. Si vous n'acceptez pas ces Conditions, vous devez arrêter d'utiliser l'Application
-              immédiatement.</p>
-
-            <h2 id="fr-modifications-des-conditions">3. Modifications des Conditions</h2>
-            <p>GlobalBuy24 se réserve le droit de modifier ces Conditions à tout moment. Les modifications prendront
-              effet
-              immédiatement après leur publication dans l'Application ou par d'autres notifications. Votre utilisation
-              continue de l'Application après ces modifications vaut acceptation des nouvelles Conditions.</p>
-
-            <h2 id="fr-eligibilite">4. Éligibilité</h2>
-            <p>Pour utiliser GlobalBuy24, vous devez :</p>
-            <ul>
-              <li>Être âgé d'au moins 18 ans ou avoir atteint l'âge de la majorité dans votre juridiction.</li>
-              <li>Avoir la capacité légale de conclure un contrat contraignant.</li>
-              <li>Utiliser la plateforme en conformité avec toutes les lois et réglementations applicables.</li>
-            </ul>
-
-            <h2 id="fr-compte-utilisateur">5. Compte Utilisateur</h2>
-            <ul>
-              <li><strong>Inscription :</strong> La création d'un compte peut être nécessaire pour accéder à certaines
-                fonctionnalités. Vous acceptez de fournir des informations exactes, à jour et complètes lors de
-                l'inscription
-                et de les mettre à jour pour qu'elles restent exactes et complètes.</li>
-              <li><strong>Sécurité :</strong> Vous êtes seul responsable du maintien de la confidentialité de vos
-                identifiants
-                de compte (nom d'utilisateur, mot de passe, etc.). Vous devez prendre toutes les mesures raisonnables
-                pour
-                empêcher l'accès ou l'utilisation non autorisés de votre compte. Informez-nous immédiatement à <a
-                  href="mailto:admin@globalbuy24.com">admin@globalbuy24.com</a> si vous suspectez ou avez connaissance
-                d'un
-                accès ou d'une utilisation non autorisés de votre compte, ou de toute autre violation de la sécurité.
-              </li>
-              <li><strong>Activités interdites :</strong> Vous vous engagez à ne pas créer de comptes à des fins
-                frauduleuses,
-                trompeuses ou malveillantes, ni à usurper l'identité d'une autre personne ou entité. Toute activité de
-                ce type
-                entraînera la résiliation immédiate du compte et pourra donner lieu à des poursuites judiciaires.</li>
-              <li><strong>Suppression de compte :</strong> GB24 se réserve le droit, à sa seule discrétion, de suspendre
-                ou de
-                résilier tout compte qui viole les présentes Conditions, se livre à des activités frauduleuses, présente
-                un
-                risque de sécurité pour la plateforme ou est jugé être utilisé de manière abusive. Cela inclut, sans s'y
-                limiter, la violation de l'une des présentes conditions, la fourniture de fausses informations ou toute
-                activité qui nuit à l'intégrité ou à la réputation de GB24 ou de ses utilisateurs.</li>
-            </ul>
-
-            <h2 id="fr-fonctionnement-de-gb24">6. Fonctionnement de GB24</h2>
-            <ol>
-              <li><strong>Passer une commande :</strong> L'utilisateur fournit des liens de produits provenant de
-                boutiques en
-                ligne tierces. GB24 traite la demande et fournit un devis complet incluant le prix du produit, nos frais
-                de
-                service et le coût d'expédition estimé jusqu'à la destination finale.</li>
-              <li><strong>Paiement :</strong> Une fois le devis confirmé et accepté par l'utilisateur, le paiement
-                intégral
-                doit être effectué avant que GB24 ne passe la commande auprès du détaillant tiers. Les paiements sont
-                traités
-                de manière sécurisée par des prestataires de paiement tiers, comme détaillé dans la Section 7.</li>
-              <li><strong>Expédition au hub GB24 :</strong> Les articles sont achetés et livrés par le magasin en ligne
-                d'origine à notre hub désigné à Berlin, en Allemagne. Les utilisateurs sont responsables de s'assurer
-                que le
-                détaillant peut expédier à cette adresse.</li>
-              <li><strong>Traitement et livraison :</strong> Une fois reçus à notre hub de Berlin, nous effectuons un
-                contrôle
-                visuel externe de l'état du colis pour identifier tout signe évident de dommage ou d'altération. Nous
-                consolidons les envois (si plusieurs articles sont commandés), puis organisons l'expédition vers la
-                destination finale dans les pays africains sélectionnés.</li>
-              <li><strong>Réception :</strong> Les utilisateurs récupèrent leurs commandes aux points de retrait
-                pré-déterminés ou via des transporteurs locaux, le cas échéant, dans le pays de destination. Les
-                instructions
-                de livraison spécifiques et les détails des points de retrait seront communiqués à l'utilisateur.</li>
-            </ol>
-
-            <h2 id="fr-achats-et-paiements">7. Achats et Paiements</h2>
-            <ul>
-              <li><strong>Prix :</strong> Le prix total présenté à l'utilisateur comprend le coût du produit tel
-                qu'indiqué
-                par le détaillant tiers, les frais de service de GlobalBuy24 pour la facilitation, et tous les frais
-                d'expédition applicables de Berlin à la destination finale. Tous les frais supplémentaires tels que les
-                droits
-                de douane ou taxes sont distincts et détaillés ci-dessous.</li>
-              <li><strong>Paiements :</strong> Tous les paiements sont traités de manière sécurisée par des prestataires
-                de
-                paiement tiers réputés. En initiant un paiement via notre plateforme, vous reconnaissez et acceptez de
-                vous
-                conformer aux conditions générales, ainsi qu'aux politiques de confidentialité, de ces prestataires de
-                paiement tiers. GlobalBuy24 ne stocke pas vos informations complètes de carte de paiement.</li>
-              <li><strong>Taxes et droits de douane :</strong> Les utilisateurs sont seuls responsables de toutes les
-                taxes
-                applicables, droits d'importation, frais de douane ou autres frais gouvernementaux perçus par le pays de
-                destination. Ces frais ne sont pas inclus dans le devis initial et doivent être payés par l'utilisateur
-                à
-                l'arrivée ou à la collecte des marchandises, comme l'exigent les réglementations locales. Le
-                non-paiement de
-                ces frais peut entraîner des retards ou la confiscation de la commande.</li>
-              <li><strong>Remboursements et retours :</strong> Les remboursements et les retours sont principalement
-                soumis
-                aux politiques des détaillants tiers d'origine auprès desquels les produits ont été achetés. Bien que
-                GB24
-                vous aide à faciliter la communication et le traitement des demandes auprès de ces détaillants en votre
-                nom,
-                le résultat final (par exemple, l'approbation du remboursement, l'acceptation du retour) ne peut être
-                garanti
-                par GB24. Veuillez vous référer à notre <a href="#fr-annulations-et-remboursements">Politique
-                  d'Annulations et
-                  de Remboursements</a> détaillée ci-dessous.</li>
-            </ul>
-
-            <h2 id="fr-livraison-et-expedition">8. Livraison et Expédition</h2>
-            <ul>
-              <li><strong>Destinations desservies :</strong> GB24 expédie exclusivement les commandes de notre hub de
-                Berlin,
-                en Allemagne, vers les destinations africaines pré-désignées, telles que spécifiées sur notre
-                plateforme. Nous
-                n'offrons pas d'expédition vers d'autres destinations.</li>
-              <li><strong>Éligibilité des articles :</strong> Il est de la seule responsabilité de l'utilisateur de
-                s'assurer
-                que les articles choisis peuvent être légalement et logistiquement expédiés du détaillant tiers à notre
-                hub de
-                Berlin avant de passer une commande. GB24 n'est pas responsable des articles qui ne peuvent pas être
-                livrés à
-                notre hub de Berlin.</li>
-              <li><strong>Vérification de l'emballage et de l'état :</strong> À la réception à notre hub de Berlin, GB24
-                effectue un contrôle visuel externe de l'état du colis pour identifier tout signe évident de dommage ou
-                d'altération. Cependant, nous n'ouvrons pas les colis scellés et ne vérifions pas la qualité interne du
-                produit, son authenticité ou sa fonctionnalité.</li>
-              <li><strong>Risque de perte :</strong> Le risque de perte ou de dommage des articles est transféré de GB24
-                à
-                l'utilisateur une fois que les articles arrivent à leur point de collecte final désigné ou sont remis au
-                coursier local pour la livraison finale dans le pays de destination.</li>
-              <li><strong>Délais de livraison :</strong> GB24 n'est pas responsable des retards de livraison causés par
-                des
-                facteurs échappant à notre contrôle raisonnable, y compris, mais sans s'y limiter, les procédures de
-                dédouanement, les problèmes imprévus du transporteur, les catastrophes naturelles, les troubles
-                politiques,
-                les grèves ou d'autres événements de force majeure. Nous nous efforcerons cependant d'informer les
-                utilisateurs de tout retard important.</li>
-            </ul>
-
-            <h2 id="fr-regles-importantes-expedition">9. Règles Importantes d'Expédition</h2>
-            <ul>
-              <li><strong>Poids maximum :</strong> Le poids maximum par article individuel est de 23 kg. Les articles
-                dépassant ce poids peuvent être soumis à des frais supplémentaires, à un refus ou nécessiter des
-                arrangements
-                spéciaux.</li>
-              <li><strong>Dimensions maximales :</strong> Les colis individuels ne doivent pas dépasser 50 cm de
-                largeur, 50
-                cm de longueur et 50 cm de hauteur. Tous les articles doivent respecter les directives d'expédition
-                internationales standard. Les articles surdimensionnés peuvent entraîner des frais supplémentaires ou
-                être
-                refusés.</li>
-              <li><strong>Articles interdits :</strong> GB24 interdit strictement l'expédition de matériaux dangereux,
-                de
-                denrées périssables, de substances illégales, d'armes, d'explosifs ou de tout autre article restreint ou
-                interdit par les réglementations d'expédition internationales ou les lois de l'Allemagne ou du pays de
-                destination. Pour une liste complète et à jour des articles interdits, veuillez consulter notre <a
-                  href="[LINK_TO_PROHIBITED_ITEMS_LIST]" target="_blank">Liste des Articles Interdits</a>. Il est de la
-                responsabilité de l'utilisateur de consulter cette liste avant de passer une commande.</li>
-            </ul>
-
-            <h2 id="fr-annulations-et-remboursements">10. Politique d'Annulations et de Remboursements</h2>
-            <p>Cette section décrit les conditions spécifiques dans lesquelles les annulations et les remboursements
-              peuvent
-              être traités pour les commandes passées via GlobalBuy24.</p>
-            <ul>
-              <li><strong>Annulation de commande par l'utilisateur :</strong> Les commandes ne peuvent pas être annulées
-                une
-                fois qu'elles ont été emballées et expédiées de notre hub de Berlin vers l'Afrique. Si une commande n'a
-                pas
-                encore été traitée par GB24 (c'est-à-dire pas encore achetée auprès du détaillant ou pas encore expédiée
-                de
-                Berlin), les utilisateurs peuvent demander une annulation. Ces annulations peuvent être soumises à des
-                frais
-                d'annulation pour couvrir les coûts administratifs et les dépenses non récupérables encourues par GB24
-                (par
-                exemple, les frais de traitement des paiements). Le montant exact des frais sera communiqué lors de la
-                demande
-                d'annulation.</li>
-              <li><strong>Aucun remboursement après expédition (avec exceptions) :</strong> Généralement, les
-                remboursements
-                ne sont pas autorisés une fois que les commandes ont été emballées et expédiées de notre hub de Berlin.
-                Cependant, des exceptions s'appliquent comme détaillé ci-dessous. Si un article est perdu en transit ou
-                considérablement retardé au-delà des attentes raisonnables en raison de problèmes avec le transporteur
-                (et non
-                en raison de retards douaniers ou liés à l'utilisateur), les utilisateurs peuvent contacter GB24 pour
-                obtenir
-                de l'aide pour déposer des réclamations auprès du transporteur. Le résultat de ces réclamations est
-                soumis aux
-                politiques du transporteur.</li>
-              <li><strong>Annulations par le détaillant :</strong> Si le détaillant tiers d'origine annule une commande
-                pour
-                quelque raison que ce soit (par exemple, rupture de stock, problème de paiement de leur côté), nous
-                émettrons
-                un remboursement intégral à l'utilisateur pour le coût du produit, y compris les frais de service
-                facturés par
-                GB24 pour ce produit spécifique. Dans de tels cas, les utilisateurs seront immédiatement informés par
-                GB24, et
-                les remboursements seront traités dans les 7 jours ouvrables à compter de la date de confirmation
-                d'annulation
-                du détaillant.</li>
-              <li><strong>Cas exceptionnels (endommagé à l'arrivée) :</strong> Si une commande est visiblement
-                endommagée à
-                l'arrivée au point de collecte final désigné ou à la réception via le coursier local, les utilisateurs
-                doivent
-                signaler le problème à GB24 dans les 48 heures suivant la réception. Ce rapport doit inclure des preuves
-                photographiques claires des dommages causés au colis et/ou au produit. GB24 lancera alors une enquête
-                auprès
-                du transporteur et/ou du détaillant. Les remboursements ou compensations pour les articles endommagés
-                seront
-                déterminés au cas par cas, en tenant compte de l'étendue des dommages, des résultats de l'enquête et des
-                politiques du transporteur et du détaillant concernés.</li>
-            </ul>
-
-            <h2 id="fr-clauses-de-non-responsabilite-et-aucune-garantie">11. Clauses de Non-responsabilité et Aucune
-              Garantie
-            </h2>
-            <p>GlobalBuy24 agit uniquement en tant que facilitateur de commerce électronique. Nous ne vendons aucun
-              produit
-              directement ; nous aidons plutôt les utilisateurs à acheter des articles auprès de détaillants en ligne
-              tiers.
-              Par conséquent :</p>
-            <ul>
-              <li><strong>Aucune garantie sur les produits :</strong> GB24 ne fabrique, n'approuve ni ne garantit la
-                qualité,
-                l'authenticité, l'adéquation à un usage particulier, la qualité marchande ou tout autre aspect des
-                produits
-                achetés auprès de détaillants tiers. Les utilisateurs doivent vérifier tous les détails du produit, les
-                spécifications et l'authenticité directement auprès du détaillant d'origine avant de passer une
-                commande.</li>
-              <li><strong>Base "tel quel" et "selon disponibilité" :</strong> Le Service vous est fourni "TEL QUEL" et
-                "SELON
-                DISPONIBILITÉ" avec tous les défauts et sans garantie d'aucune sorte. Dans toute la mesure permise par
-                la loi
-                applicable, la Société, en son nom propre et au nom de ses Affiliés et de leurs concédants de licence et
-                prestataires de services respectifs, décline expressément toute garantie, qu'elle soit expresse,
-                implicite,
-                légale ou autre, concernant le Service, y compris toutes les garanties implicites de qualité marchande,
-                d'adéquation à un usage particulier, de titre et de non-contrefaçon, et les garanties pouvant découler
-                du
-                cours des transactions, du cours de l'exécution, de l'usage ou de la pratique commerciale. Sans
-                limitation de
-                ce qui précède, la Société ne donne aucune garantie ni engagement, et ne fait aucune déclaration
-                d'aucune
-                sorte selon laquelle le Service répondra à vos exigences, atteindra les résultats escomptés, sera
-                compatible
-                ou fonctionnera avec tout autre logiciel, application, système ou service, fonctionnera sans
-                interruption,
-                répondra à des normes de performance ou de fiabilité ou sera exempt d'erreurs ou que toute erreur ou
-                tout
-                défaut pourra ou sera corrigé.</li>
-              <li><strong>Aucune responsabilité pour le contenu tiers :</strong> GB24 n'est pas responsable du contenu,
-                de
-                l'exactitude ou de la disponibilité des sites Web tiers ou des listes de produits. Tout problème
-                découlant des
-                descriptions de produits, des images ou de la disponibilité sur les sites de détaillants externes relève
-                uniquement de la relation entre l'utilisateur et le détaillant respectif.</li>
-            </ul>
-
-            <h2 id="fr-utilisation-acceptable">12. Utilisation Acceptable</h2>
-            <p>Vous acceptez d'utiliser GlobalBuy24 uniquement à des fins légales et d'une manière qui n'enfreint pas
-              les
-              droits de quiconque, ni ne restreint ou n'inhibe l'utilisation et la jouissance du Service par quiconque.
-              Il
-              vous est strictement interdit de :</p>
-            <ul>
-              <li>Violer les lois ou réglementations locales, nationales ou internationales applicables.</li>
-              <li>Utiliser la plateforme à des fins frauduleuses, trompeuses ou malveillantes, y compris, mais sans s'y
-                limiter, la fausse déclaration de votre identité ou de vos informations de paiement.</li>
-              <li>Télécharger, publier, transmettre ou distribuer de toute autre manière tout contenu nuisible,
-                malveillant,
-                illégal, obscène, diffamatoire, menaçant, harcelant, abusif ou autrement répréhensible.</li>
-              <li>Interférer avec ou perturber l'intégrité ou la performance du Service ou des données qu'il contient.
-              </li>
-              <li>Tenter d'obtenir un accès non autorisé au Service ou à ses systèmes ou réseaux connexes.</li>
-              <li>S'engager dans toute activité susceptible d'endommager, de désactiver, de surcharger ou de nuire au
-                Service
-                ou d'interférer avec l'utilisation du Service par toute autre partie.</li>
-            </ul>
-
-            <h2 id="fr-propriete-intellectuelle">13. Propriété Intellectuelle</h2>
-            <ul>
-              <li><strong>Propriété de GB24 :</strong> Tous les droits, titres et intérêts relatifs à l'application
-                GlobalBuy24, à son contenu (à l'exclusion du contenu soumis par l'utilisateur), à ses fonctionnalités, à
-                ses
-                marques de commerce, à ses logos et à ses marques de service appartiennent exclusivement à GlobalBuy24
-                ou à
-                ses concédants de licence. Ceux-ci sont protégés par le droit d'auteur, le droit des marques et d'autres
-                lois
-                sur la propriété intellectuelle.</li>
-              <li><strong>Licence de contenu utilisateur :</strong> En soumettant des avis, des commentaires, des
-                retours ou
-                tout autre contenu (« Contenu Utilisateur ») à GlobalBuy24, vous accordez à GB24 une licence mondiale,
-                non
-                exclusive, libre de redevances, perpétuelle, irrévocable et sous-licenciable d'utiliser, de reproduire,
-                de
-                modifier, d'adapter, de publier, de traduire, de créer des œuvres dérivées, de distribuer et d'afficher
-                ce
-                Contenu Utilisateur dans tout média dans le but d'exploiter, d'améliorer et de promouvoir le Service.
-                Vous
-                déclarez et garantissez que vous possédez ou avez les licences, droits, consentements et permissions
-                nécessaires pour accorder cette licence.</li>
-            </ul>
-
-            <h2 id="fr-politique-de-confidentialite">14. Politique de Confidentialité</h2>
-            <p>GB24 s'engage profondément à protéger votre vie privée. Pour des détails complets sur la manière dont
-              nous
-              collectons, utilisons, stockons et sécurisons vos données personnelles, ainsi que sur vos droits
-              concernant vos
-              données, veuillez vous référer à notre <a href="[LINK_TO_PRIVACY_POLICY]" target="_blank">Politique de
-                Confidentialité</a> dédiée.</p>
-
-            <h2 id="fr-limitation-de-responsabilite">15. Limitation de Responsabilité</h2>
-            <p>Dans toute la mesure permise par la loi applicable, en aucun cas la Société, ses Affiliés, ou leurs
-              administrateurs, employés, agents ou concédants de licence respectifs ne seront responsables de tout
-              dommage
-              indirect, accessoire, spécial, punitif ou consécutif de quelque nature que ce soit, y compris, mais sans
-              s'y
-              limiter, les dommages pour perte de profits, perte de données ou d'autres informations, interruption
-              d'activité,
-              préjudice corporel, perte de confidentialité découlant de ou lié de quelque manière que ce soit à
-              l'utilisation
-              ou à l'incapacité d'utiliser le Service, les logiciels tiers et/ou le matériel tiers utilisés avec le
-              Service,
-              ou autrement en relation avec toute disposition des présentes Conditions.</p>
-            <p>Sans préjudice de ce qui précède, la responsabilité totale de la Société envers vous pour tous les
-              dommages,
-              pertes et causes d'action (qu'ils soient contractuels, délictuels, y compris la négligence, ou autres)
-              découlant
-              de ou en relation avec les présentes Conditions ou votre utilisation du Service ne pourra en aucun cas
-              excéder
-              le montant que vous avez payé à GB24 pour le service spécifique à l'origine de la réclamation au cours des
-              douze
-              (12) mois précédant l'événement donnant lieu à la responsabilité, ou [INSÉRER LE PLAFOND MONÉTAIRE
-              SPÉCIFIQUE,
-              par exemple, 100 EUR], le montant le plus bas étant retenu. Cette limitation s'applique même si la Société
-              a été
-              informée de la possibilité de tels dommages.</p>
-            <p>GB24 n'est pas responsable de :</p>
-            <ul>
-              <li>Problèmes de qualité des produits, d'authenticité, de disponibilité ou de listes incorrectes de la
-                part des
-                détaillants tiers.</li>
-              <li>Retards ou défaillances causés par les prestataires logistiques, les processeurs de paiement ou les
-                autorités douanières.</li>
-              <li>Tout dommage direct ou indirect découlant de votre dépendance à l'égard des informations ou des
-                produits
-                obtenus via des liens ou des services tiers.</li>
-            </ul>
-
-            <h2 id="fr-indemnisation">16. Indemnisation</h2>
-            <p>Vous acceptez de défendre, d'indemniser et de tenir à l'écart de toute responsabilité GlobalBuy24, ses
-              Affiliés, concédants de licence et prestataires de services, ainsi que leurs dirigeants, administrateurs,
-              employés, sous-traitants, agents, concédants de licence, fournisseurs, successeurs et ayants droit
-              respectifs,
-              contre toutes réclamations, responsabilités, dommages, jugements, récompenses, pertes, coûts, dépenses ou
-              honoraires (y compris les honoraires d'avocat raisonnables) découlant de ou liés à votre violation des
-              présentes
-              Conditions ou à votre utilisation du Service, y compris, mais sans s'y limiter, votre Contenu Utilisateur,
-              votre
-              utilisation de toute information obtenue du Service et votre utilisation de tout service tiers accessible
-              via
-              l'Application.</p>
-
-            <h2 id="fr-separabilite">17. Séparabilité</h2>
-            <p>Si une disposition des présentes Conditions est jugée inapplicable ou invalide, cette disposition sera
-              modifiée
-              et interprétée de manière à atteindre les objectifs de cette disposition dans la plus grande mesure
-              possible en
-              vertu de la loi applicable, et les dispositions restantes resteront pleinement en vigueur.</p>
-
-            <h2 id="fr-integrale-de-laccord">18. Intégralité de l'Accord</h2>
-            <p>Les présentes Conditions, ainsi que la Politique de Confidentialité et toute autre mention légale publiée
-              par
-              GlobalBuy24 sur le Service, constituent l'intégralité de l'accord entre vous et GlobalBuy24 concernant le
-              Service. Cet accord remplace toutes les ententes, accords, représentations et garanties antérieurs et
-              contemporains, tant écrits qu'oraux, relatifs au Service.</p>
-
-            <h2 id="fr-force-majeure">19. Force Majeure</h2>
-            <p>GlobalBuy24 ne sera pas responsable de tout retard ou manquement à ses obligations en vertu des présentes
-              si ce
-              retard ou ce manquement est causé par un événement échappant à son contrôle raisonnable, y compris, mais
-              sans
-              s'y limiter, les cas de force majeure, la guerre, le terrorisme, les émeutes, les embargos, les actes des
-              autorités civiles ou militaires, les incendies, les inondations, les accidents, les grèves ou les pénuries
-              de
-              moyens de transport, de carburant, d'énergie, de main-d'œuvre ou de matériaux.</p>
-
-            <h2 id="fr-droit-applicable-et-resolution-des-litiges">20. Droit Applicable et Résolution des Litiges</h2>
-            <p>Les présentes Conditions sont régies et interprétées conformément aux lois du Cameroun, sans égard à ses
-              principes de conflit de lois. Vous acceptez que toute action ou procédure judiciaire découlant de ou liée
-              aux
-              présentes Conditions ou au Service soit intentée exclusivement devant les tribunaux situés au Cameroun.
-            </p>
-            <p><strong>Note Importante :</strong> Bien que les présentes Conditions stipulent que le droit camerounais
-              est
-              applicable, les utilisateurs résidant en dehors du Cameroun (par exemple, dans l'UE/Allemagne) peuvent
-              toujours
-              bénéficier des lois impératives de protection des consommateurs de leur pays de résidence. Nous vous
-              conseillons
-              vivement de consulter un conseiller juridique pour comprendre toutes les implications de cette clause dans
-              votre
-              juridiction spécifique.</p>
-            <p><strong>Résolution Informelle :</strong> Avant de recourir à une action en justice formelle, nous vous
-              encourageons à nous contacter directement à <a
-                href="mailto:admin@globalbuy24.com">admin@globalbuy24.com</a>
-              pour tenter de résoudre tout litige de manière informelle. Nous ferons des efforts raisonnables pour
-              répondre à
-              vos préoccupations rapidement.</p>
-
-            <h2 id="fr-informations-de-contact">21. Informations de Contact</h2>
-            <p>Pour toute question, demande ou préoccupation concernant les présentes Conditions Générales d'Utilisation
-              ou la
-              plateforme GlobalBuy24, veuillez nous contacter à :</p>
-            <ul>
-              <li><strong>Email :</strong> <a href="mailto:admin@globalbuy24.com">admin@globalbuy24.com</a></li>
-              <li><strong>Téléphone :</strong> +49 17632271138</li>
-              <li><strong>Adresse de livraison à Berlin :</strong> Huttenstraße 25, 13353 Berlin, Germany</li>
-            </ul>
-            <p>En utilisant GlobalBuy24, vous reconnaissez avoir lu, compris et accepté ces Conditions Générales
-              d'Utilisation.</p>
-          </div>
+        <div class="language-switcher">
+          <button class="btn btn-outline-primary btn-sm" onclick="showLanguage('en')">English</button>
+          <button class="btn btn-outline-primary btn-sm" onclick="showLanguage('fr')">Français</button>
         </div>
-      </div>
 
-      <!-- Mobile Table of Contents (shown only on mobile) -->
-      <div class="col-12 d-lg-none mt-4">
-        <div class="accordion" id="mobileToc">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseToc" aria-expanded="false" aria-controls="collapseToc">
-                <i class="bi bi-list-ul me-2"></i>Table of Contents
-              </button>
-            </h2>
-            <div id="collapseToc" class="accordion-collapse collapse" data-bs-parent="#mobileToc">
-              <div class="accordion-body p-0">
+        <div class="row g-4 mt-4">
+          <!-- Table of Contents Column (25% width) -->
+          <div class="col-lg-3">
+            <div class="toc-sidebar">
+              <div class="table-of-contents">
+                <h3><i class="bi bi-list-ul me-2"></i>Table of Contents</h3>
                 <ul class="nav flex-column">
                   <li class="nav-item"><a class="nav-link" href="#en-description-of-services">1. Description of
-                      Services</a></li>
+                      Services</a>
+                  </li>
                   <li class="nav-item"><a class="nav-link" href="#en-acceptance-of-terms">2. Acceptance of Terms</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#en-changes-to-terms">3. Changes to Terms</a></li>
@@ -1284,7 +99,8 @@
                   <li class="nav-item"><a class="nav-link" href="#en-user-account">5. User Account</a></li>
                   <li class="nav-item"><a class="nav-link" href="#en-how-gb24-works">6. How GB24 Works</a></li>
                   <li class="nav-item"><a class="nav-link" href="#en-purchasing-and-payments">7. Purchasing and
-                      Payments</a></li>
+                      Payments</a>
+                  </li>
                   <li class="nav-item"><a class="nav-link" href="#en-shipping-and-delivery">8. Shipping and Delivery</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#en-important-shipping-rules">9. Important Shipping
@@ -1295,7 +111,8 @@
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#en-acceptable-use">12. Acceptable Use</a></li>
                   <li class="nav-item"><a class="nav-link" href="#en-intellectual-property">13. Intellectual
-                      Property</a></li>
+                      Property</a>
+                  </li>
                   <li class="nav-item"><a class="nav-link" href="#en-privacy-policy">14. Privacy Policy</a></li>
                   <li class="nav-item"><a class="nav-link" href="#en-limitation-of-liability">15. Limitation of
                       Liability</a></li>
@@ -1310,157 +127,698 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Footer Start -->
-  <div class="container-fluid footer wow fadeIn" data-wow-delay="0.1s">
-    <div class="footer-top">
-      <div class="footer-logo">
-        <img src="img/logo/logo_transparent_bg.png" alt="GlobalBuy24 Logo">
-      </div>
+          <!-- Main Content Column (75% width) -->
+          <div class="col-lg-9">
+            <div class="main-content">
 
-      <div class="footer-nav">
-        <a class="btn btn-link" href="index.html#home" data-translate="home">Home</a>
-        <a class="btn btn-link" href="index.html#how-it-works" data-translate="howItWorks">How It Works</a>
-        <a class="btn btn-link" href="index.html#benefits" data-translate="whyUs">Why Us</a>
-        <a class="btn btn-link" href="index.html#download" data-translate="appPreview">App Preview</a>
-        <a class="btn btn-link" href="index.html#support" data-translate="support">Support</a>
-        <a id="languageSwitcher" class="btn btn-link" onclick="switchLanguage(currentLanguage === 'en' ? 'fr' : 'en')">
-          <span data-translate="language">French</span>
-        </a>
-      </div>
+              <div id="en-section" class="language-section">
+                <p>Welcome to GlobalBuy24 ("GB24"). These Terms of Service (“Terms”) govern your access to and use of
+                  the
+                  GlobalBuy24 mobile application (“App”) and its associated services. By using our platform, you agree
+                  to
+                  comply
+                  with these Terms. If you disagree, you must discontinue using the app and services.</p>
 
-      <div class="footer-social">
-        <a class="btn btn-social" href="#" aria-label="Facebook">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a class="btn btn-social" href="#" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a class="btn btn-social" href="#" aria-label="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </div>
-    </div>
+                <h2 id="en-description-of-services">1. Description of Services</h2>
+                <p>GlobalBuy24 is an innovative e-commerce facilitation platform designed to bridge the gap between
+                  users in
+                  underserved markets and global online retailers. Our mission is to empower users by providing access
+                  to a
+                  wide
+                  range of products from international e-commerce websites and ensuring a streamlined shopping
+                  experience.
+                </p>
+                <ul>
+                  <li>GB24 is not a seller; we facilitate purchases from third-party online stores.</li>
+                  <li>Orders are shipped from our hub in Berlin, Germany to selected African destinations.</li>
+                  <li>Users must ensure their chosen items can be delivered to our Berlin hub before placing an order.
+                  </li>
+                </ul>
 
-    <div class="footer-bottom">
-      <div class="container">
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
-          <div class="mb-2 mb-md-0">&copy; 2025 GlobalBuy24. All rights reserved.</div>
-          <div class="d-flex flex-wrap justify-content-center">
-            <a class="footer-link btn-link mx-2" href="privacy.html">Privacy Policy</a>
-            <span class="mx-2">|</span>
-            <a class="footer-link btn-link mx-2" href="terms-of-service.html">Terms of Service</a>
-            <span class="mx-2">|</span>
-            <a class="footer-link btn-link mx-2" href="cookies.html">Cookies Settings</a>
+                <h2 id="en-acceptance-of-terms">2. Acceptance of Terms</h2>
+                <p>By downloading, installing, or using the GlobalBuy24 App, you confirm that you have read, understood,
+                  and
+                  agree
+                  to these Terms. If you do not agree, you must stop using the App immediately.</p>
+
+                <h2 id="en-changes-to-terms">3. Changes to Terms</h2>
+                <p>GlobalBuy24 reserves the right to update or modify these Terms at any time. Changes will be effective
+                  immediately upon posting within the App or through other notifications. Your continued use of the App
+                  after
+                  updates constitutes acceptance of the revised Terms.</p>
+
+                <h2 id="en-eligibility">4. Eligibility</h2>
+                <p>To use GlobalBuy24, you must:</p>
+                <ul>
+                  <li>Be at least 18 years old or the age of majority in your jurisdiction.</li>
+                  <li>Have the legal capacity to enter into a binding agreement.</li>
+                  <li>Use the platform in compliance with all applicable laws and regulations.</li>
+                </ul>
+
+                <h2 id="en-user-account">5. User Account</h2>
+                <ul>
+                  <li><strong>Registration:</strong> You may be required to create an account to access certain
+                    features.
+                    You
+                    agree to provide accurate, current, and complete information during registration and to update such
+                    information to keep it accurate and complete.</li>
+                  <li><strong>Security:</strong> You are solely responsible for maintaining the confidentiality of your
+                    account
+                    credentials (username, password, etc.). You must take all reasonable steps to prevent unauthorized
+                    access to
+                    or use of your account. Notify us immediately at <a
+                      href="mailto:admin@globalbuy24.com">admin@globalbuy24.com</a> if you suspect or become aware of
+                    any
+                    unauthorized access to or use of your account, or any other breach of security.</li>
+                  <li><strong>Prohibited Activities:</strong> You agree not to create accounts for fraudulent,
+                    deceptive, or
+                    malicious purposes, or to impersonate any other person or entity. Any such activity will result in
+                    immediate
+                    account termination and may lead to legal action.</li>
+                  <li><strong>Account Termination:</strong> GB24 reserves the right, at its sole discretion, to suspend
+                    or
+                    terminate any account that violates these Terms, engages in fraudulent activities, poses a security
+                    risk
+                    to
+                    the platform, or is deemed to be misused. This includes, but is not limited to, breach of any terms
+                    herein,
+                    providing false information, or engaging in any activity that harms the integrity or reputation of
+                    GB24
+                    or its
+                    users.</li>
+                </ul>
+
+                <h2 id="en-how-gb24-works">6. How GB24 Works</h2>
+                <ol>
+                  <li><strong>Placing an Order:</strong> Users provide product links from third-party online stores.
+                    GB24
+                    processes the request and provides a comprehensive quote including the product price, our service
+                    fee,
+                    and the
+                    estimated shipping cost to the final destination.</li>
+                  <li><strong>Payment:</strong> Once the quote is confirmed and accepted by the user, full payment must
+                    be
+                    made
+                    before GB24 places the order with the third-party retailer. Payments are processed via secure
+                    third-party
+                    payment providers as detailed in Section 7.</li>
+                  <li><strong>Shipping to GB24 Hub:</strong> The items are purchased and delivered from the original
+                    online
+                    store
+                    to our designated Berlin hub in Germany. Users are responsible for ensuring the retailer can ship to
+                    this
+                    address.</li>
+                  <li><strong>Processing & Shipping:</strong> Once received at our Berlin hub, we conduct an external
+                    package
+                    condition check, consolidate shipments (if multiple items are ordered), and then arrange for onward
+                    shipping
+                    to the final destination in selected African countries.</li>
+                  <li><strong>Delivery:</strong> Users collect their orders at pre-determined designated pick-up points
+                    or
+                    via
+                    local couriers where applicable in the destination country. Specific delivery instructions and
+                    pick-up
+                    point
+                    details will be communicated to the user.</li>
+                </ol>
+
+                <h2 id="en-purchasing-and-payments">7. Purchasing and Payments</h2>
+                <ul>
+                  <li><strong>Pricing:</strong> The total price presented to the user includes the product cost as
+                    listed by
+                    the
+                    third-party retailer, GlobalBuy24's service fees for facilitation, and all applicable shipping fees
+                    from
+                    Berlin to the final destination. Any additional charges such as customs duties or taxes are separate
+                    and
+                    detailed below.</li>
+                  <li><strong>Payments:</strong> All payments are processed securely through reputable third-party
+                    payment
+                    providers. By initiating a payment through our platform, you acknowledge and agree to comply with
+                    the
+                    terms
+                    and conditions, as well as the privacy policies, of these third-party payment providers. GlobalBuy24
+                    does not
+                    store your full payment card details.</li>
+                  <li><strong>Customs & Duties:</strong> Users are solely responsible for any and all applicable taxes,
+                    import
+                    duties, customs fees, or other governmental charges levied by the destination country. These fees
+                    are
+                    not
+                    included in the initial quote and must be paid by the user upon arrival or collection of the goods,
+                    as
+                    required by local regulations. Failure to pay these fees may result in delays or confiscation of the
+                    order.
+                  </li>
+                  <li><strong>Refunds & Returns:</strong> Refunds and returns are primarily subject to the policies of
+                    the
+                    original third-party retailers from whom the products were purchased. While GB24 will assist in
+                    facilitating
+                    communication and processing requests with these retailers on your behalf, the ultimate outcome
+                    (e.g.,
+                    approval of refund, acceptance of return) cannot be guaranteed by GB24. Please refer to our detailed
+                    <a href="#en-cancellations-and-refunds">Cancellation & Refunds Policy</a> below.</li>
+                </ul>
+
+                <h2 id="en-shipping-and-delivery">8. Shipping and Delivery</h2>
+                <ul>
+                  <li><strong>Delivery Locations:</strong> GB24 exclusively ships orders from our Berlin, Germany hub to
+                    pre-designated African destinations as specified on our platform. We do not offer shipping to other
+                    locations.
+                  </li>
+                  <li><strong>Item Eligibility:</strong> It is the user's sole responsibility to ensure that the chosen
+                    items can
+                    be legally and logistically shipped from the third-party retailer to our Berlin hub before placing a
+                    purchase
+                    order. GB24 is not responsible for items that cannot be delivered to our Berlin hub.</li>
+                  <li><strong>Packaging & Condition Check:</strong> Upon receipt at our Berlin hub, GB24 performs an
+                    external
+                    visual check of the package condition to identify any obvious signs of damage or tampering. However,
+                    we
+                    do not
+                    open sealed packages or verify the internal product quality, authenticity, or functionality.</li>
+                  <li><strong>Risk of Loss:</strong> The risk of loss or damage to items transfers from GB24 to the user
+                    once the
+                    items arrive at their final designated pick-up point or are handed over to the local courier for
+                    final
+                    delivery in the destination country.</li>
+                  <li><strong>Delivery Delays:</strong> GB24 is not liable for delays in delivery caused by factors
+                    beyond
+                    our
+                    reasonable control, including but not limited to customs clearance procedures, unforeseen carrier
+                    issues,
+                    natural disasters, political unrest, strikes, or other force majeure events. We will, however,
+                    endeavor
+                    to
+                    keep users informed of any significant delays.</li>
+                </ul>
+
+                <h2 id="en-important-shipping-rules">9. Important Shipping Rules</h2>
+                <ul>
+                  <li><strong>Weight Limit:</strong> The maximum weight per individual item is 23 kg. Items exceeding
+                    this
+                    weight
+                    may be subject to additional fees, rejection, or require special arrangements.</li>
+                  <li><strong>Size Restrictions:</strong> Individual packages must not exceed 50 cm in width, 50 cm in
+                    length, and
+                    50 cm in height. All items must fit within standard international shipping guidelines. Oversized
+                    items
+                    may
+                    incur additional charges or be rejected.</li>
+                  <li><strong>Prohibited Items:</strong> GB24 strictly prohibits the shipment of hazardous materials,
+                    perishable
+                    goods, illegal substances, weapons, explosives, or any other items restricted or prohibited by
+                    international
+                    shipping regulations or the laws of Germany or the destination country. For a comprehensive and
+                    updated
+                    list
+                    of prohibited items, please refer to our <a href="[LINK_TO_PROHIBITED_ITEMS_LIST]"
+                      target="_blank">Prohibited
+                      Items List</a>. It is the user's responsibility to review this list before placing an order.</li>
+                </ul>
+
+                <h2 id="en-cancellations-and-refunds">10. Cancellations & Refunds Policy</h2>
+                <p>This section outlines the specific conditions under which cancellations and refunds may be processed
+                  for
+                  orders
+                  placed through GlobalBuy24.</p>
+                <ul>
+                  <li><strong>Order Cancellation by User:</strong> Orders cannot be cancelled once they have been
+                    packaged
+                    and
+                    shipped from our Berlin hub to Africa. If an order has not yet been processed by GB24 (i.e., not yet
+                    purchased
+                    from the retailer or not yet shipped from Berlin), users may request a cancellation. Such
+                    cancellations
+                    may be
+                    subject to a cancellation fee to cover administrative costs and any non-recoverable expenses
+                    incurred by
+                    GB24
+                    (e.g., payment processing fees). The exact fee will be communicated upon cancellation request.</li>
+                  <li><strong>No Refunds After Shipment (with exceptions):</strong> Generally, refunds are not allowed
+                    once
+                    orders
+                    have been packaged and shipped from our Berlin hub. However, exceptions apply as detailed below. If
+                    an
+                    item is
+                    lost in transit or significantly delayed beyond reasonable expectations due to issues with the
+                    shipping
+                    provider (and not due to customs or user-related delays), users may contact GB24 for assistance in
+                    filing
+                    claims with the shipping provider. The outcome of such claims is subject to the shipping provider's
+                    policies.
+                  </li>
+                  <li><strong>Retailer Cancellations:</strong> If the original third-party retailer cancels an order for
+                    any
+                    reason (e.g., out of stock, payment issue on their end), we will issue a full refund to the user for
+                    the
+                    product cost, including any service fees charged by GB24 for that specific product. In such cases,
+                    users
+                    will
+                    be notified immediately by GB24, and refunds will be processed within 7 business days from the date
+                    of
+                    the
+                    retailer's cancellation confirmation.</li>
+                  <li><strong>Exceptional Cases (Damaged Upon Arrival):</strong> If an order is visibly damaged upon
+                    arrival
+                    at
+                    the final designated pick-up point or upon receipt via local courier, users must report the issue to
+                    GB24
+                    within 48 hours of receipt. This report must include clear photographic evidence of the damage to
+                    the
+                    package
+                    and/or product. GB24 will then initiate an investigation with the shipping provider and/or retailer.
+                    Refunds
+                    or compensation for damaged items will be determined on a case-by-case basis, taking into account
+                    the
+                    extent
+                    of the damage, the investigation findings, and the policies of the relevant shipping provider and
+                    retailer.
+                  </li>
+                </ul>
+
+                <h2 id="en-disclaimers-and-no-warranties">11. Disclaimers and No Warranties</h2>
+                <p>GlobalBuy24 acts solely as an e-commerce facilitator. We do not sell any products directly; rather,
+                  we
+                  assist
+                  users in purchasing items from third-party online retailers. Therefore:</p>
+                <ul>
+                  <li><strong>No Product Guarantees:</strong> GB24 does not manufacture, endorse, or guarantee the
+                    quality,
+                    authenticity, fitness for a particular purpose, merchantability, or any other aspect of the products
+                    purchased
+                    from third-party retailers. Users must verify all product details, specifications, and authenticity
+                    directly
+                    with the original retailer before placing an order.</li>
+                  <li><strong>"As Is" and "As Available" Basis:</strong> The Service is provided to You "AS IS" and "AS
+                    AVAILABLE"
+                    and with all faults and defects without warranty of any kind. To the maximum extent permitted under
+                    applicable
+                    law, the Company, on its own behalf and on behalf of its Affiliates and its and their respective
+                    licensors and
+                    service providers, expressly disclaims all warranties, whether express, implied, statutory, or
+                    otherwise, with
+                    respect to the Service, including all implied warranties of merchantability, fitness for a
+                    particular
+                    purpose,
+                    title and non-infringement, and warranties that may arise out of course of dealing, course of
+                    performance,
+                    usage or trade practice. Without limitation to the foregoing, the Company provides no warranty or
+                    undertaking,
+                    and makes no representation of any kind that the Service will meet Your requirements, achieve any
+                    intended
+                    results, be compatible or work with any other software, applications, systems or services, operate
+                    without
+                    interruption, meet any performance or reliability standards or be error free or that any errors or
+                    defects can
+                    or will be corrected.</li>
+                  <li><strong>No Liability for Third-Party Content:</strong> GB24 is not responsible for the content,
+                    accuracy, or
+                    availability of third-party websites or product listings. Any issues arising from product
+                    descriptions,
+                    images, or availability on external retailer sites are solely between the user and the respective
+                    retailer.
+                  </li>
+                </ul>
+
+                <h2 id="en-acceptable-use">12. Acceptable Use</h2>
+                <p>You agree to use GlobalBuy24 only for lawful purposes and in a manner that does not infringe the
+                  rights
+                  of,
+                  restrict, or inhibit anyone else's use and enjoyment of the Service. You are strictly prohibited from:
+                </p>
+                <ul>
+                  <li>Violating any applicable local, national, or international laws or regulations.</li>
+                  <li>Using the platform for any fraudulent, deceptive, or misleading activities, including but not
+                    limited
+                    to
+                    misrepresenting your identity or payment information.</li>
+                  <li>Uploading, posting, transmitting, or otherwise distributing any content that is harmful,
+                    malicious,
+                    unlawful, obscene, defamatory, threatening, harassing, abusive, or otherwise objectionable.</li>
+                  <li>Interfering with or disrupting the integrity or performance of the Service or the data contained
+                    therein.
+                  </li>
+                  <li>Attempting to gain unauthorized access to the Service or its related systems or networks.</li>
+                  <li>Engaging in any activity that could damage, disable, overburden, or impair the Service or
+                    interfere
+                    with any
+                    other party's use of the Service.</li>
+                </ul>
+
+                <h2 id="en-intellectual-property">13. Intellectual Property</h2>
+                <ul>
+                  <li><strong>GB24 Ownership:</strong> All rights, title, and interest in and to the GlobalBuy24 App,
+                    its
+                    content
+                    (excluding user-submitted content), features, functionality, trademarks, logos, and service marks
+                    belong
+                    exclusively to GlobalBuy24 or its licensors. These are protected by copyright, trademark, and other
+                    intellectual property laws.</li>
+                  <li><strong>User Content License:</strong> By submitting reviews, comments, feedback, or any other
+                    content
+                    ("User Content") to GlobalBuy24, you grant GB24 a worldwide, non-exclusive, royalty-free, perpetual,
+                    irrevocable, and sublicensable license to use, reproduce, modify, adapt, publish, translate, create
+                    derivative
+                    works from, distribute, and display such User Content in any media for the purpose of operating,
+                    improving,
+                    and promoting the Service. You represent and warrant that you own or have the necessary licenses,
+                    rights,
+                    consents, and permissions to grant this license.</li>
+                </ul>
+
+                <h2 id="en-privacy-policy">14. Privacy Policy</h2>
+                <p>GB24 is deeply committed to protecting your privacy. For comprehensive details on how we collect,
+                  use,
+                  store,
+                  and secure your personal data, as well as your rights regarding your data, please refer to our
+                  dedicated
+                  <a href="[LINK_TO_PRIVACY_POLICY]" target="_blank">Privacy Policy</a>.
+                </p>
+
+                <h2 id="en-limitation-of-liability">15. Limitation of Liability</h2>
+                <p>To the maximum extent permitted by applicable law, in no event shall the Company, its Affiliates, or
+                  their
+                  respective directors, employees, agents, or licensors be liable for any indirect, incidental, special,
+                  punitive,
+                  or consequential damages whatsoever, including, but not limited to, damages for loss of profits, loss
+                  of
+                  data or
+                  other information, business interruption, personal injury, loss of privacy arising out of or in any
+                  way
+                  related
+                  to the use of or inability to use the Service, third-party software and/or third-party hardware used
+                  with
+                  the
+                  Service, or otherwise in connection with any provision of these Terms.</p>
+                <p>Without prejudice to the foregoing, the Company's total liability to You for all damages, losses, and
+                  causes of
+                  action (whether in contract, tort, including negligence, or otherwise) arising out of or in connection
+                  with
+                  these Terms or Your use of the Service shall in no event exceed the amount paid by You to GB24 for the
+                  specific
+                  service giving rise to the claim in the twelve (12) months preceding the event giving rise to the
+                  liability, or
+                  [INSERT SPECIFIC MONETARY CAP, e.g., 100 EUR], whichever is lower. This limitation applies even if the
+                  Company
+                  has been advised of the possibility of such damages.</p>
+                <p>GB24 is not liable for:</p>
+                <ul>
+                  <li>Issues with product quality, authenticity, availability, or incorrect listings from third-party
+                    retailers.
+                  </li>
+                  <li>Delays or failures caused by logistics providers, payment processors, or customs authorities.</li>
+                  <li>Any direct or indirect damages arising from your reliance on information or products obtained
+                    through
+                    third-party links or services.</li>
+                </ul>
+
+                <h2 id="en-indemnification">16. Indemnification</h2>
+                <p>You agree to defend, indemnify, and hold harmless GlobalBuy24, its Affiliates, licensors, and service
+                  providers, and its and their respective officers, directors, employees, contractors, agents,
+                  licensors,
+                  suppliers, successors, and assigns from and against any claims, liabilities, damages, judgments,
+                  awards,
+                  losses,
+                  costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your
+                  violation of
+                  these Terms or your use of the Service, including, but not limited to, your User Content, your use of
+                  any
+                  information obtained from the Service, and your use of any third-party services accessed through the
+                  App.
+                </p>
+
+                <h2 id="en-severability">17. Severability</h2>
+                <p>If any provision of these Terms is held to be unenforceable or invalid, such provision will be
+                  changed
+                  and
+                  interpreted to accomplish the objectives of such provision to the greatest extent possible under
+                  applicable law
+                  and the remaining provisions will continue in full force and effect.</p>
+
+                <h2 id="en-entire-agreement">18. Entire Agreement</h2>
+                <p>These Terms, together with the Privacy Policy and any other legal notices published by GlobalBuy24 on
+                  the
+                  Service, constitute the entire agreement between you and GlobalBuy24 concerning the Service. This
+                  agreement
+                  supersedes all prior and contemporaneous understandings, agreements, representations, and warranties,
+                  both
+                  written and oral, with respect to the Service.</p>
+
+                <h2 id="en-force-majeure">19. Force Majeure</h2>
+                <p>GlobalBuy24 shall not be liable for any delay or failure to perform its obligations hereunder if such
+                  delay or
+                  failure is caused by an event beyond its reasonable control, including but not limited to acts of God,
+                  war,
+                  terrorism, riots, embargoes, acts of civil or military authorities, fire, floods, accidents, strikes,
+                  or
+                  shortages of transportation facilities, fuel, energy, labor, or materials.</p>
+
+                <h2 id="en-governing-law-and-dispute-resolution">20. Governing Law and Dispute Resolution</h2>
+                <p>These Terms are governed by and construed in accordance with the laws of Cameroon, without regard to
+                  its
+                  conflict of law principles. You agree that any legal action or proceeding arising out of or relating
+                  to
+                  these
+                  Terms or the Service shall be instituted exclusively in the courts located in Cameroon.</p>
+                <p><strong>Important Note:</strong> While these Terms specify Cameroonian law as governing, users
+                  residing
+                  outside
+                  Cameroon (e.g., in the EU/Germany) may still benefit from mandatory consumer protection laws in their
+                  country of
+                  residence. We strongly advise you to consult with legal counsel to understand the full implications of
+                  this
+                  clause in your specific jurisdiction.</p>
+                <p><strong>Informal Resolution:</strong> Before resorting to formal legal action, we encourage you to
+                  contact us
+                  directly at <a href="mailto:admin@globalbuy24.com">admin@globalbuy24.com</a> to seek an informal
+                  resolution to
+                  any dispute. We will make reasonable efforts to resolve your concerns promptly.</p>
+
+                <h2 id="en-contact-information">21. Contact Information</h2>
+                <p>For any inquiries, questions, or concerns regarding these Terms of Service or the GlobalBuy24
+                  platform,
+                  please
+                  contact us at:</p>
+                <ul>
+                  <li><strong>Email:</strong> <a href="mailto:admin@globalbuy24.com">admin@globalbuy24.com</a></li>
+                  <li><strong>Phone:</strong> +49 17632271138</li>
+                  <li><strong>Berlin Address for Deliveries:</strong> Huttenstraße 25, 13353 Berlin, Germany</li>
+                </ul>
+                <p>By using GlobalBuy24, you acknowledge that you have read, understood, and agreed to these Terms of
+                  Service.</p>
+              </div>
+
+
+            </div>
+          </div>
+
+          <!-- Mobile Table of Contents (shown only on mobile) -->
+          <div class="col-12 d-lg-none mt-4">
+            <div class="accordion" id="mobileToc">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseToc" aria-expanded="false" aria-controls="collapseToc">
+                    <i class="bi bi-list-ul me-2"></i>Table of Contents
+                  </button>
+                </h2>
+                <div id="collapseToc" class="accordion-collapse collapse" data-bs-parent="#mobileToc">
+                  <div class="accordion-body p-0">
+                    <ul class="nav flex-column">
+                      <li class="nav-item"><a class="nav-link" href="#en-description-of-services">1. Description of
+                          Services</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#en-acceptance-of-terms">2. Acceptance of Terms</a>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="#en-changes-to-terms">3. Changes to Terms</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#en-eligibility">4. Eligibility</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#en-user-account">5. User Account</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#en-how-gb24-works">6. How GB24 Works</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#en-purchasing-and-payments">7. Purchasing and
+                          Payments</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#en-shipping-and-delivery">8. Shipping and
+                          Delivery</a>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="#en-important-shipping-rules">9. Important Shipping
+                          Rules</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#en-cancellations-and-refunds">10. Cancellations &
+                          Refunds</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#en-disclaimers-and-no-warranties">11.
+                          Disclaimers</a>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="#en-acceptable-use">12. Acceptable Use</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#en-intellectual-property">13. Intellectual
+                          Property</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#en-privacy-policy">14. Privacy Policy</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#en-limitation-of-liability">15. Limitation of
+                          Liability</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#en-indemnification">16. Indemnification</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#en-severability">17. Severability</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#en-entire-agreement">18. Entire Agreement</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#en-force-majeure">19. Force Majeure</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#en-governing-law">20. Governing Law</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#en-contact-information">21. Contact
+                          Information</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- Footer End -->
 
-  <!-- Back to Top -->
-  <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2">
-    <i class="bi bi-arrow-up"></i>
-  </a>
+      <!-- Footer Start -->
+      <div class="container-fluid footer wow fadeIn" data-wow-delay="0.1s">
+        <div class="footer-top">
+          <div class="footer-logo">
+            <img src="img/logo/logo_transparent_bg.png" alt="GlobalBuy24 Logo">
+          </div>
 
-  <!-- JavaScript Libraries -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/waypoints/waypoints.min.js"></script>
-  <script src="lib/counterup/counterup.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+          <div class="footer-nav">
+            <a class="btn btn-link" href="index.html#home" data-translate="home">Home</a>
+            <a class="btn btn-link" href="index.html#how-it-works" data-translate="howItWorks">How It Works</a>
+            <a class="btn btn-link" href="index.html#benefits" data-translate="whyUs">Why Us</a>
+            <a class="btn btn-link" href="index.html#download" data-translate="appPreview">App Preview</a>
+            <a class="btn btn-link" href="index.html#support" data-translate="support">Support</a>
+            <a id="languageSwitcher" class="btn btn-link"
+              onclick="switchLanguage(currentLanguage === 'en' ? 'fr' : 'en')">
+              <span data-translate="language">French</span>
+            </a>
+          </div>
 
-  <!-- Template Javascript -->
-  <script src="js/main.js"></script>
+          <div class="footer-social">
+            <a class="btn btn-social" href="#" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="btn btn-social" href="#" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a class="btn btn-social" href="#" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
 
-  <script>
-    // Language switching functionality
-    let currentLanguage = 'en';
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+              <div class="mb-2 mb-md-0">&copy; 2025 GlobalBuy24. All rights reserved.</div>
+              <div class="d-flex flex-wrap justify-content-center">
+                <a class="footer-link btn-link mx-2" href="privacy.html">Privacy Policy</a>
+                <span class="mx-2">|</span>
+                <a class="footer-link btn-link mx-2" href="terms-of-service.html">Terms of Service</a>
+                <span class="mx-2">|</span>
+                <a class="footer-link btn-link mx-2" href="cookies.html">Cookies Settings</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer End -->
 
-    function showLanguage(lang) {
-      document.querySelectorAll('.language-section').forEach(section => {
-        section.classList.remove('active');
-      });
-      document.getElementById(lang + '-section').classList.add('active');
-      currentLanguage = lang;
-      updateLanguageSwitcher();
-    }
+      <!-- Back to Top -->
+      <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2">
+        <i class="bi bi-arrow-up"></i>
+      </a>
 
-    function updateLanguageSwitcher() {
-      const languageSwitchers = document.querySelectorAll('#languageSwitcher, #languageSwitcherNav');
-      languageSwitchers.forEach(switcher => {
-        const span = switcher.querySelector('span');
-        if (span) {
-          span.textContent = currentLanguage === 'en' ? 'French' : 'English';
+      <!-- JavaScript Libraries -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="lib/wow/wow.min.js"></script>
+      <script src="lib/easing/easing.min.js"></script>
+      <script src="lib/waypoints/waypoints.min.js"></script>
+      <script src="lib/counterup/counterup.min.js"></script>
+      <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+      <script src="lib/isotope/isotope.pkgd.min.js"></script>
+
+      <!-- Template Javascript -->
+      <script src="js/main.js"></script>
+
+      <script>
+        // Language switching functionality
+        let currentLanguage = 'en';
+
+        function showLanguage(lang) {
+          document.querySelectorAll('.language-section').forEach(section => {
+            section.classList.remove('active');
+          });
+          document.getElementById(lang + '-section').classList.add('active');
+          currentLanguage = lang;
+          updateLanguageSwitcher();
         }
-      });
-    }
 
-    // Table of contents highlighting
-    document.addEventListener('DOMContentLoaded', function () {
-      // Show English by default
-      showLanguage('en');
-
-      // Get all section IDs from the table of contents
-      const sections = document.querySelectorAll('.table-of-contents a[href^="#"]');
-      const navLinks = document.querySelectorAll('.table-of-contents a');
-
-      // Function to update active link
-      function updateActiveLink() {
-        let current = '';
-
-        // Find the section that's currently in view
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-          if (window.scrollY >= (sectionTop - 200)) {
-            current = section.getAttribute('href');
-          }
-        });
-
-        // Update active class
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === current) {
-            link.classList.add('active');
-          }
-        });
-      }
-
-      // Smooth scrolling for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          const targetId = this.getAttribute('href');
-          if (targetId.length > 1) { // Not just '#'
-            e.preventDefault();
-            const target = document.querySelector(targetId);
-            if (target) {
-              window.scrollTo({
-                top: target.offsetTop - 100, // Adjust for fixed header
-                behavior: 's'
-              });
-              // Update URL without page jump
-              history.pushState(null, null, targetId);
+        function updateLanguageSwitcher() {
+          const languageSwitchers = document.querySelectorAll('#languageSwitcher, #languageSwitcherNav');
+          languageSwitchers.forEach(switcher => {
+            const span = switcher.querySelector('span');
+            if (span) {
+              span.textContent = currentLanguage === 'en' ? 'French' : 'English';
             }
+          });
+        }
+
+        // Table of contents highlighting and smooth scrolling
+        document.addEventListener('DOMContentLoaded', function () {
+          // Show English by default on page load
+          showLanguage('en');
+
+          // Get all section IDs from the table of contents
+          // Target h2 and h3 elements within the active language section that have an ID
+          const sections = document.querySelectorAll('.main-content .language-section.active h2[id], .main-content .language-section.active h3[id]');
+          const navLinks = document.querySelectorAll('.toc-sidebar .table-of-contents a[href^="#"]');
+          const mobileNavLinks = document.querySelectorAll('#mobileToc .nav-link[href^="#"]');
+
+          function updateActiveLink() {
+            let currentHash = '';
+            sections.forEach(section => {
+              const sectionTop = section.offsetTop;
+              // Adjust for fixed header and some buffer
+              if (window.scrollY >= (sectionTop - 150)) {
+                currentHash = '#' + section.getAttribute('id');
+              }
+            });
+
+            // Update active class for desktop TOC
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === currentHash) {
+                link.classList.add('active');
+              }
+            });
+
+            // Update active class for mobile TOC
+            mobileNavLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === currentHash) {
+                link.classList.add('active');
+              }
+            });
           }
+
+          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+              const targetId = this.getAttribute('href');
+              if (targetId.length > 1) { // Not just '#'
+                e.preventDefault();
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                  window.scrollTo({
+                    top: targetElement.offsetTop - 100, // Adjust for fixed header
+                    behavior: 'smooth'
+                  });
+                  history.pushState(null, null, targetId); // Update URL without page jump
+                }
+              }
+            });
+          });
+
+          window.addEventListener('scroll', updateActiveLink);
+          updateActiveLink(); // Initialize active link on page load
         });
-      });
-
-      // Update active link on scroll
-      window.addEventListener('scroll', updateActiveLink);
-
-      // Initialize active link on page load
-      updateActiveLink();
-    });
-  </script>
+      </script>
 </body>
 
 </html>

@@ -1,4 +1,3 @@
-<!-- Footer Start -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,809 +33,1816 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-    <a href="index.html" class="navbar-brand">
-      <img src="img/logo/logo_transparent_bg.png" alt="GlobalBuy24 Logo" class="logo-white">
-      <img src="img/logo/logo_blue_primary.jpg" alt="GlobalBuy24 Logo" class="logo-black"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-      <span class="fa fa-bars"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <div class="navbar-nav mx-auto py-0">
-        <a href="#home" class="nav-item nav-link active" data-translate="home">Home</a>
-        <a href="#about" class="nav-item nav-link" data-translate="about">About</a>
-        <a href="#feature" class="nav-item nav-link" data-translate="feature">Features</a>
-        <a href="#screenshot" class="nav-item nav-link" data-translate="appPreview">App Preview</a>
-        <a href="#contact" class="nav-item nav-link" data-translate="contact">Contact</a>
-        <a id="languageSwitcher" class="btn nav-item nav-link"
-          onclick="switchLanguage(currentLanguage === 'en' ? 'fr' : 'en')">French</a>
+  <!-- Navbar Start -->
+  <div class="container-fluid px-0">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light px-0">
+        <a href="index.html" class="navbar-brand">
+          <img src="img/logo/logo_transparent_bg.png" alt="GlobalBuy24 Logo" class="logo-white">
+          <img src="img/logo/logo_blue_primary.jpg" alt="GlobalBuy24 Logo" class="logo-black">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link" data-translate="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="privacy.html" class="nav-link active" data-translate="privacyPolicy">Privacy Policy</a>
+            </li>
+            <li class="nav-item">
+              <a href="terms-of-service.html" class="nav-link" data-translate="termsOfService">Terms of Service</a>
+            </li>
+            <li class="nav-item">
+              <a href="cookies.html" class="nav-link" data-translate="cookiesSettings">Cookies Settings</a>
+            </li>
+            <li class="nav-item">
+              <a id="languageSwitcherNav" class="nav-link" onclick="switchLanguage(currentLanguage === 'en' ? 'fr' : 'en')">
+                <span data-translate="language">French</span>
+              </a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center">
+            <a href="index.html#download" class="btn btn-primary py-2 px-4 d-none d-lg-block"
+              data-translate="downloadNow">Download Now</a>
+          </div>
+        </div>
       </div>
-      <div class="d-flex align-items-center">
-        <a href="#download" class="btn btn-primary py-2 px-4 d-none d-lg-block" data-translate="downloadNow">Download
-          Now</a>
-      </div>
-    </div>
+    </nav>
+  </div>
   </nav>
+  <!-- Navbar End -->
+
+  <!-- Privacy Container Start -->
   <div class="privacy-container">
     <h1>GlobalBuy24 Privacy Policy</h1>
     <p class="last-updated">Last updated: July 21, 2025</p>
 
-    <div class="privacy-content-wrapper">
-      <!-- Sidebar with Table of Contents -->
-      <div class="privacy-sidebar">
-        <div class="table-of-contents">
-          <h2>Table of Contents</h2>
-          <ul>
-            <li><a href="#interpretation-and-definitions">1. Interpretation and Definitions</a></li>
-            <li><a href="#collecting-and-using-your-personal-data">2. Collecting and Using Your Personal Data</a></li>
-            <li><a href="#use-of-your-personal-data">3. Use of Your Personal Data</a></li>
-            <li><a href="#legal-basis-for-processing-personal-data-under-gdpr">4. Legal Basis for Processing Personal
-                Data under GDPR</a></li>
-            <li><a href="#sharing-your-personal-information">5. Sharing Your Personal Information</a></li>
-            <li><a href="#retention-of-your-personal-data">6. Retention of Your Personal Data</a></li>
-            <li><a href="#transfer-of-your-personal-data">7. Transfer of Your Personal Data</a></li>
-            <li><a href="#your-data-protection-rights-under-gdpr">8. Your Data Protection Rights under GDPR</a></li>
-            <li><a href="#disclosure-of-your-personal-data">9. Disclosure of Your Personal Data</a></li>
-            <li><a href="#security-of-your-personal-data">10. Security of Your Personal Data</a></li>
-            <li><a href="#childrens-privacy">11. Children's Privacy</a></li>
-            <li><a href="#links-to-other-websites">12. Links to Other Websites</a></li>
-            <li><a href="#changes-to-this-privacy-policy">13. Changes to this Privacy Policy</a></li>
-            <li><a href="#contact-us">14. Contact Us</a></li>
-          </ul>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+      <button class="btn btn-outline-primary btn-sm" onclick="showLanguage('en')">English</button>
+      <button class="btn btn-outline-primary btn-sm" onclick="showLanguage('fr')">Français</button>
+    </div>
+
+    <div class="row g-4 mt-4">
+      <!-- Table of Contents Column (Desktop) -->
+      <div class="col-lg-3 d-none d-lg-block">
+        <div class="toc-sidebar">
+          <div class="table-of-contents">
+            <h3><i class="bi bi-list-ul me-2"></i>Table of Contents</h3>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#en-interpretation-and-definitions">1. Interpretation and
+                  Definitions</a></li>
+              <li class="nav-item"><a class="nav-link" href="#en-collecting-and-using-your-personal-data">2. Collecting
+                  and Using Your Personal Data</a></li>
+              <li class="nav-item"><a class="nav-link" href="#en-use-of-your-personal-data">3. Use of Your Personal
+                  Data</a></li>
+              <li class="nav-item"><a class="nav-link" href="#en-legal-basis-for-processing-personal-data-under-gdpr">4.
+                  Legal Basis for Processing Personal Data under GDPR</a></li>
+              <li class="nav-item"><a class="nav-link" href="#en-sharing-your-personal-information">5. Sharing Your
+                  Personal Information</a></li>
+              <li class="nav-item"><a class="nav-link" href="#en-retention-of-your-personal-data">6. Retention of Your
+                  Personal Data</a></li>
+              <li class="nav-item"><a class="nav-link" href="#en-transfer-of-your-personal-data">7. Transfer of Your
+                  Personal Data</a></li>
+              <li class="nav-item"><a class="nav-link" href="#en-your-data-protection-rights-under-gdpr">8. Your Data
+                  Protection Rights under GDPR</a></li>
+              <li class="nav-item"><a class="nav-link" href="#en-disclosure-of-your-personal-data">9. Disclosure of Your
+                  Personal Data</a></li>
+              <li class="nav-item"><a class="nav-link" href="#en-security-of-your-personal-data">10. Security of Your
+                  Personal Data</a></li>
+              <li class="nav-item"><a class="nav-link" href="#en-childrens-privacy">11. Children's Privacy</a></li>
+              <li class="nav-item"><a class="nav-link" href="#en-links-to-other-websites">12. Links to Other
+                  Websites</a></li>
+              <li class="nav-item"><a class="nav-link" href="#en-changes-to-this-privacy-policy">13. Changes to this
+                  Privacy Policy</a></li>
+              <li class="nav-item"><a class="nav-link" href="#en-contact-us">14. Contact Us</a></li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <!-- Main Content Area -->
-      <div class="privacy-main-content">
-        <p>This Privacy Policy describes Our policies and procedures on the collection, use, and disclosure of Your
-          information when You use the Service and tells You about Your privacy rights and how the law protects You. We
-          understand the critical importance of Your privacy and are committed to protecting Your personal data with the
-          utmost care and transparency. Our aim is to provide a clear and comprehensive overview of how Your information
-          is handled, ensuring You are fully informed and empowered regarding Your data.</p>
+      <!-- Main Content Column -->
+      <div class="col-lg-9">
+        <div class="main-content">
 
-        <p>We use Your Personal Data to provide and improve the Service. By using the Service, You agree to the
-          collection and use of information in accordance with this Privacy Policy. This policy is designed to comply
-          with the General Data Protection Regulation (GDPR) and other applicable data protection laws, reflecting our
-          commitment to global privacy standards.</p>
+          <div id="en-section" class="language-section active">
+            <p>This Privacy Policy describes Our policies and procedures on the collection, use, and disclosure of Your
+              information when You use the Service and tells You about Your privacy rights and how the law protects You.
+              We
+              understand the critical importance of Your privacy and are committed to protecting Your personal data with
+              the
+              utmost care and transparency. Our aim is to provide a clear and comprehensive overview of how Your
+              information
+              is handled, ensuring You are fully informed and empowered regarding Your data.</p>
 
-        <h2 id="interpretation-and-definitions">1. Interpretation and Definitions</h2>
-        <h3>Interpretation</h3>
-        <p>The words of which the initial letter is capitalized have meanings defined under the following conditions.
-          These
-          definitions are crucial for understanding the scope and intent of this Privacy Policy, ensuring clarity and
-          consistency throughout the document. The following definitions shall have the same meaning regardless of
-          whether
-          they appear in singular or in plural.</p>
-        they appear in singular or in plural.</p>
+            <p>We use Your Personal Data to provide and improve the Service. By using the Service, You agree to the
+              collection and use of information in accordance with this Privacy Policy. This policy is designed to
+              comply
+              with the General Data Protection Regulation (GDPR) and other applicable data protection laws, reflecting
+              our
+              commitment to global privacy standards.</p>
 
-        <h3>Definitions</h3>
-        <p>For the purposes of this Privacy Policy:</p>
-        <ul>
-          <li><strong>Account</strong> means a unique, personalized account created for You to access specific features
-            and
-            functionalities within our Service, such as managing your profile, viewing order history, or saving
-            preferences.
-          </li>
-          <li><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with
-            a
-            party, where "control" signifies ownership of 50% or more of the shares, equity interest, or other
-            securities
-            entitled to vote for the election of directors or other managing authority. This includes our parent
-            company,
-            subsidiaries, and any joint venture partners.</li>
-          <li><strong>Application</strong> refers to GlobalBuy24, the comprehensive software program provided by the
-            Company, which is meticulously developed and continuously operated using the FlutterFlow platform to ensure
-            a
-            robust and efficient user experience.</li>
-          <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement)
-            refers
-            to GlobalBuy24, with its registered office at Huttenstraße 25, 13353 Berlin, Germany. For the purpose of the
-            GDPR, the Company acts as the Data Controller, determining the purposes and means of processing Your
-            Personal
-            Data.</li>
-          <li><strong>Country</strong> refers to: Germany, specifically Berlin, which is within the European Economic
-            Area
-            (EEA), meaning our data processing activities are subject to the General Data Protection Regulation (GDPR).
-          </li>
-          <li><strong>Data Controller</strong>, for the purposes of the GDPR (General Data Protection Regulation),
-            refers to
-            the Company as the legal person which, alone or jointly with others, determines the purposes and means of
-            the
-            processing of Personal Data. This signifies our responsibility for Your data.</li>
-          <li><strong>Device</strong> means any electronic device that can access and utilize the Service, encompassing
-            a
-            wide range of hardware such as personal computers, mobile phones (smartphones), or digital tablets.</li>
-          <li><strong>Personal Data</strong> is any information that directly or indirectly relates to an identified or
-            identifiable individual. This can include anything from a name or email address to an IP address or a unique
-            device identifier, provided it can be linked back to a specific person.</li>
-          <li><strong>Service</strong> refers to the Application, GlobalBuy24, and all the functionalities, content, and
-            services provided through it.</li>
-          <li><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of
-            the
-            Company. This broadly refers to third-party companies or individuals employed by the Company to facilitate
-            the
-            Service, to provide the Service on behalf of the Company, to perform services related to the Service (e.g.,
-            hosting, customer support), or to assist the Company in analyzing how the Service is used (e.g., analytics
-            providers).</li>
-          <li><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the
-            Service
-            itself or derived from the Service infrastructure. This includes technical information about Your
-            interaction
-            with the Service, such as the duration of a page visit, features accessed, or error reports.</li>
-          <li><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal
-            entity on behalf of which such individual is accessing or using the Service, as applicable. This refers to
-            the
-            user whose data is being collected and processed.</li>
-        </ul>
+            <h2 id="en-interpretation-and-definitions">1. Interpretation and Definitions</h2>
+            <h3>Interpretation</h3>
+            <p>The words of which the initial letter is capitalized have meanings defined under the following
+              conditions.
+              These
+              definitions are crucial for understanding the scope and intent of this Privacy Policy, ensuring clarity
+              and
+              consistency throughout the document. The following definitions shall have the same meaning regardless of
+              whether
+              they appear in singular or in plural.</p>
 
-        <hr>
-        <h2 id="collecting-and-using-your-personal-data">2. Collecting and Using Your Personal Data</h2>
-        <h3>Types of Data Collected</h3>
-        <h4>Personal Data</h4>
-        <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that
-          can
-          be used to contact or identify You, or to enable specific features of the Service. This information is
-          collected
-          to facilitate Your use of GlobalBuy24, manage Your account, and fulfill Your requests. Personally identifiable
-          information may include, but is not limited to:</p>
-        <ul>
-          <li><strong>Email address:</strong> Primarily used for account registration, login, sending transactional
-            notifications (e.g., order confirmations, password resets), and for direct communication regarding Your
-            account
-            or inquiries.</li>
-          <li><strong>First name and last name:</strong> Used for personalizing Your experience within the app,
-            addressing
-            You correctly, and for shipping purposes.</li>
-          <li><strong>Phone number:</strong> May be collected for order verification, delivery notifications, or for
-            direct
-            customer support communication, especially for critical updates related to Your purchases.</li>
-          <li><strong>Address, State, Province, ZIP/Postal code, City:</strong> Essential for processing and shipping
-            Your
-            orders, calculating shipping costs, and ensuring accurate delivery of products purchased through the
-            Service.
-            This information is directly tied to the fulfillment of Your purchase contracts.</li>
-        </ul>
-
-        <h4>Usage Data</h4>
-        <p>Usage Data is collected automatically when You interact with or use the Service. This data helps us
-          understand
-          how users engage with GlobalBuy24, enabling us to improve its performance, stability, and user experience.</p>
-        <p>Usage Data may include information such as Your Device's Internet Protocol address (e.g., IP address),
-          browser
-          type, browser version, the specific pages or screens of our Service that You visit, the precise time and date
-          of
-          Your visit, the duration spent on those pages or screens, unique device identifiers (such as the device's
-          advertising ID or other persistent identifiers), and other diagnostic data related to app performance and
-          stability.</p>
-        <p>When You access the Service by or through a mobile device, We may collect certain information automatically,
-          including, but not limited to, the type of mobile device You use (e.g., iPhone, Android phone), Your mobile
-          device's unique ID, the IP address of Your mobile device, Your mobile operating system (e.g., iOS, Android),
-          the
-          type of mobile Internet browser You use, unique device identifiers, and other diagnostic data that helps us
-          troubleshoot and improve the app. This data is crucial for optimizing the app's compatibility and performance
-          across various devices and network conditions.</p>
-        <p>We may also collect information that Your browser sends whenever You visit our Service or when You access the
-          Service by or through a mobile device. This includes standard log data that web servers typically collect.</p>
-
-        <h4>Cookies and Similar Technologies</h4>
-        <p>While GlobalBuy24 itself may not directly employ extensive tracking cookies for advertising purposes, the
-          FlutterFlow platform and its integrated services, as well as third-party service providers, may utilize
-          cookies,
-          web beacons, and similar tracking technologies to enhance functionality, analyze usage patterns, and ensure
-          the
-          proper operation of the Service. These technologies may collect information to:</p>
-        <ul>
-          <li>Maintain user sessions (e.g., keeping you logged in).</li>
-          <li>Remember user preferences.</li>
-          <li>Analyze site traffic and user behavior for performance optimization.</li>
-          <li>Facilitate secure transactions.</li>
-        </ul>
-        <p>Any such use is primarily for the functional integrity and improvement of the Service. You can instruct Your
-          browser to refuse all cookies or to indicate when a cookie is being sent. However, if You do not accept
-          cookies,
-          You may not be able to use some portions of our Service.</p>
-
-        <h4>Information Collected while Using the Application</h4>
-        <p>While using Our Application, in order to provide specific features and enhance Your experience, We may
-          collect,
-          with Your explicit prior permission:</p>
-        <ul>
-          <li><strong>Information regarding your location:</strong> This may include precise location data obtained
-            through
-            GPS, Wi-Fi, or cellular network triangulation. We use this information to provide location-based features,
-            such
-            as identifying nearby stores or services, tailoring product recommendations based on Your region, or
-            facilitating location-specific offers. This information helps us to customize and improve the relevance of
-            Our
-            Service to Your geographic context.</li>
-        </ul>
-        <p>We use this information to provide features of Our Service, to improve and customize Our Service. The
-          information
-          may be uploaded to the Company's secure servers and/or a Service Provider's server or it may be simply stored
-          locally on Your device. You maintain full control over this data and can enable or disable access to this
-          information at any time through Your Device settings.</p>
-
-        <h3>Third-Party Service Providers</h3>
-        <p>Our Application is developed and operated on the FlutterFlow platform. FlutterFlow applications inherently
-          integrate with various default services, which may include Google's Firebase for core functionalities. These
-          services are essential for the operation, analytics, crash reporting, and backend infrastructure of the
-          Application. These integrated services may automatically collect certain Usage Data (as described above) to
-          provide their respective functionalities. For instance, Firebase Analytics may collect data on app usage
-          patterns,
-          user engagement, and crash logs to help us monitor app performance, identify areas for improvement, and debug
-          issues. This data is typically aggregated and anonymized where possible, but may include unique identifiers.
-        </p>
-        <p>We also use the following specific third-party Service Providers to provide and improve our service, and to
-          facilitate critical functionalities:</p>
-        <ul>
-          <li><strong>Fapshi (Payment Gateway):</strong> We utilize Fapshi, a third-party payment gateway based in
-            Cameroon,
-            to securely process all payments for goods and services purchased through GlobalBuy24. When You initiate a
-            purchase, You will be securely redirected to Fapshi's dedicated platform to complete the transaction. During
-            this process, Fapshi will collect necessary financial and personal information directly from You, such as
-            Your
-            payment card details, billing address, and transaction amount. <strong>Please note that GlobalBuy24 does not
-              directly collect, store, or process Your sensitive payment card details.</strong> That information is
-            provided
-            directly to Fapshi, whose collection, use, and handling of Your personal information are governed by their
-            own
-            comprehensive Privacy Policy. We strongly encourage You to review Fapshi's Privacy Policy to understand
-            their
-            data practices: <a href="https://www.fapshi.com/en/privacy-policy"
-              target="_blank">https://www.fapshi.com/en/privacy-policy</a>. Our integration with Fapshi is designed to
-            ensure the highest level of security for Your financial transactions.</li>
-        </ul>
-
-        <hr>
-        <h2 id="use-of-your-personal-data">3. Use of Your Personal Data</h2>
-        <p>The Company may use Personal Data for the following purposes, each with a specific legal basis as outlined in
-          Section 4:</p>
-        <ul>
-          <li><strong>To provide and maintain our Service:</strong> This encompasses all activities necessary to ensure
-            the
-            continuous and optimal functioning of GlobalBuy24. It includes monitoring the usage of our Service to
-            identify
-            trends, detect and resolve technical issues, prevent and address security incidents, and manage server
-            infrastructure. By analyzing Usage Data, we can proactively identify bugs, optimize server load, and enhance
-            the
-            overall stability and security of the Application, ensuring a reliable experience for all users. This
-            processing
-            is essential for the legitimate interest of the Company to operate a functional and secure service.</li>
-          <li><strong>To manage Your Account:</strong> When You register for an Account, the Personal Data You provide
-            (such
-            as email, name, and contact details) is meticulously used to create and maintain Your unique user profile.
-            This
-            enables You to access and manage personalized functionalities within the Service, including but not limited
-            to
-            viewing Your comprehensive order history, efficiently managing Your saved addresses for quicker checkouts,
-            tracking the real-time status of Your shipments, and utilizing features specifically designed for registered
-            users to enhance their shopping experience. This processing is necessary for the performance of the contract
-            between You and the Company, as it directly supports the core functionality of Your user account.</li>
-          <li><strong>For the performance of a contract:</strong> This refers to the fundamental purpose of GlobalBuy24
-            –
-            facilitating Your purchases and ensuring the seamless execution of transactions. We use Your Personal Data
-            to
-            meticulously process Your orders, securely manage payments (primarily via our trusted Service Provider
-            Fapshi),
-            arrange for the efficient delivery of products to Your specified address, provide comprehensive customer
-            support
-            related to Your purchases (e.g., inquiries about products, delivery status, or order modifications), and
-            handle
-            returns or refunds in accordance with our terms of sale. This also extends to any other contractual
-            agreements
-            You enter into with Us through the Service, ensuring that all terms and conditions are met effectively and
-            transparently. This processing is strictly necessary for the performance of the contract of sale or service
-            with
-            You.</li>
-          <li><strong>To contact You:</strong> We may communicate with You through various electronic means to provide
-            essential information. This includes sending critical transactional emails (e.g., order confirmations,
-            shipping
-            updates, password resets, security alerts regarding Your account), important service-related announcements
-            (e.g., changes to terms of service, privacy policy updates, new feature rollouts), and critical security
-            alerts
-            to protect Your account. If enabled by You, mobile application push notifications may be used to provide
-            real-time updates on Your orders, delivery status, or other relevant service information. These
-            communications
-            are vital for the effective provision of our Service, ensuring You are always informed about Your
-            transactions
-            and account security. This processing is based on the necessity for the performance of a contract or our
-            legitimate interest in informing You about service-related matters.</li>
-          <li><strong>To provide You with news, special offers and general information:</strong> We may use Your contact
-            information to send You marketing communications about products, services, and events that we genuinely
-            believe
-            may be of interest to You. These communications are tailored based on Your past interactions, purchase
-            history,
-            or inquiries, and could include exclusive promotions, exciting new product announcements, seasonal sales, or
-            updates on categories You've shown interest in. You always retain full control over these communications;
-            You
-            have the unequivocal right to opt out of receiving these marketing communications at any time by simply
-            following the clear unsubscribe instructions provided in every email, or by contacting Us directly through
-            the
-            methods outlined in this Privacy Policy. This processing is based on Your consent or our legitimate interest
-            in
-            promoting our similar products and services to enhance Your shopping experience.</li>
-          <li><strong>To manage Your requests:</strong> We use Your Personal Data to efficiently respond to and manage
-            any
-            inquiries, feedback, complaints, or support requests You submit to Us. This includes addressing technical
-            issues
-            You might encounter while using the app, providing personalized assistance with Your account settings,
-            resolving
-            disputes related to orders or services, and fulfilling information requests regarding our products or
-            policies.
-            Our goal is to ensure You receive timely, relevant, and effective support, enhancing Your overall
-            satisfaction
-            with GlobalBuy24. This processing is necessary for the performance of a contract (e.g., customer support
-            related
-            to a purchase) or our legitimate interest in providing effective customer service and maintaining positive
-            user
-            relations.</li>
-          <li><strong>For business transfers:</strong> In the event that the Company is involved in a merger,
-            acquisition,
-            divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our
-            assets,
-            whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, Your Personal Data
-            held
-            by Us about our Service users may be among the assets transferred. This transfer would be a necessary part
-            of
-            the business transaction. We will ensure that any such transfer is conducted in a manner that fully respects
-            Your privacy rights and will provide You with prominent notice (e.g., via email or an in-app notification)
-            before Your Personal Data is transferred and becomes subject to a different Privacy Policy. This ensures
-            transparency and allows You to understand the implications of such a transfer. This processing is based on
-            our
-            legitimate interest in facilitating corporate transactions and ensuring business continuity.</li>
-          <li><strong>For other purposes:</strong> We may utilize Your information for various internal analytical,
-            research, and operational purposes that contribute to the continuous improvement of GlobalBuy24. This
-            includes
-            conducting in-depth data analysis to understand user behavior patterns, identify emerging usage trends, and
-            gain
-            insights into how our Service is being utilized. We also use this data to determine the effectiveness of our
-            promotional campaigns, personalize Your experience within the app (e.g., customized product displays,
-            relevant
-            notifications), and continuously evaluate and enhance our Service, products, services, marketing strategies,
-            and
-            Your overall user experience. This comprehensive analysis helps us to deliver a more relevant, efficient,
-            and
-            enjoyable Service to You. This processing is based on our legitimate interest in improving our Service and
-            user
-            experience.</li>
-        </ul>
-
-        <hr>
-        <h2 id="legal-basis-for-processing-personal-data-under-gdpr">4. Legal Basis for Processing Personal Data under
-          GDPR
-        </h2>
-        <p>For users located in the European Economic Area (EEA) and the UK, our collection and use of Personal Data are
-          always based on a valid legal ground as required by the General Data Protection Regulation (GDPR). The
-          specific
-          legal basis for processing Your Personal Data depends on the type of Personal Data We collect and the
-          particular
-          context in which We collect and use it.</p>
-        <p>We may process Your Personal Data because:</p>
-        <ul>
-          <li><strong>We need to perform a contract with You:</strong> This applies when the processing of Your Personal
-            Data is necessary for the performance of a contract to which You are a party, or in order to take steps at
-            Your
-            request prior to entering into a contract. For example, processing Your name and address is necessary to
-            fulfill
-            Your purchase orders, manage Your account, or provide customer support related to a service You have
-            requested.
-            Without this processing, we would be unable to provide the core functionalities of GlobalBuy24.</li>
-          <li><strong>You have given Us permission to do so (Consent):</strong> This legal basis applies when You have
-            given
-            us explicit, clear, and unambiguous consent for the processing of Your Personal Data for one or more
-            specific
-            purposes. For instance, we would rely on Your consent to send You marketing communications about new
-            products or
-            special offers, or to collect certain types of sensitive data if it were ever required and explicitly
-            requested.
-            You have the right to withdraw Your consent at any time, without affecting the lawfulness of processing
-            based on
-            consent before its withdrawal.</li>
-          <li><strong>The processing is in Our legitimate interests and it's not overridden by Your rights:</strong> We
-            may
-            process Your Personal Data when it is necessary for the purposes of our legitimate interests, provided that
-            these interests do not override Your fundamental rights and freedoms. Examples of our legitimate interests
-            include:
+            <h3>Definitions</h3>
+            <p>For the purposes of this Privacy Policy:</p>
             <ul>
-              <li>Improving and optimizing our Service, products, and user experience.</li>
-              <li>Ensuring the security and integrity of our Application and systems.</li>
-              <li>Detecting and preventing fraud or other illegal activities.</li>
-              <li>Conducting internal analytics and research to understand user behavior and market trends.</li>
-              <li>Facilitating business transfers and corporate transactions.</li>
+              <li><strong>Account</strong> means a unique, personalized account created for You to access specific
+                features
+                and
+                functionalities within our Service, such as managing your profile, viewing order history, or saving
+                preferences.
+              </li>
+              <li><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control
+                with
+                a
+                party, where "control" signifies ownership of 50% or more of the shares, equity interest, or other
+                securities
+                entitled to vote for the election of directors or other managing authority. This includes our parent
+                company,
+                subsidiaries, and any joint venture partners.</li>
+              <li><strong>Application</strong> refers to GlobalBuy24, the comprehensive software program provided by the
+                Company, which is meticulously developed and continuously operated using the FlutterFlow platform to
+                ensure
+                a
+                robust and efficient user experience.</li>
+              <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement)
+                refers
+                to GlobalBuy24, with its registered office at Huttenstraße 25, 13353 Berlin, Germany. For the purpose of
+                the
+                GDPR, the Company acts as the Data Controller, determining the purposes and means of processing Your
+                Personal
+                Data.</li>
+              <li><strong>Country</strong> refers to: Germany, specifically Berlin, which is within the European
+                Economic
+                Area
+                (EEA), meaning our data processing activities are subject to the General Data Protection Regulation
+                (GDPR).
+              </li>
+              <li><strong>Data Controller</strong>, for the purposes of the GDPR (General Data Protection Regulation),
+                refers to
+                the Company as the legal person which, alone or jointly with others, determines the purposes and means
+                of
+                the
+                processing of Personal Data. This signifies our responsibility for Your data.</li>
+              <li><strong>Device</strong> means any electronic device that can access and utilize the Service,
+                encompassing
+                a
+                wide range of hardware such as personal computers, mobile phones (smartphones), or digital tablets.</li>
+              <li><strong>Personal Data</strong> is any information that directly or indirectly relates to an identified
+                or
+                identifiable individual. This can include anything from a name or email address to an IP address or a
+                unique
+                device identifier, provided it can be linked back to a specific person.</li>
+              <li><strong>Service</strong> refers to the Application, GlobalBuy24, and all the functionalities, content,
+                and
+                services provided through it.</li>
+              <li><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf
+                of
+                the
+                Company. This broadly refers to third-party companies or individuals employed by the Company to
+                facilitate
+                the
+                Service, to provide the Service on behalf of the Company, to perform services related to the Service
+                (e.g.,
+                hosting, customer support), or to assist the Company in analyzing how the Service is used (e.g.,
+                analytics
+                providers).</li>
+              <li><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the
+                Service
+                itself or derived from the Service infrastructure. This includes technical information about Your
+                interaction
+                with the Service, such as the duration of a page visit, features accessed, or error reports.</li>
+              <li><strong>You</strong> means the individual accessing or using the Service, or the company, or other
+                legal
+                entity on behalf of which such individual is accessing or using the Service, as applicable. This refers
+                to
+                the
+                user whose data is being collected and processed.</li>
             </ul>
-            We always conduct a balancing test to ensure that our legitimate interests are proportionate to Your privacy
-            rights.
-          </li>
-          <li><strong>To comply with the law (Legal Obligation):</strong> We may process Your Personal Data where it is
-            necessary for compliance with a legal obligation to which the Company is subject. This includes, but is not
-            limited to, obligations related to tax, accounting, consumer protection laws, or responding to valid legal
-            requests from public authorities (e.g., court orders, government agency requests) in accordance with
-            applicable
-            laws.</li>
-        </ul>
 
-        <hr>
-        <h2 id="sharing-your-personal-information">5. Sharing Your Personal Information</h2>
-        <p>We may share Your personal information in the following situations, always striving to ensure that Your data
-          is
-          protected and used only for the purposes disclosed:</p>
-        <ul>
-          <li><strong>With Service Providers:</strong> We engage trusted third-party Service Providers to perform
-            various
-            functions on Our behalf, enabling us to operate and improve GlobalBuy24 efficiently. These providers may
-            include
-            cloud hosting services, customer support platforms, email communication services, and analytics providers
-            (such
-            as those integrated through FlutterFlow like Firebase for analytics and crash reporting). We may share Your
-            personal information with these Service Providers to monitor and analyze the use of our Service, to process
-            payments (e.g., Fapshi), to facilitate communications with You, or to assist with technical support. These
-            service providers act as data processors for the Company and are strictly bound by contractual agreements to
-            protect Your data, adhere to stringent confidentiality requirements, and use it solely for the specific
-            purposes
-            for which they were engaged, in compliance with applicable data protection laws. This ensures that Your data
-            is
-            handled securely and responsibly even when processed by external entities.</li>
-          <li><strong>For business transfers:</strong> In the event that the Company is involved in a merger,
-            acquisition,
-            divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our
-            assets,
-            whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, Your Personal Data
-            held
-            by Us about our Service users may be among the assets transferred. This transfer would be a necessary part
-            of
-            the business transaction. Should such a transfer occur, We are committed to ensuring that the acquiring
-            entity
-            is bound by the terms of this Privacy Policy or provides a new privacy policy that offers comparable
-            protection
-            for Your Personal Data. We will provide You with prominent notice (e.g., via email or an in-app
-            notification)
-            before Your Personal Data is transferred and becomes subject to a different privacy policy.</li>
-          <li><strong>With Affiliates:</strong> We may share Your information with Our affiliates for various legitimate
-            internal administrative purposes, including centralized data processing, shared IT services, and
-            consolidated
-            business operations. This allows us to operate more efficiently across our group of companies and provide a
-            more
-            seamless and integrated service. For instance, Your account information or usage data might be shared with
-            an
-            affiliate responsible for product development, technical infrastructure, or customer support within the
-            GlobalBuy24 corporate group. In all such instances, we will impose strict contractual obligations on those
-            affiliates to adhere rigorously to the terms of this Privacy Policy and to implement equivalent data
-            protection
-            and security measures to safeguard Your information. Affiliates include Our parent company and any other
-            subsidiaries, joint venture partners, or other companies that We control or that are under common control
-            with
-            Us.</li>
-          <li><strong>With business partners:</strong> We may strategically collaborate with trusted business partners
-            to
-            offer You certain products, services, or promotions that we believe may significantly enhance Your overall
-            experience with GlobalBuy24. This could involve co-branded offers, exclusive discounts, loyalty programs, or
-            integrated services that complement our core offerings (e.g., shipping partners, product suppliers). When
-            sharing Your information with these partners, we adhere to a principle of data minimization, providing only
-            the
-            necessary data required for the specific purpose, which may include aggregated or de-identified data where
-            possible. If personal data such as Your email address is shared for direct marketing purposes by our
-            partners,
-            it will only be done with Your explicit and informed consent, and You will always have a clear and
-            accessible
-            option to opt-out of such communications. Our business partners are contractually bound to protect Your data
-            and
-            to use it solely for the purposes agreed upon, in accordance with their own privacy policies and all
-            applicable
-            data protection laws.</li>
-          <li><strong>With other users:</strong> GlobalBuy24 may incorporate interactive features that allow You to
-            engage
-            with other users or share information in public areas of the Service. Examples of such public areas include
-            publicly visible product review sections, community forums, comment sections on product listings, or user
-            profiles if they are configured for public visibility by You. When You choose to share personal information
-            or
-            otherwise interact in these public areas (e.g., Your username, profile picture, the content of Your comments
-            or
-            reviews, or location if explicitly shared by You in a public post), such information may be viewed by all
-            users
-            of the Service and may also be publicly distributed outside of the Service (e.g., through search engines).
-            We
-            strongly urge You to exercise extreme caution and discretion when deciding to disclose Your Personal Data in
-            public areas, as We cannot control the actions of other users or third parties who may access, copy, or use
-            such
-            publicly available information.</li>
-          <li><strong>With Your consent:</strong> We are committed to transparency and Your control over Your data.
-            Therefore, We may disclose Your personal information for any other purpose not explicitly mentioned in this
-            Privacy Policy, but only when we have obtained Your clear, specific, informed, and affirmative consent to do
-            so.
-            This ensures that You have full control and understanding over the sharing of Your data for purposes outside
-            of
-            our standard operational and service provisions, and You can withdraw this consent at any time.</li>
-        </ul>
+            <hr>
+            <h2 id="en-collecting-and-using-your-personal-data">2. Collecting and Using Your Personal Data</h2>
+            <h3>Types of Data Collected</h3>
+            <h4>Personal Data</h4>
+            <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information
+              that
+              can
+              be used to contact or identify You, or to enable specific features of the Service. This information is
+              collected
+              to facilitate Your use of GlobalBuy24, manage Your account, and fulfill Your requests. Personally
+              identifiable
+              information may include, but is not limited to:</p>
+            <ul>
+              <li><strong>Email address:</strong> Primarily used for account registration, login, sending transactional
+                notifications (e.g., order confirmations, password resets), and for direct communication regarding Your
+                account
+                or inquiries.</li>
+              <li><strong>First name and last name:</strong> Used for personalizing Your experience within the app,
+                addressing
+                You correctly, and for shipping purposes.</li>
+              <li><strong>Phone number:</strong> May be collected for order verification, delivery notifications, or for
+                direct
+                customer support communication, especially for critical updates related to Your purchases.</li>
+              <li><strong>Address, State, Province, ZIP/Postal code, City:</strong> Essential for processing and
+                shipping
+                Your
+                orders, calculating shipping costs, and ensuring accurate delivery of products purchased through the
+                Service.
+                This information is directly tied to the fulfillment of Your purchase contracts.</li>
+            </ul>
 
-        <hr>
-        <h2 id="retention-of-your-personal-data">6. Retention of Your Personal Data</h2>
-        <p>The Company will retain Your Personal Data only for as long as is strictly necessary for the purposes set out
-          in
-          this Privacy Policy, or for the duration required by applicable legal and regulatory obligations. The specific
-          retention period for different types of Personal Data is determined by various factors, including:</p>
-        <ul>
-          <li>The purpose for which the data was collected (e.g., account management, transaction fulfillment).</li>
-          <li>The nature of the data (e.g., sensitive vs. non-sensitive).</li>
-          <li>Any legal or regulatory requirements that mandate specific retention periods (e.g., tax laws, consumer
-            protection laws, anti-money laundering regulations).</li>
-          <li>Our legitimate business needs, such as dispute resolution, fraud prevention, auditing, and internal
-            record-keeping.</li>
-        </ul>
-        <p>We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for
-          example, if we are required to retain your data to comply with applicable tax or accounting laws), resolve
-          disputes, and enforce our legal agreements and policies. Once the retention period expires, Your Personal Data
-          will be securely deleted or anonymized in a manner that prevents its re-identification.</p>
-        <p>The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for
-          a
-          shorter period of time compared to Personal Data, as it is often aggregated and less directly identifiable.
-          However, Usage Data may be retained for longer periods when this data is specifically used to strengthen the
-          security of Our Service (e.g., analyzing unusual login patterns, detecting and preventing cyberattacks), to
-          improve the functionality of Our Service (e.g., understanding feature usage to guide development, optimizing
-          user
-          flows), or when We are legally obligated to retain this data for longer time periods (e.g., for audit trails
-          or
-          regulatory compliance purposes related to system performance).</p>
+            <h4>Usage Data</h4>
+            <p>Usage Data is collected automatically when You interact with or use the Service. This data helps us
+              understand
+              how users engage with GlobalBuy24, enabling us to improve its performance, stability, and user experience.
+            </p>
+            <p>Usage Data may include information such as Your Device's Internet Protocol address (e.g., IP address),
+              browser
+              type, browser version, the specific pages or screens of our Service that You visit, the precise time and
+              date
+              of
+              Your visit, the duration spent on those pages or screens, unique device identifiers (such as the device's
+              advertising ID or other persistent identifiers), and other diagnostic data related to app performance and
+              stability.</p>
+            <p>When You access the Service by or through a mobile device, We may collect certain information
+              automatically,
+              including, but not limited to, the type of mobile device You use (e.g., iPhone, Android phone), Your
+              mobile
+              device's unique ID, the IP address of Your mobile device, Your mobile operating system (e.g., iOS,
+              Android),
+              the
+              type of mobile Internet browser You use, unique device identifiers, and other diagnostic data that helps
+              us
+              troubleshoot and improve the app. This data is crucial for optimizing the app's compatibility and
+              performance
+              across various devices and network conditions.</p>
+            <p>We may also collect information that Your browser sends whenever You visit our Service or when You access
+              the
+              Service by or through a mobile device. This includes standard log data that web servers typically collect.
+            </p>
 
-        <hr>
-        <h2 id="transfer-of-your-personal-data">7. Transfer of Your Personal Data</h2>
-        <p>Your information, including Personal Data, is processed at the Company's operating offices in Berlin,
-          Germany,
-          and in any other places where the parties involved in the processing are located. This means that Your
-          information
-          may be transferred to — and maintained on — computers located outside of Your state, province, country, or
-          other
-          governmental jurisdiction where the data protection laws may differ from those in Your jurisdiction.</p>
-        <p>As a company based in Germany, we are subject to the General Data Protection Regulation (GDPR). When
-          transferring
-          Personal Data outside the European Economic Area (EEA) or the UK, we take all steps reasonably necessary to
-          ensure
-          that Your data is treated securely and in accordance with this Privacy Policy and the stringent requirements
-          of
-          the GDPR. This means that no transfer of Your Personal Data will take place to an organization or a country
-          unless
-          there are adequate controls in place, including appropriate safeguards to ensure the security of Your data and
-          other personal information. These safeguards may include, but are not limited to:</p>
-        <ul>
-          <li><strong>Adequacy Decisions:</strong> Transferring data to countries or organizations recognized by the
-            European Commission or competent UK authorities as providing an adequate level of data protection, ensuring
-            a
-            comparable standard of privacy protection.</li>
-          <li><strong>Standard Contractual Clauses (SCCs):</strong> Implementing legally binding contracts approved by
-            the
-            European Commission or competent UK authorities that impose robust data protection obligations on the
-            recipient
-            of the data outside the EEA/UK, including security measures and data subject rights.</li>
-          <li><strong>Binding Corporate Rules (BCRs):</strong> For transfers within a corporate group, implementing
-            internal
-            rules approved by data protection authorities, which provide a robust framework for international data
-            transfers.</li>
-          <li><strong>Your Explicit Consent:</strong> In specific situations, we may rely on Your explicit consent for
-            the
-            transfer, provided that You have been fully informed of the potential risks of such transfers for You due to
-            the
-            absence of an adequacy decision and appropriate safeguards. This consent is always voluntary and can be
-            withdrawn.</li>
-        </ul>
-        <p>Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement
-          to
-          such transfers, provided the aforementioned safeguards are in place to ensure the continued protection of Your
-          data.</p>
+            <h4>Cookies and Similar Technologies</h4>
+            <p>While GlobalBuy24 itself may not directly employ extensive tracking cookies for advertising purposes, the
+              FlutterFlow platform and its integrated services, as well as third-party service providers, may utilize
+              cookies,
+              web beacons, and similar tracking technologies to enhance functionality, analyze usage patterns, and
+              ensure
+              the
+              proper operation of the Service. These technologies may collect information to:</p>
+            <ul>
+              <li>Maintain user sessions (e.g., keeping you logged in).</li>
+              <li>Remember user preferences.</li>
+              <li>Analyze site traffic and user behavior for performance optimization.</li>
+              <li>Facilitate secure transactions.</li>
+            </ul>
+            <p>Any such use is primarily for the functional integrity and improvement of the Service. You can instruct
+              Your
+              browser to refuse all cookies or to indicate when a cookie is being sent. However, if You do not accept
+              cookies,
+              You may not be able to use some portions of our Service.</p>
 
-        <hr>
-        <h2 id="your-data-protection-rights-under-gdpr">8. Your Data Protection Rights under GDPR</h2>
-        <p>If You are a resident of the European Economic Area (EEA) or the UK, You have certain comprehensive data
-          protection rights under the General Data Protection Regulation (GDPR). We are committed to facilitating the
-          effective exercise of these rights. You have the right to:</p>
-        <ul>
-          <li><strong>The right to access (Article 15 GDPR):</strong> You have the right to request copies of Your
-            Personal
-            Data that we hold. This allows You to verify the lawfulness of the processing. We may charge You a small fee
-            for
-            this service if the request is manifestly unfounded, excessive, or repetitive.</li>
-          <li><strong>The right to rectification (Article 16 GDPR):</strong> You have the right to request that We
-            correct
-            any information You believe is inaccurate or incomplete. We are obliged to correct inaccurate Personal Data
-            or
-            complete incomplete Personal Data without undue delay.</li>
-          <li><strong>The right to erasure (Right to be Forgotten) (Article 17 GDPR):</strong> You have the right to
-            request
-            that We erase Your Personal Data, under certain conditions, such as when the data is no longer necessary for
-            the
-            purposes for which it was collected, or when You withdraw consent and there is no other legal ground for
-            processing.</li>
-          <li><strong>The right to restrict processing (Article 18 GDPR):</strong> You have the right to request that We
-            restrict the processing of Your Personal Data, under certain conditions, for example, if You contest the
-            accuracy of the data, or if the processing is unlawful but You oppose erasure.</li>
-          <li><strong>The right to object to processing (Article 21 GDPR):</strong> You have the right to object to Our
-            processing of Your Personal Data, under certain conditions, particularly where the processing is based on
-            legitimate interests (unless we demonstrate compelling legitimate grounds) or for direct marketing purposes.
-          </li>
-          <li><strong>The right to data portability (Article 20 GDPR):</strong> You have the right to request that We
-            transfer the data that we have collected to another organization, or directly to You, in a structured,
-            commonly
-            used, and machine-readable format, under certain conditions. This applies to data processed by automated
-            means
-            based on consent or a contract.</li>
-          <li><strong>The right to withdraw consent (Article 7(3) GDPR):</strong> Where we rely on Your consent to
-            process
-            Your Personal Data, You have the right to withdraw that consent at any time. The withdrawal of consent shall
-            not
-            affect the lawfulness of processing based on consent before its withdrawal.</li>
-          <li><strong>The right to lodge a complaint with a supervisory authority (Article 77 GDPR):</strong> You have
-            the
-            right to complain to a data protection authority about Our collection and use of Your Personal Data. For
-            more
-            information, please contact Your local data protection authority in the EEA or the UK. In Germany, this
-            would be
-            the Berlin Commissioner for Data Protection and Freedom of Information (Berliner Beauftragte für Datenschutz
-            und
-            Informationsfreiheit).</li>
-        </ul>
-        <p>You may update, amend, or delete Your information at any time by signing in to Your Account, if you have one,
-          and
-          visiting the account settings section that allows you to manage Your personal information directly. You may
-          also
-          contact Us to request access to, correct, or delete any personal information that You have provided to Us.
-          Please
-          note, however, that We may need to retain certain information when we have a legal obligation or lawful basis
-          to
-          do so (e.g., for tax or legal compliance), or when it is necessary for the establishment, exercise, or defense
-          of
-          legal claims.</p>
+            <h4>Information Collected while Using the Application</h4>
+            <p>While using Our Application, in order to provide specific features and enhance Your experience, We may
+              collect,
+              with Your explicit prior permission:</p>
+            <ul>
+              <li><strong>Information regarding your location:</strong> This may include precise location data obtained
+                through
+                GPS, Wi-Fi, or cellular network triangulation. We use this information to provide location-based
+                features,
+                such
+                as identifying nearby stores or services, tailoring product recommendations based on Your region, or
+                facilitating location-specific offers. This information helps us to customize and improve the relevance
+                of
+                Our
+                Service to Your geographic context.</li>
+            </ul>
+            <p>We use this information to provide features of Our Service, to improve and customize Our Service. The
+              information
+              may be uploaded to the Company's secure servers and/or a Service Provider's server or it may be simply
+              stored
+              locally on Your device. You maintain full control over this data and can enable or disable access to this
+              information at any time through Your Device settings.</p>
 
-        <hr>
-        <h2 id="disclosure-of-your-personal-data">9. Disclosure of Your Personal Data</h2>
-        <h3>Business Transactions</h3>
-        <p>If the Company is involved in a merger, acquisition, asset sale, or similar business transaction, Your
-          Personal
-          Data may be transferred as part of that transaction. This is a standard part of corporate reorganizations. We
-          will
-          provide You with prominent notice (e.g., via email and/or a prominent notice on Our Service) before Your
-          Personal
-          Data is transferred and becomes subject to a different Privacy Policy, ensuring You are fully aware of any
-          changes
-          to the handling of Your data and can exercise any applicable rights.</p>
+            <h3>Third-Party Service Providers</h3>
+            <p>Our Application is developed and operated on the FlutterFlow platform. FlutterFlow applications
+              inherently
+              integrate with various default services, which may include Google's Firebase for core functionalities.
+              These
+              services are essential for the operation, analytics, crash reporting, and backend infrastructure of the
+              Application. These integrated services may automatically collect certain Usage Data (as described above)
+              to
+              provide their respective functionalities. For instance, Firebase Analytics may collect data on app usage
+              patterns,
+              user engagement, and crash logs to help us monitor app performance, identify areas for improvement, and
+              debug
+              issues. This data is typically aggregated and anonymized where possible, but may include unique
+              identifiers.
+            </p>
+            <p>We also use the following specific third-party Service Providers to provide and improve our service, and
+              to
+              facilitate critical functionalities:</p>
+            <ul>
+              <li><strong>Fapshi (Payment Gateway):</strong> We utilize Fapshi, a third-party payment gateway based in
+                Cameroon,
+                to securely process all payments for goods and services purchased through GlobalBuy24. When You initiate
+                a
+                purchase, You will be securely redirected to Fapshi's dedicated platform to complete the transaction.
+                During
+                this process, Fapshi will collect necessary financial and personal information directly from You, such
+                as
+                Your
+                payment card details, billing address, and transaction amount. <strong>Please note that GlobalBuy24 does
+                  not
+                  directly collect, store, or process Your sensitive payment card details.</strong> That information is
+                provided
+                directly to Fapshi, whose collection, use, and handling of Your personal information are governed by
+                their
+                own
+                comprehensive Privacy Policy. We strongly encourage You to review Fapshi's Privacy Policy to understand
+                their
+                data practices: <a href="https://www.fapshi.com/en/privacy-policy"
+                  target="_blank">https://www.fapshi.com/en/privacy-policy</a>. Our integration with Fapshi is designed
+                to
+                ensure the highest level of security for Your financial transactions.</li>
+            </ul>
 
-        <h3>Law enforcement</h3>
-        <p>Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so
-          by
-          law or in response to valid requests by public authorities (e.g., a court order, subpoena, or a legitimate
-          request
-          from a government agency). We are committed to transparency and will only comply with such requests where we
-          believe they are legally valid and necessary. We will endeavor to notify You of such requests unless legally
-          prohibited from doing so.</p>
+            <hr>
+            <h2 id="en-use-of-your-personal-data">3. Use of Your Personal Data</h2>
+            <p>The Company may use Personal Data for the following purposes, each with a specific legal basis as
+              outlined in
+              Section 4:</p>
+            <ul>
+              <li><strong>To provide and maintain our Service:</strong> This encompasses all activities necessary to
+                ensure
+                the
+                continuous and optimal functioning of GlobalBuy24. It includes monitoring the usage of our Service to
+                identify
+                trends, detect and resolve technical issues, prevent and address security incidents, and manage server
+                infrastructure. By analyzing Usage Data, we can proactively identify bugs, optimize server load, and
+                enhance
+                the
+                overall stability and security of the Application, ensuring a reliable experience for all users. This
+                processing
+                is essential for the legitimate interest of the Company to operate a functional and secure service.</li>
+              <li><strong>To manage Your Account:</strong> When You register for an Account, the Personal Data You
+                provide
+                (such
+                as email, name, and contact details) is meticulously used to create and maintain Your unique user
+                profile.
+                This
+                enables You to access and manage personalized functionalities within the Service, including but not
+                limited
+                to
+                viewing Your comprehensive order history, efficiently managing Your saved addresses for quicker
+                checkouts,
+                tracking the real-time status of Your shipments, and utilizing features specifically designed for
+                registered
+                users to enhance their shopping experience. This processing is necessary for the performance of the
+                contract
+                between You and the Company, as it directly supports the core functionality of Your user account.</li>
+              <li><strong>For the performance of a contract:</strong> This refers to the fundamental purpose of
+                GlobalBuy24
+                –
+                facilitating Your purchases and ensuring the seamless execution of transactions. We use Your Personal
+                Data
+                to
+                meticulously process Your orders, securely manage payments (primarily via our trusted Service Provider
+                Fapshi),
+                arrange for the efficient delivery of products to Your specified address, provide comprehensive customer
+                support
+                related to Your purchases (e.g., inquiries about products, delivery status, or order modifications), and
+                handle
+                returns or refunds in accordance with our terms of sale. This also extends to any other contractual
+                agreements
+                You enter into with Us through the Service, ensuring that all terms and conditions are met effectively
+                and
+                transparently. This processing is strictly necessary for the performance of the contract of sale or
+                service
+                with
+                You.</li>
+              <li><strong>To contact You:</strong> We may communicate with You through various electronic means to
+                provide
+                essential information. This includes sending critical transactional emails (e.g., order confirmations,
+                shipping
+                updates, password resets, security alerts regarding Your account), important service-related
+                announcements
+                (e.g., changes to terms of service, privacy policy updates, new feature rollouts), and critical security
+                alerts
+                to protect Your account. If enabled by You, mobile application push notifications may be used to provide
+                real-time updates on Your orders, delivery status, or other relevant service information. These
+                communications
+                are vital for the effective provision of our Service, ensuring You are always informed about Your
+                transactions
+                and account security. This processing is based on the necessity for the performance of a contract or our
+                legitimate interest in informing You about service-related matters.</li>
+              <li><strong>To provide You with news, special offers and general information:</strong> We may use Your
+                contact
+                information to send You marketing communications about products, services, and events that we genuinely
+                believe
+                may be of interest to You. These communications are tailored based on Your past interactions, purchase
+                history,
+                or inquiries, and could include exclusive promotions, exciting new product announcements, seasonal
+                sales, or
+                updates on categories You've shown interest in. You always retain full control over these
+                communications;
+                You
+                have the unequivocal right to opt out of receiving these marketing communications at any time by simply
+                following the clear unsubscribe instructions provided in every email, or by contacting Us directly
+                through
+                the
+                methods outlined in this Privacy Policy. This processing is based on Your consent or our legitimate
+                interest
+                in
+                promoting our similar products and services to enhance Your shopping experience.</li>
+              <li><strong>To manage Your requests:</strong> We use Your Personal Data to efficiently respond to and
+                manage
+                any
+                inquiries, feedback, complaints, or support requests You submit to Us. This includes addressing
+                technical
+                issues
+                You might encounter while using the app, providing personalized assistance with Your account settings,
+                resolving
+                disputes related to orders or services, and fulfilling information requests regarding our products or
+                policies.
+                Our goal is to ensure You receive timely, relevant, and effective support, enhancing Your overall
+                satisfaction
+                with GlobalBuy24. This processing is necessary for the performance of a contract (e.g., customer support
+                related
+                to a purchase) or our legitimate interest in providing effective customer service and maintaining
+                positive
+                user
+                relations.</li>
+              <li><strong>For business transfers:</strong> In the event that the Company is involved in a merger,
+                acquisition,
+                divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our
+                assets,
+                whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, Your Personal
+                Data
+                held
+                by Us about our Service users may be among the assets transferred. This transfer would be a necessary
+                part
+                of
+                the business transaction. We will ensure that any such transfer is conducted in a manner that fully
+                respects
+                Your privacy rights and will provide You with prominent notice (e.g., via email or an in-app
+                notification)
+                before Your Personal Data is transferred and becomes subject to a different Privacy Policy. This ensures
+                transparency and allows You to understand the implications of such a transfer. This processing is based
+                on
+                our
+                legitimate interest in facilitating corporate transactions and ensuring business continuity.</li>
+              <li><strong>For other purposes:</strong> We may utilize Your information for various internal analytical,
+                research, and operational purposes that contribute to the continuous improvement of GlobalBuy24. This
+                includes
+                conducting in-depth data analysis to understand user behavior patterns, identify emerging usage trends,
+                and
+                gain
+                insights into how our Service is being utilized. We also use this data to determine the effectiveness of
+                our
+                promotional campaigns, personalize Your experience within the app (e.g., customized product displays,
+                relevant
+                notifications), and continuously evaluate and enhance our Service, products, services, marketing
+                strategies,
+                and
+                Your overall user experience. This comprehensive analysis helps us to deliver a more relevant,
+                efficient,
+                and
+                enjoyable Service to You. This processing is based on our legitimate interest in improving our Service
+                and
+                user
+                experience.</li>
+            </ul>
 
-        <h3>Other legal requirements</h3>
-        <p>The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:</p>
-        <ul>
-          <li>Comply with a legal obligation (e.g., maintaining financial records for tax purposes, fulfilling audit
-            requirements, or adhering to industry-specific regulations).</li>
-          <li>Protect and defend the rights or property of the Company (e.g., enforcing our terms of service, defending
-            against intellectual property infringement claims, or preventing unauthorized use of our Service).</li>
-          <li>Prevent or investigate possible wrongdoing in connection with the Service (e.g., detecting and addressing
-            fraudulent activities, security breaches, or other illegal acts that may compromise the integrity of our
-            Service
-            or the safety of our users).</li>
-          <li>Protect the personal safety of Users of the Service or the public (e.g., in emergencies or situations
-            posing a
-            significant threat to life or physical integrity).</li>
-          <li>Protect against legal liability (e.g., responding to legal claims, subpoenas, or litigation where the
-            disclosure of data is deemed essential for our legal defense).</li>
-        </ul>
+            <hr>
+            <h2 id="en-legal-basis-for-processing-personal-data-under-gdpr">4. Legal Basis for Processing Personal Data
+              under
+              GDPR
+            </h2>
+            <p>For users located in the European Economic Area (EEA) and the UK, our collection and use of Personal Data
+              are
+              always based on a valid legal ground as required by the General Data Protection Regulation (GDPR). The
+              specific
+              legal basis for processing Your Personal Data depends on the type of Personal Data We collect and the
+              particular
+              context in which We collect and use it.</p>
+            <p>We may process Your Personal Data because:</p>
+            <ul>
+              <li><strong>We need to perform a contract with You:</strong> This applies when the processing of Your
+                Personal
+                Data is necessary for the performance of a contract to which You are a party, or in order to take steps
+                at
+                Your
+                request prior to entering into a contract. For example, processing Your name and address is necessary to
+                fulfill
+                Your purchase orders, manage Your account, or provide customer support related to a service You have
+                requested.
+                Without this processing, we would be unable to provide the core functionalities of GlobalBuy24.</li>
+              <li><strong>You have given Us permission to do so (Consent):</strong> This legal basis applies when You
+                have
+                given
+                us explicit, clear, and unambiguous consent for the processing of Your Personal Data for one or more
+                specific
+                purposes. For instance, we would rely on Your consent to send You marketing communications about new
+                products or
+                special offers, or to collect certain types of sensitive data if it were ever required and explicitly
+                requested.
+                You have the right to withdraw Your consent at any time, without affecting the lawfulness of processing
+                based on
+                consent before its withdrawal.</li>
+              <li><strong>The processing is in Our legitimate interests and it's not overridden by Your rights:</strong>
+                We
+                may
+                process Your Personal Data when it is necessary for the purposes of our legitimate interests, provided
+                that
+                these interests do not override Your fundamental rights and freedoms. Examples of our legitimate
+                interests
+                include:
+                <ul>
+                  <li>Improving and optimizing our Service, products, and user experience.</li>
+                  <li>Ensuring the security and integrity of our Application and systems.</li>
+                  <li>Detecting and preventing fraud or other illegal activities.</li>
+                  <li>Conducting internal analytics and research to understand user behavior and market trends.</li>
+                  <li>Facilitating business transfers and corporate transactions.</li>
+                </ul>
+                We always conduct a balancing test to ensure that our legitimate interests are proportionate to Your
+                privacy
+                rights.
+              </li>
+              <li><strong>To comply with the law (Legal Obligation):</strong> We may process Your Personal Data where it
+                is
+                necessary for compliance with a legal obligation to which the Company is subject. This includes, but is
+                not
+                limited to, obligations related to tax, accounting, consumer protection laws, or responding to valid
+                legal
+                requests from public authorities (e.g., court orders, government agency requests) in accordance with
+                applicable
+                laws.</li>
+            </ul>
 
-        <hr>
-        <h2 id="security-of-your-personal-data">10. Security of Your Personal Data</h2>
-        <p>The security of Your Personal Data is of paramount importance to Us. We implement a variety of commercially
-          acceptable technical and organizational measures designed to protect Your Personal Data from unauthorized
-          access,
-          use, alteration, and disclosure. These measures are continually reviewed and updated to adapt to evolving
-          security
-          threats. Our robust security framework includes, but is not limited to:</p>
-        <ul>
-          <li><strong>Encryption:</strong> Utilizing encryption technologies (e.g., Transport Layer Security/SSL for
-            data in
-            transit and encryption at rest for sensitive data) to protect data during transmission over networks and
-            while
-            stored on our servers.</li>
-          <li><strong>Access Controls:</strong> Implementing strict physical, administrative, and technical access
-            controls
-            to limit who can access Personal Data within the Company, based on a "need-to-know" and "least privilege"
-            principle, ensuring only authorized personnel can access Your data for legitimate purposes.</li>
-          <li><strong>Data Minimization:</strong> Adhering to the principle of collecting only the Personal Data that is
-            strictly necessary for the stated purposes, thereby reducing the amount of data potentially at risk.</li>
-          <li><strong>Regular Audits and Assessments:</strong> Periodically reviewing our security practices, conducting
-            vulnerability assessments, penetration testing, and security audits to identify and promptly address
-            potential
-            weaknesses in our systems and processes.</li>
-          <li><strong>Secure Storage:</strong> Storing data on secure servers hosted in reputable data centers with
-            appropriate physical security measures, environmental controls, and robust digital security protocols (e.g.,
-            firewalls, intrusion detection systems).</li>
-          <li><strong>Employee Training:</strong> Ensuring our staff receives regular training on data protection,
-            security
-            best practices, and confidentiality obligations.</li>
-        </ul>
-        <p>However, it is crucial to remember that no method of transmission over the Internet, or method of electronic
-          storage, is 100% secure. While We strive to use commercially acceptable means and best practices to protect
-          Your
-          Personal Data, We cannot guarantee its absolute security. We encourage You to also take proactive steps to
-          protect
-          Your personal information, such as using strong, unique passwords for Your account, enabling multi-factor
-          authentication where available, and being cautious about sharing Your account details or personal information
-          online.</p>
+            <hr>
+            <h2 id="en-sharing-your-personal-information">5. Sharing Your Personal Information</h2>
+            <p>We may share Your personal information in the following situations, always striving to ensure that Your
+              data
+              is
+              protected and used only for the purposes disclosed:</p>
+            <ul>
+              <li><strong>With Service Providers:</strong> We engage trusted third-party Service Providers to perform
+                various
+                functions on Our behalf, enabling us to operate and improve GlobalBuy24 efficiently. These providers may
+                include
+                cloud hosting services, customer support platforms, email communication services, and analytics
+                providers
+                (such
+                as those integrated through FlutterFlow like Firebase for analytics and crash reporting). We may share
+                Your
+                personal information with these Service Providers to monitor and analyze the use of our Service, to
+                process
+                payments (e.g., Fapshi), to facilitate communications with You, or to assist with technical support.
+                These
+                service providers act as data processors for the Company and are strictly bound by contractual
+                agreements to
+                protect Your data, adhere to stringent confidentiality requirements, and use it solely for the specific
+                purposes
+                for which they were engaged, in compliance with applicable data protection laws. This ensures that Your
+                data
+                is
+                handled securely and responsibly even when processed by external entities.</li>
+              <li><strong>For business transfers:</strong> In the event that the Company is involved in a merger,
+                acquisition,
+                divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our
+                assets,
+                whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, Your Personal
+                Data
+                held
+                by Us about our Service users may be among the assets transferred. This transfer would be a necessary
+                part
+                of
+                the business transaction. Should such a transfer occur, We are committed to ensuring that the acquiring
+                entity
+                is bound by the terms of this Privacy Policy or provides a new privacy policy that offers comparable
+                protection
+                for Your Personal Data. We will provide You with prominent notice (e.g., via email or an in-app
+                notification)
+                before Your Personal Data is transferred and becomes subject to a different privacy policy.</li>
+              <li><strong>With Affiliates:</strong> We may share Your information with Our affiliates for various
+                legitimate
+                internal administrative purposes, including centralized data processing, shared IT services, and
+                consolidated
+                business operations. This allows us to operate more efficiently across our group of companies and
+                provide a
+                more
+                seamless and integrated service. For instance, Your account information or usage data might be shared
+                with
+                an
+                affiliate responsible for product development, technical infrastructure, or customer support within the
+                GlobalBuy24 corporate group. In all such instances, we will impose strict contractual obligations on
+                those
+                affiliates to adhere rigorously to the terms of this Privacy Policy and to implement equivalent data
+                protection
+                and security measures to safeguard Your information. Affiliates include Our parent company and any other
+                subsidiaries, joint venture partners, or other companies that We control or that are under common
+                control
+                with
+                Us.</li>
+              <li><strong>With business partners:</strong> We may strategically collaborate with trusted business
+                partners
+                to
+                offer You certain products, services, or promotions that we believe may significantly enhance Your
+                overall
+                experience with GlobalBuy24. This could involve co-branded offers, exclusive discounts, loyalty
+                programs, or
+                integrated services that complement our core offerings (e.g., shipping partners, product suppliers).
+                When
+                sharing Your information with these partners, we adhere to a principle of data minimization, providing
+                only
+                the
+                necessary data required for the specific purpose, which may include aggregated or de-identified data
+                where
+                possible. If personal data such as Your email address is shared for direct marketing purposes by our
+                partners,
+                it will only be done with Your explicit and informed consent, and You will always have a clear and
+                accessible
+                option to opt-out of such communications. Our business partners are contractually bound to protect Your
+                data
+                and
+                to use it solely for the purposes agreed upon, in accordance with their own privacy policies and all
+                applicable
+                data protection laws.</li>
+              <li><strong>With other users:</strong> GlobalBuy24 may incorporate interactive features that allow You to
+                engage
+                with other users or share information in public areas of the Service. Examples of such public areas
+                include
+                publicly visible product review sections, community forums, comment sections on product listings, or
+                user
+                profiles if they are configured for public visibility by You. When You choose to share personal
+                information
+                or
+                otherwise interact in these public areas (e.g., Your username, profile picture, the content of Your
+                comments
+                or
+                reviews, or location if explicitly shared by You in a public post), such information may be viewed by
+                all
+                users
+                of the Service and may also be publicly distributed outside of the Service (e.g., through search
+                engines).
+                We
+                strongly urge You to exercise extreme caution and discretion when deciding to disclose Your Personal
+                Data in
+                public areas, as We cannot control the actions of other users or third parties who may access, copy, or
+                use
+                such
+                publicly available information.</li>
+              <li><strong>With Your consent:</strong> We are committed to transparency and Your control over Your data.
+                Therefore, We may disclose Your personal information for any other purpose not explicitly mentioned in
+                this
+                Privacy Policy, but only when we have obtained Your clear, specific, informed, and affirmative consent
+                to do
+                so.
+                This ensures that You have full control and understanding over the sharing of Your data for purposes
+                outside
+                of
+                our standard operational and service provisions, and You can withdraw this consent at any time.</li>
+            </ul>
 
-        <hr>
-        <h2 id="childrens-privacy">11. Children's Privacy</h2>
-        <p>Our Service does not knowingly address anyone under the age of 13. We are committed to protecting the privacy
-          of
-          children and do not knowingly collect personally identifiable information from anyone under the age of 13. If
-          You
-          are a parent or guardian and You become aware that Your child has provided Us with Personal Data without Your
-          verifiable consent, please contact Us immediately. If We become aware that We have collected Personal Data
-          from
-          anyone under the age of 13 without verification of parental consent, We will take prompt and reasonable steps
-          to
-          remove that information from Our servers and cease processing it, in compliance with applicable laws.</p>
-        <p>Furthermore, if We need to rely on consent as a legal basis for processing Your information and Your country
-          requires consent from a parent or guardian for children above 13 (e.g., under specific GDPR provisions for
-          children aged 13-16), We may require Your parent's or guardian's verifiable consent before We collect and use
-          that
-          information. This ensures compliance with age-specific consent requirements for data processing.</p>
+            <hr>
+            <h2 id="en-retention-of-your-personal-data">6. Retention of Your Personal Data</h2>
+            <p>The Company will retain Your Personal Data only for as long as is strictly necessary for the purposes set
+              out
+              in
+              this Privacy Policy, or for the duration required by applicable legal and regulatory obligations. The
+              specific
+              retention period for different types of Personal Data is determined by various factors, including:</p>
+            <ul>
+              <li>The purpose for which the data was collected (e.g., account management, transaction fulfillment).</li>
+              <li>The nature of the data (e.g., sensitive vs. non-sensitive).</li>
+              <li>Any legal or regulatory requirements that mandate specific retention periods (e.g., tax laws, consumer
+                protection laws, anti-money laundering regulations).</li>
+              <li>Our legitimate business needs, such as dispute resolution, fraud prevention, auditing, and internal
+                record-keeping.</li>
+            </ul>
+            <p>We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations
+              (for
+              example, if we are required to retain your data to comply with applicable tax or accounting laws), resolve
+              disputes, and enforce our legal agreements and policies. Once the retention period expires, Your Personal
+              Data
+              will be securely deleted or anonymized in a manner that prevents its re-identification.</p>
+            <p>The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained
+              for
+              a
+              shorter period of time compared to Personal Data, as it is often aggregated and less directly
+              identifiable.
+              However, Usage Data may be retained for longer periods when this data is specifically used to strengthen
+              the
+              security of Our Service (e.g., analyzing unusual login patterns, detecting and preventing cyberattacks),
+              to
+              improve the functionality of Our Service (e.g., understanding feature usage to guide development,
+              optimizing
+              user
+              flows), or when We are legally obligated to retain this data for longer time periods (e.g., for audit
+              trails
+              or
+              regulatory compliance purposes related to system performance).</p>
 
-        <hr>
-        <h2 id="links-to-other-websites">12. Links to Other Websites</h2>
-        <p>Our Service may contain links to other websites that are not operated by Us. These links are provided solely
-          for
-          Your convenience and information. For example, a link might direct You to a product manufacturer's website or
-          a
-          news article related to a feature. If You click on a third-party link, You will be directed away from our
-          Service
-          to that third party's site. We strongly advise You to review the Privacy Policy of every external site You
-          visit,
-          as their policies and data practices may differ significantly from ours.</p>
-        <p>We have no control over and assume no responsibility for the content, privacy policies, or practices of any
-          third-party sites or services. We do not endorse or make any representations about third-party websites. Your
-          interactions with any third-party website linked from our Service are solely at Your own risk, and we
-          encourage
-          you to exercise caution and make informed decisions before providing any personal information on such sites.
-        </p>
+            <hr>
+            <h2 id="en-transfer-of-your-personal-data">7. Transfer of Your Personal Data</h2>
+            <p>Your information, including Personal Data, is processed at the Company's operating offices in Berlin,
+              Germany,
+              and in any other places where the parties involved in the processing are located. This means that Your
+              information
+              may be transferred to — and maintained on — computers located outside of Your state, province, country, or
+              other
+              governmental jurisdiction where the data protection laws may differ from those in Your jurisdiction.</p>
+            <p>As a company based in Germany, we are subject to the General Data Protection Regulation (GDPR). When
+              transferring
+              Personal Data outside the European Economic Area (EEA) or the UK, we take all steps reasonably necessary
+              to
+              ensure
+              that Your data is treated securely and in accordance with this Privacy Policy and the stringent
+              requirements
+              of
+              the GDPR. This means that no transfer of Your Personal Data will take place to an organization or a
+              country
+              unless
+              there are adequate controls in place, including appropriate safeguards to ensure the security of Your data
+              and
+              other personal information. These safeguards may include, but are not limited to:</p>
+            <ul>
+              <li><strong>Adequacy Decisions:</strong> Transferring data to countries or organizations recognized by the
+                European Commission or competent UK authorities as providing an adequate level of data protection,
+                ensuring
+                a
+                comparable standard of privacy protection.</li>
+              <li><strong>Standard Contractual Clauses (SCCs):</strong> Implementing legally binding contracts approved
+                by
+                the
+                European Commission or competent UK authorities that impose robust data protection obligations on the
+                recipient
+                of the data outside the EEA/UK, including security measures and data subject rights.</li>
+              <li><strong>Binding Corporate Rules (BCRs):</strong> For transfers within a corporate group, implementing
+                internal
+                rules approved by data protection authorities, which provide a robust framework for international data
+                transfers.</li>
+              <li><strong>Your Explicit Consent:</strong> In specific situations, we may rely on Your explicit consent
+                for
+                the
+                transfer, provided that You have been fully informed of the potential risks of such transfers for You
+                due to
+                the
+                absence of an adequacy decision and appropriate safeguards. This consent is always voluntary and can be
+                withdrawn.</li>
+            </ul>
+            <p>Your consent to this Privacy Policy followed by Your submission of such information represents Your
+              agreement
+              to
+              such transfers, provided the aforementioned safeguards are in place to ensure the continued protection of
+              Your
+              data.</p>
 
-        <hr>
-        <h2 id="changes-to-this-privacy-policy">13. Changes to this Privacy Policy</h2>
-        <p>We may update Our Privacy Policy from time to time to reflect changes in our data processing practices, to
-          comply
-          with new legal requirements, or to incorporate technological advancements and new features within GlobalBuy24.
-          We
-          will notify You of any significant changes by posting the new Privacy Policy on this page, indicating the
-          "Last
-          updated" date at the top.</p>
-        <p>For material changes that affect how Your Personal Data is processed, we will endeavor to let You know via
-          email
-          and/or a prominent notice within Our Service (e.g., an in-app banner or pop-up message) prior to the change
-          becoming effective. This ensures You have sufficient time to review the changes and understand their
-          implications.
-          We encourage You to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy
-          are
-          effective when they are posted on this page. Your continued use of the Service after the revised Privacy
-          Policy
-          has become effective indicates Your acceptance of the revised Privacy Policy.</p>
+            <hr>
+            <h2 id="en-your-data-protection-rights-under-gdpr">8. Your Data Protection Rights under GDPR</h2>
+            <p>If You are a resident of the European Economic Area (EEA) or the UK, You have certain comprehensive data
+              protection rights under the General Data Protection Regulation (GDPR). We are committed to facilitating
+              the
+              effective exercise of these rights. You have the right to:</p>
+            <ul>
+              <li><strong>The right to access (Article 15 GDPR):</strong> You have the right to request copies of Your
+                Personal
+                Data that we hold. This allows You to verify the lawfulness of the processing. We may charge You a small
+                fee
+                for
+                this service if the request is manifestly unfounded, excessive, or repetitive.</li>
+              <li><strong>The right to rectification (Article 16 GDPR):</strong> You have the right to request that We
+                correct
+                any information You believe is inaccurate or incomplete. We are obliged to correct inaccurate Personal
+                Data
+                or
+                complete incomplete Personal Data without undue delay.</li>
+              <li><strong>The right to erasure (Right to be Forgotten) (Article 17 GDPR):</strong> You have the right to
+                request
+                that We erase Your Personal Data, under certain conditions, such as when the data is no longer necessary
+                for
+                the
+                purposes for which it was collected, or when You withdraw consent and there is no other legal ground for
+                processing.</li>
+              <li><strong>The right to restrict processing (Article 18 GDPR):</strong> You have the right to request
+                that We
+                restrict the processing of Your Personal Data, under certain conditions, for example, if You contest the
+                accuracy of the data, or if the processing is unlawful but You oppose erasure.</li>
+              <li><strong>The right to object to processing (Article 21 GDPR):</strong> You have the right to object to
+                Our
+                processing of Your Personal Data, under certain conditions, particularly where the processing is based
+                on
+                legitimate interests (unless we demonstrate compelling legitimate grounds) or for direct marketing
+                purposes.
+              </li>
+              <li><strong>The right to data portability (Article 20 GDPR):</strong> You have the right to request that
+                We
+                transfer the data that we have collected to another organization, or directly to You, in a structured,
+                commonly
+                used, and machine-readable format, under certain conditions. This applies to data processed by automated
+                means
+                based on consent or a contract.</li>
+              <li><strong>The right to withdraw consent (Article 7(3) GDPR):</strong> Where we rely on Your consent to
+                process
+                Your Personal Data, You have the right to withdraw that consent at any time. The withdrawal of consent
+                shall
+                not
+                affect the lawfulness of processing based on consent before its withdrawal.</li>
+              <li><strong>The right to lodge a complaint with a supervisory authority (Article 77 GDPR):</strong> You
+                have
+                the
+                right to complain to a data protection authority about Our collection and use of Your Personal Data. For
+                more
+                information, please contact Your local data protection authority in the EEA or the UK. In Germany, this
+                would be
+                the Berlin Commissioner for Data Protection and Freedom of Information (Berliner Beauftragte für
+                Datenschutz
+                und
+                Informationsfreiheit).</li>
+            </ul>
+            <p>You may update, amend, or delete Your information at any time by signing in to Your Account, if you have
+              one,
+              and
+              visiting the account settings section that allows you to manage Your personal information directly. You
+              may
+              also
+              contact Us to request access to, correct, or delete any personal information that You have provided to Us.
+              Please
+              note, however, that We may need to retain certain information when we have a legal obligation or lawful
+              basis
+              to
+              do so (e.g., for tax or legal compliance), or when it is necessary for the establishment, exercise, or
+              defense
+              of
+              legal claims.</p>
 
-        <hr>
-        <h2 id="contact-us">14. Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, Your data, or wish to exercise any of Your data
-          protection
-          rights, You can contact us using the following methods:</p>
-        <ul>
-          <li>By email: <a href="mailto:contact@globalbuy24.com">contact@globalbuy24.com</a></li>
-          <li>By visiting this page on our website: <a href="https://globalbuy24.com/"
-              target="_blank">https://globalbuy24.com/</a></li>
-          <li>By phone number: +237 672815351</li>
-        </ul>
+            <hr>
+            <h2 id="en-disclosure-of-your-personal-data">9. Disclosure of Your Personal Data</h2>
+            <h3>Business Transactions</h3>
+            <p>If the Company is involved in a merger, acquisition, asset sale, or similar business transaction, Your
+              Personal
+              Data may be transferred as part of that transaction. This is a standard part of corporate reorganizations.
+              We
+              will
+              provide You with prominent notice (e.g., via email and/or a prominent notice on Our Service) before Your
+              Personal
+              Data is transferred and becomes subject to a different Privacy Policy, ensuring You are fully aware of any
+              changes
+              to the handling of Your data and can exercise any applicable rights.</p>
+
+            <h3>Law enforcement</h3>
+            <p>Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do
+              so
+              by
+              law or in response to valid requests by public authorities (e.g., a court order, subpoena, or a legitimate
+              request
+              from a government agency). We are committed to transparency and will only comply with such requests where
+              we
+              believe they are legally valid and necessary. We will endeavor to notify You of such requests unless
+              legally
+              prohibited from doing so.</p>
+
+            <h3>Other legal requirements</h3>
+            <p>The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:
+            </p>
+            <ul>
+              <li>Comply with a legal obligation (e.g., maintaining financial records for tax purposes, fulfilling audit
+                requirements, or adhering to industry-specific regulations).</li>
+              <li>Protect and defend the rights or property of the Company (e.g., enforcing our terms of service,
+                defending
+                against intellectual property infringement claims, or preventing unauthorized use of our Service).</li>
+              <li>Prevent or investigate possible wrongdoing in connection with the Service (e.g., detecting and
+                addressing
+                fraudulent activities, security breaches, or other illegal acts that may compromise the integrity of our
+                Service
+                or the safety of our users).</li>
+              <li>Protect the personal safety of Users of the Service or the public (e.g., in emergencies or situations
+                posing a
+                significant threat to life or physical integrity).</li>
+              <li>Protect against legal liability (e.g., responding to legal claims, subpoenas, or litigation where the
+                disclosure of data is deemed essential for our legal defense).</li>
+            </ul>
+
+            <hr>
+            <h2 id="en-security-of-your-personal-data">10. Security of Your Personal Data</h2>
+            <p>The security of Your Personal Data is of paramount importance to Us. We implement a variety of
+              commercially
+              acceptable technical and organizational measures designed to protect Your Personal Data from unauthorized
+              access,
+              use, alteration, and disclosure. These measures are continually reviewed and updated to adapt to evolving
+              security
+              threats. Our robust security framework includes, but is not limited to:</p>
+            <ul>
+              <li><strong>Encryption:</strong> Utilizing encryption technologies (e.g., Transport Layer Security/SSL for
+                data in
+                transit and encryption at rest for sensitive data) to protect data during transmission over networks and
+                while
+                stored on our servers.</li>
+              <li><strong>Access Controls:</strong> Implementing strict physical, administrative, and technical access
+                controls
+                to limit who can access Personal Data within the Company, based on a "need-to-know" and "least
+                privilege"
+                principle, ensuring only authorized personnel can access Your data for legitimate purposes.</li>
+              <li><strong>Data Minimization:</strong> Adhering to the principle of collecting only the Personal Data
+                that is
+                strictly necessary for the stated purposes, thereby reducing the amount of data potentially at risk.
+              </li>
+              <li><strong>Regular Audits and Assessments:</strong> Periodically reviewing our security practices,
+                conducting
+                vulnerability assessments, penetration testing, and security audits to identify and promptly address
+                potential
+                weaknesses in our systems and processes.</li>
+              <li><strong>Secure Storage:</strong> Storing data on secure servers hosted in reputable data centers with
+                appropriate physical security measures, environmental controls, and robust digital security protocols
+                (e.g.,
+                firewalls, intrusion detection systems).</li>
+              <li><strong>Employee Training:</strong> Ensuring our staff receives regular training on data protection,
+                security
+                best practices, and confidentiality obligations.</li>
+            </ul>
+            <p>However, it is crucial to remember that no method of transmission over the Internet, or method of
+              electronic
+              storage, is 100% secure. While We strive to use commercially acceptable means and best practices to
+              protect
+              Your
+              Personal Data, We cannot guarantee its absolute security. We encourage You to also take proactive steps to
+              protect
+              Your personal information, such as using strong, unique passwords for Your account, enabling multi-factor
+              authentication where available, and being cautious about sharing Your account details or personal
+              information
+              online.</p>
+
+            <hr>
+            <h2 id="en-childrens-privacy">11. Children's Privacy</h2>
+            <p>Our Service does not knowingly address anyone under the age of 13. We are committed to protecting the
+              privacy
+              of
+              children and do not knowingly collect personally identifiable information from anyone under the age of 13.
+              If
+              You
+              are a parent or guardian and You become aware that Your child has provided Us with Personal Data without
+              Your
+              verifiable consent, please contact Us immediately. If We become aware that We have collected Personal Data
+              from
+              anyone under the age of 13 without verification of parental consent, We will take prompt and reasonable
+              steps
+              to
+              remove that information from Our servers and cease processing it, in compliance with applicable laws.</p>
+            <p>Furthermore, if We need to rely on consent as a legal basis for processing Your information and Your
+              country
+              requires consent from a parent or guardian for children above 13 (e.g., under specific GDPR provisions for
+              children aged 13-16), We may require Your parent's or guardian's verifiable consent before We collect and
+              use
+              that
+              information. This ensures compliance with age-specific consent requirements for data processing.</p>
+
+            <hr>
+            <h2 id="en-links-to-other-websites">12. Links to Other Websites</h2>
+            <p>Our Service may contain links to other websites that are not operated by Us. These links are provided
+              solely
+              for
+              Your convenience and information. For example, a link might direct You to a product manufacturer's website
+              or
+              a
+              news article related to a feature. If You click on a third-party link, You will be directed away from our
+              Service
+              to that third party's site. We strongly advise You to review the Privacy Policy of every external site You
+              visit,
+              as their policies and data practices may differ significantly from ours.</p>
+            <p>We have no control over and assume no responsibility for the content, privacy policies, or practices of
+              any
+              third-party sites or services. We do not endorse or make any representations about third-party websites.
+              Your
+              interactions with any third-party website linked from our Service are solely at Your own risk, and we
+              encourage
+              you to exercise caution and make informed decisions before providing any personal information on such
+              sites.
+            </p>
+
+            <hr>
+            <h2 id="en-changes-to-this-privacy-policy">13. Changes to this Privacy Policy</h2>
+            <p>We may update Our Privacy Policy from time to time to reflect changes in our data processing practices,
+              to
+              comply
+              with new legal requirements, or to incorporate technological advancements and new features within
+              GlobalBuy24.
+              We
+              will notify You of any significant changes by posting the new Privacy Policy on this page, indicating the
+              "Last
+              updated" date at the top.</p>
+            <p>For material changes that affect how Your Personal Data is processed, we will endeavor to let You know
+              via
+              email
+              and/or a prominent notice within Our Service (e.g., an in-app banner or pop-up message) prior to the
+              change
+              becoming effective. This ensures You have sufficient time to review the changes and understand their
+              implications.
+              We encourage You to review this Privacy Policy periodically for any changes. Changes to this Privacy
+              Policy
+              are
+              effective when they are posted on this page. Your continued use of the Service after the revised Privacy
+              Policy
+              has become effective indicates Your acceptance of the revised Privacy Policy.</p>
+
+            <hr>
+            <h2 id="en-contact-us">14. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, Your data, or wish to exercise any of Your data
+              protection
+              rights, You can contact us using the following methods:</p>
+            <ul>
+              <li>By email: <a href="mailto:contact@globalbuy24.com">contact@globalbuy24.com</a></li>
+              <li>By visiting this page on our website: <a href="https://globalbuy24.com/"
+                  target="_blank">https://globalbuy24.com/</a></li>
+              <li>By phone number: +237 672815351</li>
+            </ul>
+          </div>
+
+          <div id="fr-section" class="language-section">
+            <p class="last-updated">Dernière mise à jour : 21 juillet 2025</p>
+            <p>Cette Politique de Confidentialité décrit Nos politiques et procédures concernant la collecte,
+              l'utilisation
+              et la divulgation de Vos informations lorsque Vous utilisez le Service et Vous informe sur Vos droits en
+              matière de confidentialité et sur la manière dont la loi Vous protège. Nous comprenons l'importance
+              capitale de Votre vie privée et nous nous engageons à protéger Vos données personnelles avec le plus grand
+              soin et la plus grande transparence. Notre objectif est de fournir un aperçu clair et complet de la
+              manière
+              dont Vos informations sont traitées, afin de Vous assurer que Vous êtes pleinement informé et habilité
+              concernant Vos données.</p>
+
+            <p>Nous utilisons Vos Données Personnelles pour fournir et améliorer le Service. En utilisant le Service,
+              Vous
+              acceptez la collecte et l'utilisation des informations conformément à cette Politique de Confidentialité.
+              Cette politique est conçue pour se conformer au Règlement Général sur la Protection des Données (RGPD) et
+              aux autres lois applicables en matière de protection des données, reflétant notre engagement envers les
+              normes mondiales de confidentialité.</p>
+
+            <h2 id="fr-interpretation-et-definitions">1. Interprétation et Définitions</h2>
+            <h3>Interprétation</h3>
+            <p>Les mots dont la première lettre est en majuscule ont des significations définies dans les conditions
+              suivantes. Ces définitions sont cruciales pour comprendre la portée et l'intention de cette Politique de
+              Confidentialité, garantissant clarté et cohérence tout au long du document. Les définitions suivantes
+              auront la même signification, qu'elles apparaissent au singulier ou au pluriel.</p>
+
+            <h3>Définitions</h3>
+            <p>Aux fins de la présente Politique de Confidentialité :</p>
+            <ul>
+              <li><strong>Compte</strong> désigne un compte unique et personnalisé créé pour Vous afin d'accéder à des
+                fonctionnalités et des fonctions spécifiques au sein de notre Service, telles que la gestion de votre
+                profil, la consultation de l'historique des commandes ou la sauvegarde des préférences.
+              </li>
+              <li><strong>Affilié</strong> désigne une entité qui contrôle, est contrôlée par ou est sous contrôle
+                commun
+                avec une partie, où "contrôle" signifie la propriété de 50 % ou plus des actions, des participations ou
+                d'autres titres donnant droit de vote pour l'élection des administrateurs ou d'une autre autorité de
+                gestion. Cela inclut notre société mère, nos filiales et tout partenaire de coentreprise.</li>
+              <li><strong>Application</strong> fait référence à GlobalBuy24, le programme logiciel complet fourni par la
+                Société, qui est méticuleusement développé et continuellement exploité à l'aide de la plateforme
+                FlutterFlow pour assurer une expérience utilisateur robuste et efficace.</li>
+              <li><strong>Société</strong> (désignée par "la Société", "Nous" ou "Notre" dans le présent Contrat) fait
+                référence à GlobalBuy24, dont le siège social est situé Huttenstraße 25, 13353 Berlin, Allemagne. Aux
+                fins
+                du RGPD, la Société agit en tant que Responsable du Traitement, déterminant les finalités et les moyens
+                du traitement de Vos Données Personnelles.</li>
+              <li><strong>Pays</strong> fait référence à : l'Allemagne, plus précisément Berlin, qui se trouve dans
+                l'Espace économique européen (EEE), ce qui signifie que nos activités de traitement des données sont
+                soumises au Règlement général sur la protection des données (RGPD).
+              </li>
+              <li><strong>Responsable du Traitement</strong>, aux fins du RGPD (Règlement général sur la protection des
+                données), désigne la personne physique ou morale qui, seule ou conjointement avec d'autres, détermine
+                les
+                finalités et les moyens du traitement des Données Personnelles. Cela signifie notre responsabilité à
+                l'égard de Vos données.</li>
+              <li><strong>Appareil</strong> désigne tout appareil électronique pouvant accéder et utiliser le Service,
+                englobant une large gamme de matériel tel que des ordinateurs personnels, des téléphones mobiles
+                (smartphones) ou des tablettes numériques.</li>
+              <li><strong>Données Personnelles</strong> est toute information qui se rapporte directement ou
+                indirectement à une personne identifiée ou identifiable. Cela peut inclure n'importe quoi, d'un nom ou
+                d'une adresse e-mail à une adresse IP ou un identifiant d'appareil unique, à condition qu'il puisse être
+                relié à une personne spécifique.</li>
+              <li><strong>Service</strong> fait référence à l'Application, GlobalBuy24, et à toutes les
+                fonctionnalités, le contenu et les services fournis par son intermédiaire.</li>
+              <li><strong>Fournisseur de Services</strong> désigne toute personne physique ou morale qui traite les
+                données au nom de la Société. Cela fait généralement référence aux sociétés ou aux personnes physiques
+                tierces employées par la Société pour faciliter le Service, pour fournir le Service au nom de la
+                Société,
+                pour effectuer des services liés au Service (par exemple, l'hébergement, le support client), ou pour
+                aider la Société à analyser la façon dont le Service est utilisé (par exemple, les fournisseurs
+                d'analyse).</li>
+              <li><strong>Données d'Utilisation</strong> fait référence aux données collectées automatiquement, générées
+                soit par l'utilisation du Service lui-même, soit dérivées de l'infrastructure du Service. Cela inclut
+                les informations techniques sur Votre interaction avec le Service, telles que la durée d'une visite de
+                page, les fonctionnalités consultées ou les rapports d'erreur.</li>
+              <li><strong>Vous</strong> désigne la personne physique qui accède ou utilise le Service, ou la société, ou
+                toute autre entité juridique au nom de laquelle cette personne accède ou utilise le Service, le cas
+                échéant. Cela fait référence à l'utilisateur dont les données sont collectées et traitées.</li>
+            </ul>
+
+            <hr>
+            <h2 id="fr-collecting-and-using-your-personal-data">2. Collecte et Utilisation de Vos Données Personnelles
+            </h2>
+            <h3>Types de Données Collectées</h3>
+            <h4>Données Personnelles</h4>
+            <p>Lors de l'utilisation de Notre Service, Nous pouvons Vous demander de Nous fournir certaines informations
+              personnellement identifiables qui peuvent être utilisées pour Vous contacter ou Vous identifier, ou pour
+              activer des fonctionnalités spécifiques du Service. Ces informations sont collectées pour faciliter Votre
+              utilisation de GlobalBuy24, gérer Votre compte et répondre à Vos demandes. Les informations
+              personnellement identifiables peuvent inclure, sans s'y limiter :</p>
+            <ul>
+              <li><strong>Adresse e-mail :</strong> Principalement utilisée pour l'enregistrement du compte, la
+                connexion, l'envoi de notifications transactionnelles (par exemple, confirmations de commande,
+                réinitialisations de mot de passe) et pour la communication directe concernant Votre compte ou Vos
+                demandes.</li>
+              <li><strong>Prénom et nom de famille :</strong> Utilisés pour personnaliser Votre expérience au sein de
+                l'application, Vous adresser correctement et à des fins d'expédition.</li>
+              <li><strong>Numéro de téléphone :</strong> Peut être collecté pour la vérification des commandes, les
+                notifications de livraison ou pour la communication directe du support client, en particulier pour les
+                mises à jour critiques liées à Vos achats.</li>
+              <li><strong>Adresse, État, Province, Code postal, Ville :</strong> Essentiels pour le traitement et
+                l'expédition de Vos commandes, le calcul des frais d'expédition et la garantie d'une livraison précise
+                des produits achetés via le Service. Ces informations sont directement liées à l'exécution de Vos
+                contrats d'achat.</li>
+            </ul>
+
+            <h4>Données d'Utilisation</h4>
+            <p>Les Données d'Utilisation sont collectées automatiquement lorsque Vous interagissez avec ou utilisez le
+              Service. Ces données nous aident à comprendre comment les utilisateurs interagissent avec GlobalBuy24,
+              nous permettant d'améliorer ses performances, sa stabilité et son expérience utilisateur.</p>
+            <p>Les Données d'Utilisation peuvent inclure des informations telles que l'adresse IP de Votre Appareil
+              (par exemple, l'adresse IP), le type de navigateur, la version du navigateur, les pages ou écrans
+              spécifiques de notre Service que Vous visitez, l'heure et la date précises de Votre visite, la durée
+              passée
+              sur ces pages ou écrans, les identifiants uniques de l'appareil (tels que l'ID publicitaire de l'appareil
+              ou d'autres identifiants persistants) et d'autres données de diagnostic liées aux performances et à la
+              stabilité de l'application.</p>
+            <p>Lorsque Vous accédez au Service par ou via un appareil mobile, Nous pouvons collecter certaines
+              informations automatiquement, y compris, mais sans s'y limiter, le type d'appareil mobile que Vous
+              utilisez
+              (par exemple, iPhone, téléphone Android), l'ID unique de Votre appareil mobile, l'adresse IP de Votre
+              appareil mobile, Votre système d'exploitation mobile (par exemple, iOS, Android), le type de navigateur
+              Internet mobile que Vous utilisez, les identifiants uniques de l'appareil et d'autres données de
+              diagnostic
+              qui nous aident à résoudre les problèmes et à améliorer l'application. Ces données sont cruciales pour
+              optimiser la compatibilité et les performances de l'application sur divers appareils et conditions de
+              réseau.</p>
+            <p>Nous pouvons également collecter les informations que Votre navigateur envoie chaque fois que Vous
+              visitez
+              notre Service ou lorsque Vous accédez au Service par ou via un appareil mobile. Cela inclut les données de
+              journal standard que les serveurs Web collectent généralement.</p>
+
+            <h4>Cookies et Technologies Similaires</h4>
+            <p>Bien que GlobalBuy24 lui-même n'utilise pas directement de nombreux cookies de suivi à des fins
+              publicitaires, la plateforme FlutterFlow et ses services intégrés, ainsi que les fournisseurs de services
+              tiers, peuvent utiliser des cookies, des balises Web et des technologies de suivi similaires pour
+              améliorer
+              les fonctionnalités, analyser les habitudes d'utilisation et assurer le bon fonctionnement du Service. Ces
+              technologies peuvent collecter des informations pour :</p>
+            <ul>
+              <li>Maintenir les sessions utilisateur (par exemple, vous maintenir connecté).</li>
+              <li>Mémoriser les préférences de l'utilisateur.</li>
+              <li>Analyser le trafic du site et le comportement de l'utilisateur pour l'optimisation des performances.
+              </li>
+              <li>Faciliter les transactions sécurisées.</li>
+            </ul>
+            <p>Toute utilisation de ce type est principalement destinée à l'intégrité fonctionnelle et à l'amélioration
+              du Service. Vous pouvez demander à Votre navigateur de refuser tous les cookies ou d'indiquer quand un
+              cookie est envoyé. Cependant, si Vous n'acceptez pas les cookies, Vous pourriez ne pas être en mesure
+              d'utiliser certaines parties de notre Service.</p>
+
+            <h4>Informations Collectées lors de l'Utilisation de l'Application</h4>
+            <p>Lors de l'utilisation de Notre Application, afin de fournir des fonctionnalités spécifiques et
+              d'améliorer
+              Votre expérience, Nous pouvons collecter, avec Votre autorisation préalable explicite :</p>
+            <ul>
+              <li><strong>Informations concernant votre localisation :</strong> Cela peut inclure des données de
+                localisation précises obtenues par GPS, Wi-Fi ou triangulation de réseau cellulaire. Nous utilisons ces
+                informations pour fournir des fonctionnalités basées sur la localisation, telles que l'identification
+                des magasins ou services à proximité, l'adaptation des recommandations de produits en fonction de Votre
+                région ou la facilitation d'offres spécifiques à la localisation. Ces informations nous aident à
+                personnaliser et à améliorer la pertinence de Notre Service à Votre contexte géographique.</li>
+            </ul>
+            <p>Nous utilisons ces informations pour fournir des fonctionnalités de Notre Service, pour améliorer et
+              personnaliser Notre Service. Les informations peuvent être téléchargées sur les serveurs sécurisés de la
+              Société et/ou sur le serveur d'un Fournisseur de Services ou elles peuvent simplement être stockées
+              localement sur Votre appareil. Vous conservez le contrôle total de ces données et pouvez activer ou
+              désactiver l'accès à ces informations à tout moment via les paramètres de Votre Appareil.</p>
+
+            <h3>Fournisseurs de Services Tiers</h3>
+            <p>Notre Application est développée et exploitée sur la plateforme FlutterFlow. Les applications FlutterFlow
+              s'intègrent intrinsèquement à divers services par défaut, qui peuvent inclure Firebase de Google pour les
+              fonctionnalités de base. Ces services sont essentiels pour le fonctionnement, l'analyse, le rapport
+              d'erreurs et l'infrastructure backend de l'Application. Ces services intégrés peuvent collecter
+              automatiquement certaines Données d'Utilisation (telles que décrites ci-dessus) pour fournir leurs
+              fonctionnalités respectives. Par exemple, Firebase Analytics peut collecter des données sur les habitudes
+              d'utilisation des applications, l'engagement des utilisateurs et les journaux de plantage pour nous aider
+              à
+              surveiller les performances des applications, à identifier les domaines à améliorer et à déboguer les
+              problèmes. Ces données sont généralement agrégées et anonymisées si possible, mais peuvent inclure des
+              identifiants uniques.</p>
+            <p>Nous utilisons également les Fournisseurs de Services tiers spécifiques suivants pour fournir et
+              améliorer
+              notre service, et pour faciliter les fonctionnalités critiques :</p>
+            <ul>
+              <li><strong>Fapshi (Passerelle de paiement) :</strong> Nous utilisons Fapshi, une passerelle de paiement
+                tierce basée au Cameroun, pour traiter en toute sécurité tous les paiements des biens et services
+                achetés
+                via GlobalBuy24. Lorsque Vous initiez un achat, Vous serez redirigé en toute sécurité vers la plateforme
+                dédiée de Fapshi pour finaliser la transaction. Au cours de ce processus, Fapshi collectera directement
+                auprès de Vous les informations financières et personnelles nécessaires, telles que les détails de Votre
+                carte de paiement, l'adresse de facturation et le montant de la transaction. <strong>Veuillez noter que
+                  GlobalBuy24 ne collecte, ne stocke ni ne traite directement les détails sensibles de Votre carte de
+                  paiement.</strong> Ces informations sont fournies directement à Fapshi, dont la collecte,
+                l'utilisation
+                et le traitement de Vos informations personnelles sont régis par leur propre Politique de
+                Confidentialité
+                complète. Nous Vous encourageons fortement à consulter la Politique de Confidentialité de Fapshi pour
+                comprendre leurs pratiques en matière de données : <a href="https://www.fapshi.com/en/privacy-policy"
+                  target="_blank">https://www.fapshi.com/en/privacy-policy</a>. Notre intégration avec Fapshi est conçue
+                pour assurer le plus haut niveau de sécurité pour Vos transactions financières.</li>
+            </ul>
+
+            <hr>
+            <h2 id="fr-use-of-your-personal-data">3. Utilisation de Vos Données Personnelles</h2>
+            <p>La Société peut utiliser les Données Personnelles aux fins suivantes, chacune avec une base juridique
+              spécifique comme indiqué à la Section 4 :</p>
+            <ul>
+              <li><strong>Pour fournir et maintenir notre Service :</strong> Cela englobe toutes les activités
+                nécessaires pour assurer le fonctionnement continu et optimal de GlobalBuy24. Cela inclut la
+                surveillance de l'utilisation de notre Service pour identifier les tendances, détecter et résoudre les
+                problèmes techniques, prévenir et traiter les incidents de sécurité, et gérer l'infrastructure du
+                serveur. En analysant les Données d'Utilisation, nous pouvons identifier de manière proactive les bugs,
+                optimiser la charge du serveur et améliorer la stabilité et la sécurité globales de l'Application,
+                garantissant une expérience fiable pour tous les utilisateurs. Ce traitement est essentiel pour
+                l'intérêt
+                légitime de la Société d'exploiter un service fonctionnel et sécurisé.</li>
+              <li><strong>Pour gérer Votre Compte :</strong> Lorsque Vous créez un Compte, les Données Personnelles que
+                Vous fournissez (telles que l'e-mail, le nom et les coordonnées) sont méticuleusement utilisées pour
+                créer et maintenir Votre profil utilisateur unique. Cela Vous permet d'accéder et de gérer les
+                fonctionnalités personnalisées au sein du Service, y compris, mais sans s'y limiter, la consultation de
+                Votre historique de commandes complet, la gestion efficace de Vos adresses enregistrées pour des
+                paiements plus rapides, le suivi en temps réel de Vos expéditions et l'utilisation de fonctionnalités
+                spécifiquement conçues pour les utilisateurs enregistrés afin d'améliorer leur expérience d'achat. Ce
+                traitement est nécessaire à l'exécution du contrat entre Vous et la Société, car il prend directement en
+                charge la fonctionnalité principale de Votre compte utilisateur.</li>
+              <li><strong>Pour l'exécution d'un contrat :</strong> Cela fait référence à l'objectif fondamental de
+                GlobalBuy24 – faciliter Vos achats et assurer l'exécution transparente des transactions. Nous utilisons
+                Vos Données Personnelles pour traiter méticuleusement Vos commandes, gérer les paiements en toute
+                sécurité (principalement via notre Fournisseur de Services de confiance Fapshi), organiser la livraison
+                efficace des produits à Votre adresse spécifiée, fournir un support client complet lié à Vos achats (par
+                exemple, des demandes concernant les produits, l'état de la livraison ou les modifications de commande)
+                et gérer les retours ou les remboursements conformément à nos conditions de vente. Cela s'étend
+                également à tout autre accord contractuel que Vous concluez avec Nous via le Service, garantissant que
+                toutes les conditions générales sont respectées de manière efficace et transparente. Ce traitement est
+                strictement nécessaire à l'exécution du contrat de vente ou de service avec Vous.</li>
+              <li><strong>Pour Vous contacter :</strong> Nous pouvons communiquer avec Vous par divers moyens
+                électroniques pour Vous fournir des informations essentielles. Cela inclut l'envoi d'e-mails
+                transactionnels critiques (par exemple, confirmations de commande, mises à jour d'expédition,
+                réinitialisations de mot de passe, alertes de sécurité concernant Votre compte), d'annonces importantes
+                liées au service (par exemple, modifications des conditions de service, mises à jour de la politique de
+                confidentialité, déploiement de nouvelles fonctionnalités) et d'alertes de sécurité critiques pour
+                protéger Votre compte. Si Vous l'avez activé, des notifications push d'application mobile peuvent être
+                utilisées pour fournir des mises à jour en temps réel sur Vos commandes, l'état de la livraison ou
+                d'autres informations de service pertinentes. Ces communications sont vitales pour la fourniture
+                efficace
+                de notre Service, garantissant que Vous êtes toujours informé de Vos transactions et de la sécurité de
+                Votre compte. Ce traitement est basé sur la nécessité d'exécuter un contrat ou sur notre intérêt
+                légitime
+                à Vous informer des questions liées au service.</li>
+              <li><strong>Pour Vous fournir des nouvelles, des offres spéciales et des informations générales :</strong>
+                Nous pouvons utiliser Vos coordonnées pour Vous envoyer des communications marketing sur des produits,
+                services et événements que nous pensons sincèrement pouvoir Vous intéresser. Ces communications sont
+                adaptées en fonction de Vos interactions passées, de Votre historique d'achats ou de Vos demandes, et
+                pourraient inclure des promotions exclusives, des annonces de nouveaux produits passionnantes, des
+                ventes saisonnières ou des mises à jour sur les catégories qui Vous ont intéressé. Vous conservez
+                toujours
+                le contrôle total de ces communications ; Vous avez le droit univoque de Vous désinscrire de la
+                réception
+                de ces communications marketing à tout moment en suivant simplement les instructions de désabonnement
+                claires fournies dans chaque e-mail, ou en Nous contactant directement par les méthodes décrites dans
+                cette Politique de Confidentialité. Ce traitement est basé sur Votre consentement ou sur notre intérêt
+                légitime à promouvoir nos produits et services similaires pour améliorer Votre expérience d'achat.</li>
+              <li><strong>Pour gérer Vos demandes :</strong> Nous utilisons Vos Données Personnelles pour répondre
+                efficacement et gérer toutes les demandes, commentaires, plaintes ou demandes de support que Vous Nous
+                soumettez. Cela inclut la résolution des problèmes techniques que Vous pourriez rencontrer lors de
+                l'utilisation de l'application, la fourniture d'une assistance personnalisée pour les paramètres de
+                Votre
+                compte, la résolution des litiges liés aux commandes ou aux services, et la satisfaction des demandes
+                d'informations concernant nos produits ou politiques. Notre objectif est de Vous assurer un support
+                opportun, pertinent et efficace, améliorant Votre satisfaction globale avec GlobalBuy24. Ce traitement
+                est nécessaire à l'exécution d'un contrat (par exemple, le support client lié à un achat) ou à notre
+                intérêt légitime à fournir un service client efficace et à maintenir des relations positives avec les
+                utilisateurs.</li>
+              <li><strong>Pour les transferts d'entreprise :</strong> Dans le cas où la Société est impliquée dans une
+                fusion, une acquisition, une cession, une restructuration, une réorganisation, une dissolution ou toute
+                autre vente ou transfert de tout ou partie de Nos actifs, que ce soit dans le cadre d'une activité en
+                cours ou dans le cadre d'une faillite, d'une liquidation ou d'une procédure similaire, Vos Données
+                Personnelles détenues par Nous concernant les utilisateurs de notre Service peuvent faire partie des
+                actifs transférés. Ce transfert serait une partie nécessaire de la transaction commerciale. Nous nous
+                assurerons que tout transfert de ce type est effectué d'une manière qui respecte pleinement Vos droits à
+                la vie privée et Nous Vous fournirons un avis bien visible (par exemple, par e-mail ou par une
+                notification intégrée à l'application) avant que Vos Données Personnelles ne soient transférées et ne
+                soient soumises à une Politique de Confidentialité différente. Cela garantit la transparence et Vous
+                permet de comprendre les implications d'un tel transfert. Ce traitement est basé sur notre intérêt
+                légitime à faciliter les transactions d'entreprise et à assurer la continuité des activités.</li>
+              <li><strong>À d'autres fins :</strong> Nous pouvons utiliser Vos informations à diverses fins d'analyse
+                interne, de recherche et d'exploitation qui contribuent à l'amélioration continue de GlobalBuy24. Cela
+                inclut la réalisation d'analyses de données approfondies pour comprendre les habitudes de comportement
+                des utilisateurs, identifier les tendances d'utilisation émergentes et obtenir des informations sur la
+                façon dont notre Service est utilisé. Nous utilisons également ces données pour déterminer l'efficacité
+                de nos campagnes promotionnelles, personnaliser Votre expérience au sein de l'application (par exemple,
+                des affichages de produits personnalisés, des notifications pertinentes) et évaluer et améliorer
+                continuellement notre Service, nos produits, nos services, nos stratégies marketing et Votre expérience
+                utilisateur globale. Cette analyse complète nous aide à Vous fournir un Service plus pertinent, efficace
+                et agréable. Ce traitement est basé sur notre intérêt légitime à améliorer notre Service et l'expérience
+                utilisateur.</li>
+            </ul>
+
+            <hr>
+            <h2 id="fr-legal-basis-for-processing-personal-data-under-gdpr">4. Base Légale pour le Traitement des
+              Données
+              Personnelles en vertu du RGPD
+            </h2>
+            <p>Pour les utilisateurs situés dans l'Espace économique européen (EEE) et au Royaume-Uni, notre collecte et
+              notre utilisation des Données Personnelles sont toujours basées sur une base juridique valide, comme
+              l'exige
+              le Règlement général sur la protection des données (RGPD). La base juridique spécifique pour le traitement
+              de Vos Données Personnelles dépend du type de Données Personnelles que Nous collectons et du contexte
+              particulier dans lequel Nous les collectons et les utilisons.</p>
+            <p>Nous pouvons traiter Vos Données Personnelles parce que :</p>
+            <ul>
+              <li><strong>Nous devons exécuter un contrat avec Vous :</strong> Cela s'applique lorsque le traitement de
+                Vos Données Personnelles est nécessaire à l'exécution d'un contrat auquel Vous êtes partie, ou afin de
+                prendre des mesures à Votre demande avant de conclure un contrat. Par exemple, le traitement de Votre
+                nom
+                et de Votre adresse est nécessaire pour exécuter Vos commandes, gérer Votre compte ou fournir un support
+                client lié à un service que Vous avez demandé. Sans ce traitement, nous serions incapables de fournir
+                les
+                fonctionnalités de base de GlobalBuy24.</li>
+              <li><strong>Vous Nous avez donné l'autorisation de le faire (Consentement) :</strong> Cette base juridique
+                s'applique lorsque Vous Nous avez donné un consentement explicite, clair et univoque pour le traitement
+                de Vos Données Personnelles à une ou plusieurs fins spécifiques. Par exemple, nous nous fierions à Votre
+                consentement pour Vous envoyer des communications marketing sur de nouveaux produits ou des offres
+                spéciales, ou pour collecter certains types de données sensibles si cela était un jour requis et
+                explicitement demandé. Vous avez le droit de retirer Votre consentement à tout moment, sans affecter la
+                légalité du traitement fondé sur le consentement avant son retrait.</li>
+              <li><strong>Le traitement est dans Nos intérêts légitimes et il ne l'emporte pas sur Vos droits :</strong>
+                Nous pouvons traiter Vos Données Personnelles lorsque cela est nécessaire aux fins de nos intérêts
+                légitimes, à condition que ces intérêts ne l'emportent pas sur Vos droits et libertés fondamentaux. Des
+                exemples de nos intérêts légitimes incluent :
+                <ul>
+                  <li>L'amélioration et l'optimisation de notre Service, de nos produits et de l'expérience utilisateur.
+                  </li>
+                  <li>La garantie de la sécurité et de l'intégrité de notre Application et de nos systèmes.</li>
+                  <li>La détection et la prévention de la fraude ou d'autres activités illégales.</li>
+                  <li>La réalisation d'analyses et de recherches internes pour comprendre le comportement des
+                    utilisateurs et les tendances du marché.</li>
+                  <li>La facilitation des transferts d'entreprise et des transactions d'entreprise.</li>
+                </ul>
+                Nous effectuons toujours un test de mise en balance pour nous assurer que nos intérêts légitimes sont
+                proportionnés à Vos droits en matière de vie privée.
+              </li>
+              <li><strong>Pour se conformer à la loi (Obligation légale) :</strong> Nous pouvons traiter Vos Données
+                Personnelles lorsque cela est nécessaire pour nous conformer à une obligation légale à laquelle la
+                Société est soumise. Cela inclut, sans s'y limiter, les obligations liées aux lois fiscales, comptables,
+                de protection des consommateurs, ou la réponse à des demandes légales valides d'autorités publiques (par
+                exemple, ordonnances judiciaires, citations à comparaître, ou demandes légitimes d'organismes
+                gouvernementaux) conformément aux lois applicables.</li>
+            </ul>
+
+            <hr>
+            <h2 id="fr-sharing-your-personal-information">5. Partage de Vos Informations Personnelles</h2>
+            <p>Nous pouvons partager Vos informations personnelles dans les situations suivantes, en nous efforçant
+              toujours de garantir que Vos données sont protégées et utilisées uniquement aux fins divulguées :</p>
+            <ul>
+              <li><strong>Avec les Fournisseurs de Services :</strong> Nous engageons des Fournisseurs de Services tiers
+                de confiance pour exécuter diverses fonctions en Notre nom, ce qui nous permet d'exploiter et
+                d'améliorer
+                efficacement GlobalBuy24. Ces fournisseurs peuvent inclure des services d'hébergement cloud, des
+                plateformes de support client, des services de communication par e-mail et des fournisseurs d'analyse
+                (tels
+                que ceux intégrés via FlutterFlow comme Firebase pour l'analyse et les rapports d'erreurs). Nous pouvons
+                partager Vos informations personnelles avec ces Fournisseurs de Services pour surveiller et analyser
+                l'utilisation de notre Service, pour traiter les paiements (par exemple, Fapshi), pour faciliter les
+                communications avec Vous, ou pour aider au support technique. Ces fournisseurs de services agissent en
+                tant que sous-traitants pour la Société et sont strictement liés par des accords contractuels pour
+                protéger Vos données, respecter des exigences strictes de confidentialité et les utiliser uniquement aux
+                fins spécifiques pour lesquelles ils ont été engagés, conformément aux lois applicables en matière de
+                protection des données. Cela garantit que Vos données sont traitées en toute sécurité et de manière
+                responsable, même lorsqu'elles sont traitées par des entités externes.</li>
+              <li><strong>Pour les transferts d'entreprise :</strong> Dans le cas où la Société est impliquée dans une
+                fusion, une acquisition, une cession d'actifs, une restructuration, une réorganisation, une dissolution
+                ou toute autre vente ou transfert de tout ou partie de Nos actifs, que ce soit dans le cadre d'une
+                activité en cours ou dans le cadre d'une faillite, d'une liquidation ou d'une procédure similaire, Vos
+                Données Personnelles détenues par Nous concernant les utilisateurs de notre Service peuvent faire partie
+                des actifs transférés. Ce transfert serait une partie nécessaire de la transaction commerciale. Si un
+                tel
+                transfert se produit, Nous nous engageons à garantir que l'entité acquéreuse est liée par les termes de
+                la présente Politique de Confidentialité ou fournit une nouvelle politique de confidentialité qui offre
+                une protection comparable pour Vos Données Personnelles. Nous Vous fournirons un avis bien visible (par
+                exemple, par e-mail ou par une notification intégrée à l'application) avant que Vos Données Personnelles
+                ne soient transférées et ne soient soumises à une politique de confidentialité différente.</li>
+              <li><strong>Avec les Affiliés :</strong> Nous pouvons partager Vos informations avec Nos affiliés à
+                diverses fins administratives internes légitimes, y compris le traitement centralisé des données, les
+                services informatiques partagés et les opérations commerciales consolidées. Cela nous permet de
+                fonctionner
+                plus efficacement au sein de notre groupe de sociétés et de fournir un service plus fluide et intégré.
+                Par
+                exemple, Vos informations de compte ou Vos données d'utilisation peuvent être partagées avec un affilié
+                responsable du développement de produits, de l'infrastructure technique ou du support client au sein du
+                groupe GlobalBuy24. Dans tous ces cas, nous imposerons des obligations contractuelles strictes à ces
+                affiliés afin qu'ils adhèrent rigoureusement aux termes de la présente Politique de Confidentialité et
+                qu'ils mettent en œuvre des mesures équivalentes de protection et de sécurité des données pour
+                sauvegarder Vos informations. Les affiliés comprennent Notre société mère et toute autre filiale,
+                partenaire de coentreprise ou autre société que Nous contrôlons ou qui est sous contrôle commun avec
+                Nous.</li>
+              <li><strong>Avec les partenaires commerciaux :</strong> Nous pouvons collaborer stratégiquement avec des
+                partenaires commerciaux de confiance pour Vous offrir certains produits, services ou promotions que nous
+                pensons pouvoir améliorer considérablement Votre expérience globale avec GlobalBuy24. Cela pourrait
+                impliquer des offres co-brandées, des remises exclusives, des programmes de fidélité ou des services
+                intégrés qui complètent nos offres de base (par exemple, les partenaires d'expédition, les fournisseurs
+                de produits). Lors du partage de Vos informations avec ces partenaires, nous adhérons à un principe de
+                minimisation des données, ne fournissant que les données nécessaires à la fin spécifique, ce qui peut
+                inclure des données agrégées ou anonymisées si possible. Si des données personnelles telles que Votre
+                adresse e-mail sont partagées à des fins de marketing direct par nos partenaires, cela ne sera fait
+                qu'avec
+                Votre consentement explicite et éclairé, et Vous aurez toujours une option claire et accessible pour
+                Vous
+                désinscrire de ces communications. Nos partenaires commerciaux sont contractuellement tenus de protéger
+                Vos données et de les utiliser uniquement aux fins convenues, conformément à leurs propres politiques de
+                confidentialité et à toutes les lois applicables en matière de protection des données.</li>
+              <li><strong>Avec d'autres utilisateurs :</strong> GlobalBuy24 peut intégrer des fonctionnalités
+                interactives qui Vous permettent d'interagir avec d'autres utilisateurs ou de partager des informations
+                dans les zones publiques du Service. Des exemples de ces zones publiques incluent les sections de
+                commentaires sur les produits visibles publiquement, les forums communautaires, les sections de
+                commentaires sur les listes de produits ou les profils d'utilisateurs s'ils sont configurés pour une
+                visibilité publique par Vous. Lorsque Vous choisissez de partager des informations personnelles ou
+                d'interagir de toute autre manière dans ces zones publiques (par exemple, Votre nom d'utilisateur, Votre
+                photo de profil, le contenu de Vos commentaires ou de Vos avis, ou Votre localisation si elle est
+                explicitement partagée par Vous dans une publication publique), ces informations peuvent être consultées
+                par tous les utilisateurs du Service et peuvent également être distribuées publiquement en dehors du
+                Service (par exemple, via les moteurs de recherche). Nous Vous encourageons fortement à faire preuve
+                d'une extrême prudence et de discrétion lorsque Vous décidez de divulguer Vos Données Personnelles dans
+                les zones publiques, car Nous ne pouvons pas contrôler les actions des autres utilisateurs ou des tiers
+                qui pourraient accéder, copier ou utiliser ces informations accessibles au public.</li>
+              <li><strong>Avec Votre consentement :</strong> Nous nous engageons à la transparence et à Votre contrôle
+                sur Vos données. Par conséquent, Nous pouvons divulguer Vos informations personnelles à toute autre fin
+                non explicitement mentionnée dans la présente Politique de Confidentialité, mais uniquement lorsque Nous
+                avons obtenu Votre consentement clair, spécifique, éclairé et affirmatif à le faire. Cela garantit que
+                Vous avez un contrôle et une compréhension complets du partage de Vos données à des fins extérieures à
+                Nos dispositions opérationnelles et de service standard, et Vous pouvez retirer ce consentement à tout
+                moment.</li>
+            </ul>
+
+            <hr>
+            <h2 id="fr-retention-of-your-personal-data">6. Conservation de Vos Données Personnelles</h2>
+            <p>La Société ne conservera Vos Données Personnelles que le temps strictement nécessaire aux fins énoncées
+              dans la présente Politique de Confidentialité, ou pour la durée requise par les obligations légales et
+              réglementaires applicables. La période de conservation spécifique pour différents types de Données
+              Personnelles est déterminée par divers facteurs, notamment :</p>
+            <ul>
+              <li>La finalité pour laquelle les données ont été collectées (par exemple, gestion de compte, exécution de
+                transactions).</li>
+              <li>La nature des données (par exemple, sensibles ou non sensibles).</li>
+              <li>Toutes les exigences légales ou réglementaires qui imposent des périodes de conservation spécifiques
+                (par exemple, lois fiscales, lois sur la protection des consommateurs, réglementations en matière de
+                lutte contre le blanchiment d'argent).</li>
+              <li>Nos besoins commerciaux légitimes, tels que la résolution de litiges, la prévention de la fraude,
+                l'audit et la tenue de registres internes.</li>
+            </ul>
+            <p>Nous conserverons et utiliserons Vos Données Personnelles dans la mesure nécessaire pour nous conformer à
+              nos obligations légales (par exemple, si nous sommes tenus de conserver Vos données pour nous conformer
+              aux lois fiscales ou comptables applicables), résoudre les litiges et faire respecter nos accords et
+              politiques juridiques. Une fois la période de conservation expirée, Vos Données Personnelles seront
+              supprimées en toute sécurité ou anonymisées d'une manière qui empêche leur réidentification.</p>
+            <p>La Société conservera également les Données d'Utilisation à des fins d'analyse interne. Les Données
+              d'Utilisation sont généralement conservées pendant une période plus courte que les Données Personnelles,
+              car elles sont souvent agrégées et moins directement identifiables. Cependant, les Données d'Utilisation
+              peuvent être conservées pendant des périodes plus longues lorsque ces données sont spécifiquement
+              utilisées
+              pour renforcer la sécurité de Notre Service (par exemple, l'analyse des schémas de connexion inhabituels,
+              la détection et la prévention des cyberattaques), pour améliorer la fonctionnalité de Notre Service (par
+              exemple, la compréhension de l'utilisation des fonctionnalités pour guider le développement,
+              l'optimisation
+              des flux d'utilisateurs), ou lorsque Nous sommes légalement tenus de conserver ces données pendant de plus
+              longues périodes (par exemple, pour les pistes d'audit ou les exigences réglementaires liées aux
+              performances du système).</p>
+
+            <hr>
+            <h2 id="fr-transfer-of-your-personal-data">7. Transfert de Vos Données Personnelles</h2>
+            <p>Vos informations, y compris les Données Personnelles, sont traitées dans les bureaux d'exploitation de la
+              Société à Berlin, en Allemagne, et dans tout autre lieu où se trouvent les parties impliquées dans le
+              traitement. Cela signifie que Vos informations peuvent être transférées vers — et conservées sur — des
+              ordinateurs situés en dehors de Votre État, province, pays ou autre juridiction gouvernementale où les
+              lois
+              sur la protection des données peuvent différer de celles de Votre juridiction.</p>
+            <p>En tant que société basée en Allemagne, nous sommes soumis au Règlement général sur la protection des
+              données (RGPD). Lors du transfert de Données Personnelles en dehors de l'Espace économique européen (EEE)
+              ou du Royaume-Uni, nous prenons toutes les mesures raisonnablement nécessaires pour garantir que Vos
+              données
+              sont traitées en toute sécurité et conformément à la présente Politique de Confidentialité et aux
+              exigences
+              strictes du RGPD. Cela signifie qu'aucun transfert de Vos Données Personnelles n'aura lieu vers une
+              organisation ou un pays à moins que des contrôles adéquats ne soient en place, y compris des garanties
+              appropriées pour assurer la sécurité de Vos données et d'autres informations personnelles. Ces garanties
+              peuvent inclure, sans s'y limiter :</p>
+            <ul>
+              <li><strong>Décisions d'adéquation :</strong> Transfert de données vers des pays ou des organisations
+                reconnus par la Commission européenne ou les autorités britanniques compétentes comme offrant un niveau
+                adéquat de protection des données, garantissant un niveau comparable de protection de la vie privée.
+              </li>
+              <li><strong>Clauses contractuelles types (CCT) :</strong> Mise en œuvre de contrats juridiquement
+                contraignants approuvés par la Commission européenne ou les autorités britanniques compétentes qui
+                imposent des obligations solides en matière de protection des données au destinataire des données en
+                dehors de l'EEE/Royaume-Uni, y compris des mesures de sécurité et des droits des personnes concernées.
+              </li>
+              <li><strong>Règles d'entreprise contraignantes (RCC) :</strong> Pour les transferts au sein d'un groupe
+                d'entreprises, mise en œuvre de règles internes approuvées par les autorités de protection des données,
+                qui fournissent un cadre robuste pour les transferts internationaux de données.</li>
+              <li><strong>Votre consentement explicite :</strong> Dans des situations spécifiques, nous pouvons nous
+                appuyer sur Votre consentement explicite pour le transfert, à condition que Vous ayez été pleinement
+                informé des risques potentiels de tels transferts pour Vous en raison de l'absence d'une décision
+                d'adéquation et de garanties appropriées. Ce consentement est toujours volontaire et peut être retiré.
+              </li>
+            </ul>
+            <p>Votre consentement à la présente Politique de Confidentialité, suivi de la soumission de ces
+              informations,
+              représente Votre accord à de tels transferts, à condition que les garanties susmentionnées soient en place
+              pour assurer la protection continue de Vos données.</p>
+
+            <hr>
+            <h2 id="fr-your-data-protection-rights-under-gdpr">8. Vos Droits en Matière de Protection des Données en
+              vertu
+              du RGPD</h2>
+            <p>Si Vous êtes résident de l'Espace économique européen (EEE) ou du Royaume-Uni, Vous disposez de certains
+              droits complets en matière de protection des données en vertu du Règlement général sur la protection des
+              données (RGPD). Nous nous engageons à faciliter l'exercice effectif de ces droits. Vous avez le droit de :
+            </p>
+            <ul>
+              <li><strong>Le droit d'accès (Article 15 RGPD) :</strong> Vous avez le droit de demander des copies de Vos
+                Données Personnelles que nous détenons. Cela Vous permet de vérifier la légalité du traitement. Nous
+                pouvons Vous facturer une petite somme pour ce service si la demande est manifestement infondée,
+                excessive ou répétitive.</li>
+              <li><strong>Le droit de rectification (Article 16 RGPD) :</strong> Vous avez le droit de nous demander de
+                corriger toute information que Vous estimez inexacte ou incomplète. Nous sommes tenus de corriger les
+                Données Personnelles inexactes ou de compléter les Données Personnelles incomplètes sans délai excessif.
+              </li>
+              <li><strong>Le droit à l'effacement (Droit à l'oubli) (Article 17 RGPD) :</strong> Vous avez le droit de
+                nous demander d'effacer Vos Données Personnelles, sous certaines conditions, par exemple lorsque les
+                données ne sont plus nécessaires aux fins pour lesquelles elles ont été collectées, ou lorsque Vous
+                retirez Votre consentement et qu'il n'existe aucune autre base légale pour le traitement.</li>
+              <li><strong>Le droit à la limitation du traitement (Article 18 RGPD) :</strong> Vous avez le droit de nous
+                demander de limiter le traitement de Vos Données Personnelles, sous certaines conditions, par exemple si
+                Vous contestez l'exactitude des données, ou si le traitement est illégal mais que Vous Vous opposez à
+                l'effacement.</li>
+              <li><strong>Le droit d'opposition au traitement (Article 21 RGPD) :</strong> Vous avez le droit de Vous
+                opposer à notre traitement de Vos Données Personnelles, sous certaines conditions, en particulier
+                lorsque
+                le traitement est basé sur des intérêts légitimes (à moins que nous ne démontrions des motifs légitimes
+                impérieux) ou à des fins de marketing direct.</li>
+              <li><strong>Le droit à la portabilité des données (Article 20 RGPD) :</strong> Vous avez le droit de nous
+                demander de transférer les données que nous avons collectées à une autre organisation, ou directement à
+                Vous, dans un format structuré, couramment utilisé et lisible par machine, sous certaines conditions.
+                Cela s'applique aux données traitées par des moyens automatisés sur la base du consentement ou d'un
+                contrat.</li>
+              <li><strong>Le droit de retirer son consentement (Article 7(3) RGPD) :</strong> Lorsque nous nous basons
+                sur Votre consentement pour traiter Vos Données Personnelles, Vous avez le droit de retirer ce
+                consentement à tout moment. Le retrait du consentement n'affecte pas la légalité du traitement fondé sur
+                le consentement avant son retrait.</li>
+              <li><strong>Le droit de déposer une plainte auprès d'une autorité de contrôle (Article 77 RGPD) :</strong>
+                Vous avez le droit de déposer une plainte auprès d'une autorité de protection des données concernant
+                notre
+                collecte et notre utilisation de Vos Données Personnelles. Pour plus d'informations, veuillez contacter
+                Votre autorité locale de protection des données dans l'EEE ou au Royaume-Uni. En Allemagne, il s'agirait
+                du Commissaire de Berlin à la protection des données et à la liberté d'information (Berliner Beauftragte
+                für Datenschutz und Informationsfreiheit).</li>
+            </ul>
+            <p>Vous pouvez mettre à jour, modifier ou supprimer Vos informations à tout moment en Vous connectant à
+              Votre
+              Compte, si Vous en avez un, et en visitant la section des paramètres de compte qui Vous permet de gérer
+              Vos
+              informations personnelles directement. Vous pouvez également Nous contacter pour demander l'accès à, la
+              correction ou la suppression de toute information personnelle que Vous Nous avez fournie. Veuillez noter,
+              cependant, que Nous pourrions avoir besoin de conserver certaines informations lorsque nous avons une
+              obligation légale ou une base légale pour le faire (par exemple, à des fins fiscales ou de conformité
+              légale), ou lorsque cela est nécessaire à l'établissement, à l'exercice ou à la défense de revendications
+              légales.</p>
+
+            <hr>
+            <h2 id="fr-disclosure-of-your-personal-data">9. Divulgation de Vos Données Personnelles</h2>
+            <h3>Transactions Commerciales</h3>
+            <p>Si la Société est impliquée dans une fusion, une acquisition, une vente d'actifs ou une transaction
+              commerciale similaire, Vos Données Personnelles peuvent être transférées dans le cadre de cette
+              transaction. Cela fait partie intégrante des réorganisations d'entreprise. Nous Vous informerons de
+              manière
+              visible (par exemple, par e-mail et/ou par un avis visible sur Notre Service) avant que Vos Données
+              Personnelles ne soient transférées et ne soient soumises à une Politique de Confidentialité différente,
+              afin de Vous assurer que Vous êtes pleinement conscient de tout changement apporté au traitement de Vos
+              données et que Vous pouvez exercer tous les droits applicables.</p>
+
+            <h3>Application de la loi</h3>
+            <p>Dans certaines circonstances, la Société peut être tenue de divulguer Vos Données Personnelles si la loi
+              l'exige ou en réponse à des demandes valides d'autorités publiques (par exemple, une ordonnance
+              judiciaire,
+              une citation à comparaître ou une demande légitime d'un organisme gouvernemental). Nous nous engageons à
+              la
+              transparence et ne nous conformerons à de telles demandes que si nous estimons qu'elles sont légalement
+              valides et nécessaires. Nous nous efforcerons de Vous informer de ces demandes, sauf si la loi nous
+              l'interdit.</p>
+
+            <h3>Autres exigences légales</h3>
+            <p>La Société peut divulguer Vos Données Personnelles de bonne foi si elle estime qu'une telle action est
+              nécessaire pour :</p>
+            <ul>
+              <li>Se conformer à une obligation légale (par exemple, la tenue de registres financiers à des fins
+                fiscales,
+                le respect des exigences d'audit ou l'adhésion aux réglementations spécifiques à l'industrie).</li>
+              <li>Protéger et défendre les droits ou la propriété de la Société (par exemple, l'application de nos
+                conditions de service, la défense contre les réclamations pour violation de la propriété intellectuelle
+                ou la prévention de l'utilisation non autorisée de notre Service).</li>
+              <li>Prévenir ou enquêter sur d'éventuels actes répréhensibles en rapport avec le Service (par exemple, la
+                détection et le traitement des activités frauduleuses, des violations de sécurité ou d'autres actes
+                illégaux susceptibles de compromettre l'intégrité de notre Service ou la sécurité de nos utilisateurs).
+              </li>
+              <li>Protéger la sécurité personnelle des Utilisateurs du Service ou du public (par exemple, en cas
+                d'urgence ou de situations présentant une menace significative pour la vie ou l'intégrité physique).
+              </li>
+              <li>Se protéger contre la responsabilité légale (par exemple, répondre à des réclamations légales, des
+                citations à comparaître ou des litiges où la divulgation de données est jugée essentielle à notre
+                défense
+                légale).</li>
+            </ul>
+
+            <hr>
+            <h2 id="fr-security-of-your-personal-data">10. Sécurité de Vos Données Personnelles</h2>
+            <p>La sécurité de Vos Données Personnelles est d'une importance capitale pour Nous. Nous mettons en œuvre
+              une variété de mesures techniques et organisationnelles commercialement acceptables conçues pour protéger
+              Vos Données Personnelles contre l'accès, l'utilisation, l'altération et la divulgation non autorisés. Ces
+              mesures sont continuellement examinées et mises à jour pour s'adapter aux menaces de sécurité évolutives.
+              Notre cadre de sécurité robuste comprend, sans s'y limiter :</p>
+            <ul>
+              <li><strong>Chiffrement :</strong> Utilisation de technologies de chiffrement (par exemple, Transport
+                Layer
+                Security/SSL pour les données en transit et chiffrement au repos pour les données sensibles) pour
+                protéger les données pendant la transmission sur les réseaux et lorsqu'elles sont stockées sur nos
+                serveurs.</li>
+              <li><strong>Contrôles d'accès :</strong> Mise en œuvre de contrôles d'accès physiques, administratifs et
+                techniques stricts pour limiter l'accès aux Données Personnelles au sein de la Société, sur la base d'un
+                principe de "besoin de savoir" et de "moindre privilège", garantissant que seul le personnel autorisé
+                peut accéder à Vos données à des fins légitimes.</li>
+              <li><strong>Minimisation des données :</strong> Adhésion au principe de ne collecter que les Données
+                Personnelles strictement nécessaires aux fins énoncées, réduisant ainsi la quantité de données
+                potentiellement à risque.</li>
+              <li><strong>Audits et évaluations réguliers :</strong> Examen périodique de nos pratiques de sécurité,
+                réalisation d'évaluations de vulnérabilité, de tests d'intrusion et d'audits de sécurité pour identifier
+                et corriger rapidement les faiblesses potentielles de nos systèmes et processus.</li>
+              <li><strong>Stockage sécurisé :</strong> Stockage des données sur des serveurs sécurisés hébergés dans des
+                centres de données réputés avec des mesures de sécurité physique appropriées, des contrôles
+                environnementaux et des protocoles de sécurité numérique robustes (par exemple, pare-feu, systèmes de
+                détection d'intrusion).</li>
+              <li><strong>Formation des employés :</strong> S'assurer que notre personnel reçoit une formation régulière
+                sur la protection des données, les meilleures pratiques de sécurité et les obligations de
+                confidentialité.</li>
+            </ul>
+            <p>Cependant, il est crucial de se rappeler qu'aucune méthode de transmission sur Internet, ni aucune
+              méthode
+              de stockage électronique, n'est sûre à 100 %. Bien que Nous nous efforcions d'utiliser des moyens
+              commercialement acceptables et les meilleures pratiques pour protéger Vos Données Personnelles, Nous ne
+              pouvons garantir leur sécurité absolue. Nous Vous encourageons à prendre également des mesures proactives
+              pour protéger Vos informations personnelles, telles que l'utilisation de mots de passe forts et uniques
+              pour Votre compte, l'activation de l'authentification multifacteur lorsque disponible, et la prudence
+              quant au partage de Vos informations de compte ou de Vos informations personnelles en ligne.</p>
+
+            <hr>
+            <h2 id="fr-childrens-privacy">11. Confidentialité des Enfants</h2>
+            <p>Notre Service ne s'adresse sciemment à personne de moins de 13 ans. Nous nous engageons à protéger la vie
+              privée des enfants et ne collectons sciemment aucune information personnellement identifiable de quiconque
+              ayant moins de 13 ans. Si Vous êtes un parent ou un tuteur et que Vous apprenez que Votre enfant Nous a
+              fourni des Données Personnelles sans Votre consentement vérifiable, veuillez Nous contacter
+              immédiatement. Si Nous apprenons que Nous avons collecté des Données Personnelles auprès de quiconque
+              ayant moins de 13 ans sans vérification du consentement parental, Nous prendrons des mesures rapides et
+              raisonnables pour supprimer ces informations de Nos serveurs et cesser de les traiter, conformément aux
+              lois applicables.</p>
+            <p>De plus, si Nous devons nous appuyer sur le consentement comme base légale pour le traitement de Vos
+              informations et que Votre pays exige le consentement d'un parent ou d'un tuteur pour les enfants de plus
+              de 13 ans (par exemple, en vertu de dispositions spécifiques du RGPD pour les enfants âgés de 13 à 16
+              ans),
+              Nous pourrions exiger le consentement vérifiable de Votre parent ou tuteur avant de collecter et
+              d'utiliser
+              ces informations. Cela garantit la conformité avec les exigences de consentement spécifiques à l'âge pour
+              le traitement des données.</p>
+
+            <hr>
+            <h2 id="fr-links-to-other-websites">12. Liens vers d'Autres Sites Web</h2>
+            <p>Notre Service peut contenir des liens vers d'autres sites Web qui ne sont pas exploités par Nous. Ces
+              liens sont fournis uniquement pour Votre commodité et Votre information. Par exemple, un lien pourrait
+              Vous diriger vers le site Web d'un fabricant de produits ou un article de presse lié à une
+              fonctionnalité. Si Vous cliquez sur un lien tiers, Vous serez redirigé hors de notre Service vers le site
+              de ce tiers. Nous Vous conseillons fortement de consulter la Politique de Confidentialité de chaque site
+              externe que Vous visitez, car leurs politiques et pratiques en matière de données peuvent différer
+              considérablement des nôtres.</p>
+            <p>Nous n'avons aucun contrôle sur le contenu, les politiques de confidentialité ou les pratiques des sites
+              ou services tiers et n'assumons aucune responsabilité à cet égard. Nous n'approuvons ni ne faisons aucune
+              déclaration concernant les sites Web tiers. Vos interactions avec tout site Web tiers lié à partir de
+              notre
+              Service se font uniquement à Vos propres risques, et nous Vous encourageons à faire preuve de prudence et
+              à
+              prendre des décisions éclairées avant de fournir des informations personnelles sur ces sites.</p>
+
+            <hr>
+            <h2 id="fr-changes-to-this-privacy-policy">13. Modifications de cette Politique de Confidentialité</h2>
+            <p>Nous pouvons mettre à jour Notre Politique de Confidentialité de temps à autre pour refléter les
+              modifications de nos pratiques de traitement des données, pour nous conformer aux nouvelles exigences
+              légales ou pour intégrer les avancées technologiques et les nouvelles fonctionnalités au sein de
+              GlobalBuy24. Nous Vous informerons de tout changement significatif en publiant la nouvelle Politique de
+              Confidentialité sur cette page, en indiquant la date de "Dernière mise à jour" en haut.</p>
+            <p>Pour les modifications importantes qui affectent la façon dont Vos Données Personnelles sont traitées,
+              nous nous efforcerons de Vous en informer par e-mail et/ou par un avis bien visible au sein de Notre
+              Service (par exemple, une bannière intégrée à l'application ou un message pop-up) avant que le changement
+              ne prenne effet. Cela garantit que Vous disposez de suffisamment de temps pour examiner les changements et
+              comprendre leurs implications. Nous Vous encourageons à consulter régulièrement cette Politique de
+              Confidentialité pour tout changement. Les modifications apportées à cette Politique de Confidentialité
+              prennent effet dès leur publication sur cette page. Votre utilisation continue du Service après l'entrée
+              en
+              vigueur de la Politique de Confidentialité révisée indique Votre acceptation de la Politique de
+              Confidentialité révisée.</p>
+
+            <hr>
+            <h2 id="fr-contact-us">14. Contactez-Nous</h2>
+            <p>Si Vous avez des questions concernant cette Politique de Confidentialité, Vos données, ou si Vous
+              souhaitez exercer l'un de Vos droits en matière de protection des données, Vous pouvez nous contacter
+              selon les méthodes suivantes :</p>
+            <ul>
+              <li>Par e-mail : <a href="mailto:contact@globalbuy24.com">contact@globalbuy24.com</a></li>
+              <li>En visitant cette page sur notre site Web : <a href="https://globalbuy24.com/"
+                  target="_blank">https://globalbuy24.com/</a></li>
+              <li>Par numéro de téléphone : +237 672815351</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Table of Contents (shown only on mobile) -->
+      <div class="col-12 d-lg-none mt-4">
+        <div class="accordion" id="mobileTocPrivacy">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTocPrivacy" aria-expanded="false" aria-controls="collapseTocPrivacy">
+                <i class="bi bi-list-ul me-2"></i>Table of Contents
+              </button>
+            </h2>
+            <div id="collapseTocPrivacy" class="accordion-collapse collapse" data-bs-parent="#mobileTocPrivacy">
+              <div class="accordion-body p-0">
+                <ul class="nav flex-column">
+                  <li class="nav-item"><a class="nav-link" href="#en-interpretation-and-definitions">1. Interpretation
+                      and Definitions</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#en-collecting-and-using-your-personal-data">2.
+                      Collecting and Using Your Personal Data</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#en-use-of-your-personal-data">3. Use of Your Personal
+                      Data</a></li>
+                  <li class="nav-item"><a class="nav-link"
+                      href="#en-legal-basis-for-processing-personal-data-under-gdpr">4. Legal Basis for Processing
+                      Personal Data under GDPR</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#en-sharing-your-personal-information">5. Sharing Your
+                      Personal Information</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#en-retention-of-your-personal-data">6. Retention of
+                      Your Personal Data</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#en-transfer-of-your-personal-data">7. Transfer of Your
+                      Personal Data</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#en-your-data-protection-rights-under-gdpr">8. Your
+                      Data Protection Rights under GDPR</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#en-disclosure-of-your-personal-data">9. Disclosure of
+                      Your Personal Data</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#en-security-of-your-personal-data">10. Security of
+                      Your Personal Data</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#en-childrens-privacy">11. Children's Privacy</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#en-links-to-other-websites">12. Links to Other
+                      Websites</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#en-changes-to-this-privacy-policy">13. Changes to this
+                      Privacy Policy</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#en-contact-us">14. Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- All other content will go here -->
-  </div> <!-- End of main-content -->
-  </div> <!-- End of content-wrapper -->
-  </div> <!-- End of container -->
+  </div>
+  <!-- Privacy Container End -->
 
   <!-- Footer Start -->
   <div class="container-fluid footer wow fadeIn" data-wow-delay="0.1s">
@@ -844,18 +1850,19 @@
       <div class="footer-logo">
         <img src="img/logo/logo_transparent_bg.png" alt="GlobalBuy24 Logo">
       </div>
-      
+
       <div class="footer-nav">
-        <a class="btn btn-link" href="#home" data-translate="home">Home</a>
-        <a class="btn btn-link" href="#how-it-works" data-translate="howItWorks">How It Works</a>
-        <a class="btn btn-link" href="#benefits" data-translate="whyUs">Why Us</a>
-        <a class="btn btn-link" href="#download" data-translate="appPreview">App Preview</a>
-        <a class="btn btn-link" href="#support" data-translate="support">Support</a>
-        <a id="languageSwitcher" class="btn btn-link" onclick="switchLanguage(currentLanguage === 'en' ? 'fr' : 'en')">
+        <a class="btn btn-link" href="index.html#home" data-translate="home">Home</a>
+        <a class="btn btn-link" href="index.html#how-it-works" data-translate="howItWorks">How It Works</a>
+        <a class="btn btn-link" href="index.html#benefits" data-translate="whyUs">Why Us</a>
+        <a class="btn btn-link" href="index.html#download" data-translate="appPreview">App Preview</a>
+        <a class="btn btn-link" href="index.html#support" data-translate="support">Support</a>
+        <a id="languageSwitcherFooter" class="btn btn-link"
+          onclick="switchLanguage(currentLanguage === 'en' ? 'fr' : 'en')">
           <span data-translate="language">French</span>
         </a>
       </div>
-      
+
       <div class="footer-social">
         <a class="btn btn-social" href="#" aria-label="Facebook">
           <i class="fab fa-facebook-f"></i>
@@ -868,18 +1875,16 @@
         </a>
       </div>
     </div>
-    
+
     <div class="footer-bottom">
-      <div class="container">
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
-          <div class="mb-2 mb-md-0">&copy; 2025 GlobalBuy24. All rights reserved.</div>
-          <div class="d-flex flex-wrap justify-content-center">
-            <a class="footer-link btn-link mx-2" href="privacy.html">Privacy Policy</a>
-            <span class="mx-2">|</span>
-            <a class="footer-link btn-link mx-2" href="terms-of-service.html">Terms of Service</a>
-            <span class="mx-2">|</span>
-            <a class="footer-link btn-link mx-2" href="cookies.html">Cookies Settings</a>
-          </div>
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+        <div class="mb-2 mb-md-0">&copy; 2025 GlobalBuy24. All rights reserved.</div>
+        <div class="d-flex flex-wrap justify-content-center">
+          <a class="footer-link btn-link mx-2" href="privacy.html">Privacy Policy</a>
+          <span class="mx-2">|</span>
+          <a class="footer-link btn-link mx-2" href="terms-of-service.html">Terms of Service</a>
+          <span class="mx-2">|</span>
+          <a class="footer-link btn-link mx-2" href="cookies.html">Cookies Settings</a>
         </div>
       </div>
     </div>
@@ -888,7 +1893,7 @@
 
   <!-- Back to Top -->
   <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2">
-    <i class="bi bi-arrow-up "></i>
+    <i class="bi bi-arrow-up"></i>
   </a>
 
   <!-- JavaScript Libraries -->
@@ -905,54 +1910,94 @@
   <script src="js/main.js"></script>
 
   <script>
+    // Language switching functionality
+    let currentLanguage = 'en'; // Default language
+
+    function showLanguage(lang) {
+      document.querySelectorAll('.language-section').forEach(section => {
+        section.classList.remove('active'); // Hide all language sections by removing 'active'
+      });
+      const targetSection = document.getElementById(lang + '-section');
+      if (targetSection) {
+        targetSection.classList.add('active'); // Show the target language section by adding 'active'
+      }
+      currentLanguage = lang;
+      updateLanguageSwitcherText();
+    }
+
+    function switchLanguage(lang) {
+      showLanguage(lang);
+    }
+
+    function updateLanguageSwitcherText() {
+      const languageSwitchers = document.querySelectorAll('#languageSwitcherNav, #languageSwitcherFooter');
+      languageSwitchers.forEach(switcher => {
+        const span = switcher.querySelector('span');
+        if (span) {
+          span.textContent = currentLanguage === 'en' ? 'French' : 'English';
+        }
+      });
+    }
+
+    // Table of contents highlighting and smooth scrolling
     document.addEventListener('DOMContentLoaded', function () {
+      // Show English by default on page load
+      showLanguage('en');
+
       // Get all section IDs from the table of contents
-      const sections = document.querySelectorAll('.table-of-contents a[href^="#"]');
-      const navLinks = document.querySelectorAll('.table-of-contents a');
+      // Target h2 and h3 elements within the active language section that have an ID
+      const sections = document.querySelectorAll('.main-content .language-section.active h2[id], .main-content .language-section.active h3[id]');
+      const navLinks = document.querySelectorAll('.toc-sidebar .table-of-contents a[href^="#"]');
+      const mobileNavLinks = document.querySelectorAll('#mobileTocPrivacy .nav-link[href^="#"]'); // Changed ID here
 
-      // Function to update active link
       function updateActiveLink() {
-        let current = '';
-
-        // Find the section that's currently in view
+        let currentHash = '';
         sections.forEach(section => {
           const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-          if (window.scrollY >= (sectionTop - 200)) {
-            current = section.getAttribute('href');
+          // Adjust for fixed header and some buffer
+          if (window.scrollY >= (sectionTop - 150)) {
+            currentHash = '#' + section.getAttribute('id');
           }
         });
 
-        // Update active class
+        // Update active class for desktop TOC
         navLinks.forEach(link => {
           link.classList.remove('active');
-          if (link.getAttribute('href') === current) {
+          if (link.getAttribute('href') === currentHash) {
+            link.classList.add('active');
+          }
+        });
+
+        // Update active class for mobile TOC
+        mobileNavLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === currentHash) {
             link.classList.add('active');
           }
         });
       }
 
-      // Smooth scrolling for anchor links
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            window.scrollTo({
-              top: target.offsetTop - 100, // Adjust for fixed header if needed
-              behavior: 'smooth'
-            });
-
-            // Update URL without page jump
-            history.pushState(null, null, this.getAttribute('href'));
+          const targetId = this.getAttribute('href');
+          if (targetId.length > 1) { // Not just '#'
+            e.preventDefault();
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 100, // Adjust for fixed header
+                behavior: 'smooth'
+              });
+              history.pushState(null, null, targetId); // Update URL without page jump
+            }
           }
         });
       });
 
-      // Update active link on scroll
       window.addEventListener('scroll', updateActiveLink);
-
-      // Initialize active link on page load
-      updateActiveLink();
+      updateActiveLink(); // Initialize active link on page load
     });
   </script>
+</body>
+
+</html>
