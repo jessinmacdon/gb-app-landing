@@ -15,6 +15,26 @@
     // Initiate the wowjs
     new WOW().init();
 
+    // Handle custom hamburger menu animation
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.navbar-toggler');
+        const ham = hamburger.querySelector('.ham');
+        
+        // Toggle 'active' class on click
+        hamburger.addEventListener('click', function() {
+            ham.classList.toggle('active');
+        });
+        
+        // Remove 'active' class when menu is closed via other means (e.g., clicking a link)
+        const navbarCollapse = document.getElementById('navbarCollapse');
+        if (navbarCollapse) {
+            navbarCollapse.addEventListener('hidden.bs.collapse', function() {
+                ham.classList.remove('active');
+            });
+        }
+    });
+
+
 
 
     // Smooth scrolling on the navbar links and button links

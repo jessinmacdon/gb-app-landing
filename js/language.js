@@ -6,6 +6,9 @@ const translations = {
         feature: "Features",
         appPreview: "App Preview",
         contact: "Contact",
+        privacyPolicy: "Privacy Policy",
+        termsOfService: "Terms of Service",
+        cookiesSettings: "Cookies Settings",
         downloadNow: "Download Now",
         downloadApp: "Download App",
 
@@ -91,7 +94,20 @@ const translations = {
         paymentMethods: "Payment Methods",
         returnsRefunds: "Returns & Refunds",
         faq: "FAQ",
-        copyright: "© GlobalBuy24. All Rights Reserved."
+        copyright: "© GlobalBuy24. All Rights Reserved.",
+        
+        // Policy Pages
+        lastUpdated: "Last updated",
+        tableOfContents: "Table of Contents",
+        readMore: "Read More",
+        showLess: "Show Less",
+        accept: "Accept",
+        decline: "Decline",
+        savePreferences: "Save Preferences",
+        necessaryCookies: "Necessary Cookies",
+        analyticsCookies: "Analytics Cookies",
+        marketingCookies: "Marketing Cookies",
+        preferencesCookies: "Preferences Cookies"
     },
     fr: {
         // Navbar
@@ -180,12 +196,28 @@ const translations = {
         quickLinks: "Liens Rapides",
         support: "Support",
         process: "Processus",
-        features: "Caractéristiques",
+        features: "Fonctionnalités",
         helpCenter: "Centre d'Aide",
         paymentMethods: "Méthodes de Paiement",
         returnsRefunds: "Retours et Remboursements",
         faq: "FAQ",
-        copyright: "© GlobalBuy24. Tous droits réservés."
+        copyright: "© GlobalBuy24. Tous droits réservés.",
+        
+        // Policy Pages
+        privacyPolicy: "Politique de Confidentialité",
+        termsOfService: "Conditions d'Utilisation",
+        cookiesSettings: "Paramètres des Cookies",
+        lastUpdated: "Dernière mise à jour",
+        tableOfContents: "Table des Matières",
+        readMore: "Lire la suite",
+        showLess: "Afficher moins",
+        accept: "Accepter",
+        decline: "Refuser",
+        savePreferences: "Enregistrer les Préférences",
+        necessaryCookies: "Cookies Nécessaires",
+        analyticsCookies: "Cookies d'Analyse",
+        marketingCookies: "Cookies Marketing",
+        preferencesCookies: "Cookies de Préférences"
     }
 };
 
@@ -199,24 +231,22 @@ function switchLanguage(lang) {
 }
 
 function updateTextContent() {
-    const elements = document.querySelectorAll('[data-translate]');
-    elements.forEach(element => {
+    document.querySelectorAll('[data-translate]').forEach(element => {
         const key = element.getAttribute('data-translate');
-        if (translations[currentLanguage][key]) {
+        if (translations[currentLanguage] && translations[currentLanguage][key]) {
             element.textContent = translations[currentLanguage][key];
         }
     });
 }
 
 function updateLanguageSwitcher() {
-    const switchers = document.querySelectorAll('#languageSwitcher');
-    if (switchers.length > 0) {
-        switchers.forEach(switcher => {
-            // Capitalize first letter of the language name
-            const languageText = currentLanguage === 'en' ? 'french' : 'english';
-            switcher.textContent = languageText.charAt(0).toUpperCase() + languageText.slice(1);
-        });
-    }
+    const languageSwitchers = document.querySelectorAll('#languageSwitcher, #languageSwitcherNav, #languageSwitcherFooter');
+    languageSwitchers.forEach(switcher => {
+        const span = switcher.querySelector('.language-code');
+        if (span) {
+            span.textContent = currentLanguage === 'en' ? 'FR' : 'EN';
+        }
+    });
 }
 
 // Initialize language based on user preference or browser language
