@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>GlobalBuy24</title>
+    <title data-translate="siteTitle">GlobalBuy24</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -33,7 +33,7 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
-    <div class="container-xxl bg-white p-0">
+    <div class=" bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner"
             class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -45,146 +45,183 @@
 
 
         <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0" id="home">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand">
-                    <img src="img/logo/logo_transparent_bg.png" alt="GlobalBuy24 Logo" class="logo-white">
-                    <img src="img/logo/logo_blue_primary.jpg" alt="GlobalBuy24 Logo" class="logo-black"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto py-0">
-                        <a href="#home" class="nav-item nav-link active" data-translate="home">Home</a>
-                        <a href="#about" class="nav-item nav-link" data-translate="about">About</a>
-                        <a href="#feature" class="nav-item nav-link" data-translate="feature">Features</a>
-                        <a href="#screenshot" class="nav-item nav-link" data-translate="appPreview">App Preview</a>
-                        <a href="#contact" class="nav-item nav-link" data-translate="contact">Contact</a>
-                        <a id="languageSwitcher" class="btn nav-item nav-link"
-                            onclick="switchLanguage(currentLanguage === 'en' ? 'fr' : 'en')">French</a>
+        <div id="home">
+            <div class="container-fluid px-0">
+                <nav class="navbar navbar-expand-lg navbar-light container px-lg-5">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="img/logo/logo_primary.png" alt="GlobalBuy24 Logo" class="logo-black">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse" aria-expanded="false" aria-controls="navbarCollapse"
+                        aria-label="Toggle navigation">
+                        <svg class="ham ham6" viewBox="0 0 100 100" width="40">
+                            <path class="line top"
+                                d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272" />
+                            <path class="line middle"
+                                d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272" />
+                            <path class="line bottom"
+                                d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272" />
+                        </svg>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="#home" class="nav-link active" data-translate="home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#howItWorks" class="nav-link" data-translate="howItWorks">How It Works</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#appPreview" class="nav-link" data-translate="features">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#download" class="nav-link" data-translate="appPreview">App Preview</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#contact" class="nav-link" data-translate="contact">Contact</a>
+                            </li>
+                            <li class="nav-item language-switcher">
+                                <a id="languageSwitcher" class="nav-link d-flex align-items-center"
+                                    onclick="switchLanguage(currentLanguage === 'en' ? 'fr' : 'en')">
+                                    <i class="fas fa-language me-1"></i>
+                                    <span class="language-code">EN</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <a href="#download" class="btn btn-primary py-2 px-4 d-none d-lg-block"
+                                data-translate="downloadNow">Download App</a>
+                        </div>
                     </div>
-                    <div class="d-flex align-items-center">
-                        <a href="#download" class="btn btn-primary py-2 px-4 d-none d-lg-block"
-                            data-translate="downloadNow">Download Now</a>
-                    </div>
-                </div>
-            </nav>
-            <div class="container-xxl hero-header">
+                </nav>
+            </div>
+            <div class=" hero-header">
                 <div class="container px-lg-5">
                     <div class="row g-5">
-                        <div class="col-lg-8 text-center text-lg-start">
+                        <div class="text-center text-lg-start">
                             <h5 class="fw-medium" data-translate="heroSubtitle">
                                 Shop the World — Without the Hassle
                             </h5>
-                            <h1 class=" mb-4 animated slideInDown" data-translate="heroTitle">
+                            <h1 class="mb-4 animated slideInDown" data-translate="heroTitle">
                                 Shop Globally, Pay Locally
                             </h1>
-                            <p class=" pb-3 animated slideInDown" data-translate="#">Buy from
-                                any online
-                                store worldwide. Just paste the link, and GlobalBuy24 handles
-                                the rest from purchase to
+                            <p class="pb-3 animated slideInDown" data-translate="heroDescription">Buy from any online
+                                store worldwide. Just paste the link, and GlobalBuy24 handles the rest from purchase to
                                 pickup in your city.</p>
 
                             <a href="#download" class="btn btn-primary py-sm-3 px-4 px-sm-5 rounded-pill me-3"
-                                data-translate="#"><i class="fab fa-android me-2"></i>Google Play</a>
-                            <a href="#about" class="btn py-sm-3 px-4 px-sm-5 rounded-pill" data-translate="#"><i
-                                    class="fab fa-apple me-2"></i>App Store</a>
+                                data-translate="downloadAndroid">
+                                <i class="fab fa-android me-2"></i><span data-translate="googlePlay">Google Play</span>
+                            </a>
+                            <a href="#about" class="btn py-sm-3 px-4 px-sm-5 rounded-pill" data-translate="downloadIos">
+                                <i class="fab fa-apple me-2"></i><span data-translate="appStore">App Store</span>
+                            </a>
                         </div>
+                        <!-- Hero Image HERE
                         <div class="hero-asset">
                             <img src="#" alt="hero image">
                         </div>
+                        -->
 
                     </div>
                     <!-- Navbar & Hero End -->
 
 
                     <!-- How It Works -->
-                    <div class="container py-5" id="howItWorks">
+                    <div class="#" id="howItWorks">
                         <div class="howItWorks">
-                            <div class="sectionHeading">How It Works</div>
-                            <div class="howItWorksTitle">Discover the Ease of Global Shopping
+                            <div class="sectionHeading" data-translate="howItWorks">How It Works</div>
+                            <div class="howItWorksTitle" data-translate="howItWorksTitle">
+                                Discover the Ease of Global Shopping
                             </div>
-                            <div class="howItWorksSubtitle">GlobalBuy24 simplifies your shopping
-                                experience. Follow
-                                these easy steps to access global products effortlessly.</div>
+                            <div class="howItWorksSubtitle" data-translate="howItWorksSubtitle">
+                                GlobalBuy24 simplifies your shopping experience. Follow these easy steps to access
+                                global products effortlessly.
+                            </div>
                             <div class="howItWorksDescription">
                                 <div class="howItWorksDesc-container">
                                     <div class="icon">
                                         <i class="fab fa-twitter"></i>
                                     </div>
-                                    <div class="howItWorksDescriptionTitle">Step 1: Copy Your
-                                        Favorite Product Link
+                                    <div class="howItWorksDescriptionTitle" data-translate="step1Title">
+                                        Step 1: Copy Your Favorite Product Link
                                     </div>
-                                    <div class="howItWorksDescriptionBody">Browse stores like
-                                        Amazon or SHEIN and copy
-                                        the link of the product you want.</div>
+                                    <div class="howItWorksDescriptionBody" data-translate="step1Description">
+                                        Browse stores like Amazon or SHEIN and copy the link of the product you want.
+                                    </div>
                                 </div>
                                 <div class="howItWorksDesc-container">
                                     <div class="icon">
                                         <i class="fab fa-twitter"></i>
                                     </div>
-                                    <div class="howItWorksDescriptionTitle">Step 2: Paste &
-                                        Receive Your Quote</div>
-                                    <div class="howItWorksDescriptionBody">Paste the product
-                                        link in the app to get a
-                                        detailed quote with pricing.</div>
+                                    <div class="howItWorksDescriptionTitle" data-translate="step2Title">
+                                        Step 2: Paste & Receive Your Quote
+                                    </div>
+                                    <div class="howItWorksDescriptionBody" data-translate="step2Description">
+                                        Paste the product link in the app to get a detailed quote with pricing.
+                                    </div>
                                 </div>
                                 <div class="howItWorksDesc-container">
                                     <div class="icon">
                                         <i class="fab fa-twitter"></i>
                                     </div>
-                                    <div class="howItWorksDescriptionTitle">Step 3: Make Your
-                                        Secure Payment</div>
-                                    <div class="howItWorksDescriptionBody">Confirm your quote
-                                        and pay using Mobile Money
-                                        or other local payment options.</div>
+                                    <div class="howItWorksDescriptionTitle" data-translate="step3Title">
+                                        Step 3: Make Your Secure Payment
+                                    </div>
+                                    <div class="howItWorksDescriptionBody" data-translate="step3Description">
+                                        Confirm your quote and pay using Mobile Money or other local payment options.
+                                    </div>
                                 </div>
                                 <div class="howItWorksDesc-container">
                                     <div class="icon">
                                         <i class="fab fa-twitter"></i>
                                     </div>
-                                    <div class="howItWorksDescriptionTitle">Step 4: Convenient
-                                        Local Pickup</div>
-                                    <div class="howItWorksDescriptionBody">Your order will be
-                                        delivered to a nearby
-                                        pickup point for easy collection.</div>
+                                    <div class="howItWorksDescriptionTitle" data-translate="step4Title">
+                                        Step 4: Convenient Local Pickup
+                                    </div>
+                                    <div class="howItWorksDescriptionBody" data-translate="step4Description">
+                                        Your order will be delivered to a nearby pickup point for easy collection.
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- App Preview -->
-                        <div class="container mb-5" id="appPreview">
+                        <div class="#" id="appPreview">
                             <div class="appPreview">
                                 <div class="appPreview-content">
-                                    <h2 class="appPreviewTitle">Experience Seamless Global
-                                        Shopping with the GlobalBuy24
-                                        App</h2>
-                                    <p class="appPreviewSubtitle">Discover how easy it is to
-                                        shop from international
-                                        stores right from your phone. With our intuitive
-                                        interface, accessing global
-                                        products has never been simpler.</p>
+                                    <h2 class="appPreviewTitle" data-translate="appPreviewTitle">
+                                        Experience Seamless Global Shopping with the GlobalBuy24 App
+                                    </h2>
+                                    <p class="appPreviewSubtitle" data-translate="appPreviewSubtitle">
+                                        Discover how easy it is to shop from international stores right from your phone.
+                                        With our intuitive interface, accessing global products has never been simpler.
+                                    </p>
                                     <div class="appPreviewDescription">
                                         <div class="appPreviewDesc-container">
-                                            <h3 class="appPreviewDescriptionTitle">User-Friendly
-                                                Design</h3>
-                                            <p class="appPreviewDescriptionBody">Navigate
-                                                effortlessly through your
-                                                shopping journey with our sleek app interface.
+                                            <h3 class="appPreviewDescriptionTitle" data-translate="featureDesignTitle">
+                                                User-Friendly Design
+                                            </h3>
+                                            <p class="appPreviewDescriptionBody"
+                                                data-translate="featureDesignDescription">
+                                                Navigate effortlessly through your shopping journey with our sleek app
+                                                interface.
                                             </p>
                                         </div>
                                         <div class="appPreviewDesc-container">
-                                            <h3 class="appPreviewDescriptionTitle">Real-Time
-                                                Updates</h3>
-                                            <p class="appPreviewDescriptionBody">Stay informed
-                                                with instant
-                                                notifications on your order status and pickup
-                                                details.</p>
+                                            <h3 class="appPreviewDescriptionTitle" data-translate="featureUpdatesTitle">
+                                                Real-Time Updates
+                                            </h3>
+                                            <p class="appPreviewDescriptionBody"
+                                                data-translate="featureUpdatesDescription">
+                                                Stay informed with instant notifications on your order status and pickup
+                                                details.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4 appPreview-image wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="appPreview-image wow fadeInUp" data-wow-delay="0.3s">
                                     <div class="owl-carousel screenshot-carousel">
                                         <img class="img-fluid" src="img/screenshot-1.png"
                                             alt="GlobalBuy24 App Interface">
@@ -192,6 +229,7 @@
                                         <img class="img-fluid" src="img/screenshot-3.png" alt="Quote Calculator">
                                         <img class="img-fluid" src="img/screenshot-4.png" alt="Order Tracking">
                                         <img class="img-fluid" src="img/screenshot-5.png" alt="Delivery Updates">
+                                        <img class="img-fluid" src="img/screenshot-6.png" alt="Delivery Updates">
                                     </div>
                                 </div>
 
@@ -199,23 +237,20 @@
                             <!-- App Preview End -->
 
 
-                            <!-- Download Start -->
-                            <div class="container-xxl mb-5" id="download">
-                                <div class="container benefits">
+                            <!-- Benefits Start -->
+                            <div class="#" id="benefits">
+                                <div class="benefits">
                                     <div class="benefits-intro">
-                                        <h5 class="fw-medium" data-translate="benefitsTitle">Our
-                                            Benefits</h5>
-                                        <div class="col-lg-6 beneifts-top wow fadeInUp" data-wow-delay="0.3s">
+                                        <h5 class="fw-medium" data-translate="benefitsTitle">Our Benefits</h5>
+                                        <div class="beneifts-top wow fadeInUp" data-wow-delay="0.3s">
                                             <h1 class="mb-4" data-translate="benefitsSubtitle">
-                                                Why choose GlobalBuy24
-                                                for your shopping needs</h1>
+                                                Why choose GlobalBuy24 for your shopping needs
+                                            </h1>
                                             <p class="mb-4" data-translate="benefitsDescription">
-                                                GlobalBuy24 opens the door to a world of
-                                                shopping possibilities. With
-                                                just a few clicks, you can access top
-                                                international stores and have your
-                                                products delivered locally. Experience seamless
-                                                shopping that caters
+                                                GlobalBuy24 opens the door to a world of shopping possibilities.
+                                                With just a few clicks, you can access top international stores and have
+                                                your
+                                                products delivered locally. Experience seamless shopping that caters
                                                 specifically to your needs.
                                             </p>
                                         </div>
@@ -292,8 +327,8 @@
                             </div>
 
                             <!-- Download App Section -->
-                            <div class="container-xxl mb-5" id="download">
-                                <div class="container download-app">
+                            <div class=" #" id="download">
+                                <div class=" download-app">
                                     <div>
                                         <h2>Ready to Shop the world?</h2>
                                         <p>Start shopping the world with GlobalBuy24, where
@@ -310,7 +345,7 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="col-lg-6">
+                                        <div class="#">
                                             <img class="img-fluid wow fadeInUp" data-wow-delay="0.1s"
                                                 src="img/about.png" alt="GlobalBuy24 Mobile App">
                                         </div>
@@ -322,59 +357,61 @@
                             <!-- Footer Start -->
                             <div class="container-fluid footer wow fadeIn" data-wow-delay="0.1s">
                                 <div class="footer-top">
-                                    <img src="#" alt="Logo">
-                                    <div class="col-md-6">
-                                        <a class="btn btn-link" href="#home">Home</a>
-                                        <a class="btn btn-link" href="#how-it-works">How It
+                                    <img class="logo-black" src="img/logo/logo_primary.png" alt="Logo">
+                                    <div class="btn-links-container">
+                                        <a class="btn-link" href="#home">Home</a>
+                                        <a class="btn-link" href="#how-it-works">How It
                                             Works</a>
-                                        <a class="btn btn-link" href="#benefits">Why Us</a>
-                                        <a class="btn btn-link" href="#download">App Preview</a>
-                                        <a class="btn btn-link" href="#support">Support</a>
-                                        <a id="languageSwitcher" class="btn btn-link"
+                                        <a class="btn-link" href="#benefits">Why Us</a>
+                                        <a class="btn-link" href="#download">App Preview</a>
+                                        <a class="btn-link" href="#support">Support</a>
+                                        <a id="languageSwitcher" class="btn-link"
                                             onclick="switchLanguage(currentLanguage === 'en' ? 'fr' : 'en')">French</a>
                                     </div>
-                                    <div class="d-flex pt-2">
-                                        <a class="btn btn-social" href="#">
+                                    <div class="#">
+                                        <a class="btn-social" href="#">
                                             <i class="fab fa-facebook-f"></i>
                                         </a>
-                                        <a class="btn btn-social" href="#">
+                                        <a class="btn-social" href="#">
                                             <i class="fab fa-instagram"></i>
                                         </a>
-                                        <a class="btn btn-social" href="#">
-                                            <i class="fab fa-linkedin-in"></i>
+                                        <a class="btn-social" href="#">
+                                            <i class="fab fa-youtube"></i>
                                         </a>
                                     </div>
                                 </div>
                                 <div class="footer-bottom px-lg-5">
                                     <div>&copy; 2025 GlobalBuy24. All rights reserved.</div>
-                                    <a class="footer-link btn-link" href="privacy.html" target="_blank">Privacy
-                                        Policy</a>
-                                    <a class="footer-link btn-link" href="terms-of-service.html" target="_blank">Terms
-                                        of Service</a>
-                                    <a class="footer-link btn-link" href="cookies.html" target="_blank">Cookies
-                                        Settings</a>
+                                    <div class="footer-bottom-links">
+                                        <a class="footer-link btn-link" href="privacy.html" target="_blank">Privacy
+                                            Policy</a>
+                                        <a class="footer-link btn-link" href="terms-of-service.html"
+                                            target="_blank">Terms
+                                            of Service</a>
+                                        <a class="footer-link btn-link" href="cookies.html" target="_blank">Cookies
+                                            Settings</a>
+                                    </div>
                                 </div>
+                                <!-- Footer End -->
+
+
+                                <!-- Back to Top -->
+                                <a href="#" class="btn-lg-square back-to-top">
+                                    <i class="bi bi-arrow-up "></i>
+                                </a>
                             </div>
-                            <!-- Footer End -->
 
-
-                            <!-- Back to Top -->
-                            <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2">
-                                <i class="bi bi-arrow-up "></i>
-                            </a>
-                        </div>
-
-                        <!-- JavaScript Libraries -->
-                        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-                        <script
-                            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-                        <script src="lib/wow/wow.min.js"></script>
-                        <script src="lib/easing/easing.min.js"></script>
-                        <script src="lib/waypoints/waypoints.min.js"></script>
-                        <script src="lib/counterup/counterup.min.js"></script>
-                        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-                        <script src="js/language.js"></script>
-                        <script src="js/main.js"></script>
+                            <!-- JavaScript Libraries -->
+                            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+                            <script
+                                src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+                            <script src="lib/wow/wow.min.js"></script>
+                            <script src="lib/easing/easing.min.js"></script>
+                            <script src="lib/waypoints/waypoints.min.js"></script>
+                            <script src="lib/counterup/counterup.min.js"></script>
+                            <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+                            <script src="js/language.js"></script>
+                            <script src="js/main.js"></script>
 </body>
 
 </html>
