@@ -258,7 +258,7 @@ a:hover {
 }
 
 .navbar .language-switcher .fa-language {
-  font-size: 1.1rem;
+  font-size: 24px;
   margin-right: 0.3rem;
 }
 
@@ -277,24 +277,6 @@ a:hover {
   max-width: 100%;
   background: var(--white);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-}
-
-.navbar > .container {
-  max-width: 100%;
-  margin: 0;
-  padding: 0.75rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-/* Ensure the navbar container spans full width */
-#home > .container-fluid {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  max-width: 100%;
 }
 
 /* Adjust logo size */
@@ -346,7 +328,7 @@ a:hover {
   transition: all 0.3s;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1205px) {
   .navbar-brand img {
     height: 40px;
   }
@@ -406,8 +388,27 @@ a:hover {
 }
 
 /* Responsive Navbar */
-@media (max-width: 991.98px) {
-  .navbar-collapse {
+/* Override Bootstrap's default navbar breakpoint */
+.navbar-expand-lg .navbar-toggler {
+  display: none;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  display: flex !important;
+  flex-basis: auto;
+}
+
+@media (max-width: 1205px) {
+  .navbar-expand-lg .navbar-toggler {
+    display: block;
+  }
+  
+  .navbar-expand-lg .navbar-collapse {
+    display: none !important;
+  }
+  
+  .navbar-expand-lg .navbar-collapse.show {
+    display: flex !important;
     position: fixed;
     top: 80px;
     left: 0;
@@ -418,19 +419,23 @@ a:hover {
     z-index: 1000;
     max-height: calc(100vh - 80px);
     overflow-y: auto;
+    flex-direction: column;
   }
   
   .navbar-nav {
+    width: 100%;
     padding: 1rem 0;
   }
   
   .navbar .nav-item {
     margin: 0.5rem 0;
+    width: 100%;
   }
   
   .navbar .nav-link {
     padding: 0.75rem 1rem;
     border-radius: 0.25rem;
+    display: block;
   }
   
   .navbar .nav-link:hover {
@@ -440,6 +445,16 @@ a:hover {
   .navbar .d-flex {
     padding: 1rem 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  .navbar .container {
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar-brand {
+    margin-right: auto;
   }
 }
 
@@ -483,13 +498,7 @@ a:hover {
     object-fit: contain;
 }
 
-.navbar-light .navbar-brand .logo-black {
-    display: none;
-}
 
-.navbar-light .navbar-brand .logo-white {
-    display: block;
-}
 
 .navbar-light .navbar-brand h1 {
     background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color)); /* Using custom variables */
@@ -1211,7 +1220,7 @@ a:hover {
 }
 
 /* Make sure the TOC doesn't overlap with the navbar on mobile */
-@media (max-width: 991.98px) {
+@media (max-width: 1205px) {
     #mobileToc,
     #mobileTocPrivacy,
     #mobileTocCookies {
@@ -1471,7 +1480,7 @@ a:hover {
     }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1205px) {
     /* Removed padding from body, now handled by individual sections/containers */
     body {
         padding: 0;
