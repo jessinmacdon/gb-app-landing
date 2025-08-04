@@ -37,37 +37,64 @@
 
 
 
-    // Smooth scrolling on the navbar links and button links
-    $(".navbar-nav a, .navbar .btn-link").on('click', function (event) {
-        if (this.hash !== "" && $(this.hash).length) {
+    // Enhanced smooth scrolling for all navigation links
+    $(document).on('click', 'a[href^="#"]', function(event) {
+        // Only handle internal links
+        if (this.hash !== "") {
             event.preventDefault();
             
-            // Close mobile menu if open
-            $('.navbar-collapse').collapse('hide');
+            // Store hash
+            const hash = this.hash;
+            const target = $(hash);
             
-            // Get the target element
-            var target = $(this.hash);
-            var navbarHeight = $('.navbar').outerHeight();
-            var scrollTop = target.offset().top - navbarHeight;
-            
-            // Smooth scroll to target
-            $('html, body').animate({
-                scrollTop: scrollTop
-            }, 800, 'swing');
-
-            // Update active state for nav links
-            if ($(this).parents('.navbar-nav').length) {
-                $('.navbar-nav .active').removeClass('active');
-                $(this).closest('li').find('a').addClass('active');
-            }
-            
-            // Update URL without adding to history
-            if (history.pushState) {
-                history.pushState(null, null, this.hash);
-            } else {
-                location.hash = this.hash;
+            // Verify target exists
+            if (target.length) {
+                // Close mobile menu if open
+                $('.navbar-collapse').collapse('hide');
+                
+                // Get the navbar height
+                const navbarHeight = $('.navbar').outerHeight();
+                const scrollTop = target.offset().top - navbarHeight + 10; // Add small offset
+                
+                // Ultra-fast smooth scroll to target (reduced to 200ms)
+                $('html, body').stop().animate({
+                    scrollTop: scrollTop
+                }, 200, 'swing', function() {
+                    // Update URL after scroll completes
+                    if (history.pushState) {
+                        history.pushState(null, null, hash);
+                    } else {
+                        window.location.hash = hash;
+                    }
+                });
+                
+                // Update active state for nav links
+                if ($(this).parents('.navbar-nav').length) {
+                    $('.navbar-nav .nav-link').removeClass('active');
+                    $(this).addClass('active');
+                }
+                
+                return false;
             }
         }
+    });
+    
+    // Update active state on scroll
+    $(window).on('scroll', function() {
+        const scrollPosition = $(this).scrollTop();
+        const navbarHeight = $('.navbar').outerHeight();
+        
+        // Check each section
+        $('section[id]').each(function() {
+            const sectionTop = $(this).offset().top - navbarHeight - 100;
+            const sectionBottom = sectionTop + $(this).outerHeight();
+            const sectionId = $(this).attr('id');
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                $('.navbar-nav .nav-link').removeClass('active');
+                $(`.navbar-nav a[href*=${sectionId}]`).addClass('active');
+            }
+        });
     });
 
 

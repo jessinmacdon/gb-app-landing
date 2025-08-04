@@ -13,6 +13,12 @@
 }
 
 /* Base Body Styles */
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Account for fixed navbar */
+}
+
 body {
     background-color: var(--primary-bg-color);
     color: var(--info-text-color);
@@ -22,7 +28,8 @@ body {
     line-height: 1.5;
     box-sizing: border-box; 
     padding: 0; 
-    margin: 0; 
+    margin: 0;
+    scroll-behavior: smooth;
 }
 
 /* Headings */
@@ -270,13 +277,15 @@ a:hover {
 
 /* Navbar Styles */
 .navbar {
-  padding: 0;
-  transition: all 0.3s;
-  z-index: 1000;
-  width: 100%;
-  max-width: 100%;
-  background: var(--white);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  background-color: var(--card-bg);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  padding: 15px 0;
 }
 
 /* Adjust logo size */
@@ -323,6 +332,7 @@ a:hover {
   white-space: nowrap;
 }
 
+.logo-black,
 .navbar-brand img {
   height: 50px;
   transition: all 0.3s;
@@ -358,7 +368,7 @@ a:hover {
 .navbar .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: var(--dark);
+  color: var(--text-color);
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
   font-weight: 500;
@@ -415,7 +425,7 @@ a:hover {
     right: 0;
     padding: 1rem;
     background: var(--white);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     max-height: calc(100vh - 80px);
     overflow-y: auto;
@@ -498,17 +508,18 @@ a:hover {
     object-fit: contain;
 }
 
-
-
-.navbar-light .navbar-brand h1 {
-    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color)); /* Using custom variables */
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* Section spacing */
+section {
+    padding: 100px 0;
+    position: relative;
 }
 
+/* Add padding to body to account for fixed navbar */
+body {
+    padding-top: 80px;
+}
 
-/*** Hero Header ***/
+/* Hero Header */
 .hero-header {
     margin-bottom: 40px;
     padding: 8rem 0;
@@ -630,8 +641,7 @@ a:hover {
     width: 100%;
 }
 
-
-/*** How It Works Section ***/
+/* How It Works Section */
 .howItWorks {
     display: flex;
     flex-direction: column;
@@ -683,8 +693,7 @@ a:hover {
     line-height: 1.5;
 }
 
-
-/*** App Preview Section (Screenshot Carousel) ***/
+/* App Preview Section (Screenshot Carousel) */
 .appPreview {
     display: grid;
     grid-template-columns: 65% 35%;
@@ -779,8 +788,7 @@ a:hover {
     box-shadow: 0 0 10px var(--primary-color);
 }
 
-
-/*** Feature Section ***/
+/* Feature Section */
 .feature-item {
     transition: .5s;
     height: 300px; /* Consider making this height dynamic or removing it if it causes layout issues */
@@ -791,8 +799,7 @@ a:hover {
     box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .08);
 }
 
-
-/*** Benefits Section ***/
+/* Benefits Section */
 .benefits {
     display: flex;
     flex-direction: column;
@@ -866,8 +873,7 @@ a:hover {
     font-size: 1rem;
 }
 
-
-/*** Download App Section ***/
+/* Download App Section */
 .download-app {
     display: flex;
     flex-direction: row;
@@ -906,8 +912,7 @@ a:hover {
     margin: 0.5rem;
 }
 
-
-/*** Privacy & Terms Pages Styles ***/
+/* Privacy & Terms Pages Styles */
 .privacy-container {
     max-width: 1200px;
     margin: 30px auto;
@@ -1338,7 +1343,7 @@ a:hover {
     color: var(--info-text-color);
     line-height: 1.6;
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     align-items: center;
 }
 
