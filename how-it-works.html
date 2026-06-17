@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How It Works — GlobalBuy24</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #08010b;
+      --bg-alt: #0f0515;
+      --text: #ffffff;
+      --text-muted: rgba(255, 255, 255, 0.7);
+      --text-dim: rgba(255, 255, 255, 0.6);
+      --border: rgba(255, 255, 255, 0.1);
+      --border-hover: rgba(255, 255, 255, 0.15);
+      --surface: rgba(255, 255, 255, 0.04);
+      --blue: #005AE0;
+      --violet: #970be1;
+      --nav-h: 72px;
+      --page: 64px;
+      --max: 1280px;
+    }
+
+    [data-theme="light"] {
+      --bg: #ffffff;
+      --bg-alt: #f5f5f5;
+      --text: #08010b;
+      --text-muted: rgba(8, 1, 11, 0.7);
+      --text-dim: rgba(8, 1, 11, 0.6);
+      --border: rgba(8, 1, 11, 0.1);
+      --border-hover: rgba(8, 1, 11, 0.15);
+      --surface: rgba(8, 1, 11, 0.04);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; overflow-x: hidden; transition: background 0.3s, color 0.3s; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+    #nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); display: flex; align-items: center; padding: 0 var(--page); z-index: 100; background: var(--bg); border-bottom: 1px solid var(--border); transition: all .3s; }
+    #nav.scrolled { background: var(--bg-alt); backdrop-filter: blur(14px); }
+    
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; width: 100%; max-width: var(--max); margin: 0 auto; gap: 32px; }
+    .nav-logo { height: 36px; width: auto; }
+    
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; margin-left: auto; }
+    .nav-links a, .nav-links button { font-size: 16px; font-weight: 400; color: var(--text); background: none; border: none; cursor: pointer; padding: 0; transition: opacity .2s; }
+    .nav-links a:hover, .nav-links button:hover { opacity: .7; }
+
+    .lang-wrapper { position: relative; }
+    #langBtn { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 400; padding: 0; }
+    #langDropdown { position: absolute; top: 100%; right: 0; background: var(--bg-alt); border: 1px solid var(--border); border-radius: 8px; min-width: 120px; margin-top: 8px; display: none; flex-direction: column; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); overflow: hidden; z-index: 1000; }
+    #langDropdown.open { display: flex; }
+    .lang-option { padding: 12px 16px; cursor: pointer; transition: background .2s; border: none; background: none; color: var(--text); text-align: left; font-family: inherit; font-size: 14px; }
+    .lang-option:hover { background: var(--surface); }
+
+    .theme-toggle { width: 40px; height: 40px; border-radius: 50%; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all .3s; font-size: 18px; }
+    .theme-toggle:hover { background: var(--border-hover); }
+
+    .section { padding: 112px var(--page); }
+    .section-inner { max-width: var(--max); margin: 0 auto; }
+    .tagline { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 16px; }
+    .section-h2 { font-family: 'Roboto', sans-serif; font-size: 48px; font-weight: 400; line-height: 1.2; letter-spacing: -.48px; margin-bottom: 24px; }
+    .section-p { font-size: 18px; color: var(--text-muted); line-height: 1.5; }
+    
+    .btn-primary { background: linear-gradient(129deg, var(--blue) 0%, var(--violet) 100%); color: #fff; font-size: 16px; font-weight: 500; padding: 10px 24px; border-radius: 6px; display: inline-flex; align-items: center; gap: 8px; }
+    .btn-secondary { background: var(--surface); color: var(--text); font-size: 16px; font-weight: 500; padding: 10px 24px; border-radius: 6px; border: 1px solid var(--border); display: inline-flex; align-items: center; gap: 8px; }
+
+    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-top: 80px; }
+    .step-card { display: flex; flex-direction: column; gap: 32px; text-align: center; }
+    .step-image { width: 100%; aspect-ratio: 394/240; border-radius: 16px; background: var(--surface); overflow: hidden; }
+    .step-image img { width: 100%; height: 100%; object-fit: cover; }
+    .step-h { font-family: 'Roboto', sans-serif; font-size: 24px; font-weight: 400; line-height: 1.4; letter-spacing: -.24px; }
+    .step-p { font-size: 16px; color: var(--text-muted); line-height: 1.5; }
+    .step-btn { background: linear-gradient(135deg, var(--blue) 0%, var(--violet) 100%); color: #fff; font-size: 16px; font-weight: 500; padding: 10px 20px; border-radius: 6px; }
+
+    .detail-section { display: flex; gap: 80px; align-items: center; margin-bottom: 112px; }
+    .detail-left { flex: 1; }
+    .detail-h2 { font-family: 'Roboto', sans-serif; font-size: 48px; font-weight: 400; line-height: 1.2; letter-spacing: -.48px; margin-bottom: 24px; }
+    .detail-p { font-size: 18px; color: var(--text-muted); line-height: 1.5; margin-bottom: 32px; }
+    .detail-features { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px; }
+    .feature-h { font-family: 'Roboto', sans-serif; font-size: 20px; font-weight: 400; line-height: 1.4; letter-spacing: -.2px; margin-bottom: 16px; }
+    .feature-p { font-size: 16px; color: var(--text-muted); line-height: 1.5; }
+    .detail-right { flex: 1; aspect-ratio: 600/640; border-radius: 16px; background: var(--surface); overflow: hidden; }
+    .detail-right img { width: 100%; height: 100%; object-fit: cover; }
+
+    footer { background: var(--bg-alt); padding: 80px var(--page) 0; border-top: 1px solid var(--border); }
+    .footer-inner { max-width: var(--max); margin: 0 auto; }
+    .footer-top { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding-bottom: 32px; flex-wrap: wrap; }
+    .footer-nav { display: flex; gap: 32px; flex-wrap: wrap; }
+    .footer-nav a { font-size: 14px; font-weight: 600; color: var(--text); }
+    .footer-socials { display: flex; gap: 12px; align-items: center; }
+    .footer-socials svg { width: 24px; height: 24px; cursor: pointer; opacity: .85; transition: opacity .2s; }
+    .footer-socials svg:hover { opacity: 1; }
+    .footer-divider { width: 100%; height: 1px; background: var(--border); margin: 32px 0; }
+    .footer-bottom { display: flex; gap: 24px; padding-bottom: 32px; flex-wrap: wrap; align-items: center; }
+    .footer-copy { font-size: 14px; color: var(--text-dim); }
+    .footer-legal a { font-size: 14px; color: var(--text); text-decoration: underline; }
+
+    @media (max-width: 1024px) {
+      :root { --page: 40px; }
+      .steps-grid { grid-template-columns: 1fr 1fr; }
+      .detail-section { flex-direction: column; gap: 40px; }
+    }
+    @media (max-width: 768px) {
+      :root { --nav-h: 64px; --page: 20px; }
+      .nav-links { display: none; }
+      .section { padding: 72px 20px; }
+      .section-h2 { font-size: 32px; }
+      .steps-grid { grid-template-columns: 1fr; gap: 40px; }
+      .detail-section { flex-direction: column; gap: 40px; }
+      .detail-features { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/915e2868-a93e-4993-982a-0043bc1edfef" alt="GlobalBuy24" onerror="this.outerHTML='<span style=&quot;font-size:18px;font-weight:700&quot;>GlobalBuy24</span>'" />
+    <ul class="nav-links">
+      <li><a href="how-it-works.html" style="opacity:1" data-i18n="howItWorks">How It Works</a></li>
+      <li><a href="contact.html" data-i18n="support">Support</a></li>
+      <li class="lang-wrapper">
+        <button id="langBtn">EN ▼</button>
+        <div id="langDropdown">
+          <button class="lang-option" id="langEn">English</button>
+          <button class="lang-option" id="langFr">Français</button>
+        </div>
+      </li>
+      <li>
+        <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<section class="section" style="padding-top:140px">
+  <div class="section-inner">
+    <p class="tagline" data-i18n="explore">Explore</p>
+    <h1 class="section-h2" data-i18n="howItWorksTitle">How It Works</h1>
+    <p class="section-p" data-i18n="howItWorksDesc">Experience seamless shopping from global stores to local pickup with our easy-to-follow process.</p>
+    <div style="margin-top:32px; display:flex; gap:16px; flex-wrap:wrap">
+      <a href="how-it-works.html" class="btn-primary" data-i18n="learnMore">Learn More</a>
+      <a href="contact.html" class="btn-secondary" data-i18n="getStarted">Get Started</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <h2 class="section-h2" style="text-align:center; margin-bottom:24px; max-width:768px; margin-left:auto; margin-right:auto" data-i18n="stepsTitle">How GlobalBuy24 Simplifies Your Shopping Experience</h2>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-image">
+          <img src="https://www.figma.com/api/mcp/asset/77509ec8-0b9f-418c-879d-4df3b0d56c13" alt="Step 1" onerror="this.style.display='none'" />
+        </div>
+        <h3 class="step-h" data-i18n="step1OverviewTitle">Follow these simple steps to shop globally with ease.</h3>
+        <p class="step-p" data-i18n="step1OverviewDesc">Start your journey by copying the product link from your favorite online store.</p>
+        <a href="how-it-works.html#step1" class="step-btn" data-i18n="next">Next →</a>
+      </div>
+      <div class="step-card">
+        <div class="step-image">
+          <img src="https://www.figma.com/api/mcp/asset/77509ec8-0b9f-418c-879d-4df3b0d56c13" alt="Step 2" onerror="this.style.display='none'" />
+        </div>
+        <h3 class="step-h" data-i18n="step2OverviewTitle">Receive Your Quote Instantly</h3>
+        <p class="step-p" data-i18n="step2OverviewDesc">Paste the link in the app to get a detailed quote.</p>
+        <a href="how-it-works.html#step2" class="step-btn" data-i18n="pay">Pay →</a>
+      </div>
+      <div class="step-card">
+        <div class="step-image">
+          <img src="https://www.figma.com/api/mcp/asset/77509ec8-0b9f-418c-879d-4df3b0d56c13" alt="Step 3" onerror="this.style.display='none'" />
+        </div>
+        <h3 class="step-h" data-i18n="step3OverviewTitle">Secure Payment Made Simple</h3>
+        <p class="step-p" data-i18n="step3OverviewDesc">Confirm your quote and pay using local payment methods like Mobile Money.</p>
+        <a href="how-it-works.html#step3" class="step-btn" data-i18n="collect">Collect →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="detail-section">
+      <div class="detail-left">
+        <p class="tagline" data-i18n="step">Step 1</p>
+        <h2 class="detail-h2" data-i18n="step1DetailTitle">Copy Your Product Link Effortlessly</h2>
+        <p class="detail-p" data-i18n="step1DetailDesc">Discover your favorite items on popular sites like Amazon, SHEIN, or Temu. Simply copy the product link to begin your shopping journey.</p>
+        <a href="how-it-works.html" class="btn-secondary" data-i18n="next">Next</a>
+      </div>
+      <div class="detail-right">
+        <img src="https://www.figma.com/api/mcp/asset/978d666f-0f65-4263-909b-3980c82b1000" alt="Step 1" onerror="this.style.display='none'" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="detail-section">
+      <div class="detail-left">
+        <p class="tagline" data-i18n="step">Step 2</p>
+        <h2 class="detail-h2" data-i18n="step2DetailTitle">Paste Your Link and Get a Quote</h2>
+        <p class="detail-p" data-i18n="step2DetailDesc">Simply paste the product link into the GB24 app. You'll receive a detailed quote, including all costs, instantly.</p>
+        <div class="detail-features">
+          <div>
+            <h3 class="feature-h" data-i18n="quickQuote">Quick Quote</h3>
+            <p class="feature-p" data-i18n="quickQuoteDesc">Receive a transparent quote with no hidden fees.</p>
+          </div>
+          <div>
+            <h3 class="feature-h" data-i18n="easyProcess">Easy Process</h3>
+            <p class="feature-p" data-i18n="easyProcessDesc">Get started on your global shopping journey effortlessly.</p>
+          </div>
+        </div>
+        <div style="display:flex; gap:24px">
+          <a href="how-it-works.html" class="btn-secondary" data-i18n="learnMore">Learn More</a>
+          <a href="contact.html" class="btn-primary" data-i18n="signUp">Sign Up →</a>
+        </div>
+      </div>
+      <div class="detail-right">
+        <img src="https://www.figma.com/api/mcp/asset/978d666f-0f65-4263-909b-3980c82b1000" alt="Step 2" onerror="this.style.display='none'" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="detail-section">
+      <div class="detail-left">
+        <p class="tagline" data-i18n="secure">Secure</p>
+        <h2 class="detail-h2" data-i18n="step3DetailTitle">Step 3: Pay Securely and Easily</h2>
+        <p class="detail-p" data-i18n="step3DetailDesc">Once you receive your quote, confirm it and proceed to payment. Choose from various local payment options, including Mobile Money, for a seamless transaction.</p>
+        <div class="detail-features">
+          <div>
+            <h3 class="feature-h" data-i18n="easyPayment">Easy Payment</h3>
+            <p class="feature-p" data-i18n="easyPaymentDesc">Enjoy hassle-free payments tailored for your convenience and security.</p>
+          </div>
+          <div>
+            <h3 class="feature-h" data-i18n="trustedMethods">Trusted Methods</h3>
+            <p class="feature-p" data-i18n="trustedMethodsDesc">We support popular local payment methods for your peace of mind.</p>
+          </div>
+        </div>
+        <button class="btn-primary" data-i18n="learnMore">Learn More →</button>
+      </div>
+      <div class="detail-right">
+        <img src="https://www.figma.com/api/mcp/asset/978d666f-0f65-4263-909b-3980c82b1000" alt="Step 3" onerror="this.style.display='none'" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="detail-section">
+      <div class="detail-left">
+        <p class="tagline" data-i18n="pickup">Pickup</p>
+        <h2 class="detail-h2" data-i18n="step4DetailTitle">Step 4: Convenient Local Pickup</h2>
+        <p class="detail-p" data-i18n="step4DetailDesc">Your order is delivered to a nearby pickup point, making it easy for you to collect your items. Enjoy the convenience of shopping globally without the hassle of international shipping.</p>
+        <div style="display:flex; gap:24px; margin-top:32px">
+          <a href="how-it-works.html" class="btn-secondary" data-i18n="learnMore">Learn More</a>
+          <a href="contact.html" class="btn-primary" data-i18n="signUp">Sign Up →</a>
+        </div>
+      </div>
+      <div class="detail-right">
+        <img src="https://www.figma.com/api/mcp/asset/978d666f-0f65-4263-909b-3980c82b1000" alt="Step 4" onerror="this.style.display='none'" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <img src="https://www.figma.com/api/mcp/asset/915e2868-a93e-4993-982a-0043bc1edfef" alt="GlobalBuy24" style="height:36px;width:auto" onerror="this.outerHTML='<span style=&quot;font-weight:700;font-size:18px&quot;>GlobalBuy24</span>'" />
+      <nav class="footer-nav">
+        <a href="index.html" data-i18n="home">Home</a>
+        <a href="how-it-works.html" data-i18n="howItWorks">How it works</a>
+        <a href="contact.html" data-i18n="support">Support</a>
+        <a href="privacy-policy.html" data-i18n="privacyPolicy">Privacy</a>
+        <a href="terms-of-service.html" data-i18n="termsOfService">Terms</a>
+      </nav>
+      <div class="footer-socials">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <span class="footer-copy" data-i18n="copyright">© 2025 GlobalBuy24. All rights reserved.</span>
+      <a href="privacy-policy.html" class="footer-legal" data-i18n="privacyPolicy">Privacy Policy</a>
+      <a href="terms-of-service.html" class="footer-legal" data-i18n="termsOfService">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      toggleTheme();
+      updateThemeToggleIcon();
+    });
+
+    function updateThemeToggleIcon() {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      themeToggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+    }
+
+    updateThemeToggleIcon();
+  }
+</script>
+</body>
+</html>

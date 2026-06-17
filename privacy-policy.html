@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — GlobalBuy24</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #08010b;
+      --bg-alt: #0f0515;
+      --text: #ffffff;
+      --text-muted: rgba(255, 255, 255, 0.7);
+      --border: rgba(255, 255, 255, 0.1);
+      --surface: rgba(255, 255, 255, 0.04);
+      --blue: #005AE0;
+      --nav-h: 72px;
+      --page: 64px;
+      --max: 1000px;
+    }
+
+    [data-theme="light"] {
+      --bg: #ffffff;
+      --bg-alt: #f5f5f5;
+      --text: #08010b;
+      --text-muted: rgba(8, 1, 11, 0.7);
+      --border: rgba(8, 1, 11, 0.1);
+      --surface: rgba(8, 1, 11, 0.04);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; transition: background 0.3s, color 0.3s; }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    #nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); display: flex; align-items: center; padding: 0 var(--page); z-index: 100; background: var(--bg); border-bottom: 1px solid var(--border); }
+    .nav-inner { display: flex; align-items: center; gap: 32px; width: 100%; max-width: var(--max); margin: 0 auto; }
+    .nav-logo { height: 36px; width: auto; }
+    .nav-links { display: flex; gap: 32px; list-style: none; margin-left: auto; }
+    .nav-links a, .nav-links button { font-size: 14px; color: var(--text); background: none; border: none; cursor: pointer; }
+
+    .lang-wrapper { position: relative; }
+    #langBtn { display: flex; align-items: center; gap: 8px; font-size: 14px; padding: 0; }
+    #langDropdown { position: absolute; top: 100%; right: 0; background: var(--bg-alt); border: 1px solid var(--border); border-radius: 8px; min-width: 120px; margin-top: 8px; display: none; flex-direction: column; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); overflow: hidden; z-index: 1000; }
+    #langDropdown.open { display: flex; }
+    .lang-option { padding: 12px 16px; cursor: pointer; transition: background .2s; border: none; background: none; color: var(--text); text-align: left; font-family: inherit; font-size: 14px; }
+    .lang-option:hover { background: var(--surface); }
+
+    .theme-toggle { width: 40px; height: 40px; border-radius: 50%; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all .3s; font-size: 18px; }
+    .theme-toggle:hover { background: var(--border); }
+
+    .content { max-width: var(--max); margin: 0 auto; padding: 140px var(--page) 80px; }
+    h1 { font-family: 'Roboto', sans-serif; font-size: 48px; font-weight: 400; line-height: 1.2; letter-spacing: -.48px; margin-bottom: 24px; margin-top: 80px; }
+    h1:first-child { margin-top: 0; }
+    h2 { font-family: 'Roboto', sans-serif; font-size: 32px; font-weight: 400; line-height: 1.3; letter-spacing: -.32px; margin-bottom: 16px; margin-top: 60px; }
+    h3 { font-family: 'Roboto', sans-serif; font-size: 20px; font-weight: 400; line-height: 1.4; letter-spacing: -.2px; margin-bottom: 12px; margin-top: 20px; }
+    p { font-size: 16px; line-height: 1.7; color: var(--text-muted); margin-bottom: 16px; }
+    ul, ol { margin-left: 20px; margin-bottom: 16px; }
+    li { margin-bottom: 8px; color: var(--text-muted); }
+
+    footer { background: var(--bg-alt); padding: 80px var(--page) 40px; border-top: 1px solid var(--border); margin-top: 80px; }
+    .footer-inner { max-width: var(--max); margin: 0 auto; display: flex; gap: 40px; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+    .footer-copy { font-size: 14px; color: rgba(255,255,255,.6); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 14px; color: var(--text); text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      :root { --page: 20px; }
+      h1 { font-size: 32px; }
+      h2 { font-size: 24px; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <img class="nav-logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Ctext x='5' y='28' font-family='Roboto' font-size='24' font-weight='700' fill='%23fff'%3EGlobalBuy24%3C/text%3E%3C/svg%3E" alt="GlobalBuy24" />
+    <ul class="nav-links">
+      <li><a href="how-it-works.html" data-i18n="howItWorks">How It Works</a></li>
+      <li><a href="contact.html" data-i18n="support">Support</a></li>
+      <li class="lang-wrapper">
+        <button id="langBtn">EN ▼</button>
+        <div id="langDropdown">
+          <button class="lang-option" id="langEn">English</button>
+          <button class="lang-option" id="langFr">Français</button>
+        </div>
+      </li>
+      <li>
+        <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="content">
+  <h1 data-i18n="privacyPolicy">Privacy Policy</h1>
+  <p><strong data-i18n="effectiveDate">Effective Date: January 1, 2025</strong></p>
+
+  <h2 data-i18n="introduction">Introduction</h2>
+  <p data-i18n="introText">At GlobalBuy24, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.</p>
+
+  <h2 data-i18n="infoCollected">Information We Collect</h2>
+  <h3 data-i18n="personalInfo">Personal Information</h3>
+  <p data-i18n="personalInfoText">We may collect personal information from you in various ways, including:</p>
+  <ul>
+    <li data-i18n="infoItem1">Name and email address</li>
+    <li data-i18n="infoItem2">Phone number and physical address</li>
+    <li data-i18n="infoItem3">Payment and billing information</li>
+  </ul>
+
+  <h3 data-i18n="autoInfo">Automatic Information</h3>
+  <p data-i18n="autoInfoText">We automatically collect certain information about your device and how you interact with our website.</p>
+
+  <h2 data-i18n="howWeUse">How We Use Your Information</h2>
+  <p data-i18n="howWeUseText">We use the information we collect for various purposes, including processing transactions, providing customer support, and improving our services.</p>
+
+  <h2 data-i18n="contactUs">Contact Us</h2>
+  <p data-i18n="contactUsText">If you have questions about this Privacy Policy, please contact us at:</p>
+  <p>
+    Email: <a href="mailto:support@globalbuy24.com">support@globalbuy24.com</a><br>
+    Phone: <a href="tel:+237123456789">+237 123 456 789</a>
+  </p>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy" data-i18n="copyright">© 2025 GlobalBuy24. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="privacy-policy.html" data-i18n="privacyPolicy">Privacy Policy</a>
+      <a href="terms-of-service.html" data-i18n="termsOfService">Terms of Service</a>
+      <a href="index.html" data-i18n="home">Home</a>
+      <a href="contact.html" data-i18n="contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      toggleTheme();
+      updateThemeToggleIcon();
+    });
+
+    function updateThemeToggleIcon() {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      themeToggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+    }
+
+    updateThemeToggleIcon();
+  }
+</script>
+</body>
+</html>

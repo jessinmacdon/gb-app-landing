@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlobalBuy24 — Shop the World, Pick Up in Cameroon</title>
+  <meta name="description" content="Paste any product link from Amazon, SHEIN, Zara or 200+ global stores. Get one transparent quote, pay with Mobile Money, and collect at a pickup point near you." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Design tokens ── */
+    :root {
+      --bg: #08010b;
+      --bg-alt: #0f0515;
+      --bg-card: #110218;
+      --text: #ffffff;
+      --text-muted: rgba(255,255,255,.7);
+      --text-dim: rgba(255,255,255,.55);
+      --border: rgba(255,255,255,.1);
+      --border-hover: rgba(255,255,255,.18);
+      --surface: rgba(255,255,255,.04);
+      --surface-hover: rgba(255,255,255,.07);
+      --blue: #005AE0;
+      --violet: #970be1;
+      --grad: linear-gradient(129deg, var(--blue) 0%, var(--violet) 100%);
+      --nav-h: 72px;
+      --page: 64px;
+      --max: 1280px;
+      --radius: 12px;
+    }
+
+    [data-theme="light"] {
+      --bg: #ffffff;
+      --bg-alt: #f5f5f5;
+      --bg-card: #f0ecf5;
+      --text: #08010b;
+      --text-muted: rgba(8,1,11,.7);
+      --text-dim: rgba(8,1,11,.55);
+      --border: rgba(8,1,11,.1);
+      --border-hover: rgba(8,1,11,.18);
+      --surface: rgba(8,1,11,.04);
+      --surface-hover: rgba(8,1,11,.07);
+    }
+
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: background .3s, color .3s;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ── Utility ── */
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--page); }
+    .section { padding: 112px 0; }
+    .tag { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 16px; }
+    .grad-text { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    /* ── Buttons ── */
+    .btn { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 500; padding: 11px 26px; border-radius: 8px; transition: opacity .2s, transform .15s; cursor: pointer; }
+    .btn:hover { opacity: .88; transform: translateY(-1px); }
+    .btn-primary { background: var(--grad); color: #fff; border: none; }
+    .btn-secondary { background: var(--surface); color: var(--text); border: 1px solid var(--border); }
+    .btn-secondary:hover { background: var(--surface-hover); border-color: var(--border-hover); }
+    .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+    /* ── Nav ── */
+    #nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--nav-h); z-index: 200;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      transition: background .3s, box-shadow .3s;
+    }
+    #nav.scrolled { background: rgba(8,1,11,.85); backdrop-filter: blur(16px); box-shadow: 0 1px 24px rgba(0,0,0,.35); }
+    [data-theme="light"] #nav.scrolled { background: rgba(255,255,255,.85); }
+    .nav-inner { display: flex; align-items: center; height: var(--nav-h); gap: 32px; }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-logo-text { font-size: 20px; font-weight: 700; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .nav-links { display: flex; align-items: center; gap: 28px; margin-left: auto; }
+    .nav-links a { font-size: 15px; color: var(--text-muted); transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); }
+
+    /* Lang dropdown */
+    .lang-wrapper { position: relative; }
+    #langBtn { display: flex; align-items: center; gap: 6px; font-size: 15px; color: var(--text-muted); padding: 0; transition: color .2s; }
+    #langBtn:hover { color: var(--text); }
+    #langDropdown { position: absolute; top: calc(100% + 12px); right: 0; background: var(--bg-alt); border: 1px solid var(--border); border-radius: 10px; min-width: 130px; display: none; flex-direction: column; box-shadow: 0 8px 24px rgba(0,0,0,.2); overflow: hidden; z-index: 999; }
+    #langDropdown.open { display: flex; }
+    .lang-option { padding: 12px 16px; font-size: 14px; color: var(--text); text-align: left; background: none; border: none; cursor: pointer; font-family: inherit; transition: background .15s; }
+    .lang-option:hover { background: var(--surface-hover); }
+
+    /* Theme toggle */
+    .theme-toggle { width: 40px; height: 40px; border-radius: 50%; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 17px; transition: all .2s; }
+    .theme-toggle:hover { background: var(--surface-hover); border-color: var(--border-hover); }
+
+    /* Mobile hamburger */
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; width: 40px; height: 40px; align-items: center; justify-content: center; border-radius: 8px; background: var(--surface); border: 1px solid var(--border); }
+    .nav-hamburger span { display: block; width: 20px; height: 2px; background: var(--text); border-radius: 2px; transition: all .3s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile drawer */
+    .nav-drawer { display: none; position: fixed; inset: var(--nav-h) 0 0 0; background: var(--bg); z-index: 199; padding: 32px var(--page); flex-direction: column; gap: 8px; overflow-y: auto; }
+    .nav-drawer.open { display: flex; }
+    .nav-drawer a, .nav-drawer button { font-size: 18px; color: var(--text); padding: 14px 0; border-bottom: 1px solid var(--border); width: 100%; text-align: left; background: none; }
+
+    /* ── Hero ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: var(--nav-h);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px; right: -300px;
+      width: 800px; height: 800px;
+      background: radial-gradient(circle, rgba(0,90,224,.15) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(151,11,225,.12) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; padding: 80px 0; position: relative; z-index: 1; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--text-muted); letter-spacing: .08em; text-transform: uppercase; border: 1px solid var(--border); border-radius: 100px; padding: 6px 14px; margin-bottom: 28px; }
+    .hero-eyebrow::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--grad); flex-shrink: 0; }
+    .hero-title { font-family: 'Roboto', sans-serif; font-size: clamp(42px, 5.5vw, 72px); font-weight: 700; line-height: 1.08; letter-spacing: -1.5px; margin-bottom: 24px; }
+    .hero-title span { display: block; }
+    .hero-subtitle { font-size: 17px; color: var(--text-muted); line-height: 1.7; margin-bottom: 40px; max-width: 500px; }
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 32px; }
+    .hero-note { font-size: 13px; color: var(--text-dim); display: flex; align-items: center; gap: 6px; }
+    .hero-note svg { flex-shrink: 0; }
+
+    /* Quote card */
+    .hero-visual { display: flex; align-items: center; justify-content: center; position: relative; }
+    .hero-globe { width: 100%; max-width: 480px; aspect-ratio: 1; border-radius: 24px; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+    .hero-globe-art {
+      width: 280px; height: 280px; border-radius: 50%;
+      background: conic-gradient(from 180deg, var(--blue) 0deg, var(--violet) 120deg, #1a0535 240deg, var(--blue) 360deg);
+      opacity: .7;
+      animation: spin 18s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .quote-card {
+      position: absolute;
+      bottom: 28px; left: -40px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 24px;
+      width: 280px;
+      box-shadow: 0 16px 48px rgba(0,0,0,.4);
+    }
+    .qc-title { font-size: 11px; font-weight: 600; color: var(--text-dim); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 14px; }
+    .qc-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text-muted); }
+    .qc-row:last-of-type { border-bottom: none; }
+    .qc-row.total { color: var(--text); font-weight: 600; font-size: 14px; }
+    .qc-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(0,90,224,.12); border: 1px solid rgba(0,90,224,.25); border-radius: 100px; padding: 5px 12px; font-size: 12px; color: #60a5fa; margin-top: 12px; }
+    .qc-dot { width: 7px; height: 7px; border-radius: 50%; background: #34d399; animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:.4;} }
+
+    /* ── Stats ── */
+    .stats { padding: 60px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
+    .stat-item { text-align: center; }
+    .stat-number { font-family: 'Roboto', sans-serif; font-size: 42px; font-weight: 700; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 8px; }
+    .stat-label { font-size: 14px; color: var(--text-muted); }
+
+    /* ── Steps ── */
+    .steps-header { text-align: center; max-width: 680px; margin: 0 auto 72px; }
+    .section-title { font-family: 'Roboto', sans-serif; font-size: clamp(28px, 3.5vw, 48px); font-weight: 400; line-height: 1.2; letter-spacing: -.5px; margin-bottom: 16px; }
+    .section-sub { font-size: 17px; color: var(--text-muted); line-height: 1.6; }
+
+    .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: var(--border); border-radius: var(--radius); overflow: hidden; }
+    .step-card { background: var(--bg); padding: 36px 28px; display: flex; flex-direction: column; gap: 16px; transition: background .2s; }
+    .step-card:hover { background: var(--surface-hover); }
+    .step-num { font-size: 13px; font-weight: 600; color: var(--text-dim); letter-spacing: .06em; }
+    .step-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: var(--surface); border: 1px solid var(--border); }
+    .step-icon svg { width: 24px; height: 24px; }
+    .step-h { font-family: 'Roboto', sans-serif; font-size: 18px; font-weight: 400; line-height: 1.4; }
+    .step-p { font-size: 14px; color: var(--text-muted); line-height: 1.6; flex: 1; }
+
+    /* ── App preview / Features ── */
+    .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .features-left { display: flex; flex-direction: column; gap: 40px; }
+    .feature-item { display: flex; gap: 20px; }
+    .feature-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .feature-icon svg { width: 22px; height: 22px; }
+    .feature-h { font-family: 'Roboto', sans-serif; font-size: 18px; font-weight: 400; margin-bottom: 6px; }
+    .feature-p { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
+    .screenshots-wrap { position: relative; border-radius: 20px; overflow: hidden; background: var(--surface); border: 1px solid var(--border); aspect-ratio: 9/16; max-width: 360px; margin: 0 auto; }
+    .screenshots-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .ss-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(0,90,224,.1) 0%, rgba(151,11,225,.1) 100%); }
+    .ss-placeholder span { font-size: 48px; }
+
+    /* Screenshot carousel dots */
+    .ss-dots { display: flex; gap: 6px; justify-content: center; margin-top: 16px; }
+    .ss-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--border); transition: background .3s, width .3s; }
+    .ss-dot.active { background: var(--blue); width: 20px; border-radius: 3px; }
+
+    /* ── Demo section ── */
+    .demo-wrap { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; }
+    .demo-header { padding: 48px 48px 32px; }
+    .demo-player { position: relative; background: #000; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+    .demo-player-bg { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,90,224,.2) 0%, rgba(151,11,225,.2) 100%); }
+    .demo-play-btn { position: relative; z-index: 1; width: 72px; height: 72px; border-radius: 50%; background: rgba(255,255,255,.15); border: 2px solid rgba(255,255,255,.3); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; transition: all .2s; }
+    .demo-play-btn:hover { background: rgba(255,255,255,.25); transform: scale(1.08); }
+    .demo-play-btn svg { width: 28px; height: 28px; margin-left: 4px; }
+    .demo-steps { display: flex; gap: 0; border-top: 1px solid var(--border); }
+    .demo-step { flex: 1; padding: 20px 24px; border-right: 1px solid var(--border); display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-muted); }
+    .demo-step:last-child { border-right: none; }
+    .demo-step-num { width: 24px; height: 24px; border-radius: 50%; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; flex-shrink: 0; }
+    .demo-caption { padding: 20px 48px; font-size: 14px; color: var(--text-dim); text-align: center; border-top: 1px solid var(--border); }
+
+    /* ── Testimonials ── */
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
+    .testi-card { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 20px; transition: border-color .2s, transform .2s; }
+    .testi-card:hover { border-color: var(--border-hover); transform: translateY(-3px); }
+    .testi-stars { display: flex; gap: 3px; }
+    .testi-star { color: #f59e0b; font-size: 14px; }
+    .testi-text { font-size: 15px; color: var(--text-muted); line-height: 1.7; flex: 1; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 14px; }
+    .testi-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--grad); display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 600; color: #fff; flex-shrink: 0; }
+    .testi-name { font-size: 14px; font-weight: 600; }
+    .testi-role { font-size: 13px; color: var(--text-dim); }
+
+    /* ── Benefits / Why Us ── */
+    .benefits-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: flex-start; margin-top: 56px; }
+    .benefit-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .benefit-card { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 14px; padding: 24px; transition: border-color .2s, background .2s; }
+    .benefit-card:hover { border-color: var(--border-hover); background: var(--surface-hover); }
+    .benefit-card-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+    .benefit-card-icon svg { width: 20px; height: 20px; }
+    .benefit-card-h { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+    .benefit-card-p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+    /* ── FAQ ── */
+    .faq-list { margin-top: 56px; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 22px 28px; cursor: pointer; transition: background .15s; }
+    .faq-q:hover { background: var(--surface-hover); }
+    .faq-q-text { font-size: 16px; font-weight: 600; color: var(--text); flex: 1; }
+    .faq-chevron { width: 20px; height: 20px; flex-shrink: 0; transition: transform .3s; color: var(--text-muted); }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-a { display: none; padding: 0 28px 24px; }
+    .faq-a.open { display: block; }
+    .faq-a-text { font-size: 15px; color: var(--text-muted); line-height: 1.7; }
+
+    /* ── CTA ── */
+    .cta-section { background: var(--bg-alt); border-radius: 24px; margin: 0 var(--page); padding: 80px 64px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; border: 1px solid var(--border); }
+    .cta-title { font-family: 'Roboto', sans-serif; font-size: clamp(28px, 3.5vw, 48px); font-weight: 400; line-height: 1.2; margin-bottom: 20px; }
+    .cta-desc { font-size: 17px; color: var(--text-muted); line-height: 1.6; margin-bottom: 36px; }
+    .cta-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+    .cta-visual { aspect-ratio: 1; border-radius: 20px; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+    .cta-globe { width: 200px; height: 200px; border-radius: 50%; background: conic-gradient(from 0deg, var(--blue) 0deg, var(--violet) 180deg, var(--blue) 360deg); opacity: .5; animation: spin 24s linear infinite; }
+
+    /* ── Footer ── */
+    footer { background: var(--bg-alt); border-top: 1px solid var(--border); margin-top: 112px; padding: 72px 0 0; }
+    .footer-inner { max-width: var(--max); margin: 0 auto; padding: 0 var(--page); }
+    .footer-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 48px; flex-wrap: wrap; padding-bottom: 48px; }
+    .footer-brand { max-width: 300px; }
+    .footer-brand-name { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+    .footer-tagline { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+    .footer-nav-group { display: flex; gap: 64px; flex-wrap: wrap; }
+    .footer-col h4 { font-size: 13px; font-weight: 600; color: var(--text-dim); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 16px; }
+    .footer-col a { display: block; font-size: 14px; color: var(--text-muted); margin-bottom: 10px; transition: color .2s; }
+    .footer-col a:hover { color: var(--text); }
+    .footer-socials { display: flex; gap: 10px; margin-top: 20px; }
+    .footer-social { width: 36px; height: 36px; border-radius: 8px; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; transition: background .2s, border-color .2s; }
+    .footer-social:hover { background: var(--surface-hover); border-color: var(--border-hover); }
+    .footer-social svg { width: 16px; height: 16px; }
+    .footer-divider { height: 1px; background: var(--border); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding: 24px 0 32px; }
+    .footer-copy { font-size: 13px; color: var(--text-dim); }
+    .footer-legal { display: flex; gap: 24px; }
+    .footer-legal a { font-size: 13px; color: var(--text-muted); text-decoration: underline; transition: color .2s; }
+    .footer-legal a:hover { color: var(--text); }
+
+    /* ── Back to top ── */
+    #backToTop { position: fixed; bottom: 28px; right: 28px; width: 44px; height: 44px; border-radius: 50%; background: var(--grad); color: #fff; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity .3s, transform .2s; z-index: 300; border: none; cursor: pointer; }
+    #backToTop.visible { opacity: 1; pointer-events: auto; }
+    #backToTop:hover { transform: translateY(-3px); }
+
+    /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      :root { --page: 40px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 48px; padding: 64px 0; }
+      .hero-visual { order: -1; }
+      .hero-globe { max-width: 360px; }
+      .quote-card { left: auto; right: -20px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .steps-grid { grid-template-columns: repeat(2, 1fr); }
+      .features-grid { grid-template-columns: 1fr; gap: 48px; }
+      .testi-grid { grid-template-columns: 1fr 1fr; }
+      .benefits-grid { grid-template-columns: 1fr; gap: 48px; }
+      .cta-section { grid-template-columns: 1fr; gap: 40px; margin: 0 var(--page); padding: 56px 40px; }
+      .demo-steps { flex-wrap: wrap; }
+      .demo-step { min-width: 50%; }
+    }
+    @media (max-width: 768px) {
+      :root { --page: 20px; --nav-h: 64px; }
+      .section { padding: 72px 0; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .hero-inner { padding: 48px 0; }
+      .hero-title { font-size: 36px; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .benefit-cards { grid-template-columns: 1fr; }
+      .cta-section { margin: 0; border-radius: 0; padding: 56px var(--page); border-left: none; border-right: none; }
+      .cta-visual { display: none; }
+      footer { margin-top: 72px; }
+      .footer-top { flex-direction: column; gap: 32px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .demo-header { padding: 32px 24px 20px; }
+      .demo-steps { display: grid; grid-template-columns: 1fr 1fr; }
+      .demo-step { border-bottom: 1px solid var(--border); }
+      .demo-caption { padding: 16px 24px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .quote-card { position: relative; left: auto; right: auto; bottom: auto; width: 100%; margin-top: 24px; }
+      .hero-globe { aspect-ratio: 4/3; }
+      .faq-q { padding: 18px 20px; }
+      .faq-a { padding: 0 20px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navbar ── -->
+<nav id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="GlobalBuy24 home">
+        <img src="img/logo/logo_primary.png" alt="GlobalBuy24"
+             onerror="this.outerHTML='<span class=nav-logo-text>GlobalBuy24</span>'" />
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active" data-i18n="home">Home</a></li>
+        <li><a href="how-it-works.html" data-i18n="howItWorks">How It Works</a></li>
+        <li><a href="contact.html" data-i18n="support">Support</a></li>
+        <li class="lang-wrapper">
+          <button id="langBtn" aria-haspopup="true" aria-expanded="false">EN ▾</button>
+          <div id="langDropdown" role="menu">
+            <button class="lang-option" id="langEn" role="menuitem">English</button>
+            <button class="lang-option" id="langFr" role="menuitem">Français</button>
+          </div>
+        </li>
+        <li>
+          <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle colour theme">🌙</button>
+        </li>
+      </ul>
+
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="nav-drawer" id="navDrawer" aria-hidden="true">
+  <a href="index.html" data-i18n="home">Home</a>
+  <a href="how-it-works.html" data-i18n="howItWorks">How It Works</a>
+  <a href="contact.html" data-i18n="support">Support</a>
+  <button id="langBtnMobile" style="font-size:18px;">Language: EN</button>
+  <button class="theme-toggle" id="themeToggleMobile" style="border-radius:8px;width:100%;height:auto;padding:14px 0;" aria-label="Toggle theme">🌙 Toggle theme</button>
+</div>
+
+<!-- ── Hero ── -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="hero-eyebrow" data-i18n="heroEyebrow">Global stores · Local pickup</p>
+        <h1 class="hero-title">
+          <span data-i18n="heroTitleA">Shop the world.</span>
+          <span class="grad-text" data-i18n="heroTitleB">Pick up in Cameroon.</span>
+        </h1>
+        <p class="hero-subtitle" data-i18n="heroSubtitle">Paste any product link from Amazon, SHEIN, Zara or 200+ global stores. Get one transparent quote, pay with Mobile Money, and collect at a pickup point near you.</p>
+        <div class="hero-ctas">
+          <a href="how-it-works.html" class="btn btn-primary" data-i18n="heroCtaPrimary">Start shopping</a>
+          <a href="contact.html" class="btn btn-secondary" data-i18n="heroCtaSecondary">Talk to us</a>
+        </div>
+        <p class="hero-note">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span data-i18n="heroNote">No hidden fees — the quote you see is the price you pay.</span>
+        </p>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-globe">
+          <div class="hero-globe-art"></div>
+          <!-- Globe emoji fallback for a lively visual -->
+          <div style="position:absolute;font-size:120px;opacity:.55;user-select:none;">🌍</div>
+          <div style="position:absolute;bottom:60px;font-size:40px;opacity:.7;user-select:none;animation:float 3s ease-in-out infinite;">🛒</div>
+        </div>
+        <div class="quote-card">
+          <div class="qc-title">Your Quote</div>
+          <div class="qc-row">
+            <span data-i18n="qcProduct">Product price</span>
+            <span>XAF 47,500</span>
+          </div>
+          <div class="qc-row">
+            <span data-i18n="qcShipping">International shipping</span>
+            <span>XAF 12,000</span>
+          </div>
+          <div class="qc-row">
+            <span data-i18n="qcFee">GB24 service fee</span>
+            <span>XAF 3,500</span>
+          </div>
+          <div class="qc-row total">
+            <span data-i18n="qcTotal">Total — all inclusive</span>
+            <span>XAF 63,000</span>
+          </div>
+          <div class="qc-badge">
+            <span class="qc-dot"></span>
+            <span data-i18n="qcReady">Ready for pickup · Douala</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Stats ── -->
+<div class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">2,400+</div>
+        <div class="stat-label" data-i18n="statOrders">Orders delivered</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">200+</div>
+        <div class="stat-label" data-i18n="statStores">Global stores supported</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">14 days</div>
+        <div class="stat-label" data-i18n="statDays">Average delivery time</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">98%</div>
+        <div class="stat-label" data-i18n="statSat">Customer satisfaction</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── How It Works / Steps ── -->
+<section class="section" id="howItWorks">
+  <div class="container">
+    <div class="steps-header">
+      <p class="tag" data-i18n="explore">Our process</p>
+      <h2 class="section-title" data-i18n="stepsTitle">From any store to your hands, in four steps.</h2>
+      <p class="section-sub" data-i18n="featuresSubtitle">We handle the purchase, customs and logistics. You just paste a link.</p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+        </div>
+        <h3 class="step-h" data-i18n="step1Title">Paste a product link</h3>
+        <p class="step-p" data-i18n="step1Desc">Copy any product URL from Amazon, SHEIN, Temu, Zara — any store with a link works.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+        </div>
+        <h3 class="step-h" data-i18n="step2Title">Get an instant quote</h3>
+        <p class="step-p" data-i18n="step2Desc">One total covering the product, shipping and our fee — nothing added later.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 18h.01M8 21h8a2 2 0 002-2v-7.5A2.5 2.5 0 0015.5 9h-7A2.5 2.5 0 006 11.5V19a2 2 0 002 2zM12 9V5m0 0a2 2 0 100-4 2 2 0 000 4z"/></svg>
+        </div>
+        <h3 class="step-h" data-i18n="step3Title">Pay with Mobile Money</h3>
+        <p class="step-p" data-i18n="step3Desc">MTN, Orange Money and cards — confirm in seconds, we buy on your behalf.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <h3 class="step-h" data-i18n="step4Title">Pick up locally</h3>
+        <p class="step-p" data-i18n="step4Desc">We notify you the moment your order lands at your nearest pickup point.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── App Features ── -->
+<section class="section" id="appPreview" style="background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <div class="features-grid">
+      <div class="features-left">
+        <div>
+          <p class="tag">App experience</p>
+          <h2 class="section-title" style="margin-bottom:16px">Experience Seamless Global Shopping with the GlobalBuy24 App</h2>
+          <p class="section-sub">Discover how easy it is to shop from international stores right from your phone. Our intuitive interface makes accessing global products simpler than ever.</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+          </div>
+          <div>
+            <h3 class="feature-h" data-i18n="featureOne">User-Friendly Design</h3>
+            <p class="feature-p" data-i18n="featureOneDesc">Navigate effortlessly through your shopping journey with our sleek app interface.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+          </div>
+          <div>
+            <h3 class="feature-h" data-i18n="featureTwo">Real-Time Updates</h3>
+            <p class="feature-p" data-i18n="featureTwoDesc">Stay informed with instant notifications on your order status and pickup details.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <div>
+            <h3 class="feature-h">Secure Payments</h3>
+            <p class="feature-p">Pay confidently with MTN Mobile Money, Orange Money, or bank card — all encrypted and verified.</p>
+          </div>
+        </div>
+
+        <div>
+          <a href="how-it-works.html" class="btn btn-primary" data-i18n="learnMore">Learn More</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="screenshots-wrap">
+          <img src="img/screenshot-1.png" alt="GlobalBuy24 App" id="ssImg"
+               onerror="this.style.display='none';document.getElementById('ssPlaceholder').style.display='flex'" />
+          <div class="ss-placeholder" id="ssPlaceholder" style="display:none">
+            <span>📱</span>
+          </div>
+        </div>
+        <div class="ss-dots" id="ssDots">
+          <div class="ss-dot active"></div>
+          <div class="ss-dot"></div>
+          <div class="ss-dot"></div>
+          <div class="ss-dot"></div>
+          <div class="ss-dot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Video / Demo ── -->
+<section class="section">
+  <div class="container">
+    <div class="steps-header" style="margin-bottom:48px">
+      <p class="tag" data-i18n="demoEyebrow">See it in action</p>
+      <h2 class="section-title" data-i18n="demoTitle">Watch a link become a delivery.</h2>
+      <p class="section-sub" data-i18n="demoSubtitle">A 20-second walkthrough of the entire GlobalBuy24 flow — from paste to pickup.</p>
+    </div>
+
+    <div class="demo-wrap">
+      <div class="demo-player" id="demoPlayer" role="button" aria-label="Play demo video" tabindex="0">
+        <div class="demo-player-bg"></div>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:80px;opacity:.15;user-select:none;">🌍</div>
+        <button class="demo-play-btn" id="demoPlayBtn" aria-label="Play">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+      </div>
+      <div class="demo-steps">
+        <div class="demo-step">
+          <div class="demo-step-num">1</div>
+          <span data-i18n="demoStep1">Link pasted</span>
+        </div>
+        <div class="demo-step">
+          <div class="demo-step-num">2</div>
+          <span data-i18n="demoStep2">Quote received</span>
+        </div>
+        <div class="demo-step">
+          <div class="demo-step-num">3</div>
+          <span data-i18n="demoStep3">Payment confirmed</span>
+        </div>
+        <div class="demo-step">
+          <div class="demo-step-num">4</div>
+          <span data-i18n="demoStep4">Ready for pickup</span>
+        </div>
+      </div>
+      <div class="demo-caption" id="demoCaption" data-i18n="demoCaptionIdle">Press play to run the walkthrough</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Testimonials ── -->
+<section class="section" style="background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <div class="steps-header" style="text-align:left;margin:0 0 56px;">
+      <p class="tag" data-i18n="testiEyebrow">Customer stories</p>
+      <h2 class="section-title" data-i18n="testiTitle">Trusted across Douala and Yaoundé.</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">
+          <span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span>
+        </div>
+        <p class="testi-text" data-i18n="testi1Text">"I ordered a laptop from Amazon that simply doesn't exist in local shops. The quote matched the final price exactly, and pickup in Akwa took five minutes."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">A</div>
+          <div>
+            <div class="testi-name">Amina K.</div>
+            <div class="testi-role" data-i18n="testi1Role">Entrepreneur · Douala</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">
+          <span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span>
+        </div>
+        <p class="testi-text" data-i18n="testi2Text">"Paying with MTN Mobile Money made all the difference — no card, no stress. I track every order in the app and the timeline has been accurate every time."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">J</div>
+          <div>
+            <div class="testi-name">Jean-Paul M.</div>
+            <div class="testi-role" data-i18n="testi2Role">Software developer · Yaoundé</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">
+          <span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span>
+        </div>
+        <p class="testi-text" data-i18n="testi3Text">"I stock my boutique with pieces from SHEIN and Zara that nobody else here carries. GB24 turned a two-month shipping headache into a two-week routine."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">F</div>
+          <div>
+            <div class="testi-name">Fatima N.</div>
+            <div class="testi-role" data-i18n="testi3Role">Boutique owner · Douala</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Benefits / Why Us ── -->
+<section class="section" id="benefits">
+  <div class="container">
+    <div class="benefits-grid">
+      <div>
+        <p class="tag" data-i18n="whyUs">Why us</p>
+        <h2 class="section-title" data-i18n="whyUsTitle">Why Choose GlobalBuy24?</h2>
+        <p class="section-sub" style="margin-bottom:32px" data-i18n="whyUsDesc">We make international shopping accessible to everyone in underserved markets.</p>
+        <a href="how-it-works.html" class="btn btn-primary" data-i18n="learnMore">Learn More</a>
+      </div>
+
+      <div class="benefit-cards">
+        <div class="benefit-card">
+          <div class="benefit-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <div class="benefit-card-h" data-i18n="cardOne">Shop Globally</div>
+          <div class="benefit-card-p" data-i18n="cardOneDesc">Access products from the world's biggest stores</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <div class="benefit-card-h">No Hidden Fees</div>
+          <div class="benefit-card-p">Full quote upfront — the total you approve is the total you pay.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+          </div>
+          <div class="benefit-card-h">Mobile Money Payments</div>
+          <div class="benefit-card-p">MTN, Orange Money and bank cards — convenient and secure.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <div class="benefit-card-h" data-i18n="cardThree">Local Pickup</div>
+          <div class="benefit-card-p" data-i18n="cardThreeDesc">Convenient collection points near you</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="section" style="background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <div class="steps-header" style="text-align:left;margin:0;">
+      <p class="tag" data-i18n="faq">FAQs</p>
+      <h2 class="section-title" data-i18n="faqTitle">Questions, answered.</h2>
+      <p class="section-sub" data-i18n="faqDesc">Find answers to common questions about GlobalBuy24 and our services.</p>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0">
+          <span class="faq-q-text" data-i18n="faq1">How does GlobalBuy24 work?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-a">
+          <p class="faq-a-text" data-i18n="faq1Ans">Copy the product link, paste it in our app, and receive a quote. After payment, we purchase the item, handle shipping and customs, and deliver it to a local pickup point near you.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0">
+          <span class="faq-q-text" data-i18n="faq2">What payment methods do you accept?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-a">
+          <p class="faq-a-text" data-i18n="faq2Ans">We accept local Mobile Money options including MTN and Orange, plus standard bank cards — secure, instant, and confirmed in the app.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0">
+          <span class="faq-q-text" data-i18n="faq3">Are there hidden fees?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-a">
+          <p class="faq-a-text" data-i18n="faq3Ans">No. Your quote includes the product price, international shipping and our service fee. The total you approve is the total you pay — nothing is added at pickup.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0">
+          <span class="faq-q-text" data-i18n="faq4">How long does delivery take?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-a">
+          <p class="faq-a-text" data-i18n="faq4Ans">Most orders arrive within 10–21 days, with 14 days as our current average. You can follow every stage — purchased, shipped, in customs, ready — inside the app.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0">
+          <span class="faq-q-text" data-i18n="faq5">Where can I pick up my order?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-a">
+          <p class="faq-a-text" data-i18n="faq5Ans">Our pickup network covers Douala and Yaoundé today, with new points opening regularly. You choose your preferred location at checkout and we notify you the moment your package arrives.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Final CTA ── -->
+<section class="section" id="download">
+  <div class="cta-section">
+    <div class="cta-left">
+      <p class="tag" data-i18n="ctaEyebrow">Get started today</p>
+      <h2 class="cta-title" data-i18n="ctaTitle">Ready to shop the world?</h2>
+      <p class="cta-desc" data-i18n="ctaDesc">Join thousands of customers in Cameroon already shopping globally. Your first quote takes less than a minute.</p>
+      <div class="cta-buttons">
+        <a href="how-it-works.html" class="btn btn-primary" data-i18n="ctaPrimary">See how it works</a>
+        <a href="contact.html" class="btn btn-secondary" data-i18n="ctaSecondary">Contact support</a>
+      </div>
+    </div>
+    <div class="cta-visual">
+      <div class="cta-globe"></div>
+      <div style="position:absolute;font-size:80px;opacity:.6;user-select:none;">🌍</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-name">GlobalBuy24</div>
+        <p class="footer-tagline" data-i18n="footerTagline">Shop anywhere online. We handle purchase, shipping and local pickup in Cameroon.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" class="footer-social" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" class="footer-social" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-nav-group">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="how-it-works.html" data-i18n="howItWorks">How It Works</a>
+          <a href="#appPreview">App Features</a>
+          <a href="#benefits" data-i18n="whyUs">Why Us</a>
+          <a href="#download">Download</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="contact.html" data-i18n="support">Support</a>
+          <a href="contact.html#faq" data-i18n="faq">FAQs</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="privacy-policy.html" data-i18n="privacyPolicy">Privacy Policy</a>
+          <a href="terms-of-service.html" data-i18n="termsOfService">Terms of Service</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy" data-i18n="copyright">© 2026 GlobalBuy24. All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="privacy-policy.html" data-i18n="privacyPolicy">Privacy Policy</a>
+        <a href="terms-of-service.html" data-i18n="termsOfService">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button id="backToTop" aria-label="Back to top" title="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- Shared logic -->
+<script src="app.js"></script>
+
+<script>
+  /* ── Theme toggle wiring ── */
+  function syncThemeIcons() {
+    const theme = document.documentElement.getAttribute('data-theme') || 'dark';
+    const icon = theme === 'dark' ? '☀️' : '🌙';
+    const t1 = document.getElementById('themeToggle');
+    const t2 = document.getElementById('themeToggleMobile');
+    if (t1) t1.textContent = icon;
+    if (t2) t2.textContent = icon + ' Toggle theme';
+  }
+
+  document.getElementById('themeToggle')?.addEventListener('click', () => { toggleTheme(); syncThemeIcons(); });
+  document.getElementById('themeToggleMobile')?.addEventListener('click', () => { toggleTheme(); syncThemeIcons(); });
+
+  /* ── Mobile hamburger ── */
+  const ham = document.getElementById('navHamburger');
+  const drawer = document.getElementById('navDrawer');
+  ham?.addEventListener('click', () => {
+    const open = ham.classList.toggle('open');
+    ham.setAttribute('aria-expanded', String(open));
+    drawer.classList.toggle('open', open);
+    drawer.setAttribute('aria-hidden', String(!open));
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  drawer?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    ham.classList.remove('open');
+    drawer.classList.remove('open');
+    document.body.style.overflow = '';
+  }));
+
+  /* Mobile lang toggle */
+  let mobileLang = localStorage.getItem('appLanguage') || 'en';
+  document.getElementById('langBtnMobile')?.addEventListener('click', () => {
+    mobileLang = mobileLang === 'en' ? 'fr' : 'en';
+    applyLanguage(mobileLang);
+    document.getElementById('langBtnMobile').textContent = 'Language: ' + mobileLang.toUpperCase();
+  });
+
+  /* ── FAQ accordion ── */
+  document.querySelectorAll('.faq-q').forEach(q => {
+    const toggle = () => {
+      const item = q.closest('.faq-item');
+      const ans = item.querySelector('.faq-a');
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-a').classList.remove('open');
+      });
+      if (!wasOpen) {
+        item.classList.add('open');
+        ans.classList.add('open');
+      }
+    };
+    q.addEventListener('click', toggle);
+    q.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+  });
+
+  /* ── Screenshot carousel ── */
+  const shots = ['img/screenshot-1.png','img/screenshot-2.png','img/screenshot-3.png','img/screenshot-4.png','img/screenshot-5.png'];
+  const ssImg = document.getElementById('ssImg');
+  const ssDots = document.querySelectorAll('.ss-dot');
+  let ssIdx = 0;
+  if (ssImg) {
+    setInterval(() => {
+      ssIdx = (ssIdx + 1) % shots.length;
+      ssImg.src = shots[ssIdx];
+      ssDots.forEach((d, i) => d.classList.toggle('active', i === ssIdx));
+    }, 2800);
+  }
+
+  /* ── Demo player ── */
+  const demoPlayer = document.getElementById('demoPlayer');
+  const demoPlayBtn = document.getElementById('demoPlayBtn');
+  const demoCaption = document.getElementById('demoCaption');
+  const demoStepEls = document.querySelectorAll('.demo-step-num');
+
+  function runDemo() {
+    demoPlayBtn.style.display = 'none';
+    const steps = ['Link pasted','Quote received','Payment confirmed','Ready for pickup'];
+    demoStepEls.forEach(el => { el.style.background = 'var(--surface)'; el.style.borderColor = 'var(--border)'; });
+    let i = 0;
+    const advance = () => {
+      if (i >= demoStepEls.length) {
+        const key = demoCaption.getAttribute('data-i18n');
+        if (key) demoCaption.setAttribute('data-i18n', 'demoCaptionDone');
+        const dict = window.translations?.[document.documentElement.lang] || {};
+        demoCaption.textContent = dict['demoCaptionDone'] || 'Walkthrough complete — replay any time';
+        demoPlayBtn.style.display = 'flex';
+        return;
+      }
+      demoStepEls[i].style.background = 'var(--blue)';
+      demoStepEls[i].style.borderColor = 'var(--blue)';
+      demoStepEls[i].style.color = '#fff';
+      i++;
+      setTimeout(advance, 900);
+    };
+    advance();
+  }
+
+  demoPlayBtn?.addEventListener('click', runDemo);
+  demoPlayer?.addEventListener('keydown', e => { if (e.key === 'Enter') runDemo(); });
+
+  /* ── Back to top ── */
+  const btt = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => { btt?.classList.toggle('visible', window.scrollY > 400); }, { passive: true });
+  btt?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  /* ── Init theme icon ── */
+  syncThemeIcons();
+
+  /* ── Floating cart keyframe (inline) ── */
+  const styleEl = document.createElement('style');
+  styleEl.textContent = '@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}';
+  document.head.appendChild(styleEl);
+</script>
+</body>
+</html>
