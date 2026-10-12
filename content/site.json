@@ -73,11 +73,11 @@
     "appStore": null
   },
   "social": {
-    "instagram": "https://instagram.com",
-    "facebook": "https://facebook.com",
-    "x": "https://x.com",
+    "instagram": null,
+    "facebook": null,
+    "x": null,
     "whatsapp": null,
-    "tiktok": "https://tiktok.com"
+    "tiktok": null
   },
   "legal": {
     "privacy": "/privacy.html",

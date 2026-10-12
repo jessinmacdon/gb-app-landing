@@ -15,6 +15,7 @@ export function Footer({ t, site }: { t: Dictionary; site: SiteContent }) {
     ] as const
   ).filter(([, href]) => href);
   const email = site.company.supportEmail;
+  const socials = SOCIAL_ORDER.filter((k) => site.social[k]);
   return (
     <footer className="container footer">
       <div className="footer__top">
@@ -45,26 +46,28 @@ export function Footer({ t, site }: { t: Dictionary; site: SiteContent }) {
               </ul>
             </div>
           ) : null}
-          <div className="footer__col">
-            <h2 className="footer__col-title" id="foot-follow">
-              {t.footFollow}
-            </h2>
-            <ul className="social" aria-labelledby="foot-follow">
-              {SOCIAL_ORDER.filter((k) => site.social[k]).map((k) => (
-                <li key={k}>
-                  <a
-                    className="social__link"
-                    href={site.social[k] ?? undefined}
-                    aria-label={socialMeta[k].label}
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    {socialMeta[k].icon}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {socials.length ? (
+            <div className="footer__col">
+              <h2 className="footer__col-title" id="foot-follow">
+                {t.footFollow}
+              </h2>
+              <ul className="social" aria-labelledby="foot-follow">
+                {socials.map((k) => (
+                  <li key={k}>
+                    <a
+                      className="social__link"
+                      href={site.social[k] ?? undefined}
+                      aria-label={socialMeta[k].label}
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      {socialMeta[k].icon}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
         </div>
       </div>
       <div className="footer__bottom">
