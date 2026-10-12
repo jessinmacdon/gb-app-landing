@@ -1,0 +1,46 @@
+[
+  {
+    "id": "price",
+    "label": {
+      "en": "Best price",
+      "fr": "Meilleur prix"
+    },
+    "description": {
+      "en": "Lowest delivered total first.",
+      "fr": "Le total livré le plus bas en premier."
+    }
+  },
+  {
+    "id": "quality",
+    "label": {
+      "en": "Top rated",
+      "fr": "Mieux notés"
+    },
+    "description": {
+      "en": "Highest customer ratings first.",
+      "fr": "Les meilleures notes clients en premier."
+    }
+  },
+  {
+    "id": "delivery",
+    "label": {
+      "en": "Fastest",
+      "fr": "Plus rapides"
+    },
+    "description": {
+      "en": "Quickest arrival at your pickup point first.",
+      "fr": "L'arrivée la plus rapide au point de retrait en premier."
+    }
+  },
+  {
+    "id": "variety",
+    "label": {
+      "en": "Variety",
+      "fr": "Variété"
+    },
+    "description": {
+      "en": "A mix of stores and price points.",
+      "fr": "Un mélange de boutiques et de prix."
+    }
+  }
+]

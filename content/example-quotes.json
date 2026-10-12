@@ -1,0 +1,80 @@
+[
+  {
+    "id": "sneakers",
+    "order": 1,
+    "tabLabel": {
+      "en": "Sneakers",
+      "fr": "Baskets"
+    },
+    "productName": {
+      "en": "Nike Air Max 90",
+      "fr": "Nike Air Max 90"
+    },
+    "storeLine": "Zalando · EU 42",
+    "linkPreview": "zalando.com/nike-air-max-90-sneakers…",
+    "imageUrl": null,
+    "imageAlt": {
+      "en": "Nike Air Max 90",
+      "fr": "Nike Air Max 90"
+    },
+    "breakdownXAF": {
+      "product": 65600,
+      "shipping": 14500,
+      "customs": 11800,
+      "serviceFee": 4900
+    },
+    "isHeroPhoneExample": true
+  },
+  {
+    "id": "tablet",
+    "order": 2,
+    "tabLabel": {
+      "en": "Tablet",
+      "fr": "Tablette"
+    },
+    "productName": {
+      "en": "iPad 10.9\" 64 GB",
+      "fr": "iPad 10.9\" 64 GB"
+    },
+    "storeLine": "Amazon",
+    "linkPreview": null,
+    "imageUrl": null,
+    "imageAlt": {
+      "en": "iPad 10.9\" 64 GB",
+      "fr": "iPad 10.9\" 64 GB"
+    },
+    "breakdownXAF": {
+      "product": 229000,
+      "shipping": 18500,
+      "customs": 41200,
+      "serviceFee": 12000
+    },
+    "isHeroPhoneExample": false
+  },
+  {
+    "id": "dress",
+    "order": 3,
+    "tabLabel": {
+      "en": "Dress",
+      "fr": "Robe"
+    },
+    "productName": {
+      "en": "Floral midi dress",
+      "fr": "Robe midi fleurie"
+    },
+    "storeLine": "SHEIN · M",
+    "linkPreview": null,
+    "imageUrl": null,
+    "imageAlt": {
+      "en": "Floral midi dress",
+      "fr": "Robe midi fleurie"
+    },
+    "breakdownXAF": {
+      "product": 14200,
+      "shipping": 6800,
+      "customs": 2900,
+      "serviceFee": 2500
+    },
+    "isHeroPhoneExample": false
+  }
+]
