@@ -1905,3 +1905,26 @@ section[id] {
   background: var(--chip);
   color: var(--muted);
 }
+/* Very narrow phones (≤380px): logo, language toggle and "Get the app" share one row. */
+@media (max-width: 380px) {
+  .nav__inner {
+    gap: 8px;
+  }
+  .nav__actions {
+    gap: 6px;
+  }
+  .logo__word {
+    font-size: 19px;
+  }
+  .lang-toggle__opt {
+    padding: 6px 9px;
+  }
+  .nav__cta {
+    padding: 10px 13px;
+  }
+}
+@media (max-width: 340px) {
+  .nav .logo__word {
+    display: none;
+  }
+}

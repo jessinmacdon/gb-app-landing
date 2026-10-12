@@ -92,8 +92,8 @@
         "fr": "Collez un lien"
       },
       "body": {
-        "en": "Find any product on any online store and copy the URL. Paste it into GlobalBuy.",
-        "fr": "Trouvez un produit sur n'importe quelle boutique en ligne et copiez l'URL. Collez-la dans GlobalBuy."
+        "en": "Find a product on any online store and copy its link. Paste it into GlobalBuy.",
+        "fr": "Trouvez un produit sur n'importe quelle boutique en ligne et copiez son lien. Collez-le dans GlobalBuy."
       }
     },
     {
@@ -103,8 +103,8 @@
         "fr": "Recevez un devis instantané"
       },
       "body": {
-        "en": "GlobalBuy calculates the full cost: the product price, international shipping, customs, and its service fee. One number. No surprises.",
-        "fr": "GlobalBuy calcule le coût total : prix du produit, livraison internationale, douane et frais de service. Un seul montant. Aucune surprise."
+        "en": "GlobalBuy calculates the full cost: the product price, international shipping, customs and its service fee.",
+        "fr": "GlobalBuy calcule le coût total : prix du produit, livraison internationale, douane et frais de service."
       }
     },
     {

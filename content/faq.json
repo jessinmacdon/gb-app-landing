@@ -7,8 +7,8 @@
       "fr": "Sur quelles boutiques puis-je commander ?"
     },
     "answer": {
-      "en": "Amazon, eBay, SHEIN, Zalando, About You, Etsy, ASOS, Nike, AliExpress, Walmart, H&M, Sephora, Adidas, Jumia — and any other online store with a product URL.",
-      "fr": "Amazon, eBay, SHEIN, Zalando, About You, Etsy, ASOS, Nike, AliExpress, Walmart, H&M, Sephora, Adidas, Jumia — et toute autre boutique en ligne avec une URL produit."
+      "en": "Amazon, eBay, SHEIN, Zalando, About You, Etsy, ASOS, Nike, AliExpress, Walmart, H&M, Sephora, Adidas, Jumia — and any other online store with a product link.",
+      "fr": "Amazon, eBay, SHEIN, Zalando, About You, Etsy, ASOS, Nike, AliExpress, Walmart, H&M, Sephora, Adidas, Jumia — et toute autre boutique en ligne avec un lien produit."
     },
     "defaultOpen": true
   },
@@ -20,8 +20,8 @@
       "fr": "Que comprend le devis ?"
     },
     "answer": {
-      "en": "The product price, international shipping, customs and the GlobalBuy service fee. The quote you see is what you pay.",
-      "fr": "Le prix du produit, la livraison internationale, la douane et les frais de service GlobalBuy. Le devis affiché est ce que vous payez."
+      "en": "The product price, international shipping, customs and the GlobalBuy service fee. The quote you confirm in the app is the price you pay.",
+      "fr": "Le prix du produit, la livraison internationale, la douane et les frais de service GlobalBuy. Le devis que vous confirmez dans l'app est le prix que vous payez."
     },
     "defaultOpen": false
   },
@@ -85,8 +85,8 @@
       "fr": "Que dois-je apporter pour récupérer ma commande ?"
     },
     "answer": {
-      "en": "Bring an ID. You'll get a notification when your order reaches your city's pickup point, and you choose when to collect.",
-      "fr": "Apportez une pièce d'identité. Vous êtes notifié quand votre commande arrive au point de retrait de votre ville, et vous choisissez quand passer."
+      "en": "Bring an ID when you collect your order at the pickup point.",
+      "fr": "Apportez une pièce d'identité quand vous récupérez votre commande au point de retrait."
     },
     "defaultOpen": false
   },
@@ -111,8 +111,8 @@
       "fr": "Puis-je suivre ma commande ?"
     },
     "answer": {
-      "en": "Every stage from purchase to customs to pickup notification is visible in the app.",
-      "fr": "Chaque étape, de l'achat à la douane jusqu'à la notification de retrait, est visible dans l'app."
+      "en": "Yes. Every stage, from purchase to customs to the pickup notification, is visible in the app.",
+      "fr": "Oui. Chaque étape, de l'achat à la douane jusqu'à la notification de retrait, est visible dans l'app."
     },
     "defaultOpen": false
   },
@@ -137,8 +137,8 @@
       "fr": "Y a-t-il des articles interdits ?"
     },
     "answer": {
-      "en": "GlobalBuy does not ship weapons, counterfeits, narcotics, hazardous materials, or items banned under Cameroonian import law.",
-      "fr": "GlobalBuy n'expédie pas d'armes, de contrefaçons, de stupéfiants, de matières dangereuses ni d'articles interdits par la loi camerounaise."
+      "en": "Yes. GlobalBuy doesn't ship weapons, counterfeits, narcotics, hazardous materials, or items banned under Cameroonian import law.",
+      "fr": "Oui. GlobalBuy n'expédie pas d'armes, de contrefaçons, de stupéfiants, de matières dangereuses ni d'articles interdits par la loi camerounaise."
     },
     "defaultOpen": false
   }
