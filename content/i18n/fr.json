@@ -102,6 +102,14 @@
     "cta": "Télécharger l'app",
     "empty": "Collez d'abord un lien, ou essayez un des exemples ci-dessous."
   },
+  "legalPage": {
+    "eyebrow": "Informations légales",
+    "contents": "Sur cette page",
+    "contactTitle": "Contact",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "address": "Siège social"
+  },
   "picksExampleKicker": "Exemples d'articles à commander",
   "stickyHint": "Google Play · App Store bientôt",
   "menuOpen": "Menu",

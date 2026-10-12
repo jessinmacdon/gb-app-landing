@@ -6,17 +6,26 @@ import type { Dictionary } from '@/lib/content';
 import type { SiteContent } from '@/lib/content/types';
 import type { Locale } from '@/lib/i18n';
 
-export function Nav({ lang, t, appLinks }: { lang: Locale; t: Dictionary; appLinks: SiteContent['appLinks'] }) {
+type Props = {
+  lang: Locale;
+  t: Dictionary;
+  appLinks: SiteContent['appLinks'];
+  /** Set on pages other than the landing page, so section links lead back to it. */
+  home?: string;
+};
+
+export function Nav({ lang, t, appLinks, home }: Props) {
+  const base = home ?? '';
   const links = [
-    { href: '#how', label: t.nav.how },
-    { href: '#pricing', label: t.nav.pricing },
-    { href: '#why', label: t.nav.why },
-    { href: '#faq', label: t.nav.faq },
+    { href: `${base}#how`, label: t.nav.how },
+    { href: `${base}#pricing`, label: t.nav.pricing },
+    { href: `${base}#why`, label: t.nav.why },
+    { href: `${base}#faq`, label: t.nav.faq },
   ];
   return (
     <header className="nav">
       <div className="container nav__inner">
-        <Logo />
+        <Logo href={home} />
         <nav className="nav__links" aria-label={t.navLabel}>
           {links.map((l) => (
             <a key={l.href} href={l.href}>

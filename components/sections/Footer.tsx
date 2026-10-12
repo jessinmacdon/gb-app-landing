@@ -2,10 +2,11 @@ import { socialMeta } from '@/components/Icons';
 import { Logo } from '@/components/sections/Logo';
 import type { Dictionary } from '@/lib/content';
 import type { SiteContent, SocialNetwork } from '@/lib/content/types';
+import type { Locale } from '@/lib/i18n';
 
 const SOCIAL_ORDER: SocialNetwork[] = ['instagram', 'facebook', 'x', 'whatsapp', 'tiktok'];
 
-export function Footer({ t, site }: { t: Dictionary; site: SiteContent }) {
+export function Footer({ lang, t, site, home }: { lang: Locale; t: Dictionary; site: SiteContent; home?: string }) {
   // Links without a real destination yet (e.g. the refund policy) stay hidden.
   const legal = (
     [
@@ -13,14 +14,17 @@ export function Footer({ t, site }: { t: Dictionary; site: SiteContent }) {
       ['terms', site.legal.terms, t.legal.terms],
       ['refund', site.legal.refund, t.legal.refund],
     ] as const
-  ).filter(([, href]) => href);
+  )
+    .filter(([, href]) => href)
+    // Site paths ("/privacy") live under the visitor's language.
+    .map(([key, href, label]) => [key, href!.startsWith('/') ? `/${lang}${href}` : href!, label] as const);
   const email = site.company.supportEmail;
   const socials = SOCIAL_ORDER.filter((k) => site.social[k]);
   return (
     <footer className="container footer">
       <div className="footer__top">
         <div className="footer__brand">
-          <Logo />
+          <Logo href={home} />
           <p className="footer__tag">{t.footTag}</p>
         </div>
         <div className="footer__cols">

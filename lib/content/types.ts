@@ -112,7 +112,7 @@ export type SiteContent = {
   social: Record<SocialNetwork, string | null>;
   /** null hides the link until the page exists. */
   legal: { privacy: string | null; terms: string | null; refund: string | null };
-  company: { legalName: string; supportEmail: string | null };
+  company: { legalName: string; supportEmail: string | null; phone: string | null; address: Localized };
   steps: { order: number; title: Localized; body: Localized }[];
   features: { order: number; title: Localized; body: Localized }[];
   images: { hero: ImageSlotContent; why: ImageSlotContent; cta: ImageSlotContent };
@@ -123,4 +123,18 @@ export type SiteContent = {
     /** True while products are placeholder examples; labels the list as examples. */
     sampleData: boolean;
   };
+};
+
+export type LegalBlock =
+  | { type: 'p' | 'h3' | 'note'; text: Localized }
+  | { type: 'list'; items: { term?: Localized; text: Localized }[] };
+
+/** A legal page (privacy, terms). Text may contain [label](url) links. */
+export type LegalDoc = {
+  title: Localized;
+  effective?: Localized;
+  intro: Localized[];
+  sections: { heading: Localized; blocks: LegalBlock[] }[];
+  /** Lead-in for the contact details closing the page. */
+  contact: Localized;
 };

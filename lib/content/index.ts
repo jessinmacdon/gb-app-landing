@@ -9,6 +9,8 @@
 import categoriesJson from '@/content/categories.json';
 import quotesJson from '@/content/example-quotes.json';
 import faqJson from '@/content/faq.json';
+import privacyJson from '@/content/legal/privacy.json';
+import termsJson from '@/content/legal/terms.json';
 import en from '@/content/i18n/en.json';
 import fr from '@/content/i18n/fr.json';
 import rankingModesJson from '@/content/ranking-modes.json';
@@ -19,6 +21,7 @@ import type {
   Category,
   ExampleQuote,
   FaqItem,
+  LegalDoc,
   QuoteBreakdown,
   RankingMode,
   SiteContent,
@@ -41,6 +44,7 @@ function load(): ContentBundle {
     quotes: quotesJson as ExampleQuote[],
     faq: faqJson as FaqItem[],
     testimonials: testimonialsJson as Testimonial[],
+    legal: { privacy: privacyJson as LegalDoc, terms: termsJson as LegalDoc },
     dictionaries: { en, fr },
   };
   const errors = validateContent(next);
@@ -77,6 +81,12 @@ export async function getFaq(): Promise<FaqItem[]> {
 
 export async function getTestimonials(): Promise<Testimonial[]> {
   return byOrder(load().testimonials);
+}
+
+export type LegalPageId = 'privacy' | 'terms';
+
+export async function getLegalDoc(id: LegalPageId): Promise<LegalDoc> {
+  return load().legal[id];
 }
 
 /** Totals are always derived from the breakdown, never stored. */

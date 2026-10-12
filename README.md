@@ -12,13 +12,15 @@ npm run lint       # type-check
 npm run build      # fails if content is invalid
 ```
 
-## Legacy pages
+## Legal pages and old URLs
 
-The pages from the previous static site live in `public/` and are served unchanged at
-their old URLs: `/how-it-works.html`, `/contact.html`, `/privacy.html`,
-`/terms-of-service.html` (with their `styles/` and `app.js`). `/index.html` redirects
-to the new home page. They still use the old GlobalBuy24 look; port them to the new
-design when ready.
+The privacy policy and terms live at `/en/privacy`, `/fr/privacy`, `/en/terms` and
+`/fr/terms`. Their text is in `content/legal/*.json` (both languages, validated like the
+rest of the content); company address, phone and email come from `content/site.json`.
+
+`proxy.ts` sends language-less and old static-site URLs to the visitor's language:
+`/privacy.html` and `/terms-of-service.html` to the legal pages, `/how-it-works.html`
+and `/contact.html` to the home page's How it works and FAQ sections.
 
 ## Editing content
 

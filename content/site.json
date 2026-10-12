@@ -80,8 +80,8 @@
     "tiktok": null
   },
   "legal": {
-    "privacy": "/privacy.html",
-    "terms": "/terms-of-service.html",
+    "privacy": "/privacy",
+    "terms": "/terms",
     "refund": null
   },
   "steps": [
@@ -196,6 +196,11 @@
   },
   "company": {
     "legalName": "GlobalBuy24",
+    "address": {
+      "en": "Huttenstraße 25, 13353 Berlin, Germany",
+      "fr": "Huttenstraße 25, 13353 Berlin, Allemagne"
+    },
+    "phone": "+237 672 815 351",
     "supportEmail": "support@globalbuy24.com"
   }
 }

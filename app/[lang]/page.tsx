@@ -52,7 +52,7 @@ export default async function LandingPage({ params }: PageProps<'/[lang]'>) {
         <Faq lang={lang} t={t} items={faq} email={site.company.supportEmail} />
         <FinalCta lang={lang} t={t} site={site} />
       </main>
-      <Footer t={t} site={site} />
+      <Footer lang={lang} t={t} site={site} />
       <StickyDownload links={site.appLinks} label={t.nav.download} hint={t.stickyHint} />
     </div>
   );

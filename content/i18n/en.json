@@ -102,6 +102,14 @@
     "cta": "Get the app to order",
     "empty": "Paste a link first, or try one of the examples below."
   },
+  "legalPage": {
+    "eyebrow": "Legal",
+    "contents": "On this page",
+    "contactTitle": "Contact",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Registered office"
+  },
   "picksExampleKicker": "Example items you could order",
   "stickyHint": "Google Play · App Store soon",
   "menuOpen": "Menu",

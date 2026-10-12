@@ -1,0 +1,397 @@
+{
+  "title": { "en": "Privacy Policy", "fr": "Politique de confidentialité" },
+  "intro": [
+    {
+      "en": "This Privacy Policy describes how GlobalBuy collects, uses and discloses your information when you use our app and website. We take your privacy seriously and protect your personal data with care and transparency.",
+      "fr": "Cette politique de confidentialité décrit comment GlobalBuy collecte, utilise et communique vos informations lorsque vous utilisez notre application et notre site. Nous prenons votre vie privée au sérieux et protégeons vos données personnelles avec soin et transparence."
+    },
+    {
+      "en": "By using our service, you agree to the collection and use of information in accordance with this policy. This policy complies with the General Data Protection Regulation (GDPR) and other applicable data protection laws.",
+      "fr": "En utilisant notre service, vous acceptez la collecte et l'utilisation de vos informations conformément à cette politique. Elle respecte le Règlement général sur la protection des données (RGPD) et les autres lois applicables en matière de protection des données."
+    }
+  ],
+  "sections": [
+    {
+      "heading": { "en": "Definitions", "fr": "Définitions" },
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            {
+              "term": { "en": "Account", "fr": "Compte" },
+              "text": {
+                "en": "A unique, personal account created for you to access features of our service.",
+                "fr": "Un compte unique et personnel créé pour vous permettre d'accéder aux fonctionnalités de notre service."
+              }
+            },
+            {
+              "term": { "en": "Application", "fr": "Application" },
+              "text": {
+                "en": "GlobalBuy, the mobile application provided by the Company.",
+                "fr": "GlobalBuy, l'application mobile fournie par la Société."
+              }
+            },
+            {
+              "term": { "en": "Company", "fr": "Société" },
+              "text": {
+                "en": "GlobalBuy24, which operates GlobalBuy, with registered office at Huttenstraße 25, 13353 Berlin, Germany. The Company is the data controller under the GDPR.",
+                "fr": "GlobalBuy24, qui exploite GlobalBuy, dont le siège est situé Huttenstraße 25, 13353 Berlin, Allemagne. La Société est le responsable du traitement au sens du RGPD."
+              }
+            },
+            {
+              "term": { "en": "Personal data", "fr": "Données personnelles" },
+              "text": {
+                "en": "Any information that directly or indirectly relates to an identified or identifiable individual.",
+                "fr": "Toute information se rapportant directement ou indirectement à une personne physique identifiée ou identifiable."
+              }
+            },
+            {
+              "term": { "en": "Service", "fr": "Service" },
+              "text": {
+                "en": "The GlobalBuy application, website and all their features.",
+                "fr": "L'application GlobalBuy, le site web et l'ensemble de leurs fonctionnalités."
+              }
+            },
+            {
+              "term": { "en": "Usage data", "fr": "Données d'utilisation" },
+              "text": {
+                "en": "Data collected automatically when you use the service.",
+                "fr": "Données collectées automatiquement lorsque vous utilisez le service."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Data we collect", "fr": "Données que nous collectons" },
+      "blocks": [
+        { "type": "h3", "text": { "en": "Personal data", "fr": "Données personnelles" } },
+        {
+          "type": "p",
+          "text": {
+            "en": "We may collect the following personally identifiable information:",
+            "fr": "Nous pouvons collecter les informations personnelles suivantes :"
+          }
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "term": { "en": "Email address", "fr": "Adresse e-mail" },
+              "text": { "en": "for registration, login and notifications", "fr": "pour l'inscription, la connexion et les notifications" }
+            },
+            {
+              "term": { "en": "Name", "fr": "Nom" },
+              "text": { "en": "for personalisation and order handling", "fr": "pour la personnalisation et le traitement des commandes" }
+            },
+            {
+              "term": { "en": "Phone number", "fr": "Numéro de téléphone" },
+              "text": { "en": "for order verification and pickup notifications", "fr": "pour la vérification des commandes et les notifications de retrait" }
+            },
+            {
+              "term": { "en": "Address details", "fr": "Adresse" },
+              "text": { "en": "for order processing and delivery", "fr": "pour le traitement et la livraison des commandes" }
+            },
+            {
+              "term": { "en": "City, region and postal code", "fr": "Ville, région et code postal" },
+              "text": { "en": "for delivery and shipping calculations", "fr": "pour la livraison et le calcul des frais d'expédition" }
+            }
+          ]
+        },
+        { "type": "h3", "text": { "en": "Usage data", "fr": "Données d'utilisation" } },
+        {
+          "type": "p",
+          "text": { "en": "Information collected automatically includes:", "fr": "Les informations collectées automatiquement comprennent :" }
+        },
+        {
+          "type": "list",
+          "items": [
+            { "text": { "en": "IP address and browser information", "fr": "l'adresse IP et les informations sur le navigateur" } },
+            { "text": { "en": "pages visited and time spent", "fr": "les pages consultées et le temps passé" } },
+            { "text": { "en": "device identifiers and mobile device information", "fr": "les identifiants et informations de l'appareil mobile" } },
+            { "text": { "en": "diagnostic data on app performance", "fr": "les données de diagnostic sur les performances de l'application" } },
+            { "text": { "en": "location data, only with your explicit permission", "fr": "les données de localisation, uniquement avec votre autorisation explicite" } }
+          ]
+        },
+        { "type": "h3", "text": { "en": "Cookies and similar technologies", "fr": "Cookies et technologies similaires" } },
+        {
+          "type": "p",
+          "text": {
+            "en": "GlobalBuy does not use advertising cookies. The platforms and services the app is built on may use cookies to:",
+            "fr": "GlobalBuy n'utilise pas de cookies publicitaires. Les plateformes et services sur lesquels repose l'application peuvent utiliser des cookies pour :"
+          }
+        },
+        {
+          "type": "list",
+          "items": [
+            { "text": { "en": "keep you signed in", "fr": "maintenir votre session ouverte" } },
+            { "text": { "en": "remember your preferences, such as your language", "fr": "mémoriser vos préférences, comme votre langue" } },
+            { "text": { "en": "analyse usage patterns", "fr": "analyser l'utilisation du service" } },
+            { "text": { "en": "secure transactions", "fr": "sécuriser les transactions" } }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": { "en": "How we use your data", "fr": "Utilisation de vos données" },
+      "blocks": [
+        { "type": "p", "text": { "en": "We process your personal data for the following purposes.", "fr": "Nous traitons vos données personnelles aux fins suivantes." } },
+        { "type": "h3", "text": { "en": "Providing the service", "fr": "Fourniture du service" } },
+        {
+          "type": "list",
+          "items": [
+            { "term": { "en": "Operating the service", "fr": "Fonctionnement du service" }, "text": { "en": "running and maintaining GlobalBuy", "fr": "exploiter et maintenir GlobalBuy" } },
+            { "term": { "en": "Account management", "fr": "Gestion du compte" }, "text": { "en": "creating and maintaining your profile", "fr": "créer et gérer votre profil" } },
+            { "term": { "en": "Performing our contract", "fr": "Exécution du contrat" }, "text": { "en": "processing orders, payments and deliveries", "fr": "traiter les commandes, les paiements et les livraisons" } },
+            { "term": { "en": "Customer support", "fr": "Service client" }, "text": { "en": "answering questions and resolving issues", "fr": "répondre à vos questions et résoudre les problèmes" } }
+          ]
+        },
+        { "type": "h3", "text": { "en": "Communications", "fr": "Communications" } },
+        {
+          "type": "list",
+          "items": [
+            { "term": { "en": "Transactional messages", "fr": "Messages transactionnels" }, "text": { "en": "order confirmations, shipping updates, security alerts", "fr": "confirmations de commande, suivi d'expédition, alertes de sécurité" } },
+            { "term": { "en": "Marketing", "fr": "Marketing" }, "text": { "en": "offers and product news, only with your consent", "fr": "offres et nouveautés, uniquement avec votre consentement" } },
+            { "term": { "en": "Service notices", "fr": "Avis de service" }, "text": { "en": "important changes to our service", "fr": "changements importants concernant notre service" } }
+          ]
+        },
+        { "type": "h3", "text": { "en": "Running our business", "fr": "Fonctionnement de l'entreprise" } },
+        {
+          "type": "list",
+          "items": [
+            { "term": { "en": "Analytics and improvement", "fr": "Analyse et amélioration" }, "text": { "en": "understanding how the service is used and improving it", "fr": "comprendre l'utilisation du service et l'améliorer" } },
+            { "term": { "en": "Security and fraud prevention", "fr": "Sécurité et prévention de la fraude" }, "text": { "en": "protecting your account and our platform", "fr": "protéger votre compte et notre plateforme" } },
+            { "term": { "en": "Legal compliance", "fr": "Conformité légale" }, "text": { "en": "meeting our legal obligations", "fr": "respecter nos obligations légales" } }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Legal basis for processing (GDPR)", "fr": "Base légale du traitement (RGPD)" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "For users in the European Economic Area (EEA) and the UK, we process your data on the following bases:",
+            "fr": "Pour les utilisateurs de l'Espace économique européen (EEE) et du Royaume-Uni, nous traitons vos données sur les bases suivantes :"
+          }
+        },
+        {
+          "type": "list",
+          "items": [
+            { "term": { "en": "Contract", "fr": "Contrat" }, "text": { "en": "to provide our service and fulfil your orders", "fr": "pour fournir notre service et exécuter vos commandes" } },
+            { "term": { "en": "Consent", "fr": "Consentement" }, "text": { "en": "for marketing and optional features", "fr": "pour le marketing et les fonctionnalités facultatives" } },
+            { "term": { "en": "Legitimate interests", "fr": "Intérêts légitimes" }, "text": { "en": "for improving the service, security and analytics", "fr": "pour l'amélioration du service, la sécurité et l'analyse" } },
+            { "term": { "en": "Legal obligation", "fr": "Obligation légale" }, "text": { "en": "to comply with applicable laws", "fr": "pour respecter les lois applicables" } }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Sharing your data", "fr": "Partage de vos données" },
+      "blocks": [
+        { "type": "p", "text": { "en": "We may share your information in the following situations.", "fr": "Nous pouvons partager vos informations dans les situations suivantes." } },
+        { "type": "h3", "text": { "en": "Service providers", "fr": "Prestataires" } },
+        {
+          "type": "list",
+          "items": [
+            { "term": { "en": "Payment processing", "fr": "Traitement des paiements" }, "text": { "en": "Fapshi, a payment gateway based in Cameroon", "fr": "Fapshi, une passerelle de paiement basée au Cameroun" } },
+            { "term": { "en": "Hosting and analytics", "fr": "Hébergement et analyse" }, "text": { "en": "Firebase and the other services the app is built on", "fr": "Firebase et les autres services sur lesquels repose l'application" } },
+            { "term": { "en": "Customer support", "fr": "Service client" }, "text": { "en": "third-party support tools", "fr": "outils d'assistance tiers" } }
+          ]
+        },
+        { "type": "h3", "text": { "en": "Business operations", "fr": "Opérations de l'entreprise" } },
+        {
+          "type": "list",
+          "items": [
+            { "term": { "en": "Corporate transactions", "fr": "Opérations sur la société" }, "text": { "en": "mergers, acquisitions or transfers of assets", "fr": "fusions, acquisitions ou cessions d'actifs" } },
+            { "term": { "en": "Affiliates", "fr": "Sociétés affiliées" }, "text": { "en": "other companies in our group", "fr": "autres sociétés de notre groupe" } },
+            { "term": { "en": "Business partners", "fr": "Partenaires commerciaux" }, "text": { "en": "for joint offers or integrated services", "fr": "pour des offres communes ou des services intégrés" } }
+          ]
+        },
+        { "type": "h3", "text": { "en": "Legal requirements", "fr": "Obligations légales" } },
+        {
+          "type": "list",
+          "items": [
+            { "term": { "en": "Law enforcement", "fr": "Autorités" }, "text": { "en": "when required by a valid legal request", "fr": "sur demande légale valable" } },
+            { "term": { "en": "Legal compliance", "fr": "Conformité légale" }, "text": { "en": "to meet regulatory obligations", "fr": "pour respecter nos obligations réglementaires" } },
+            { "term": { "en": "Safety", "fr": "Sécurité" }, "text": { "en": "to protect users and prevent illegal activity", "fr": "pour protéger les utilisateurs et prévenir les activités illégales" } }
+          ]
+        },
+        { "type": "h3", "text": { "en": "Public areas", "fr": "Espaces publics" } },
+        {
+          "type": "p",
+          "text": {
+            "en": "Information you share publicly, such as reviews, may be visible to other users and shared outside our service.",
+            "fr": "Les informations que vous partagez publiquement, comme les avis, peuvent être visibles par d'autres utilisateurs et diffusées en dehors de notre service."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Data retention", "fr": "Conservation des données" },
+      "blocks": [
+        { "type": "p", "text": { "en": "We keep your personal data only as long as necessary:", "fr": "Nous conservons vos données personnelles uniquement le temps nécessaire :" } },
+        {
+          "type": "list",
+          "items": [
+            { "term": { "en": "To provide the service", "fr": "Pour fournir le service" }, "text": { "en": "while your account is active", "fr": "tant que votre compte est actif" } },
+            { "term": { "en": "For legal requirements", "fr": "Pour les obligations légales" }, "text": { "en": "as required by applicable law", "fr": "selon les exigences de la loi applicable" } },
+            { "term": { "en": "For legitimate interests", "fr": "Pour nos intérêts légitimes" }, "text": { "en": "fraud prevention and dispute resolution", "fr": "prévention de la fraude et règlement des litiges" } }
+          ]
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "Usage data is usually kept for shorter periods and may be aggregated or anonymised.",
+            "fr": "Les données d'utilisation sont généralement conservées moins longtemps et peuvent être agrégées ou anonymisées."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "International data transfers", "fr": "Transferts internationaux de données" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "Your data may be transferred outside your country. For transfers outside the EEA and the UK, we ensure adequate protection through:",
+            "fr": "Vos données peuvent être transférées hors de votre pays. Pour les transferts hors de l'EEE et du Royaume-Uni, nous garantissons une protection adéquate au moyen de :"
+          }
+        },
+        {
+          "type": "list",
+          "items": [
+            { "term": { "en": "Adequacy decisions", "fr": "Décisions d'adéquation" }, "text": { "en": "countries recognised as protecting data adequately", "fr": "pays reconnus comme offrant une protection adéquate" } },
+            { "term": { "en": "Standard contractual clauses", "fr": "Clauses contractuelles types" }, "text": { "en": "contracts that require data protection", "fr": "contrats imposant la protection des données" } },
+            { "term": { "en": "Your explicit consent", "fr": "Votre consentement explicite" }, "text": { "en": "after the safeguards have been explained to you", "fr": "après vous avoir expliqué les garanties applicables" } }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Your rights under the GDPR", "fr": "Vos droits selon le RGPD" },
+      "blocks": [
+        { "type": "p", "text": { "en": "If you are in the EEA or the UK, you have the right to:", "fr": "Si vous êtes dans l'EEE ou au Royaume-Uni, vous avez le droit de :" } },
+        {
+          "type": "list",
+          "items": [
+            { "term": { "en": "Access", "fr": "Accès" }, "text": { "en": "request a copy of your personal data", "fr": "demander une copie de vos données personnelles" } },
+            { "term": { "en": "Rectification", "fr": "Rectification" }, "text": { "en": "correct inaccurate or incomplete information", "fr": "corriger des informations inexactes ou incomplètes" } },
+            { "term": { "en": "Erasure", "fr": "Effacement" }, "text": { "en": "have your data deleted under certain conditions", "fr": "faire supprimer vos données sous certaines conditions" } },
+            { "term": { "en": "Restriction", "fr": "Limitation" }, "text": { "en": "limit how we use your data", "fr": "limiter l'utilisation de vos données" } },
+            { "term": { "en": "Portability", "fr": "Portabilité" }, "text": { "en": "move your data to another service", "fr": "transférer vos données vers un autre service" } },
+            { "term": { "en": "Objection", "fr": "Opposition" }, "text": { "en": "object to processing based on legitimate interests", "fr": "vous opposer à un traitement fondé sur nos intérêts légitimes" } },
+            { "term": { "en": "Withdrawing consent", "fr": "Retrait du consentement" }, "text": { "en": "for any processing based on consent", "fr": "pour tout traitement fondé sur votre consentement" } }
+          ]
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "To exercise these rights, email [support@globalbuy24.com](mailto:support@globalbuy24.com) or use your account settings in the app.",
+            "fr": "Pour exercer ces droits, écrivez à [support@globalbuy24.com](mailto:support@globalbuy24.com) ou utilisez les paramètres de votre compte dans l'application."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Data security", "fr": "Sécurité des données" },
+      "blocks": [
+        { "type": "p", "text": { "en": "We protect your data with measures including:", "fr": "Nous protégeons vos données par des mesures telles que :" } },
+        {
+          "type": "list",
+          "items": [
+            { "term": { "en": "Encryption", "fr": "Chiffrement" }, "text": { "en": "of data in transit and at rest", "fr": "des données en transit et au repos" } },
+            { "term": { "en": "Access controls", "fr": "Contrôle des accès" }, "text": { "en": "only authorised staff can access data", "fr": "seul le personnel autorisé accède aux données" } },
+            { "term": { "en": "Regular reviews", "fr": "Contrôles réguliers" }, "text": { "en": "assessing and improving our security practices", "fr": "évaluation et amélioration de nos pratiques de sécurité" } },
+            { "term": { "en": "Secure storage", "fr": "Stockage sécurisé" }, "text": { "en": "in reputable, secure data centres", "fr": "dans des centres de données reconnus et sécurisés" } },
+            { "term": { "en": "Staff training", "fr": "Formation du personnel" }, "text": { "en": "so our team understands data protection", "fr": "pour que notre équipe maîtrise la protection des données" } }
+          ]
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "No system is completely secure. Please use a strong password and keep your account details private.",
+            "fr": "Aucun système n'est totalement sûr. Utilisez un mot de passe robuste et gardez vos identifiants confidentiels."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Children's privacy", "fr": "Protection des mineurs" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "Our service is not intended for children under 13. We do not knowingly collect personal information from children under 13, and if we learn that we have, we delete it promptly.",
+            "fr": "Notre service n'est pas destiné aux enfants de moins de 13 ans. Nous ne collectons pas sciemment leurs données personnelles et, si nous apprenons que cela s'est produit, nous les supprimons sans délai."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "For users aged 13 to 16 in countries that require parental consent, we may ask for a parent's approval before processing their data.",
+            "fr": "Pour les utilisateurs de 13 à 16 ans dans les pays qui exigent le consentement parental, nous pouvons demander l'accord d'un parent avant de traiter leurs données."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Third-party links", "fr": "Liens vers des sites tiers" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "Our service links to online stores and other external websites. We are not responsible for their privacy practices, so please read their policies before giving them personal information.",
+            "fr": "Notre service renvoie vers des boutiques en ligne et d'autres sites externes. Nous ne sommes pas responsables de leurs pratiques en matière de confidentialité : consultez leurs politiques avant de leur communiquer des informations personnelles."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Payments", "fr": "Paiements" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "Payments are processed by Fapshi, a payment gateway based in Cameroon. When you pay, you are taken to Fapshi's secure platform.",
+            "fr": "Les paiements sont traités par Fapshi, une passerelle de paiement basée au Cameroun. Lorsque vous payez, vous êtes redirigé vers la plateforme sécurisée de Fapshi."
+          }
+        },
+        {
+          "type": "note",
+          "text": {
+            "en": "GlobalBuy does not collect or store your payment details. They go directly to Fapshi, whose [privacy policy](https://www.fapshi.com/en/privacy-policy) applies.",
+            "fr": "GlobalBuy ne collecte ni ne conserve vos données de paiement. Elles sont transmises directement à Fapshi, dont la [politique de confidentialité](https://www.fapshi.com/en/privacy-policy) s'applique."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Changes to this policy", "fr": "Modifications de cette politique" },
+      "blocks": [
+        { "type": "p", "text": { "en": "We may update this policy from time to time. For significant changes, we will:", "fr": "Nous pouvons mettre à jour cette politique. En cas de changement important, nous :" } },
+        {
+          "type": "list",
+          "items": [
+            { "text": { "en": "publish the updated policy with a new \"last updated\" date", "fr": "publierons la nouvelle version avec une date de mise à jour" } },
+            { "text": { "en": "notify you by email or in the app", "fr": "vous informerons par e-mail ou dans l'application" } },
+            { "text": { "en": "give you time to review the changes before they take effect", "fr": "vous laisserons le temps d'en prendre connaissance avant leur entrée en vigueur" } }
+          ]
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "Continuing to use the service means you accept the updated policy.",
+            "fr": "En continuant à utiliser le service, vous acceptez la politique mise à jour."
+          }
+        }
+      ]
+    }
+  ],
+  "contact": {
+    "en": "For questions about this policy or to exercise your rights, contact us:",
+    "fr": "Pour toute question sur cette politique ou pour exercer vos droits, contactez-nous :"
+  }
+}

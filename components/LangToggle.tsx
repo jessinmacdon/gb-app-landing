@@ -1,12 +1,13 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { LOCALE_COOKIE, locales, type Locale } from '@/lib/i18n';
 import { SCROLL_KEY } from '@/components/ScrollRestorer';
 import { track } from '@/lib/track';
 
 export function LangToggle({ lang, label }: { lang: Locale; label: string }) {
   const router = useRouter();
+  const pathname = usePathname();
 
   const choose = (next: Locale) => {
     if (next === lang) return;
@@ -19,7 +20,9 @@ export function LangToggle({ lang, label }: { lang: Locale; label: string }) {
     } catch {
       // Storage unavailable (private mode): the switch still works, from the top.
     }
-    router.push(`/${next}`, { scroll: false });
+    // Same page in the other language: /en/privacy ⇄ /fr/privacy.
+    const rest = pathname.split('/').slice(2).join('/');
+    router.push(`/${next}${rest ? `/${rest}` : ''}`, { scroll: false });
   };
 
   return (
