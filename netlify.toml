@@ -1,8 +1,13 @@
-# Netlify detects Next.js and deploys it with its OpenNext adapter.
-# Set explicitly so older "publish the repo as static files" site settings don't apply.
+# Next.js on Netlify. The adapter is declared (and pinned in package.json)
+# rather than auto-detected: this site started as a plain static site and
+# Netlify did not install the adapter on its own, which published the raw
+# .next folder and 404'd every page.
 [build]
   command = "npm run build"
   publish = ".next"
 
 [build.environment]
   NODE_VERSION = "22"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
