@@ -10,6 +10,7 @@ target_fingerprint: "sha256:17a5ff2ab9d19b822b356371b52d15b6f7d2a273f7fe97a68baa
 target_path: /home/claude/gb-app-landing/app/[lang]/page.tsx
 timestamp: 2026-10-12T17-54-29Z
 slug: app-lang-page-tsx
+closed: true
 ---
 Method: dual-agent (A: design review subagent · B: detector + browser subagent)
 
