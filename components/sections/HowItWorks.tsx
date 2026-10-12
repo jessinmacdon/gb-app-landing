@@ -1,11 +1,10 @@
-import { LinkQuoteDemo } from '@/components/LinkQuoteDemo';
-import { quoteTotal, type Dictionary } from '@/lib/content';
-import type { ExampleQuote, SiteContent } from '@/lib/content/types';
+import type { Dictionary } from '@/lib/content';
+import type { SiteContent } from '@/lib/content/types';
 import type { Locale } from '@/lib/i18n';
 
-type Props = { lang: Locale; t: Dictionary; site: SiteContent; quotes: ExampleQuote[] };
+type Props = { lang: Locale; t: Dictionary; steps: SiteContent['steps'] };
 
-export function HowItWorks({ lang, t, site, quotes }: Props) {
+export function HowItWorks({ lang, t, steps }: Props) {
   return (
     <section id="how" className="container how" aria-labelledby="how-title">
       <div className="section-head">
@@ -15,7 +14,7 @@ export function HowItWorks({ lang, t, site, quotes }: Props) {
         </h2>
       </div>
       <ol className="how__grid">
-        {site.steps.map((s, i) => (
+        {steps.map((s, i) => (
           <li key={s.order} className="step">
             <span className="step__n" aria-hidden="true">
               {String(i + 1).padStart(2, '0')}
@@ -25,24 +24,6 @@ export function HowItWorks({ lang, t, site, quotes }: Props) {
           </li>
         ))}
       </ol>
-      <LinkQuoteDemo
-        quotes={quotes.map((q) => ({
-          id: q.id,
-          tabLabel: q.tabLabel[lang],
-          productName: q.productName[lang],
-          store: q.store,
-          storeLine: q.storeLine,
-          originalPrice: q.originalPrice,
-          sampleUrl: q.sampleUrl,
-          breakdownXAF: q.breakdownXAF,
-          totalXAF: quoteTotal(q.breakdownXAF),
-        }))}
-        stores={[...new Set([...site.stores, ...quotes.map((q) => q.store)])]}
-        lang={lang}
-        rows={t.rows}
-        copy={{ ...t.demo, exampleTag: t.exampleTag, originalPrice: t.originalPrice }}
-        appLinks={site.appLinks}
-      />
     </section>
   );
 }

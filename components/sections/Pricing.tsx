@@ -1,13 +1,16 @@
-import { QuoteExplorer } from '@/components/QuoteExplorer';
+import { PricingDemo } from '@/components/PricingDemo';
 import { quoteTotal, type Dictionary } from '@/lib/content';
-import type { ExampleQuote } from '@/lib/content/types';
+import type { ExampleQuote, SiteContent } from '@/lib/content/types';
 import type { Locale } from '@/lib/i18n';
 
-export function Pricing({ lang, t, quotes }: { lang: Locale; t: Dictionary; quotes: ExampleQuote[] }) {
+type Props = { lang: Locale; t: Dictionary; site: SiteContent; quotes: ExampleQuote[] };
+
+/** Pricing transparency, shown by doing: paste a link, get an itemised example quote. */
+export function Pricing({ lang, t, site, quotes }: Props) {
   return (
     <section id="pricing" className="pricing" aria-labelledby="pricing-title">
       <div className="container pricing__grid">
-        <QuoteExplorer
+        <PricingDemo
           quotes={quotes.map((q) => ({
             id: q.id,
             tabLabel: q.tabLabel[lang],
@@ -15,25 +18,23 @@ export function Pricing({ lang, t, quotes }: { lang: Locale; t: Dictionary; quot
             store: q.store,
             storeLine: q.storeLine,
             originalPrice: q.originalPrice,
+            sampleUrl: q.sampleUrl,
             breakdownXAF: q.breakdownXAF,
             totalXAF: quoteTotal(q.breakdownXAF),
           }))}
           defaultQuoteId={(quotes.find((q) => !q.isHeroPhoneExample) ?? quotes[0]).id}
+          stores={[...new Set([...site.stores, ...quotes.map((q) => q.store)])]}
           lang={lang}
           rows={t.rows}
-          copy={{
-            priceTry: t.priceTry,
-            exampleTag: t.exampleTag,
-            priceDisclaimer: t.priceDisclaimer,
-            originalPrice: t.originalPrice,
-          }}
+          copy={{ ...t.demo, originalPrice: t.originalPrice }}
+          appLinks={site.appLinks}
         >
           <span className="eyebrow eyebrow--dark-bg">{t.priceEyebrow}</span>
           <h2 className="pricing__title" id="pricing-title">
             {t.priceTitle}
           </h2>
           <p className="pricing__sub">{t.priceSub}</p>
-        </QuoteExplorer>
+        </PricingDemo>
       </div>
     </section>
   );

@@ -78,8 +78,21 @@
     "defaultOpen": false
   },
   {
-    "id": "faq-7",
+    "id": "faq-8",
     "order": 7,
+    "question": {
+      "en": "What if something goes wrong with my order?",
+      "fr": "Et si un problème survient avec ma commande ?"
+    },
+    "answer": {
+      "en": "Message us from your order page in the app. Every active order has live chat with our team, in French and English.",
+      "fr": "Écrivez-nous depuis la page de votre commande dans l'app. Chaque commande en cours dispose d'un chat en direct avec notre équipe, en français et en anglais."
+    },
+    "defaultOpen": false
+  },
+  {
+    "id": "faq-7",
+    "order": 8,
     "question": {
       "en": "Is there anything you won't ship?",
       "fr": "Y a-t-il des articles interdits ?"

@@ -29,7 +29,7 @@ Money is integer XAF and is displayed as `96 800 FCFA`.
 | --- | --- |
 | `categories.json` | **What we ship**: categories and products (image, price, rating, delivery days, `active`) |
 | `ranking-modes.json` | Rank-by control labels and descriptions (`price`, `quality`, `delivery`, `variety`) |
-| `example-quotes.json` | **Pricing** quote pills and receipt, and the **paste-a-link demo** in How it works. The one with `isHeroPhoneExample: true` fills the hero phone, and Pricing opens on a different one. `originalPrice` (`{ amount, currency }`) shows the listing price in the store's currency; `sampleUrl` is the demo's example link |
+| `example-quotes.json` | The **Pricing** section's paste-a-link demo and example pills. The quote with `isHeroPhoneExample: true` fills the hero phone, and Pricing opens on a different one. `originalPrice` (`{ amount, currency }`) shows the listing price in the store's currency, and the exchange rate shown is derived from it and `breakdownXAF.product`. `sampleUrl` is each example's demo link |
 | `faq.json` | **FAQ** accordion; `defaultOpen` marks the item open on load. Answers support `[link text](https://…)` |
 | `testimonials.json` | Customer quotes and avatars. Entries with `placeholder: true` are never shown, and the section stays hidden until at least one real testimonial exists |
 | `site.json` | Stores strip, cities (`live`), payment methods, app/social/legal links, company name and support email, How-it-works steps, Why features, lifestyle photos, What-we-ship defaults. Set a social or legal link to `null` to hide it until it exists. `whatWeShip.sampleData: true` labels the picks as examples; set it to `false` once the products are real |
