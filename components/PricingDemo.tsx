@@ -5,6 +5,7 @@ import { GetAppLink } from '@/components/GetAppLink';
 import type { Dictionary } from '@/lib/content';
 import type { Money, QuoteBreakdown } from '@/lib/content/types';
 import { formatMoney, formatXAF } from '@/lib/format';
+import { useCountUp } from '@/lib/motion';
 import { detectStore } from '@/lib/stores';
 import { track } from '@/lib/track';
 import { useStickyState } from '@/lib/useStickyState';
@@ -81,12 +82,15 @@ export function PricingDemo({ children, quotes, defaultQuoteId, stores, lang, ro
   const [notice, setNotice] = useState<string | null>(null);
   const [pendingId, setPendingId] = useState<string | null>(null);
   const [hint, setHint] = useState(false);
+  // Bumped each time a quote arrives: replays the receipt's add-up sequence.
+  const [runKey, setRunKey] = useState(0);
   const timers = useRef<number[]>([]);
   const input = useRef<HTMLInputElement>(null);
 
   useEffect(() => () => timers.current.forEach(clearTimeout), []);
 
   const quote = quotes.find((q) => q.id === quoteId) ?? quotes[0];
+  const total = useCountUp(quote?.totalXAF ?? 0, runKey);
   if (!quote) return null;
 
   const run = (raw: string, example: DemoQuote | null) => {
@@ -117,6 +121,7 @@ export function PricingDemo({ children, quotes, defaultQuoteId, stores, lang, ro
         setNotice(msg);
         setPendingId(null);
         setPhase('idle');
+        setRunKey((k) => k + 1);
       }, STEP_MS * 2),
     ];
   };
@@ -209,7 +214,7 @@ export function PricingDemo({ children, quotes, defaultQuoteId, stores, lang, ro
             ))}
           </ol>
         ) : (
-          <>
+          <div className="receipt__body" key={runKey} data-enter={runKey > 0 || undefined}>
             {notice ? <p className="receipt__notice">{notice}</p> : null}
             <div className="receipt__head">
               <div className="receipt__product">
@@ -233,8 +238,8 @@ export function PricingDemo({ children, quotes, defaultQuoteId, stores, lang, ro
               </div>
             ) : null}
             <dl className="receipt__rows">
-              {ROWS.map(([label, key]) => (
-                <div key={key} className="receipt__row">
+              {ROWS.map(([label, key], i) => (
+                <div key={key} className="receipt__row" style={{ '--i': i } as React.CSSProperties}>
                   <dt>{rows[label]}</dt>
                   <dd>{formatXAF(quote.breakdownXAF[key])}</dd>
                 </div>
@@ -243,14 +248,14 @@ export function PricingDemo({ children, quotes, defaultQuoteId, stores, lang, ro
             <div className="receipt__total">
               <span className="receipt__total-label">{copy.exampleTotal}</span>
               <span className="receipt__total-value">
-                {formatXAF(quote.totalXAF)} <small>FCFA</small>
+                {formatXAF(total)} <small>FCFA</small>
               </span>
             </div>
             <p className="receipt__disclaimer">{copy.demoNote}</p>
             <GetAppLink className="receipt__cta" links={appLinks} section="pricing-demo">
               {copy.cta}
             </GetAppLink>
-          </>
+          </div>
         )}
       </div>
     </>

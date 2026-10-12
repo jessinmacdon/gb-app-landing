@@ -23,6 +23,7 @@
   --orange: #ff7900;
 
   --gutter: clamp(20px, 5vw, 48px);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --section-y: clamp(72px, 10vw, 128px);
   --display: var(--font-display), 'Bricolage Grotesque', sans-serif;
   --body: var(--font-body), 'Instrument Sans', system-ui, sans-serif;
@@ -769,7 +770,6 @@ section[id] {
   border-radius: 999px;
   border: 2px solid var(--forest);
   white-space: nowrap;
-  transition: background 0.2s, color 0.2s;
   background: transparent;
   color: var(--forest);
 }
@@ -1717,7 +1717,7 @@ section[id] {
   -webkit-backdrop-filter: blur(14px);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   transform: translateY(110%);
-  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.28s var(--ease-out);
 }
 .sticky-dl[data-visible='true'] {
   transform: translateY(0);
@@ -1906,5 +1906,103 @@ section[id] {
 @media (max-width: 340px) {
   .nav .logo__word {
     display: none;
+  }
+}
+
+/* ───────── MOTION ─────────
+   One authored moment (the receipt adds up), plus motion that explains state:
+   re-ranking (FLIP, in CategoryBrowser), FAQ open/close, and press feedback.
+   Transform and opacity only, so it stays smooth on low-end phones. */
+
+/* The receipt adds up: cost lines land in order, then the total (counted up in JS). */
+.receipt__body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.receipt__body[data-enter] .receipt__row {
+  animation: receipt-line 380ms var(--ease-out) backwards;
+  animation-delay: calc(var(--i, 0) * 90ms + 60ms);
+}
+.receipt__body[data-enter] .receipt__total {
+  animation: receipt-line 420ms var(--ease-out) backwards;
+  animation-delay: 420ms;
+}
+.receipt__body[data-enter] .receipt__head,
+.receipt__body[data-enter] .receipt__origin,
+.receipt__body[data-enter] .receipt__notice {
+  animation: receipt-fade 240ms ease-out backwards;
+}
+@keyframes receipt-line {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+@keyframes receipt-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+/* FAQ answers open and close instead of jumping. */
+.faq__panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms var(--ease-out);
+}
+.faq__panel[data-open='true'] {
+  grid-template-rows: 1fr;
+}
+.faq__panel-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+.faq__panel .faq__a {
+  opacity: 0;
+  transition: opacity 200ms ease-out;
+}
+.faq__panel[data-open='true'] .faq__a {
+  opacity: 1;
+  transition-delay: 80ms;
+}
+.faq__icon {
+  transition: background-color 200ms ease-out;
+}
+
+/* Press feedback on the choices people tap. */
+.cat-pill,
+.rank-by__opt,
+.quote-tab,
+.quote-form__submit,
+.faq__btn .faq__icon {
+  transition-property: background-color, color, box-shadow, transform;
+  transition-duration: 200ms, 200ms, 200ms, 120ms;
+  transition-timing-function: ease-out;
+}
+.cat-pill:active,
+.rank-by__opt:active,
+.quote-tab:active:not(:disabled),
+.quote-form__submit:active:not(:disabled),
+.faq__btn:active .faq__icon {
+  transform: scale(0.96);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .receipt__body[data-enter] .receipt__row,
+  .receipt__body[data-enter] .receipt__total {
+    animation-name: receipt-fade;
+    animation-duration: 200ms;
+    animation-delay: 0ms;
+  }
+  .faq__panel {
+    transition: none;
+  }
+  .cat-pill:active,
+  .rank-by__opt:active,
+  .quote-tab:active:not(:disabled),
+  .quote-form__submit:active:not(:disabled),
+  .faq__btn:active .faq__icon {
+    transform: none;
   }
 }
