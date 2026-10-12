@@ -6,7 +6,6 @@ import type { SiteContent, SocialNetwork } from '@/lib/content/types';
 const SOCIAL_ORDER: SocialNetwork[] = ['instagram', 'facebook', 'x', 'whatsapp', 'tiktok'];
 
 export function Footer({ t, site }: { t: Dictionary; site: SiteContent }) {
-  const liveCities = site.cities.filter((c) => c.live).map((c) => c.name);
   // Links without a real destination yet (e.g. the refund policy) stay hidden.
   const legal = (
     [
@@ -72,7 +71,6 @@ export function Footer({ t, site }: { t: Dictionary; site: SiteContent }) {
         <span>
           © 2026 GlobalBuy. {t.rights} {t.footOperator}
         </span>
-        <span>{liveCities.join(' · ')}</span>
       </div>
     </footer>
   );

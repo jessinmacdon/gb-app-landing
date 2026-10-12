@@ -49,7 +49,7 @@ export default async function LandingPage({ params }: PageProps<'/[lang]'>) {
         <Why lang={lang} t={t} site={site} />
         <PaymentPickup lang={lang} t={t} site={site} />
         <Testimonials lang={lang} t={t} items={testimonials} />
-        <Faq lang={lang} t={t} items={faq} />
+        <Faq lang={lang} t={t} items={faq} email={site.company.supportEmail} />
         <FinalCta lang={lang} t={t} site={site} />
       </main>
       <Footer t={t} site={site} />

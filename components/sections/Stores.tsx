@@ -9,7 +9,6 @@ export function Stores({ t, stores }: { t: Dictionary; stores: string[] }) {
           {stores.map((s) => (
             <li key={s}>{s}</li>
           ))}
-          <li className="stores__more">{t.storesMore}</li>
         </ul>
       </div>
     </section>

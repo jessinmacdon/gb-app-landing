@@ -7,40 +7,14 @@
       "fr": "Sur quelles boutiques puis-je commander ?"
     },
     "answer": {
-      "en": "Amazon, eBay, SHEIN, Zalando, About You, Etsy, ASOS, Nike, AliExpress, Walmart, H&M, Sephora, Adidas, Jumia — and any other online store with a product link.",
-      "fr": "Amazon, eBay, SHEIN, Zalando, About You, Etsy, ASOS, Nike, AliExpress, Walmart, H&M, Sephora, Adidas, Jumia — et toute autre boutique en ligne avec un lien produit."
+      "en": "Any online store with a product link, from Amazon, SHEIN and Zalando to AliExpress and Jumia.",
+      "fr": "Toute boutique en ligne avec un lien produit, d'Amazon, SHEIN et Zalando à AliExpress et Jumia."
     },
     "defaultOpen": true
   },
   {
-    "id": "faq-2",
-    "order": 2,
-    "question": {
-      "en": "What does the quote include?",
-      "fr": "Que comprend le devis ?"
-    },
-    "answer": {
-      "en": "The product price, international shipping, customs and the GlobalBuy service fee. The quote you confirm in the app is the price you pay.",
-      "fr": "Le prix du produit, la livraison internationale, la douane et les frais de service GlobalBuy. Le devis que vous confirmez dans l'app est le prix que vous payez."
-    },
-    "defaultOpen": false
-  },
-  {
-    "id": "faq-3",
-    "order": 3,
-    "question": {
-      "en": "How do I pay?",
-      "fr": "Comment payer ?"
-    },
-    "answer": {
-      "en": "With MTN Mobile Money or Orange Money, directly in the app. No international credit card required. Bank card payments are coming soon.",
-      "fr": "Avec MTN Mobile Money ou Orange Money, directement dans l'app. Aucune carte internationale requise. Paiement par carte bancaire bientôt disponible."
-    },
-    "defaultOpen": false
-  },
-  {
     "id": "faq-9",
-    "order": 4,
+    "order": 2,
     "question": {
       "en": "Is the app free?",
       "fr": "L'application est-elle gratuite ?"
@@ -53,7 +27,7 @@
   },
   {
     "id": "faq-10",
-    "order": 5,
+    "order": 3,
     "question": {
       "en": "Can family abroad order for me?",
       "fr": "Un proche à l'étranger peut-il commander pour moi ?"
@@ -66,59 +40,20 @@
   },
   {
     "id": "faq-4",
-    "order": 6,
+    "order": 4,
     "question": {
-      "en": "Where do I collect my order?",
-      "fr": "Où récupérer ma commande ?"
+      "en": "How do I collect my order?",
+      "fr": "Comment récupérer ma commande ?"
     },
     "answer": {
-      "en": "At the GlobalBuy pickup point in your city: Douala, Yaoundé, Buea or Limbe. You get a notification when your order arrives and choose when to collect.",
-      "fr": "Au point de retrait GlobalBuy de votre ville : Douala, Yaoundé, Buea ou Limbe. Vous êtes notifié à l'arrivée et choisissez quand passer."
-    },
-    "defaultOpen": false
-  },
-  {
-    "id": "faq-11",
-    "order": 7,
-    "question": {
-      "en": "What do I need to collect my order?",
-      "fr": "Que dois-je apporter pour récupérer ma commande ?"
-    },
-    "answer": {
-      "en": "Bring an ID when you collect your order at the pickup point.",
-      "fr": "Apportez une pièce d'identité quand vous récupérez votre commande au point de retrait."
-    },
-    "defaultOpen": false
-  },
-  {
-    "id": "faq-5",
-    "order": 8,
-    "question": {
-      "en": "Are the products authentic?",
-      "fr": "Les produits sont-ils authentiques ?"
-    },
-    "answer": {
-      "en": "Yes. GlobalBuy buys directly from official retailers and authorised sellers only.",
-      "fr": "Oui. GlobalBuy achète uniquement auprès de distributeurs officiels et de vendeurs agréés."
-    },
-    "defaultOpen": false
-  },
-  {
-    "id": "faq-6",
-    "order": 9,
-    "question": {
-      "en": "Can I follow my order?",
-      "fr": "Puis-je suivre ma commande ?"
-    },
-    "answer": {
-      "en": "Yes. Every stage, from purchase to customs to the pickup notification, is visible in the app.",
-      "fr": "Oui. Chaque étape, de l'achat à la douane jusqu'à la notification de retrait, est visible dans l'app."
+      "en": "At the GlobalBuy pickup point in your city. You get a notification when your order arrives and choose when to collect. Bring an ID.",
+      "fr": "Au point de retrait GlobalBuy de votre ville. Vous êtes notifié à l'arrivée de votre commande et choisissez quand passer. Apportez une pièce d'identité."
     },
     "defaultOpen": false
   },
   {
     "id": "faq-8",
-    "order": 10,
+    "order": 5,
     "question": {
       "en": "What if something goes wrong with my order?",
       "fr": "Et si un problème survient avec ma commande ?"
@@ -131,7 +66,7 @@
   },
   {
     "id": "faq-7",
-    "order": 11,
+    "order": 6,
     "question": {
       "en": "Is there anything you won't ship?",
       "fr": "Y a-t-il des articles interdits ?"

@@ -648,9 +648,6 @@ section[id] {
   letter-spacing: -0.02em;
   color: #2b3b33;
 }
-.stores__more {
-  color: var(--mango-deep);
-}
 
 /* ───────── HOW IT WORKS ───────── */
 .how {
@@ -991,14 +988,6 @@ section[id] {
   background: var(--ink);
   color: var(--mango);
 }
-.ship__ban {
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.5;
-  max-width: 720px;
-  padding-top: 24px;
-  border-top: 1px solid rgba(12, 38, 28, 0.25);
-}
 
 /* Loading skeleton for the suggestions list */
 .skeleton {
@@ -1165,13 +1154,6 @@ section[id] {
   font-size: 14px;
   color: var(--meta);
 }
-.receipt__tag {
-  font-size: 12px;
-  font-weight: 600;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: var(--chip);
-}
 .receipt__kicker {
   font-size: 13px;
   color: var(--meta);
@@ -1296,12 +1278,6 @@ section[id] {
 .pay {
   background: #fff;
   border: 1px solid var(--border);
-}
-.pay__sub {
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.55;
-  color: var(--muted);
 }
 .pay__tiles {
   display: grid;
@@ -1488,6 +1464,10 @@ section[id] {
 }
 .faq__head .h2 {
   text-wrap: initial;
+}
+.faq__sub a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 .faq__sub {
   margin: 0;

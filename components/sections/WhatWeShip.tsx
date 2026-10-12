@@ -25,7 +25,6 @@ export function WhatWeShip({ t, children }: { t: Dictionary; children: React.Rea
           <p className="ship__note">{t.catNote}</p>
         </div>
         {children}
-        <p className="ship__ban">{t.catBan}</p>
       </div>
     </section>
   );
