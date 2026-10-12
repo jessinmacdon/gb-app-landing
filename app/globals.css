@@ -64,7 +64,7 @@ button {
 }
 /* Keep anchor targets clear of the sticky nav. */
 section[id] {
-  scroll-margin-top: 64px;
+  scroll-margin-top: 80px;
 }
 :focus-visible {
   outline: 2px solid var(--mango);
@@ -98,7 +98,7 @@ section[id] {
 
 .page {
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 .container {
   max-width: 1240px;
@@ -1903,11 +1903,6 @@ section[id] {
     padding: 10px 13px;
   }
 }
-@media (max-width: 340px) {
-  .nav .logo__word {
-    display: none;
-  }
-}
 
 /* ───────── MOTION ─────────
    One authored moment (the receipt adds up), plus motion that explains state:
@@ -2036,5 +2031,87 @@ section[id] {
   }
   .faq__btn[aria-expanded='false']:hover .faq__icon {
     background: var(--chip);
+  }
+}
+
+/* ───────── MOBILE MENU (below 960px, where the inline links are hidden) ───────── */
+.menu {
+  display: none;
+}
+@media (max-width: 959px) {
+  .menu {
+    display: block;
+  }
+}
+/* Phones: the floating download bar replaces the nav's download button. */
+@media (max-width: 719px) {
+  .nav .nav__cta {
+    display: none;
+  }
+}
+.menu__btn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--cream);
+  cursor: pointer;
+  transition: background-color 200ms ease-out;
+}
+.menu__btn[aria-expanded='true'] {
+  background: var(--cream);
+  color: var(--forest);
+}
+.menu__panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: var(--forest);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateY(-6px);
+  visibility: hidden;
+  transition: opacity 180ms ease-out, transform 220ms var(--ease-out), visibility 0s 220ms;
+}
+.menu__panel[data-open='true'] {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+  transition: opacity 180ms ease-out, transform 220ms var(--ease-out), visibility 0s;
+}
+.menu__panel ul {
+  list-style: none;
+  margin: 0 auto;
+  max-width: 1240px;
+  padding: 8px var(--gutter) 16px;
+}
+.menu__panel a {
+  display: flex;
+  align-items: center;
+  min-height: 52px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+}
+.menu__panel li:last-child a {
+  border-bottom: 0;
+}
+.menu__panel a:hover {
+  color: var(--mango);
+}
+@media (prefers-reduced-motion: reduce) {
+  .menu__panel,
+  .menu__panel[data-open='true'] {
+    transform: none;
+    transition: opacity 120ms ease-out, visibility 0s;
   }
 }

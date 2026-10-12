@@ -101,5 +101,7 @@
     "empty": "Collez d'abord un lien, ou essayez un des exemples ci-dessous."
   },
   "picksExampleKicker": "Exemples d'articles commandés",
-  "stickyHint": "Google Play · App Store"
+  "stickyHint": "Google Play · App Store",
+  "menuOpen": "Menu",
+  "menuClose": "Fermer le menu"
 }

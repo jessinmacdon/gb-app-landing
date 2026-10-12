@@ -101,5 +101,7 @@
     "empty": "Paste a link first, or try one of the examples below."
   },
   "picksExampleKicker": "Example items people order",
-  "stickyHint": "Google Play · App Store"
+  "stickyHint": "Google Play · App Store",
+  "menuOpen": "Menu",
+  "menuClose": "Close menu"
 }
