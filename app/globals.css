@@ -859,7 +859,8 @@ section[id] {
   }
   .rank-by__seg {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
   }
 }
 .rank-by__opt[aria-checked='true'] {
@@ -1185,6 +1186,12 @@ section[id] {
 .receipt__rate {
   font-size: 13px;
   font-variant-numeric: tabular-nums;
+}
+.receipt__rate-note {
+  margin: 0;
+  font-size: 13px;
+  color: var(--forest);
+  font-weight: 600;
 }
 .receipt__cta {
   align-self: flex-start;
@@ -2045,6 +2052,10 @@ section[id] {
 }
 /* Phones: the floating download bar replaces the nav's download button. */
 @media (max-width: 719px) {
+  /* French runs longer: keeps the closing headline to three lines on phones. */
+  .cta__title:lang(fr) {
+    font-size: 38px;
+  }
   .nav .nav__cta {
     display: none;
   }

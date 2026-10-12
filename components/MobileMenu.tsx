@@ -16,6 +16,11 @@ export function MobileMenu({ links, labels }: Props) {
   const root = useRef<HTMLDivElement>(null);
   const button = useRef<HTMLButtonElement>(null);
 
+  // The phone download bar steps aside while the menu is open.
+  useEffect(() => {
+    window.dispatchEvent(new CustomEvent('gb:menu', { detail: open }));
+  }, [open]);
+
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {

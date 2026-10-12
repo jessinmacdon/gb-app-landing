@@ -5,7 +5,7 @@ import { GetAppLink } from '@/components/GetAppLink';
 import type { Dictionary } from '@/lib/content';
 import type { Money, QuoteBreakdown } from '@/lib/content/types';
 import { formatMoney, formatXAF } from '@/lib/format';
-import { useCountUp } from '@/lib/motion';
+import { prefersReducedMotion, useCountUp } from '@/lib/motion';
 import { detectStore } from '@/lib/stores';
 import { track } from '@/lib/track';
 import { useStickyState } from '@/lib/useStickyState';
@@ -86,8 +86,19 @@ export function PricingDemo({ children, quotes, defaultQuoteId, stores, lang, ro
   const [runKey, setRunKey] = useState(0);
   const timers = useRef<number[]>([]);
   const input = useRef<HTMLInputElement>(null);
+  const totalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => () => timers.current.forEach(clearTimeout), []);
+
+  // On phones the receipt lands below the form: bring the total into view so
+  // the answer to "what will it cost?" isn't off-screen.
+  useEffect(() => {
+    const el = totalRef.current;
+    if (!runKey || !el || !window.matchMedia('(max-width: 719px)').matches) return;
+    const r = el.getBoundingClientRect();
+    if (r.top >= 80 && r.bottom <= window.innerHeight - 16) return;
+    el.scrollIntoView({ block: 'center', behavior: prefersReducedMotion() ? 'auto' : 'smooth' });
+  }, [runKey]);
 
   const quote = quotes.find((q) => q.id === quoteId) ?? quotes[0];
   const total = useCountUp(quote?.totalXAF ?? 0, runKey);
@@ -129,6 +140,13 @@ export function PricingDemo({ children, quotes, defaultQuoteId, stores, lang, ro
   const busy = phase === 0 || phase === 1;
   const rate = rateLine(quote, lang);
   const pressedId = pendingId ?? (notice ? null : quote.id);
+  // Only the outcome is announced, not every row of the receipt.
+  const colon = lang === 'fr' ? '\u202f: ' : ': ';
+  const announcement = busy
+    ? copy.pricing
+    : runKey
+      ? `${copy.exampleKicker.replace('{store}', quote.store)}${colon}${quote.productName}. ${copy.exampleTotal}${colon}${formatXAF(quote.totalXAF)} FCFA`
+      : '';
 
   return (
     <>
@@ -204,7 +222,10 @@ export function PricingDemo({ children, quotes, defaultQuoteId, stores, lang, ro
         </div>
       </div>
 
-      <div className="receipt" aria-live="polite" aria-busy={busy}>
+      <p className="sr-only" aria-live="polite">
+        {announcement}
+      </p>
+      <div className="receipt" aria-busy={busy}>
         {busy ? (
           <ol className="quote-steps">
             {[copy.reading, copy.pricing].map((label, i) => (
@@ -235,6 +256,9 @@ export function PricingDemo({ children, quotes, defaultQuoteId, stores, lang, ro
                     <span>{rate}</span>
                   </p>
                 ) : null}
+                {rate && quote.originalPrice.currency === 'EUR' ? (
+                  <p className="receipt__rate-note">{copy.rateNote}</p>
+                ) : null}
               </div>
             ) : null}
             <dl className="receipt__rows">
@@ -245,7 +269,7 @@ export function PricingDemo({ children, quotes, defaultQuoteId, stores, lang, ro
                 </div>
               ))}
             </dl>
-            <div className="receipt__total">
+            <div className="receipt__total" ref={totalRef}>
               <span className="receipt__total-label">{copy.exampleTotal}</span>
               <span className="receipt__total-value">
                 {formatXAF(total)} <small>FCFA</small>
