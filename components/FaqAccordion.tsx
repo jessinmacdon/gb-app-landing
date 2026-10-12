@@ -35,10 +35,19 @@ export function FaqAccordion({ items, defaultOpenId }: { items: FaqView[]; defau
                 </span>
               </button>
             </h3>
-            <div id={`faq-a-${f.id}`} role="region" aria-labelledby={`faq-q-${f.id}`} hidden={!open}>
-              <p className="faq__a">
-                <InlineLinks text={f.answer} />
-              </p>
+            <div
+              id={`faq-a-${f.id}`}
+              role="region"
+              aria-labelledby={`faq-q-${f.id}`}
+              className="faq__panel"
+              data-open={open}
+              inert={!open}
+            >
+              <div className="faq__panel-inner">
+                <p className="faq__a">
+                  <InlineLinks text={f.answer} />
+                </p>
+              </div>
             </div>
           </div>
         );

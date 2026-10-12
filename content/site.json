@@ -69,19 +69,19 @@
     }
   ],
   "appLinks": {
-    "googlePlay": "https://play.google.com/store",
-    "appStore": "https://apps.apple.com"
+    "googlePlay": "https://play.google.com/store/apps/details?id=com.GB24.GlobalBuy24",
+    "appStore": null
   },
   "social": {
-    "instagram": "https://instagram.com",
-    "facebook": "https://facebook.com",
-    "x": "https://x.com",
+    "instagram": null,
+    "facebook": null,
+    "x": null,
     "whatsapp": null,
-    "tiktok": "https://tiktok.com"
+    "tiktok": null
   },
   "legal": {
-    "privacy": "/privacy.html",
-    "terms": "/terms-of-service.html",
+    "privacy": "/privacy",
+    "terms": "/terms",
     "refund": null
   },
   "steps": [
@@ -92,8 +92,8 @@
         "fr": "Collez un lien"
       },
       "body": {
-        "en": "Find any product on any online store and copy the URL. Paste it into GlobalBuy.",
-        "fr": "Trouvez un produit sur n'importe quelle boutique en ligne et copiez l'URL. Collez-la dans GlobalBuy."
+        "en": "Find a product on any online store and copy its link. Paste it into GlobalBuy.",
+        "fr": "Trouvez un produit sur n'importe quelle boutique en ligne et copiez son lien. Collez-le dans GlobalBuy."
       }
     },
     {
@@ -103,8 +103,8 @@
         "fr": "Recevez un devis instantané"
       },
       "body": {
-        "en": "GlobalBuy calculates the full cost: the product price, international shipping, customs, and its service fee. One number. No surprises.",
-        "fr": "GlobalBuy calcule le coût total : prix du produit, livraison internationale, douane et frais de service. Un seul montant. Aucune surprise."
+        "en": "GlobalBuy calculates the full cost: the product price, international shipping, customs and its service fee.",
+        "fr": "GlobalBuy calcule le coût total : prix du produit, livraison internationale, douane et frais de service."
       }
     },
     {
@@ -134,41 +134,8 @@
     {
       "order": 1,
       "title": {
-        "en": "Transparent pricing",
-        "fr": "Prix transparents"
-      },
-      "body": {
-        "en": "Every quote itemises the product, shipping, customs and our fee. The quote you confirm is the price you pay.",
-        "fr": "Chaque devis détaille le produit, la livraison, la douane et nos frais. Le devis que vous confirmez est le prix que vous payez."
-      }
-    },
-    {
-      "order": 2,
-      "title": {
-        "en": "Local payment methods",
-        "fr": "Paiements locaux"
-      },
-      "body": {
-        "en": "MTN Mobile Money and Orange Money are covered. Card and bank payments are coming soon.",
-        "fr": "MTN Mobile Money et Orange Money sont acceptés. Paiement par carte et banque bientôt disponible."
-      }
-    },
-    {
-      "order": 3,
-      "title": {
-        "en": "Any store, any product",
-        "fr": "Toute boutique, tout produit"
-      },
-      "body": {
-        "en": "If a product has a URL and is legal to import into Cameroon, GlobalBuy can source it.",
-        "fr": "Si un produit a une URL et peut être importé légalement au Cameroun, GlobalBuy peut l'obtenir."
-      }
-    },
-    {
-      "order": 4,
-      "title": {
-        "en": "100% authentic",
-        "fr": "100 % authentique"
+        "en": "Official sellers only",
+        "fr": "Vendeurs officiels uniquement"
       },
       "body": {
         "en": "GlobalBuy buys directly from official retailers and authorised sellers only.",
@@ -176,7 +143,7 @@
       }
     },
     {
-      "order": 5,
+      "order": 2,
       "title": {
         "en": "Full tracking",
         "fr": "Suivi complet"
@@ -187,7 +154,7 @@
       }
     },
     {
-      "order": 6,
+      "order": 3,
       "title": {
         "en": "Bilingual support",
         "fr": "Support bilingue"
@@ -229,6 +196,11 @@
   },
   "company": {
     "legalName": "GlobalBuy24",
+    "address": {
+      "en": "Huttenstraße 25, 13353 Berlin, Germany",
+      "fr": "Huttenstraße 25, 13353 Berlin, Allemagne"
+    },
+    "phone": "+237 672 815 351",
     "supportEmail": "support@globalbuy24.com"
   }
 }

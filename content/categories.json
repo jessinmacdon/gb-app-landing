@@ -4,7 +4,7 @@
     "order": 1,
     "name": {
       "en": "Fashion & Clothing",
-      "fr": "Mode & Vêtements"
+      "fr": "Mode et Vêtements"
     },
     "products": [
       {
@@ -140,7 +140,7 @@
     "order": 2,
     "name": {
       "en": "Electronics & Gadgets",
-      "fr": "Électronique & Gadgets"
+      "fr": "Électronique et Gadgets"
     },
     "products": [
       {
@@ -210,14 +210,14 @@
         "id": "electronics-and-gadgets-4",
         "name": {
           "en": "iPad 10.9\" 64 GB",
-          "fr": "iPad 10.9\" 64 GB"
+          "fr": "iPad 10,9\" 64 Go"
         },
         "store": "Amazon",
         "productUrl": null,
         "imageUrl": null,
         "imageAlt": {
           "en": "iPad 10.9\" 64 GB",
-          "fr": "iPad 10.9\" 64 GB"
+          "fr": "iPad 10,9\" 64 Go"
         },
         "estimatedTotalXAF": 300700,
         "rating": 4.8,
@@ -276,7 +276,7 @@
     "order": 3,
     "name": {
       "en": "Beauty & Cosmetics",
-      "fr": "Beauté & Cosmétiques"
+      "fr": "Beauté et Cosmétiques"
     },
     "products": [
       {
@@ -412,7 +412,7 @@
     "order": 4,
     "name": {
       "en": "Home & Kitchen",
-      "fr": "Maison & Cuisine"
+      "fr": "Maison et Cuisine"
     },
     "products": [
       {
@@ -548,7 +548,7 @@
     "order": 5,
     "name": {
       "en": "Tools & Machinery",
-      "fr": "Outils & Machines"
+      "fr": "Outils et Machines"
     },
     "products": [
       {
@@ -820,7 +820,7 @@
     "order": 7,
     "name": {
       "en": "School & Office Supplies",
-      "fr": "Fournitures scolaires & bureau"
+      "fr": "Fournitures scolaires et bureau"
     },
     "products": [
       {
@@ -956,7 +956,7 @@
     "order": 8,
     "name": {
       "en": "Sports & Outdoor",
-      "fr": "Sport & Plein air"
+      "fr": "Sport et Plein air"
     },
     "products": [
       {
@@ -1092,7 +1092,7 @@
     "order": 9,
     "name": {
       "en": "Baby & Kids",
-      "fr": "Bébé & Enfants"
+      "fr": "Bébé et Enfants"
     },
     "products": [
       {

@@ -2,13 +2,23 @@ import { describe, expect, it } from 'vitest';
 import categories from '@/content/categories.json';
 import quotes from '@/content/example-quotes.json';
 import faq from '@/content/faq.json';
+import privacy from '@/content/legal/privacy.json';
+import terms from '@/content/legal/terms.json';
 import en from '@/content/i18n/en.json';
 import fr from '@/content/i18n/fr.json';
 import rankingModes from '@/content/ranking-modes.json';
 import site from '@/content/site.json';
 import testimonials from '@/content/testimonials.json';
 import { getCategories, getExampleQuotes, quoteTotal } from '@/lib/content';
-import type { Category, ExampleQuote, FaqItem, RankingMode, SiteContent, Testimonial } from '@/lib/content/types';
+import type {
+  Category,
+  ExampleQuote,
+  FaqItem,
+  LegalDoc,
+  RankingMode,
+  SiteContent,
+  Testimonial,
+} from '@/lib/content/types';
 import { validateContent, type ContentBundle } from '@/lib/content/validate';
 import { formatDays, formatXAF } from '@/lib/format';
 import { localeFromAcceptLanguage } from '@/lib/i18n';
@@ -88,6 +98,7 @@ describe('content', () => {
       quotes: quotes as ExampleQuote[],
       faq: faq as FaqItem[],
       testimonials: testimonials as Testimonial[],
+      legal: { privacy: privacy as LegalDoc, terms: terms as LegalDoc },
       dictionaries: { en, fr },
     });
 
@@ -105,11 +116,13 @@ describe('content', () => {
     b.quotes[1].isHeroPhoneExample = true;
     b.site.whatWeShip.defaultCategoryId = 'nope';
     delete (b.dictionaries.fr as Record<string, unknown>).picksCta;
+    b.legal.terms.sections[0].heading.fr = '';
     const errors = validateContent(b).join('\n');
     expect(errors).toMatch(/duplicate id "fashion-and-clothing-1"/);
     expect(errors).toMatch(/missing "fr" text/);
     expect(errors).toMatch(/exactly one quote/);
     expect(errors).toMatch(/defaultCategoryId "nope"/);
     expect(errors).toMatch(/missing key "picksCta"/);
+    expect(errors).toMatch(/legal terms section #1 heading: missing "fr" text/);
   });
 });

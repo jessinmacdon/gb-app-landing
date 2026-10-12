@@ -1,6 +1,7 @@
 import { locales } from '@/lib/i18n';
 import type {
   Category,
+  LegalDoc,
   ExampleQuote,
   FaqItem,
   RankingMode,
@@ -15,6 +16,7 @@ export type ContentBundle = {
   quotes: ExampleQuote[];
   faq: FaqItem[];
   testimonials: Testimonial[];
+  legal: Record<string, LegalDoc>;
   dictionaries: Record<string, unknown>;
 };
 
@@ -126,6 +128,30 @@ export function validateContent(c: ContentBundle): string[] {
   }
   for (const [k, v] of Object.entries({ ...s.appLinks, ...s.social, ...s.legal })) url(v, `site link ${k}`);
   if (!s.company?.legalName?.trim()) err('site: company.legalName is required');
+  localized(s.company?.address, 'site company.address');
+
+  // Legal pages
+  for (const [name, doc] of Object.entries(c.legal)) {
+    localized(doc.title, `legal ${name} title`);
+    localized(doc.contact, `legal ${name} contact`);
+    if (doc.effective) localized(doc.effective, `legal ${name} effective`);
+    doc.intro.forEach((p, i) => localized(p, `legal ${name} intro #${i + 1}`));
+    if (!doc.sections.length) err(`legal ${name}: no sections`);
+    doc.sections.forEach((sec, i) => {
+      const at = `legal ${name} section #${i + 1}`;
+      localized(sec.heading, `${at} heading`);
+      sec.blocks.forEach((b, j) => {
+        if (b.type === 'list') {
+          if (!b.items.length) err(`${at} block #${j + 1}: empty list`);
+          b.items.forEach((it, k) => {
+            if (it.term) localized(it.term, `${at} block #${j + 1} item #${k + 1} term`);
+            localized(it.text, `${at} block #${j + 1} item #${k + 1}`);
+          });
+        } else if (['p', 'h3', 'note'].includes(b.type)) localized(b.text, `${at} block #${j + 1}`);
+        else err(`${at} block #${j + 1}: unknown type "${(b as { type: string }).type}"`);
+      });
+    });
+  }
   if (!c.categories.some((cat) => cat.id === s.whatWeShip.defaultCategoryId))
     err(`site: whatWeShip.defaultCategoryId "${s.whatWeShip.defaultCategoryId}" does not match a category`);
   if (!c.rankingModes.some((m) => m.id === s.whatWeShip.defaultRankingMode))

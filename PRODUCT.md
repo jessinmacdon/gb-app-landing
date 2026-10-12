@@ -45,12 +45,15 @@ It is meant to beat what people do today:
   2. Get a quote covering product price, international shipping, customs and GlobalBuy's service fee.
   3. Pay with MTN Mobile Money or Orange Money.
   4. GlobalBuy handles shipping and customs and notifies the user when the order reaches their city's pickup point.
+- **Ordering from abroad:** someone abroad can order and pay in the app for a relative, who collects in Cameroon.
+- **Collecting:** the person collecting brings an ID.
 - **Pickup cities live today:** Douala, Yaoundé, Buea, Limbe. More cities are planned.
 - **Support:** in French and English. There's live chat in the app for customers with an active order (on the order confirmation page), and a GlobalBuy community, including support, opens on launch day. There's no WhatsApp support number yet; don't link or promise one.
 - **Stores:** any online store with a product URL, including Amazon, eBay, SHEIN, Zalando, About You, Etsy, ASOS, Nike, AliExpress, Walmart, H&M, Sephora, Adidas and Jumia.
 
 ## Capabilities and Constraints
 
+- **The app is free to download.**
 - **Payments:** MTN Mobile Money and Orange Money. No international card is required. Bank card payments are coming soon.
 - **Languages:** the site and app are bilingual, English and French.
 - **Prohibited items:** GlobalBuy does not ship weapons, counterfeits, narcotics, hazardous materials, or items banned under Cameroonian import law.

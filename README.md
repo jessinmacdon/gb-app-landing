@@ -12,13 +12,15 @@ npm run lint       # type-check
 npm run build      # fails if content is invalid
 ```
 
-## Legacy pages
+## Legal pages and old URLs
 
-The pages from the previous static site live in `public/` and are served unchanged at
-their old URLs: `/how-it-works.html`, `/contact.html`, `/privacy.html`,
-`/terms-of-service.html` (with their `styles/` and `app.js`). `/index.html` redirects
-to the new home page. They still use the old GlobalBuy24 look; port them to the new
-design when ready.
+The privacy policy and terms live at `/en/privacy`, `/fr/privacy`, `/en/terms` and
+`/fr/terms`. Their text is in `content/legal/*.json` (both languages, validated like the
+rest of the content); company address, phone and email come from `content/site.json`.
+
+`proxy.ts` sends language-less and old static-site URLs to the visitor's language:
+`/privacy.html` and `/terms-of-service.html` to the legal pages, `/how-it-works.html`
+and `/contact.html` to the home page's How it works and FAQ sections.
 
 ## Editing content
 
@@ -29,10 +31,10 @@ Money is integer XAF and is displayed as `96 800 FCFA`.
 | --- | --- |
 | `categories.json` | **What we ship**: categories and products (image, price, rating, delivery days, `active`) |
 | `ranking-modes.json` | Rank-by control labels and descriptions (`price`, `quality`, `delivery`, `variety`) |
-| `example-quotes.json` | **Pricing** quote pills and receipt, and the **paste-a-link demo** in How it works. The one with `isHeroPhoneExample: true` fills the hero phone, and Pricing opens on a different one. `originalPrice` (`{ amount, currency }`) shows the listing price in the store's currency; `sampleUrl` is the demo's example link |
+| `example-quotes.json` | The **Pricing** section's paste-a-link demo and example pills. The quote with `isHeroPhoneExample: true` fills the hero phone, and Pricing opens on a different one. `originalPrice` (`{ amount, currency }`) shows the listing price in the store's currency, and the exchange rate shown is derived from it and `breakdownXAF.product`. `sampleUrl` is each example's demo link |
 | `faq.json` | **FAQ** accordion; `defaultOpen` marks the item open on load. Answers support `[link text](https://…)` |
 | `testimonials.json` | Customer quotes and avatars. Entries with `placeholder: true` are never shown, and the section stays hidden until at least one real testimonial exists |
-| `site.json` | Stores strip, cities (`live`), payment methods, app/social/legal links, company name and support email, How-it-works steps, Why features, lifestyle photos, What-we-ship defaults. Set a social or legal link to `null` to hide it until it exists. `whatWeShip.sampleData: true` labels the picks as examples; set it to `false` once the products are real |
+| `site.json` | Stores strip, cities (`live`), payment methods, app/social/legal links, company name and support email, How-it-works steps, Why features, lifestyle photos, What-we-ship defaults. Set a social or legal link to `null` to hide it until it exists. `whatWeShip.sampleData: true` labels the picks as examples ("Example items people order") and hides the delivery-day chips and the "Fastest" ranking, since sample data has no real delivery times; set it to `false` once the products are real |
 | `i18n/en.json`, `i18n/fr.json` | Static UI copy (both files must have the same keys) |
 
 Content is checked by `lib/content/validate.ts` on every build and test run. Missing

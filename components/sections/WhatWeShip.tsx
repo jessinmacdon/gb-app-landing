@@ -25,7 +25,6 @@ export function WhatWeShip({ t, children }: { t: Dictionary; children: React.Rea
           <p className="ship__note">{t.catNote}</p>
         </div>
         {children}
-        <p className="ship__ban">{t.catBan}</p>
       </div>
     </section>
   );
@@ -71,7 +70,7 @@ export async function WhatWeShipBrowser({ lang, t, settings, appLinks }: Props) 
         picksCta: t.picksCta,
         picksEmpty: t.picksEmpty,
         daysUnit: t.daysUnit,
-        sampleTag: t.picksSampleTag,
+        exampleKicker: t.picksExampleKicker,
         tabsLabel: t.catTabsLabel,
       }}
     />

@@ -14,7 +14,6 @@ export function PaymentPickup({ lang, t, site }: { lang: Locale; t: Dictionary; 
       <div className="card-lg pay">
         <span className="eyebrow">{t.payEyebrow}</span>
         <h2 className="h2">{t.payTitle}</h2>
-        <p className="pay__sub">{t.paySub}</p>
         <ul className="pay__tiles">
           {live.map((p) => (
             <li key={p.id} className={`pay__tile ${TILE_CLASS[p.id] ?? ''}`}>

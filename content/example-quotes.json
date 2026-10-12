@@ -24,8 +24,8 @@
       "fr": "Nike Air Max 90"
     },
     "breakdownXAF": {
-      "product": 65600,
-      "shipping": 14500,
+      "product": 65589,
+      "shipping": 14511,
       "customs": 11800,
       "serviceFee": 4900
     },
@@ -40,7 +40,7 @@
     },
     "productName": {
       "en": "iPad 10.9\" 64 GB",
-      "fr": "iPad 10.9\" 64 GB"
+      "fr": "iPad 10,9\" 64 Go"
     },
     "store": "Amazon",
     "storeLine": "Amazon",
@@ -53,7 +53,7 @@
     "imageUrl": null,
     "imageAlt": {
       "en": "iPad 10.9\" 64 GB",
-      "fr": "iPad 10.9\" 64 GB"
+      "fr": "iPad 10,9\" 64 Go"
     },
     "breakdownXAF": {
       "product": 229000,
@@ -88,8 +88,8 @@
       "fr": "Robe midi fleurie"
     },
     "breakdownXAF": {
-      "product": 14200,
-      "shipping": 6800,
+      "product": 14202,
+      "shipping": 6798,
       "customs": 2900,
       "serviceFee": 2500
     },

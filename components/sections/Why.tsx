@@ -6,7 +6,7 @@ import type { Locale } from '@/lib/i18n';
 export function Why({ lang, t, site }: { lang: Locale; t: Dictionary; site: SiteContent }) {
   const img = site.images.why;
   return (
-    <section id="why" className="container why" aria-labelledby="why-title">
+    <section id="why" className={`container why${img.url ? '' : ' why--solo'}`} aria-labelledby="why-title">
       <div className="why__left">
         <span className="eyebrow">{t.whyEyebrow}</span>
         <h2 className="h2" id="why-title">

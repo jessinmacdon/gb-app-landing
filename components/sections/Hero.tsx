@@ -84,7 +84,10 @@ export function Hero({ lang, t, site, heroQuote: q }: Props) {
                 ))}
                 <div className="phone__rule" />
                 <div className="phone__total">
-                  <span className="phone__total-label">{t.rows.total}</span>
+                  <span className="phone__total-label">
+                    {t.rows.total}
+                    <span className="phone__tag">{t.phone.exampleTag}</span>
+                  </span>
                   <span className="phone__total-value">
                     {formatXAF(quoteTotal(q.breakdownXAF))} <small>FCFA</small>
                   </span>

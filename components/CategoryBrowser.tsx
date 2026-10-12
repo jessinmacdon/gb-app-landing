@@ -1,11 +1,12 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useLayoutEffect, useRef } from 'react';
 import { GetAppLink } from '@/components/GetAppLink';
 import { StarIcon } from '@/components/Icons';
 import { ImageSlot, Monogram } from '@/components/ImageSlot';
 import type { RankingModeId } from '@/lib/content/types';
 import { formatDays, formatRating, formatXAF } from '@/lib/format';
+import { EASE_OUT, prefersReducedMotion } from '@/lib/motion';
 import { rankProducts } from '@/lib/ranking';
 import { onRovingKeyDown } from '@/lib/rovingTabs';
 import { storeMonogram } from '@/lib/stores';
@@ -34,7 +35,7 @@ type Props = {
   maxProducts: number;
   /** Labels the list as examples while products are placeholder data. */
   sampleData: boolean;
-  appLinks: { googlePlay: string; appStore: string };
+  appLinks: { googlePlay: string; appStore: string | null };
   copy: {
     popularIn: string;
     rankBy: string;
@@ -42,7 +43,7 @@ type Props = {
     picksCta: string;
     picksEmpty: string;
     daysUnit: string;
-    sampleTag: string;
+    exampleKicker: string;
     tabsLabel: string;
   };
 };
@@ -85,13 +86,56 @@ export function CategoryBrowser({
     revealPill(catId, false);
   }, []);
 
+  // Motion that explains the change: re-ranking slides each product from its
+  // old row to its new one (FLIP); a new category fades its items in.
+  const listRef = useRef<HTMLOListElement>(null);
+  const before = useRef<{ kind: 'rank' | 'category'; rects: Map<string, DOMRect> } | null>(null);
+  const snapshot = (kind: 'rank' | 'category') => {
+    const rects = new Map<string, DOMRect>();
+    listRef.current
+      ?.querySelectorAll<HTMLElement>('[data-id]')
+      .forEach((el) => rects.set(el.dataset.id!, el.getBoundingClientRect()));
+    before.current = { kind, rects };
+  };
+  useLayoutEffect(() => {
+    const prev = before.current;
+    before.current = null;
+    const list = listRef.current;
+    if (!prev || !list) return;
+    const reduce = prefersReducedMotion();
+    list.querySelectorAll<HTMLElement>('[data-id]').forEach((el, i) => {
+      const old = prev.rects.get(el.dataset.id!);
+      if (prev.kind === 'rank' && old) {
+        if (reduce) return;
+        const now = el.getBoundingClientRect();
+        const dx = old.left - now.left;
+        const dy = old.top - now.top;
+        if (dx || dy)
+          el.animate([{ transform: `translate(${dx}px, ${dy}px)` }, { transform: 'none' }], {
+            duration: 420,
+            easing: EASE_OUT,
+          });
+      } else {
+        el.animate(
+          reduce
+            ? [{ opacity: 0 }, { opacity: 1 }]
+            : [{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }],
+          { duration: reduce ? 150 : 320, delay: reduce ? 0 : Math.min(i, 5) * 35, easing: EASE_OUT, fill: 'backwards' },
+        );
+      }
+    });
+  }, [catId, mode]);
+
+  // Sample data has no real delivery times, so delivery isn't shown or ranked on.
+  const visibleModes = sampleData ? modes.filter((m) => m.id !== 'delivery') : modes;
   const category = categories.find((c) => c.id === catId) ?? categories[0];
-  const activeMode = modes.find((m) => m.id === mode) ?? modes[0];
+  const activeMode = visibleModes.find((m) => m.id === mode) ?? visibleModes[0];
   if (!category || !activeMode) return null;
 
   const picks = rankProducts(category.products, activeMode.id).slice(0, maxProducts);
 
   const selectCategory = (id: string) => {
+    if (id !== category.id) snapshot('category');
     setCatId(id);
     track({ event: 'category_select', categoryId: id });
     revealPill(id, true);
@@ -124,10 +168,7 @@ export function CategoryBrowser({
       <div className="picks" id="ship-picks" role="tabpanel" aria-labelledby={`cat-tab-${category.id}`}>
         <div className="picks__head">
           <div className="picks__heading">
-            <span className="picks__kicker">
-              {copy.popularIn}
-              {sampleData ? <span className="picks__sample">{copy.sampleTag}</span> : null}
-            </span>
+            <span className="picks__kicker">{sampleData ? copy.exampleKicker : copy.popularIn}</span>
             <h3 className="picks__cat">{category.name}</h3>
             <span className="picks__desc" aria-live="polite">
               {activeMode.description}
@@ -138,7 +179,7 @@ export function CategoryBrowser({
               {copy.rankBy}
             </span>
             <div className="rank-by__seg" role="radiogroup" aria-labelledby="rank-by-label" onKeyDown={onRovingKeyDown}>
-              {modes.map((m) => (
+              {visibleModes.map((m) => (
                 <button
                   key={m.id}
                   type="button"
@@ -147,6 +188,7 @@ export function CategoryBrowser({
                   tabIndex={m.id === activeMode.id ? 0 : -1}
                   className="rank-by__opt"
                   onClick={() => {
+                    if (m.id !== activeMode.id) snapshot('rank');
                     setMode(m.id);
                     track({ event: 'ranking_select', mode: m.id, categoryId: category.id });
                   }}
@@ -161,9 +203,9 @@ export function CategoryBrowser({
         {picks.length === 0 ? (
           <p className="picks__empty">{copy.picksEmpty}</p>
         ) : (
-          <ol className="picks__list">
+          <ol className="picks__list" ref={listRef}>
             {picks.map((p, i) => (
-              <li key={p.id} className="pick">
+              <li key={p.id} className="pick" data-id={p.id}>
                 <span className={`pick__rank${i === 0 ? ' pick__rank--first' : ''}`}>{i + 1}</span>
                 <ImageSlot
                   src={p.imageUrl}
@@ -185,7 +227,9 @@ export function CategoryBrowser({
                       <StarIcon />
                       {formatRating(p.rating)}
                     </span>
-                    <span className={chip(activeMode.id === 'delivery')}>{formatDays(p.deliveryDays, copy.daysUnit)}</span>
+                    {sampleData ? null : (
+                      <span className={chip(activeMode.id === 'delivery')}>{formatDays(p.deliveryDays, copy.daysUnit)}</span>
+                    )}
                   </div>
                 </div>
               </li>

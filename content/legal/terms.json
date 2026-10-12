@@ -1,0 +1,95 @@
+{
+  "title": { "en": "Terms of Service", "fr": "Conditions d'utilisation" },
+  "effective": { "en": "Effective 1 January 2025", "fr": "En vigueur depuis le 1er janvier 2025" },
+  "intro": [],
+  "sections": [
+    {
+      "heading": { "en": "Acceptance of terms", "fr": "Acceptation des conditions" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "By accessing or using the GlobalBuy app, website and services, operated by GlobalBuy24, you accept and agree to be bound by these Terms of Service.",
+            "fr": "En accédant à l'application, au site et aux services GlobalBuy, exploités par GlobalBuy24, ou en les utilisant, vous acceptez d'être lié par les présentes conditions d'utilisation."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Licence and restrictions", "fr": "Licence et restrictions d'utilisation" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "GlobalBuy24 grants you a limited, non-exclusive, non-transferable licence to use our services for personal, non-commercial purposes.",
+            "fr": "GlobalBuy24 vous accorde une licence limitée, non exclusive et non transférable d'utilisation de nos services à des fins personnelles et non commerciales."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Product links and quotes", "fr": "Liens produits et devis" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "When you submit a product link, you confirm that you have the right to use it and that the information you provide is accurate and truthful.",
+            "fr": "En soumettant un lien produit, vous confirmez avoir le droit de l'utiliser et que les informations fournies sont exactes et sincères."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Payment and transactions", "fr": "Paiement et transactions" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "Every transaction through GlobalBuy is a binding agreement. By confirming payment, you agree to pay the quoted amount in full.",
+            "fr": "Chaque transaction effectuée via GlobalBuy constitue un engagement ferme. En confirmant le paiement, vous acceptez de régler l'intégralité du montant indiqué dans le devis."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Refunds and cancellations", "fr": "Remboursements et annulations" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "Refund requests must be made within 7 days of payment and are processed within 10 to 15 business days.",
+            "fr": "Les demandes de remboursement doivent être faites dans les 7 jours suivant le paiement et sont traitées sous 10 à 15 jours ouvrables."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Delivery and liability", "fr": "Livraison et responsabilité" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "We are not liable for delays caused by customs, carriers or events of force majeure.",
+            "fr": "Nous ne sommes pas responsables des retards dus à la douane, aux transporteurs ou à un cas de force majeure."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Dispute resolution", "fr": "Règlement des litiges" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "Any dispute arising from these Terms of Service will be resolved through good-faith negotiation.",
+            "fr": "Tout litige découlant des présentes conditions d'utilisation sera réglé par une négociation de bonne foi."
+          }
+        }
+      ]
+    }
+  ],
+  "contact": {
+    "en": "For questions about these Terms of Service, contact us:",
+    "fr": "Pour toute question sur ces conditions d'utilisation, contactez-nous :"
+  }
+}

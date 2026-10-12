@@ -8,10 +8,6 @@ const imageHosts = (process.env.IMAGE_HOSTS ?? '')
   .filter(Boolean);
 
 const nextConfig: NextConfig = {
-  // The legacy pages in public/ link to index.html, which is now the Next.js home page.
-  async redirects() {
-    return [{ source: '/index.html', destination: '/', permanent: true }];
-  },
   images: {
     remotePatterns: imageHosts.map((hostname) => ({ protocol: 'https', hostname })),
   },
