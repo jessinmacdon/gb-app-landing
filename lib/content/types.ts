@@ -40,13 +40,21 @@ export type QuoteBreakdown = {
   serviceFee: number;
 };
 
+export type Money = { amount: number; currency: string };
+
 export type ExampleQuote = {
   id: string;
   order: number;
   tabLabel: Localized;
   productName: Localized;
+  /** Store display name, e.g. "Zalando". */
+  store: string;
   /** e.g. "Zalando · EU 42" */
   storeLine: string;
+  /** The listing price in the store's own currency, shown next to the FCFA breakdown. */
+  originalPrice: Money | null;
+  /** Example link used by the paste-a-link demo. */
+  sampleUrl: string | null;
   /** Text shown in the hero phone's pasted-link field. */
   linkPreview: string | null;
   imageUrl: string | null;
@@ -79,8 +87,6 @@ export type Testimonial = {
 export type ImageSlotContent = {
   url: string | null;
   alt: Localized;
-  /** Shown in the striped placeholder while url is null. */
-  placeholderLabel: string;
 };
 
 export type PaymentMethod = {
@@ -101,8 +107,11 @@ export type SiteContent = {
   cities: City[];
   payments: PaymentMethod[];
   appLinks: { googlePlay: string; appStore: string };
-  social: Record<SocialNetwork, string>;
-  legal: { privacy: string; terms: string; refund: string };
+  /** null hides the icon until the account exists. */
+  social: Record<SocialNetwork, string | null>;
+  /** null hides the link until the page exists. */
+  legal: { privacy: string | null; terms: string | null; refund: string | null };
+  company: { legalName: string; supportEmail: string | null };
   steps: { order: number; title: Localized; body: Localized }[];
   features: { order: number; title: Localized; body: Localized }[];
   images: { hero: ImageSlotContent; why: ImageSlotContent; cta: ImageSlotContent };
@@ -110,5 +119,7 @@ export type SiteContent = {
     defaultCategoryId: string;
     defaultRankingMode: RankingModeId;
     maxProducts: number;
+    /** True while products are placeholder examples; labels the list as examples. */
+    sampleData: boolean;
   };
 };

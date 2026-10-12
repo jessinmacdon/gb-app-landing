@@ -46,7 +46,7 @@ It is meant to beat what people do today:
   3. Pay with MTN Mobile Money or Orange Money.
   4. GlobalBuy handles shipping and customs and notifies the user when the order reaches their city's pickup point.
 - **Pickup cities live today:** Douala, Yaoundé, Buea, Limbe. More cities are planned.
-- **Support:** in French and English, in the app and on WhatsApp.
+- **Support:** in French and English. There's live chat in the app for customers with an active order (on the order confirmation page), and a GlobalBuy community, including support, opens on launch day. There's no WhatsApp support number yet; don't link or promise one.
 - **Stores:** any online store with a product URL, including Amazon, eBay, SHEIN, Zalando, About You, Etsy, ASOS, Nike, AliExpress, Walmart, H&M, Sephora, Adidas and Jumia.
 
 ## Capabilities and Constraints
@@ -57,6 +57,7 @@ It is meant to beat what people do today:
 - **Authenticity:** GlobalBuy buys only from official retailers and authorised sellers.
 - **Tracking:** every stage, from purchase through customs to the pickup notification, is visible in the app.
 - **Site stack:** Next.js 16 + TypeScript on Netlify. Dynamic content comes from JSON in `content/`.
+- **Refund policy:** in progress. Don't link to it or describe its terms until it's published.
 - **Undecided:** whether the quote breakdown (product + shipping + customs + service fee) is a permanent, fixed structure. Don't present it as a guarantee beyond "the quote you see is what you pay".
 
 ## Brand Commitments
@@ -69,6 +70,7 @@ It is meant to beat what people do today:
 - **Missing evidence:** there are no confirmed real customer numbers, reviews, testimonials or order statistics yet.
 - **Placeholders:** the testimonials, product prices, ratings, delivery times and example quotes in `content/` are invented placeholders, and future work must not present them as real.
 - **Assets:** there is no photography and no official store badge or MTN/Orange logo artwork in the repo yet.
+- **Resale prices:** there's no research on local resale prices, so don't show markup comparisons with invented local prices.
 - **Logo:** an earlier site referenced `img/logo/logo_primary.png`, but the file isn't in the repo.
 
 ## Product Principles

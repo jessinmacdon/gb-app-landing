@@ -1,8 +1,9 @@
 'use client';
 
 import type { Dictionary } from '@/lib/content';
-import type { QuoteBreakdown } from '@/lib/content/types';
-import { formatXAF } from '@/lib/format';
+import type { Money, QuoteBreakdown } from '@/lib/content/types';
+import { formatMoney, formatXAF } from '@/lib/format';
+import { onRovingKeyDown } from '@/lib/rovingTabs';
 import { track } from '@/lib/track';
 import { useStickyState } from '@/lib/useStickyState';
 
@@ -10,7 +11,9 @@ export type QuoteView = {
   id: string;
   tabLabel: string;
   productName: string;
+  store: string;
   storeLine: string;
+  originalPrice: Money | null;
   breakdownXAF: QuoteBreakdown;
   totalXAF: number;
 };
@@ -19,8 +22,11 @@ type Props = {
   /** Eyebrow, title and copy rendered above the quote pills. */
   children: React.ReactNode;
   quotes: QuoteView[];
+  /** Selected first; the hero already shows a different example. */
+  defaultQuoteId: string;
+  lang: 'en' | 'fr';
   rows: Dictionary['rows'];
-  copy: { priceTry: string; exampleTag: string; priceDisclaimer: string };
+  copy: { priceTry: string; exampleTag: string; priceDisclaimer: string; originalPrice: string };
 };
 
 const ROWS = [
@@ -31,8 +37,8 @@ const ROWS = [
 ] as const;
 
 /** Pricing section body: intro and quote pills on the left, receipt card on the right. */
-export function QuoteExplorer({ children, quotes, rows, copy }: Props) {
-  const [quoteId, setQuoteId] = useStickyState('pricing.quote', quotes[0]?.id);
+export function QuoteExplorer({ children, quotes, defaultQuoteId, lang, rows, copy }: Props) {
+  const [quoteId, setQuoteId] = useStickyState('pricing.quote', defaultQuoteId);
   const quote = quotes.find((q) => q.id === quoteId) ?? quotes[0];
   if (!quote) return null;
 
@@ -44,13 +50,14 @@ export function QuoteExplorer({ children, quotes, rows, copy }: Props) {
           <span className="pricing__try-label" id="quote-tabs-label">
             {copy.priceTry}
           </span>
-          <div className="quote-tabs" role="tablist" aria-labelledby="quote-tabs-label">
+          <div className="quote-tabs" role="tablist" aria-labelledby="quote-tabs-label" onKeyDown={onRovingKeyDown}>
             {quotes.map((q) => (
               <button
                 key={q.id}
                 type="button"
                 role="tab"
                 aria-selected={q.id === quote.id}
+                tabIndex={q.id === quote.id ? 0 : -1}
                 aria-controls="quote-receipt"
                 className="quote-tab"
                 onClick={() => {
@@ -73,6 +80,12 @@ export function QuoteExplorer({ children, quotes, rows, copy }: Props) {
           </div>
           <span className="receipt__tag">{copy.exampleTag}</span>
         </div>
+        {quote.originalPrice ? (
+          <p className="receipt__origin">
+            <span>{copy.originalPrice.replace('{store}', quote.store)}</span>
+            <span className="receipt__origin-value">{formatMoney(quote.originalPrice, lang)}</span>
+          </p>
+        ) : null}
         <dl className="receipt__rows">
           {ROWS.map(([label, key]) => (
             <div key={key} className="receipt__row">

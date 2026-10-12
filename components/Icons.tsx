@@ -62,3 +62,18 @@ export const socialMeta: Record<SocialNetwork, { label: string; icon: React.Reac
     ),
   },
 };
+
+// Small UI glyphs, drawn on a 16px grid with one stroke weight.
+const glyph = (d: string, size = 16) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d={d} />
+  </svg>
+);
+export const CheckIcon = ({ size }: { size?: number }) => glyph('M3 8.5l3.2 3L13 4.5', size);
+export const PlusIcon = ({ size }: { size?: number }) => glyph('M8 3v10M3 8h10', size);
+export const MinusIcon = ({ size }: { size?: number }) => glyph('M3 8h10', size);
+export const StarIcon = ({ size = 12 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+    <path d="M8 1.2l2.1 4.3 4.7.7-3.4 3.3.8 4.7L8 12l-4.2 2.2.8-4.7L1.2 6.2l4.7-.7z" />
+  </svg>
+);

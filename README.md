@@ -29,10 +29,10 @@ Money is integer XAF and is displayed as `96 800 FCFA`.
 | --- | --- |
 | `categories.json` | **What we ship**: categories and products (image, price, rating, delivery days, `active`) |
 | `ranking-modes.json` | Rank-by control labels and descriptions (`price`, `quality`, `delivery`, `variety`) |
-| `example-quotes.json` | **Pricing** quote pills and receipt; the one with `isHeroPhoneExample: true` also fills the hero phone |
+| `example-quotes.json` | **Pricing** quote pills and receipt, and the **paste-a-link demo** in How it works. The one with `isHeroPhoneExample: true` fills the hero phone, and Pricing opens on a different one. `originalPrice` (`{ amount, currency }`) shows the listing price in the store's currency; `sampleUrl` is the demo's example link |
 | `faq.json` | **FAQ** accordion; `defaultOpen` marks the item open on load. Answers support `[link text](https://…)` |
-| `testimonials.json` | Customer quotes and avatars |
-| `site.json` | Stores strip, cities (`live`), payment methods, app/social/legal links, How-it-works steps, Why features, lifestyle photos, What-we-ship defaults |
+| `testimonials.json` | Customer quotes and avatars. Entries with `placeholder: true` are never shown, and the section stays hidden until at least one real testimonial exists |
+| `site.json` | Stores strip, cities (`live`), payment methods, app/social/legal links, company name and support email, How-it-works steps, Why features, lifestyle photos, What-we-ship defaults. Set a social or legal link to `null` to hide it until it exists. `whatWeShip.sampleData: true` labels the picks as examples; set it to `false` once the products are real |
 | `i18n/en.json`, `i18n/fr.json` | Static UI copy (both files must have the same keys) |
 
 Content is checked by `lib/content/validate.ts` on every build and test run. Missing
@@ -42,7 +42,9 @@ keys fail with a readable list of problems.
 **Images.** Any `imageUrl`, `avatarUrl`, `logoUrl` or `site.images.*.url` can be a
 path under `public/` (e.g. `/images/products/jbl-flip-6.jpg`) or an absolute URL. For
 remote hosts, list them in the `IMAGE_HOSTS` env var (comma-separated) so Next can
-optimize them. A missing or broken image falls back to the design's striped placeholder.
+optimize them. Missing or broken images never show an empty frame: product and
+quote thumbnails fall back to a store monogram, avatars to initials, and the hero,
+Why and final-CTA photos collapse (the CTA becomes a single column).
 Product thumbnails should be square and at least 256×256.
 
 **Quote totals** are always computed from the breakdown; there is no total field to keep in sync.

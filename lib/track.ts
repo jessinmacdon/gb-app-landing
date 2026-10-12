@@ -9,7 +9,8 @@ export type TrackEvent =
   | { event: 'ranking_select'; mode: string; categoryId: string }
   | { event: 'quote_select'; quoteId: string }
   | { event: 'faq_open'; faqId: string }
-  | { event: 'language_switch'; to: string };
+  | { event: 'language_switch'; to: string }
+  | { event: 'demo_quote'; store: string | null; sample: boolean };
 
 declare global {
   interface Window {
