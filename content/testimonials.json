@@ -1,0 +1,47 @@
+[
+  {
+    "id": "t-1",
+    "order": 1,
+    "name": "Brenda N.",
+    "avatarUrl": null,
+    "quote": {
+      "en": "I ordered a laptop from Amazon and paid with MoMo. The price in the app was exactly what I paid.",
+      "fr": "J'ai commandé un ordinateur sur Amazon et payé par MoMo. Le prix dans l'app était exactement ce que j'ai payé."
+    },
+    "meta": {
+      "en": "Douala · Electronics",
+      "fr": "Douala · Électronique"
+    },
+    "placeholder": true
+  },
+  {
+    "id": "t-2",
+    "order": 2,
+    "name": "Arnaud T.",
+    "avatarUrl": null,
+    "quote": {
+      "en": "Zalando never shipped to Cameroon. Now I paste the link and pick up my order in Yaoundé.",
+      "fr": "Zalando ne livrait pas au Cameroun. Maintenant je colle le lien et je récupère ma commande à Yaoundé."
+    },
+    "meta": {
+      "en": "Yaoundé · Fashion",
+      "fr": "Yaoundé · Mode"
+    },
+    "placeholder": true
+  },
+  {
+    "id": "t-3",
+    "order": 3,
+    "name": "Grace E.",
+    "avatarUrl": null,
+    "quote": {
+      "en": "I could follow my parcel through customs in the app, and support answered me on WhatsApp in English.",
+      "fr": "J'ai suivi mon colis jusqu'à la douane dans l'app, et le support m'a répondu sur WhatsApp."
+    },
+    "meta": {
+      "en": "Buea · Baby & Kids",
+      "fr": "Buea · Bébé & Enfants"
+    },
+    "placeholder": true
+  }
+]

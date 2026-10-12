@@ -1,0 +1,1226 @@
+[
+  {
+    "id": "fashion-and-clothing",
+    "order": 1,
+    "name": {
+      "en": "Fashion & Clothing",
+      "fr": "Mode & Vêtements"
+    },
+    "products": [
+      {
+        "id": "fashion-and-clothing-1",
+        "name": {
+          "en": "Levi's 501 jeans",
+          "fr": "Jean Levi's 501"
+        },
+        "store": "Zalando",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Levi's 501 jeans",
+          "fr": "Jean Levi's 501"
+        },
+        "estimatedTotalXAF": 58400,
+        "rating": 4.7,
+        "deliveryDays": {
+          "min": 10,
+          "max": 14
+        },
+        "active": true
+      },
+      {
+        "id": "fashion-and-clothing-2",
+        "name": {
+          "en": "Nike Air Max 90",
+          "fr": "Nike Air Max 90"
+        },
+        "store": "Zalando",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Nike Air Max 90",
+          "fr": "Nike Air Max 90"
+        },
+        "estimatedTotalXAF": 96800,
+        "rating": 4.8,
+        "deliveryDays": {
+          "min": 10,
+          "max": 14
+        },
+        "active": true
+      },
+      {
+        "id": "fashion-and-clothing-3",
+        "name": {
+          "en": "Linen shirt",
+          "fr": "Chemise en lin"
+        },
+        "store": "H&M",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Linen shirt",
+          "fr": "Chemise en lin"
+        },
+        "estimatedTotalXAF": 21900,
+        "rating": 4.3,
+        "deliveryDays": {
+          "min": 12,
+          "max": 16
+        },
+        "active": true
+      },
+      {
+        "id": "fashion-and-clothing-4",
+        "name": {
+          "en": "Wax print maxi dress",
+          "fr": "Robe longue en wax"
+        },
+        "store": "Etsy",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Wax print maxi dress",
+          "fr": "Robe longue en wax"
+        },
+        "estimatedTotalXAF": 47500,
+        "rating": 4.9,
+        "deliveryDays": {
+          "min": 14,
+          "max": 21
+        },
+        "active": true
+      },
+      {
+        "id": "fashion-and-clothing-5",
+        "name": {
+          "en": "Puffer jacket",
+          "fr": "Doudoune"
+        },
+        "store": "SHEIN",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Puffer jacket",
+          "fr": "Doudoune"
+        },
+        "estimatedTotalXAF": 18600,
+        "rating": 4,
+        "deliveryDays": {
+          "min": 15,
+          "max": 22
+        },
+        "active": true
+      },
+      {
+        "id": "fashion-and-clothing-6",
+        "name": {
+          "en": "adidas Samba",
+          "fr": "adidas Samba"
+        },
+        "store": "Adidas",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "adidas Samba",
+          "fr": "adidas Samba"
+        },
+        "estimatedTotalXAF": 84200,
+        "rating": 4.8,
+        "deliveryDays": {
+          "min": 9,
+          "max": 13
+        },
+        "active": true
+      }
+    ]
+  },
+  {
+    "id": "electronics-and-gadgets",
+    "order": 2,
+    "name": {
+      "en": "Electronics & Gadgets",
+      "fr": "Électronique & Gadgets"
+    },
+    "products": [
+      {
+        "id": "electronics-and-gadgets-1",
+        "name": {
+          "en": "Samsung Galaxy A55",
+          "fr": "Samsung Galaxy A55"
+        },
+        "store": "Amazon",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Samsung Galaxy A55",
+          "fr": "Samsung Galaxy A55"
+        },
+        "estimatedTotalXAF": 268000,
+        "rating": 4.6,
+        "deliveryDays": {
+          "min": 8,
+          "max": 12
+        },
+        "active": true
+      },
+      {
+        "id": "electronics-and-gadgets-2",
+        "name": {
+          "en": "JBL Flip 6 speaker",
+          "fr": "Enceinte JBL Flip 6"
+        },
+        "store": "Amazon",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "JBL Flip 6 speaker",
+          "fr": "Enceinte JBL Flip 6"
+        },
+        "estimatedTotalXAF": 89500,
+        "rating": 4.7,
+        "deliveryDays": {
+          "min": 8,
+          "max": 12
+        },
+        "active": true
+      },
+      {
+        "id": "electronics-and-gadgets-3",
+        "name": {
+          "en": "Anker 20,000 mAh power bank",
+          "fr": "Batterie externe Anker 20 000 mAh"
+        },
+        "store": "AliExpress",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Anker 20,000 mAh power bank",
+          "fr": "Batterie externe Anker 20 000 mAh"
+        },
+        "estimatedTotalXAF": 19800,
+        "rating": 4.4,
+        "deliveryDays": {
+          "min": 16,
+          "max": 25
+        },
+        "active": true
+      },
+      {
+        "id": "electronics-and-gadgets-4",
+        "name": {
+          "en": "iPad 10.9\" 64 GB",
+          "fr": "iPad 10.9\" 64 GB"
+        },
+        "store": "Amazon",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "iPad 10.9\" 64 GB",
+          "fr": "iPad 10.9\" 64 GB"
+        },
+        "estimatedTotalXAF": 300700,
+        "rating": 4.8,
+        "deliveryDays": {
+          "min": 8,
+          "max": 12
+        },
+        "active": true
+      },
+      {
+        "id": "electronics-and-gadgets-5",
+        "name": {
+          "en": "Sony WH-1000XM5",
+          "fr": "Sony WH-1000XM5"
+        },
+        "store": "eBay",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Sony WH-1000XM5",
+          "fr": "Sony WH-1000XM5"
+        },
+        "estimatedTotalXAF": 214000,
+        "rating": 4.7,
+        "deliveryDays": {
+          "min": 11,
+          "max": 16
+        },
+        "active": true
+      },
+      {
+        "id": "electronics-and-gadgets-6",
+        "name": {
+          "en": "Redmi Watch",
+          "fr": "Redmi Watch"
+        },
+        "store": "AliExpress",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Redmi Watch",
+          "fr": "Redmi Watch"
+        },
+        "estimatedTotalXAF": 31500,
+        "rating": 4.2,
+        "deliveryDays": {
+          "min": 16,
+          "max": 25
+        },
+        "active": true
+      }
+    ]
+  },
+  {
+    "id": "beauty-and-cosmetics",
+    "order": 3,
+    "name": {
+      "en": "Beauty & Cosmetics",
+      "fr": "Beauté & Cosmétiques"
+    },
+    "products": [
+      {
+        "id": "beauty-and-cosmetics-1",
+        "name": {
+          "en": "CeraVe moisturising cream",
+          "fr": "Crème hydratante CeraVe"
+        },
+        "store": "Amazon",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "CeraVe moisturising cream",
+          "fr": "Crème hydratante CeraVe"
+        },
+        "estimatedTotalXAF": 16900,
+        "rating": 4.8,
+        "deliveryDays": {
+          "min": 8,
+          "max": 12
+        },
+        "active": true
+      },
+      {
+        "id": "beauty-and-cosmetics-2",
+        "name": {
+          "en": "Fenty Beauty Gloss Bomb",
+          "fr": "Fenty Beauty Gloss Bomb"
+        },
+        "store": "Sephora",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Fenty Beauty Gloss Bomb",
+          "fr": "Fenty Beauty Gloss Bomb"
+        },
+        "estimatedTotalXAF": 24800,
+        "rating": 4.7,
+        "deliveryDays": {
+          "min": 10,
+          "max": 14
+        },
+        "active": true
+      },
+      {
+        "id": "beauty-and-cosmetics-3",
+        "name": {
+          "en": "The Ordinary Niacinamide",
+          "fr": "The Ordinary Niacinamide"
+        },
+        "store": "ASOS",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "The Ordinary Niacinamide",
+          "fr": "The Ordinary Niacinamide"
+        },
+        "estimatedTotalXAF": 9700,
+        "rating": 4.5,
+        "deliveryDays": {
+          "min": 10,
+          "max": 15
+        },
+        "active": true
+      },
+      {
+        "id": "beauty-and-cosmetics-4",
+        "name": {
+          "en": "Dyson Airwrap",
+          "fr": "Dyson Airwrap"
+        },
+        "store": "Amazon",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Dyson Airwrap",
+          "fr": "Dyson Airwrap"
+        },
+        "estimatedTotalXAF": 412000,
+        "rating": 4.6,
+        "deliveryDays": {
+          "min": 8,
+          "max": 12
+        },
+        "active": true
+      },
+      {
+        "id": "beauty-and-cosmetics-5",
+        "name": {
+          "en": "Satin bonnet set",
+          "fr": "Lot de bonnets en satin"
+        },
+        "store": "SHEIN",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Satin bonnet set",
+          "fr": "Lot de bonnets en satin"
+        },
+        "estimatedTotalXAF": 4900,
+        "rating": 4.1,
+        "deliveryDays": {
+          "min": 15,
+          "max": 22
+        },
+        "active": true
+      },
+      {
+        "id": "beauty-and-cosmetics-6",
+        "name": {
+          "en": "Shea body oil",
+          "fr": "Huile corporelle au karité"
+        },
+        "store": "Etsy",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Shea body oil",
+          "fr": "Huile corporelle au karité"
+        },
+        "estimatedTotalXAF": 13200,
+        "rating": 4.8,
+        "deliveryDays": {
+          "min": 14,
+          "max": 20
+        },
+        "active": true
+      }
+    ]
+  },
+  {
+    "id": "home-and-kitchen",
+    "order": 4,
+    "name": {
+      "en": "Home & Kitchen",
+      "fr": "Maison & Cuisine"
+    },
+    "products": [
+      {
+        "id": "home-and-kitchen-1",
+        "name": {
+          "en": "Ninja air fryer",
+          "fr": "Friteuse sans huile Ninja"
+        },
+        "store": "Amazon",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Ninja air fryer",
+          "fr": "Friteuse sans huile Ninja"
+        },
+        "estimatedTotalXAF": 112000,
+        "rating": 4.8,
+        "deliveryDays": {
+          "min": 9,
+          "max": 13
+        },
+        "active": true
+      },
+      {
+        "id": "home-and-kitchen-2",
+        "name": {
+          "en": "KitchenAid stand mixer",
+          "fr": "Robot pâtissier KitchenAid"
+        },
+        "store": "Walmart",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "KitchenAid stand mixer",
+          "fr": "Robot pâtissier KitchenAid"
+        },
+        "estimatedTotalXAF": 298000,
+        "rating": 4.8,
+        "deliveryDays": {
+          "min": 12,
+          "max": 18
+        },
+        "active": true
+      },
+      {
+        "id": "home-and-kitchen-3",
+        "name": {
+          "en": "Non-stick pan set",
+          "fr": "Set de poêles antiadhésives"
+        },
+        "store": "AliExpress",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Non-stick pan set",
+          "fr": "Set de poêles antiadhésives"
+        },
+        "estimatedTotalXAF": 27400,
+        "rating": 4,
+        "deliveryDays": {
+          "min": 18,
+          "max": 26
+        },
+        "active": true
+      },
+      {
+        "id": "home-and-kitchen-4",
+        "name": {
+          "en": "Oster blender",
+          "fr": "Blender Oster"
+        },
+        "store": "Walmart",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Oster blender",
+          "fr": "Blender Oster"
+        },
+        "estimatedTotalXAF": 46900,
+        "rating": 4.4,
+        "deliveryDays": {
+          "min": 12,
+          "max": 18
+        },
+        "active": true
+      },
+      {
+        "id": "home-and-kitchen-5",
+        "name": {
+          "en": "Cotton bedsheet set",
+          "fr": "Parure de draps en coton"
+        },
+        "store": "H&M",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Cotton bedsheet set",
+          "fr": "Parure de draps en coton"
+        },
+        "estimatedTotalXAF": 23500,
+        "rating": 4.3,
+        "deliveryDays": {
+          "min": 12,
+          "max": 16
+        },
+        "active": true
+      },
+      {
+        "id": "home-and-kitchen-6",
+        "name": {
+          "en": "Brita filter jug",
+          "fr": "Carafe filtrante Brita"
+        },
+        "store": "Amazon",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Brita filter jug",
+          "fr": "Carafe filtrante Brita"
+        },
+        "estimatedTotalXAF": 21800,
+        "rating": 4.6,
+        "deliveryDays": {
+          "min": 8,
+          "max": 12
+        },
+        "active": true
+      }
+    ]
+  },
+  {
+    "id": "tools-and-machinery",
+    "order": 5,
+    "name": {
+      "en": "Tools & Machinery",
+      "fr": "Outils & Machines"
+    },
+    "products": [
+      {
+        "id": "tools-and-machinery-1",
+        "name": {
+          "en": "DeWalt cordless drill",
+          "fr": "Perceuse sans fil DeWalt"
+        },
+        "store": "Amazon",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "DeWalt cordless drill",
+          "fr": "Perceuse sans fil DeWalt"
+        },
+        "estimatedTotalXAF": 128000,
+        "rating": 4.8,
+        "deliveryDays": {
+          "min": 10,
+          "max": 14
+        },
+        "active": true
+      },
+      {
+        "id": "tools-and-machinery-2",
+        "name": {
+          "en": "Bosch angle grinder",
+          "fr": "Meuleuse Bosch"
+        },
+        "store": "eBay",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Bosch angle grinder",
+          "fr": "Meuleuse Bosch"
+        },
+        "estimatedTotalXAF": 74500,
+        "rating": 4.6,
+        "deliveryDays": {
+          "min": 11,
+          "max": 16
+        },
+        "active": true
+      },
+      {
+        "id": "tools-and-machinery-3",
+        "name": {
+          "en": "108-piece socket set",
+          "fr": "Coffret de 108 douilles"
+        },
+        "store": "AliExpress",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "108-piece socket set",
+          "fr": "Coffret de 108 douilles"
+        },
+        "estimatedTotalXAF": 29900,
+        "rating": 4.2,
+        "deliveryDays": {
+          "min": 18,
+          "max": 26
+        },
+        "active": true
+      },
+      {
+        "id": "tools-and-machinery-4",
+        "name": {
+          "en": "2 kW inverter generator",
+          "fr": "Groupe électrogène 2 kW"
+        },
+        "store": "Walmart",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "2 kW inverter generator",
+          "fr": "Groupe électrogène 2 kW"
+        },
+        "estimatedTotalXAF": 465000,
+        "rating": 4.5,
+        "deliveryDays": {
+          "min": 14,
+          "max": 21
+        },
+        "active": true
+      },
+      {
+        "id": "tools-and-machinery-5",
+        "name": {
+          "en": "Laser level",
+          "fr": "Niveau laser"
+        },
+        "store": "Amazon",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Laser level",
+          "fr": "Niveau laser"
+        },
+        "estimatedTotalXAF": 38600,
+        "rating": 4.4,
+        "deliveryDays": {
+          "min": 9,
+          "max": 13
+        },
+        "active": true
+      },
+      {
+        "id": "tools-and-machinery-6",
+        "name": {
+          "en": "Welding helmet",
+          "fr": "Masque de soudure"
+        },
+        "store": "eBay",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Welding helmet",
+          "fr": "Masque de soudure"
+        },
+        "estimatedTotalXAF": 31200,
+        "rating": 4.3,
+        "deliveryDays": {
+          "min": 12,
+          "max": 17
+        },
+        "active": true
+      }
+    ]
+  },
+  {
+    "id": "auto-parts",
+    "order": 6,
+    "name": {
+      "en": "Auto Parts",
+      "fr": "Pièces auto"
+    },
+    "products": [
+      {
+        "id": "auto-parts-1",
+        "name": {
+          "en": "Bosch wiper blades",
+          "fr": "Balais d'essuie-glace Bosch"
+        },
+        "store": "Amazon",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Bosch wiper blades",
+          "fr": "Balais d'essuie-glace Bosch"
+        },
+        "estimatedTotalXAF": 14800,
+        "rating": 4.6,
+        "deliveryDays": {
+          "min": 9,
+          "max": 13
+        },
+        "active": true
+      },
+      {
+        "id": "auto-parts-2",
+        "name": {
+          "en": "Toyota oil filter",
+          "fr": "Filtre à huile Toyota"
+        },
+        "store": "eBay",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Toyota oil filter",
+          "fr": "Filtre à huile Toyota"
+        },
+        "estimatedTotalXAF": 8900,
+        "rating": 4.7,
+        "deliveryDays": {
+          "min": 12,
+          "max": 17
+        },
+        "active": true
+      },
+      {
+        "id": "auto-parts-3",
+        "name": {
+          "en": "OBD2 diagnostic scanner",
+          "fr": "Scanner de diagnostic OBD2"
+        },
+        "store": "AliExpress",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "OBD2 diagnostic scanner",
+          "fr": "Scanner de diagnostic OBD2"
+        },
+        "estimatedTotalXAF": 15600,
+        "rating": 4.3,
+        "deliveryDays": {
+          "min": 16,
+          "max": 24
+        },
+        "active": true
+      },
+      {
+        "id": "auto-parts-4",
+        "name": {
+          "en": "Brake pad set",
+          "fr": "Jeu de plaquettes de frein"
+        },
+        "store": "eBay",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Brake pad set",
+          "fr": "Jeu de plaquettes de frein"
+        },
+        "estimatedTotalXAF": 36700,
+        "rating": 4.5,
+        "deliveryDays": {
+          "min": 12,
+          "max": 17
+        },
+        "active": true
+      },
+      {
+        "id": "auto-parts-5",
+        "name": {
+          "en": "Car jump starter",
+          "fr": "Booster de démarrage"
+        },
+        "store": "Amazon",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Car jump starter",
+          "fr": "Booster de démarrage"
+        },
+        "estimatedTotalXAF": 62400,
+        "rating": 4.6,
+        "deliveryDays": {
+          "min": 9,
+          "max": 13
+        },
+        "active": true
+      },
+      {
+        "id": "auto-parts-6",
+        "name": {
+          "en": "Dash cam",
+          "fr": "Caméra embarquée"
+        },
+        "store": "Amazon",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Dash cam",
+          "fr": "Caméra embarquée"
+        },
+        "estimatedTotalXAF": 48900,
+        "rating": 4.4,
+        "deliveryDays": {
+          "min": 9,
+          "max": 13
+        },
+        "active": true
+      }
+    ]
+  },
+  {
+    "id": "school-and-office-supplies",
+    "order": 7,
+    "name": {
+      "en": "School & Office Supplies",
+      "fr": "Fournitures scolaires & bureau"
+    },
+    "products": [
+      {
+        "id": "school-and-office-supplies-1",
+        "name": {
+          "en": "Casio fx-991 calculator",
+          "fr": "Calculatrice Casio fx-991"
+        },
+        "store": "Amazon",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Casio fx-991 calculator",
+          "fr": "Calculatrice Casio fx-991"
+        },
+        "estimatedTotalXAF": 17500,
+        "rating": 4.8,
+        "deliveryDays": {
+          "min": 8,
+          "max": 12
+        },
+        "active": true
+      },
+      {
+        "id": "school-and-office-supplies-2",
+        "name": {
+          "en": "JanSport backpack",
+          "fr": "Sac à dos JanSport"
+        },
+        "store": "Zalando",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "JanSport backpack",
+          "fr": "Sac à dos JanSport"
+        },
+        "estimatedTotalXAF": 33800,
+        "rating": 4.6,
+        "deliveryDays": {
+          "min": 10,
+          "max": 14
+        },
+        "active": true
+      },
+      {
+        "id": "school-and-office-supplies-3",
+        "name": {
+          "en": "Notebook pack",
+          "fr": "Lot de cahiers"
+        },
+        "store": "Walmart",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Notebook pack",
+          "fr": "Lot de cahiers"
+        },
+        "estimatedTotalXAF": 9800,
+        "rating": 4.3,
+        "deliveryDays": {
+          "min": 12,
+          "max": 18
+        },
+        "active": true
+      },
+      {
+        "id": "school-and-office-supplies-4",
+        "name": {
+          "en": "LED desk lamp",
+          "fr": "Lampe de bureau LED"
+        },
+        "store": "AliExpress",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "LED desk lamp",
+          "fr": "Lampe de bureau LED"
+        },
+        "estimatedTotalXAF": 11200,
+        "rating": 4.1,
+        "deliveryDays": {
+          "min": 16,
+          "max": 24
+        },
+        "active": true
+      },
+      {
+        "id": "school-and-office-supplies-5",
+        "name": {
+          "en": "HP DeskJet printer",
+          "fr": "Imprimante HP DeskJet"
+        },
+        "store": "Amazon",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "HP DeskJet printer",
+          "fr": "Imprimante HP DeskJet"
+        },
+        "estimatedTotalXAF": 74900,
+        "rating": 4.2,
+        "deliveryDays": {
+          "min": 9,
+          "max": 13
+        },
+        "active": true
+      },
+      {
+        "id": "school-and-office-supplies-6",
+        "name": {
+          "en": "Ergonomic office chair",
+          "fr": "Chaise de bureau ergonomique"
+        },
+        "store": "Walmart",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Ergonomic office chair",
+          "fr": "Chaise de bureau ergonomique"
+        },
+        "estimatedTotalXAF": 139000,
+        "rating": 4.4,
+        "deliveryDays": {
+          "min": 14,
+          "max": 21
+        },
+        "active": true
+      }
+    ]
+  },
+  {
+    "id": "sports-and-outdoor",
+    "order": 8,
+    "name": {
+      "en": "Sports & Outdoor",
+      "fr": "Sport & Plein air"
+    },
+    "products": [
+      {
+        "id": "sports-and-outdoor-1",
+        "name": {
+          "en": "adidas match football",
+          "fr": "Ballon de football adidas"
+        },
+        "store": "Adidas",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "adidas match football",
+          "fr": "Ballon de football adidas"
+        },
+        "estimatedTotalXAF": 22400,
+        "rating": 4.7,
+        "deliveryDays": {
+          "min": 9,
+          "max": 13
+        },
+        "active": true
+      },
+      {
+        "id": "sports-and-outdoor-2",
+        "name": {
+          "en": "Yoga mat",
+          "fr": "Tapis de yoga"
+        },
+        "store": "Amazon",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Yoga mat",
+          "fr": "Tapis de yoga"
+        },
+        "estimatedTotalXAF": 16300,
+        "rating": 4.5,
+        "deliveryDays": {
+          "min": 8,
+          "max": 12
+        },
+        "active": true
+      },
+      {
+        "id": "sports-and-outdoor-3",
+        "name": {
+          "en": "Nike Pegasus running shoes",
+          "fr": "Chaussures de running Nike Pegasus"
+        },
+        "store": "Nike",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Nike Pegasus running shoes",
+          "fr": "Chaussures de running Nike Pegasus"
+        },
+        "estimatedTotalXAF": 87600,
+        "rating": 4.8,
+        "deliveryDays": {
+          "min": 9,
+          "max": 13
+        },
+        "active": true
+      },
+      {
+        "id": "sports-and-outdoor-4",
+        "name": {
+          "en": "Adjustable dumbbells",
+          "fr": "Haltères réglables"
+        },
+        "store": "Walmart",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Adjustable dumbbells",
+          "fr": "Haltères réglables"
+        },
+        "estimatedTotalXAF": 54200,
+        "rating": 4.4,
+        "deliveryDays": {
+          "min": 14,
+          "max": 21
+        },
+        "active": true
+      },
+      {
+        "id": "sports-and-outdoor-5",
+        "name": {
+          "en": "4-person camping tent",
+          "fr": "Tente de camping 4 places"
+        },
+        "store": "eBay",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "4-person camping tent",
+          "fr": "Tente de camping 4 places"
+        },
+        "estimatedTotalXAF": 48800,
+        "rating": 4.3,
+        "deliveryDays": {
+          "min": 12,
+          "max": 17
+        },
+        "active": true
+      },
+      {
+        "id": "sports-and-outdoor-6",
+        "name": {
+          "en": "Smart jump rope",
+          "fr": "Corde à sauter connectée"
+        },
+        "store": "AliExpress",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Smart jump rope",
+          "fr": "Corde à sauter connectée"
+        },
+        "estimatedTotalXAF": 7900,
+        "rating": 4,
+        "deliveryDays": {
+          "min": 16,
+          "max": 24
+        },
+        "active": true
+      }
+    ]
+  },
+  {
+    "id": "baby-and-kids",
+    "order": 9,
+    "name": {
+      "en": "Baby & Kids",
+      "fr": "Bébé & Enfants"
+    },
+    "products": [
+      {
+        "id": "baby-and-kids-1",
+        "name": {
+          "en": "Pampers nappies, size 4",
+          "fr": "Couches Pampers, taille 4"
+        },
+        "store": "Amazon",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Pampers nappies, size 4",
+          "fr": "Couches Pampers, taille 4"
+        },
+        "estimatedTotalXAF": 28400,
+        "rating": 4.8,
+        "deliveryDays": {
+          "min": 8,
+          "max": 12
+        },
+        "active": true
+      },
+      {
+        "id": "baby-and-kids-2",
+        "name": {
+          "en": "Lightweight stroller",
+          "fr": "Poussette légère"
+        },
+        "store": "Walmart",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Lightweight stroller",
+          "fr": "Poussette légère"
+        },
+        "estimatedTotalXAF": 167000,
+        "rating": 4.6,
+        "deliveryDays": {
+          "min": 14,
+          "max": 21
+        },
+        "active": true
+      },
+      {
+        "id": "baby-and-kids-3",
+        "name": {
+          "en": "LEGO Classic box",
+          "fr": "Boîte LEGO Classic"
+        },
+        "store": "Amazon",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "LEGO Classic box",
+          "fr": "Boîte LEGO Classic"
+        },
+        "estimatedTotalXAF": 39500,
+        "rating": 4.9,
+        "deliveryDays": {
+          "min": 8,
+          "max": 12
+        },
+        "active": true
+      },
+      {
+        "id": "baby-and-kids-4",
+        "name": {
+          "en": "Kids' sneakers",
+          "fr": "Baskets enfant"
+        },
+        "store": "Zalando",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Kids' sneakers",
+          "fr": "Baskets enfant"
+        },
+        "estimatedTotalXAF": 31200,
+        "rating": 4.5,
+        "deliveryDays": {
+          "min": 10,
+          "max": 14
+        },
+        "active": true
+      },
+      {
+        "id": "baby-and-kids-5",
+        "name": {
+          "en": "Video baby monitor",
+          "fr": "Babyphone vidéo"
+        },
+        "store": "eBay",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Video baby monitor",
+          "fr": "Babyphone vidéo"
+        },
+        "estimatedTotalXAF": 52800,
+        "rating": 4.4,
+        "deliveryDays": {
+          "min": 11,
+          "max": 16
+        },
+        "active": true
+      },
+      {
+        "id": "baby-and-kids-6",
+        "name": {
+          "en": "Toddler outfit set",
+          "fr": "Lot de tenues bébé"
+        },
+        "store": "SHEIN",
+        "productUrl": null,
+        "imageUrl": null,
+        "imageAlt": {
+          "en": "Toddler outfit set",
+          "fr": "Lot de tenues bébé"
+        },
+        "estimatedTotalXAF": 11900,
+        "rating": 4.1,
+        "deliveryDays": {
+          "min": 15,
+          "max": 22
+        },
+        "active": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,93 @@
+[
+  {
+    "id": "faq-1",
+    "order": 1,
+    "question": {
+      "en": "Which stores can I order from?",
+      "fr": "Sur quelles boutiques puis-je commander ?"
+    },
+    "answer": {
+      "en": "Amazon, eBay, SHEIN, Zalando, About You, Etsy, ASOS, Nike, AliExpress, Walmart, H&M, Sephora, Adidas, Jumia — and any other online store with a product URL.",
+      "fr": "Amazon, eBay, SHEIN, Zalando, About You, Etsy, ASOS, Nike, AliExpress, Walmart, H&M, Sephora, Adidas, Jumia — et toute autre boutique en ligne avec une URL produit."
+    },
+    "defaultOpen": true
+  },
+  {
+    "id": "faq-2",
+    "order": 2,
+    "question": {
+      "en": "What does the quote include?",
+      "fr": "Que comprend le devis ?"
+    },
+    "answer": {
+      "en": "The product price, international shipping, customs and the GlobalBuy service fee. The quote you see is what you pay.",
+      "fr": "Le prix du produit, la livraison internationale, la douane et les frais de service GlobalBuy. Le devis affiché est ce que vous payez."
+    },
+    "defaultOpen": false
+  },
+  {
+    "id": "faq-3",
+    "order": 3,
+    "question": {
+      "en": "How do I pay?",
+      "fr": "Comment payer ?"
+    },
+    "answer": {
+      "en": "With MTN Mobile Money or Orange Money, directly in the app. No international credit card required. Bank card payments are coming soon.",
+      "fr": "Avec MTN Mobile Money ou Orange Money, directement dans l'app. Aucune carte internationale requise. Paiement par carte bancaire bientôt disponible."
+    },
+    "defaultOpen": false
+  },
+  {
+    "id": "faq-4",
+    "order": 4,
+    "question": {
+      "en": "Where do I collect my order?",
+      "fr": "Où récupérer ma commande ?"
+    },
+    "answer": {
+      "en": "At the GlobalBuy pickup point in your city: Douala, Yaoundé, Buea or Limbe. You get a notification when your order arrives and choose when to collect.",
+      "fr": "Au point de retrait GlobalBuy de votre ville : Douala, Yaoundé, Buea ou Limbe. Vous êtes notifié à l'arrivée et choisissez quand passer."
+    },
+    "defaultOpen": false
+  },
+  {
+    "id": "faq-5",
+    "order": 5,
+    "question": {
+      "en": "Are the products authentic?",
+      "fr": "Les produits sont-ils authentiques ?"
+    },
+    "answer": {
+      "en": "Yes. GlobalBuy buys directly from official retailers and authorised sellers only.",
+      "fr": "Oui. GlobalBuy achète uniquement auprès de distributeurs officiels et de vendeurs agréés."
+    },
+    "defaultOpen": false
+  },
+  {
+    "id": "faq-6",
+    "order": 6,
+    "question": {
+      "en": "Can I follow my order?",
+      "fr": "Puis-je suivre ma commande ?"
+    },
+    "answer": {
+      "en": "Every stage from purchase to customs to pickup notification is visible in the app.",
+      "fr": "Chaque étape, de l'achat à la douane jusqu'à la notification de retrait, est visible dans l'app."
+    },
+    "defaultOpen": false
+  },
+  {
+    "id": "faq-7",
+    "order": 7,
+    "question": {
+      "en": "Is there anything you won't ship?",
+      "fr": "Y a-t-il des articles interdits ?"
+    },
+    "answer": {
+      "en": "GlobalBuy does not ship weapons, counterfeits, narcotics, hazardous materials, or items banned under Cameroonian import law.",
+      "fr": "GlobalBuy n'expédie pas d'armes, de contrefaçons, de stupéfiants, de matières dangereuses ni d'articles interdits par la loi camerounaise."
+    },
+    "defaultOpen": false
+  }
+]

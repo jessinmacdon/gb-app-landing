@@ -1,0 +1,232 @@
+{
+  "stores": [
+    "Amazon",
+    "eBay",
+    "SHEIN",
+    "Zalando",
+    "About You",
+    "Etsy",
+    "ASOS",
+    "Nike",
+    "AliExpress",
+    "Walmart",
+    "H&M",
+    "Sephora",
+    "Adidas",
+    "Jumia"
+  ],
+  "cities": [
+    {
+      "name": "Douala",
+      "live": true
+    },
+    {
+      "name": "Yaoundé",
+      "live": true
+    },
+    {
+      "name": "Buea",
+      "live": true
+    },
+    {
+      "name": "Limbe",
+      "live": true
+    }
+  ],
+  "payments": [
+    {
+      "id": "mtn",
+      "name": {
+        "en": "MTN Mobile Money",
+        "fr": "MTN Mobile Money"
+      },
+      "tileTitle": "MTN",
+      "tileSubtitle": "Mobile Money",
+      "logoUrl": null,
+      "status": "live"
+    },
+    {
+      "id": "orange",
+      "name": {
+        "en": "Orange Money",
+        "fr": "Orange Money"
+      },
+      "tileTitle": "Orange",
+      "tileSubtitle": "Orange Money",
+      "logoUrl": null,
+      "status": "live"
+    },
+    {
+      "id": "cards",
+      "name": {
+        "en": "Bank cards",
+        "fr": "Cartes bancaires"
+      },
+      "tileTitle": null,
+      "tileSubtitle": null,
+      "logoUrl": null,
+      "status": "coming_soon"
+    }
+  ],
+  "appLinks": {
+    "googlePlay": "https://play.google.com/store",
+    "appStore": "https://apps.apple.com"
+  },
+  "social": {
+    "instagram": "https://instagram.com",
+    "facebook": "https://facebook.com",
+    "x": "https://x.com",
+    "whatsapp": "https://wa.me/",
+    "tiktok": "https://tiktok.com"
+  },
+  "legal": {
+    "privacy": "/privacy.html",
+    "terms": "/terms-of-service.html",
+    "refund": "#"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "title": {
+        "en": "Paste a link",
+        "fr": "Collez un lien"
+      },
+      "body": {
+        "en": "Find any product on any online store and copy the URL. Paste it into GlobalBuy.",
+        "fr": "Trouvez un produit sur n'importe quelle boutique en ligne et copiez l'URL. Collez-la dans GlobalBuy."
+      }
+    },
+    {
+      "order": 2,
+      "title": {
+        "en": "Get an instant quote",
+        "fr": "Recevez un devis instantané"
+      },
+      "body": {
+        "en": "GlobalBuy calculates the full cost: the product price, international shipping, customs, and its service fee. One number. No surprises.",
+        "fr": "GlobalBuy calcule le coût total : prix du produit, livraison internationale, douane et frais de service. Un seul montant. Aucune surprise."
+      }
+    },
+    {
+      "order": 3,
+      "title": {
+        "en": "Pay with Mobile Money",
+        "fr": "Payez par Mobile Money"
+      },
+      "body": {
+        "en": "Confirm the quote and pay instantly using MTN Mobile Money or Orange Money. GlobalBuy then purchases the item on your behalf.",
+        "fr": "Confirmez le devis et payez instantanément avec MTN Mobile Money ou Orange Money. GlobalBuy achète ensuite l'article pour vous."
+      }
+    },
+    {
+      "order": 4,
+      "title": {
+        "en": "Collect locally",
+        "fr": "Récupérez près de chez vous"
+      },
+      "body": {
+        "en": "GlobalBuy handles shipping and customs. When your order arrives at your city's pickup point, you get a notification and choose when to collect.",
+        "fr": "GlobalBuy gère la livraison et la douane. Quand votre commande arrive au point de retrait de votre ville, vous êtes notifié et choisissez quand la récupérer."
+      }
+    }
+  ],
+  "features": [
+    {
+      "order": 1,
+      "title": {
+        "en": "Transparent pricing",
+        "fr": "Prix transparents"
+      },
+      "body": {
+        "en": "Completely transparent pricing — the quote you see is what you pay.",
+        "fr": "Une tarification totalement transparente : le devis affiché est ce que vous payez."
+      }
+    },
+    {
+      "order": 2,
+      "title": {
+        "en": "Local payment methods",
+        "fr": "Paiements locaux"
+      },
+      "body": {
+        "en": "MTN Mobile Money and Orange Money are covered. Card and bank payments are coming soon.",
+        "fr": "MTN Mobile Money et Orange Money sont acceptés. Paiement par carte et banque bientôt disponible."
+      }
+    },
+    {
+      "order": 3,
+      "title": {
+        "en": "Any store, any product",
+        "fr": "Toute boutique, tout produit"
+      },
+      "body": {
+        "en": "If a product has a URL and is legal to import into Cameroon, GlobalBuy can source it.",
+        "fr": "Si un produit a une URL et peut être importé légalement au Cameroun, GlobalBuy peut l'obtenir."
+      }
+    },
+    {
+      "order": 4,
+      "title": {
+        "en": "100% authentic",
+        "fr": "100 % authentique"
+      },
+      "body": {
+        "en": "GlobalBuy buys directly from official retailers and authorised sellers only.",
+        "fr": "GlobalBuy achète uniquement auprès de distributeurs officiels et de vendeurs agréés."
+      }
+    },
+    {
+      "order": 5,
+      "title": {
+        "en": "Full tracking",
+        "fr": "Suivi complet"
+      },
+      "body": {
+        "en": "Every stage from purchase to customs to pickup notification is visible in the app.",
+        "fr": "Chaque étape, de l'achat à la douane jusqu'à la notification de retrait, est visible dans l'app."
+      }
+    },
+    {
+      "order": 6,
+      "title": {
+        "en": "Bilingual support",
+        "fr": "Support bilingue"
+      },
+      "body": {
+        "en": "Customer service in French and English, through the app and via WhatsApp.",
+        "fr": "Service client en français et en anglais, dans l'app et sur WhatsApp."
+      }
+    }
+  ],
+  "images": {
+    "hero": {
+      "url": null,
+      "alt": {
+        "en": "A customer collecting a parcel at a GlobalBuy pickup point in Douala",
+        "fr": "Une cliente récupère un colis au point de retrait GlobalBuy de Douala"
+      },
+      "placeholderLabel": "lifestyle photo: Douala, parcel pickup"
+    },
+    "why": {
+      "url": null,
+      "alt": {
+        "en": "Friends in Yaoundé comparing new sneakers and a phone",
+        "fr": "Des amis à Yaoundé comparent de nouvelles baskets et un téléphone"
+      },
+      "placeholderLabel": "lifestyle photo — friends in Yaoundé comparing new sneakers and a phone"
+    },
+    "cta": {
+      "url": null,
+      "alt": {
+        "en": "A family in Buea collecting an order, phone in hand",
+        "fr": "Une famille à Buea récupère une commande, téléphone en main"
+      },
+      "placeholderLabel": "lifestyle photo — family in Buea collecting an order, phone in hand"
+    }
+  },
+  "whatWeShip": {
+    "defaultCategoryId": "electronics-and-gadgets",
+    "defaultRankingMode": "price",
+    "maxProducts": 6
+  }
+}
