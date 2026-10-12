@@ -7,6 +7,15 @@ const SOCIAL_ORDER: SocialNetwork[] = ['instagram', 'facebook', 'x', 'whatsapp',
 
 export function Footer({ t, site }: { t: Dictionary; site: SiteContent }) {
   const liveCities = site.cities.filter((c) => c.live).map((c) => c.name);
+  // Links without a real destination yet (e.g. the refund policy) stay hidden.
+  const legal = (
+    [
+      ['privacy', site.legal.privacy, t.legal.privacy],
+      ['terms', site.legal.terms, t.legal.terms],
+      ['refund', site.legal.refund, t.legal.refund],
+    ] as const
+  ).filter(([, href]) => href);
+  const email = site.company.supportEmail;
   return (
     <footer className="container footer">
       <div className="footer__top">
@@ -20,17 +29,23 @@ export function Footer({ t, site }: { t: Dictionary; site: SiteContent }) {
               {t.footLegal}
             </h2>
             <ul className="footer__links">
-              <li>
-                <a href={site.legal.privacy}>{t.legal.privacy}</a>
-              </li>
-              <li>
-                <a href={site.legal.terms}>{t.legal.terms}</a>
-              </li>
-              <li>
-                <a href={site.legal.refund}>{t.legal.refund}</a>
-              </li>
+              {legal.map(([key, href, label]) => (
+                <li key={key}>
+                  <a href={href ?? undefined}>{label}</a>
+                </li>
+              ))}
             </ul>
           </nav>
+          {email ? (
+            <div className="footer__col">
+              <h2 className="footer__col-title">{t.footContact}</h2>
+              <ul className="footer__links">
+                <li>
+                  <a href={`mailto:${email}`}>{email}</a>
+                </li>
+              </ul>
+            </div>
+          ) : null}
           <div className="footer__col">
             <h2 className="footer__col-title" id="foot-follow">
               {t.footFollow}
@@ -40,7 +55,7 @@ export function Footer({ t, site }: { t: Dictionary; site: SiteContent }) {
                 <li key={k}>
                   <a
                     className="social__link"
-                    href={site.social[k]}
+                    href={site.social[k] ?? undefined}
                     aria-label={socialMeta[k].label}
                     target="_blank"
                     rel="noopener"
@@ -54,7 +69,9 @@ export function Footer({ t, site }: { t: Dictionary; site: SiteContent }) {
         </div>
       </div>
       <div className="footer__bottom">
-        <span>© 2026 GlobalBuy. {t.rights}</span>
+        <span>
+          © 2026 GlobalBuy. {t.rights} {t.footOperator}
+        </span>
         <span>{liveCities.join(' · ')}</span>
       </div>
     </footer>

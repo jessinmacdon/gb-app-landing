@@ -1,10 +1,21 @@
-import { ImageSlot } from '@/components/ImageSlot';
+import { ImageSlot, Monogram } from '@/components/ImageSlot';
 import type { Dictionary } from '@/lib/content';
 import type { Testimonial } from '@/lib/content/types';
 import type { Locale } from '@/lib/i18n';
 
+const initials = (name: string) =>
+  name
+    .split(/\s+/)
+    .map((w) => w[0])
+    .join('')
+    .replace(/[^\p{L}]/gu, '')
+    .slice(0, 2)
+    .toUpperCase();
+
+/** Renders only real testimonials; the section disappears while none exist. */
 export function Testimonials({ lang, t, items }: { lang: Locale; t: Dictionary; items: Testimonial[] }) {
-  if (items.length === 0) return null;
+  const real = items.filter((q) => !q.placeholder);
+  if (real.length === 0) return null;
   return (
     <section className="testi" aria-labelledby="testi-title">
       <div className="container testi__inner">
@@ -15,7 +26,7 @@ export function Testimonials({ lang, t, items }: { lang: Locale; t: Dictionary; 
           </h2>
         </div>
         <div className="testi__grid">
-          {items.map((q) => (
+          {real.map((q) => (
             <figure key={q.id} className="quote-card">
               <blockquote>“{q.quote[lang]}”</blockquote>
               <figcaption>
@@ -23,7 +34,7 @@ export function Testimonials({ lang, t, items }: { lang: Locale; t: Dictionary; 
                   src={q.avatarUrl}
                   alt=""
                   className="quote-card__avatar"
-                  placeholder="stripes-avatar"
+                  fallback={<Monogram text={initials(q.name)} className="quote-card__avatar" />}
                   sizes="48px"
                 />
                 <span className="quote-card__who">

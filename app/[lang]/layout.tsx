@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Bricolage_Grotesque, Instrument_Sans, JetBrains_Mono } from 'next/font/google';
+import { Bricolage_Grotesque, Instrument_Sans } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { getDictionary } from '@/lib/content';
 import { isLocale, locales } from '@/lib/i18n';
@@ -16,12 +16,6 @@ const body = Instrument_Sans({
   subsets: ['latin', 'latin-ext'],
   weight: ['400', '500', '600'],
   variable: '--font-body',
-  display: 'swap',
-});
-const mono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-mono',
   display: 'swap',
 });
 
@@ -49,7 +43,7 @@ export default async function RootLayout({ children, params }: LayoutProps<'/[la
   const { lang } = await params;
   if (!isLocale(lang)) notFound();
   return (
-    <html lang={lang} className={`${display.variable} ${body.variable} ${mono.variable}`}>
+    <html lang={lang} className={`${display.variable} ${body.variable}`}>
       <body>{children}</body>
     </html>
   );

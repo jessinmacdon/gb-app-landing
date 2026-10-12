@@ -16,8 +16,7 @@ export function Why({ lang, t, site }: { lang: Locale; t: Dictionary; site: Site
           src={img.url}
           alt={img.alt[lang]}
           className="why__photo"
-          placeholder="stripes-light"
-          label={img.placeholderLabel}
+          fallback={null}
           sizes="(min-width: 960px) 560px, 100vw"
         />
       </div>

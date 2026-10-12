@@ -10,7 +10,13 @@
       "en": "Nike Air Max 90",
       "fr": "Nike Air Max 90"
     },
+    "store": "Zalando",
     "storeLine": "Zalando · EU 42",
+    "originalPrice": {
+      "amount": 99.99,
+      "currency": "EUR"
+    },
+    "sampleUrl": "https://www.zalando.com/nike-air-max-90-sneakers",
     "linkPreview": "zalando.com/nike-air-max-90-sneakers…",
     "imageUrl": null,
     "imageAlt": {
@@ -36,7 +42,13 @@
       "en": "iPad 10.9\" 64 GB",
       "fr": "iPad 10.9\" 64 GB"
     },
+    "store": "Amazon",
     "storeLine": "Amazon",
+    "originalPrice": {
+      "amount": 379.0,
+      "currency": "USD"
+    },
+    "sampleUrl": "https://www.amazon.com/apple-ipad-10-9-64gb",
     "linkPreview": null,
     "imageUrl": null,
     "imageAlt": {
@@ -62,7 +74,13 @@
       "en": "Floral midi dress",
       "fr": "Robe midi fleurie"
     },
+    "store": "SHEIN",
     "storeLine": "SHEIN · M",
+    "originalPrice": {
+      "amount": 21.65,
+      "currency": "EUR"
+    },
+    "sampleUrl": "https://www.shein.com/floral-midi-dress",
     "linkPreview": null,
     "imageUrl": null,
     "imageAlt": {

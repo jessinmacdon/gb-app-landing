@@ -52,7 +52,7 @@
         "fr": "Orange Money"
       },
       "tileTitle": "Orange",
-      "tileSubtitle": "Orange Money",
+      "tileSubtitle": "Money",
       "logoUrl": null,
       "status": "live"
     },
@@ -76,13 +76,13 @@
     "instagram": "https://instagram.com",
     "facebook": "https://facebook.com",
     "x": "https://x.com",
-    "whatsapp": "https://wa.me/",
+    "whatsapp": null,
     "tiktok": "https://tiktok.com"
   },
   "legal": {
     "privacy": "/privacy.html",
     "terms": "/terms-of-service.html",
-    "refund": "#"
+    "refund": null
   },
   "steps": [
     {
@@ -104,7 +104,7 @@
       },
       "body": {
         "en": "GlobalBuy calculates the full cost: the product price, international shipping, customs, and its service fee. One number. No surprises.",
-        "fr": "GlobalBuy calcule le coût total : prix du produit, livraison internationale, douane et frais de service. Un seul montant. Aucune surprise."
+        "fr": "GlobalBuy calcule le coût total : prix du produit, livraison internationale, douane et frais de service. Un seul montant. Aucune surprise."
       }
     },
     {
@@ -138,8 +138,8 @@
         "fr": "Prix transparents"
       },
       "body": {
-        "en": "Completely transparent pricing — the quote you see is what you pay.",
-        "fr": "Une tarification totalement transparente : le devis affiché est ce que vous payez."
+        "en": "Every quote itemises the product, shipping, customs and our fee. The quote you confirm is the price you pay.",
+        "fr": "Chaque devis détaille le produit, la livraison, la douane et nos frais. Le devis que vous confirmez est le prix que vous payez."
       }
     },
     {
@@ -193,8 +193,8 @@
         "fr": "Support bilingue"
       },
       "body": {
-        "en": "Customer service in French and English, through the app and via WhatsApp.",
-        "fr": "Service client en français et en anglais, dans l'app et sur WhatsApp."
+        "en": "Customer service in French and English in the app, with live chat for every active order.",
+        "fr": "Service client en français et en anglais dans l'app, avec un chat en direct pour chaque commande en cours."
       }
     }
   ],
@@ -204,29 +204,31 @@
       "alt": {
         "en": "A customer collecting a parcel at a GlobalBuy pickup point in Douala",
         "fr": "Une cliente récupère un colis au point de retrait GlobalBuy de Douala"
-      },
-      "placeholderLabel": "lifestyle photo: Douala, parcel pickup"
+      }
     },
     "why": {
       "url": null,
       "alt": {
         "en": "Friends in Yaoundé comparing new sneakers and a phone",
         "fr": "Des amis à Yaoundé comparent de nouvelles baskets et un téléphone"
-      },
-      "placeholderLabel": "lifestyle photo — friends in Yaoundé comparing new sneakers and a phone"
+      }
     },
     "cta": {
       "url": null,
       "alt": {
         "en": "A family in Buea collecting an order, phone in hand",
         "fr": "Une famille à Buea récupère une commande, téléphone en main"
-      },
-      "placeholderLabel": "lifestyle photo — family in Buea collecting an order, phone in hand"
+      }
     }
   },
   "whatWeShip": {
     "defaultCategoryId": "electronics-and-gadgets",
     "defaultRankingMode": "price",
-    "maxProducts": 6
+    "maxProducts": 6,
+    "sampleData": true
+  },
+  "company": {
+    "legalName": "GlobalBuy24",
+    "supportEmail": "support@globalbuy24.com"
   }
 }

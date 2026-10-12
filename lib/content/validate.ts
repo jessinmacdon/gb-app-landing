@@ -89,6 +89,10 @@ export function validateContent(c: ContentBundle): string[] {
     localized(q.imageAlt, `${at} imageAlt`);
     for (const k of ['product', 'shipping', 'customs', 'serviceFee'] as const) xaf(q.breakdownXAF?.[k], `${at} breakdownXAF.${k}`);
     url(q.imageUrl, `${at} imageUrl`);
+    url(q.sampleUrl, `${at} sampleUrl`);
+    if (!q.store?.trim()) err(`${at}: missing store`);
+    if (q.originalPrice && !(q.originalPrice.amount > 0 && /^[A-Z]{3}$/.test(q.originalPrice.currency)))
+      err(`${at}: originalPrice needs a positive amount and a 3-letter currency code`);
   }
 
   // FAQ
@@ -121,6 +125,7 @@ export function validateContent(c: ContentBundle): string[] {
     localized(x.body, `site steps/features #${i + 1} body`);
   }
   for (const [k, v] of Object.entries({ ...s.appLinks, ...s.social, ...s.legal })) url(v, `site link ${k}`);
+  if (!s.company?.legalName?.trim()) err('site: company.legalName is required');
   if (!c.categories.some((cat) => cat.id === s.whatWeShip.defaultCategoryId))
     err(`site: whatWeShip.defaultCategoryId "${s.whatWeShip.defaultCategoryId}" does not match a category`);
   if (!c.rankingModes.some((m) => m.id === s.whatWeShip.defaultRankingMode))

@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { LOCALE_COOKIE, locales, type Locale } from '@/lib/i18n';
+import { SCROLL_KEY } from '@/components/ScrollRestorer';
 import { track } from '@/lib/track';
 
 export function LangToggle({ lang, label }: { lang: Locale; label: string }) {
@@ -11,8 +12,14 @@ export function LangToggle({ lang, label }: { lang: Locale; label: string }) {
     if (next === lang) return;
     document.cookie = `${LOCALE_COOKIE}=${next}; path=/; max-age=31536000; samesite=lax`;
     track({ event: 'language_switch', to: next });
-    // Stay where the visitor is on the page.
-    router.push(`/${next}${window.location.hash}`, { scroll: false });
+    // The other language is a separate page; ScrollRestorer puts the visitor
+    // back where they were once it renders.
+    try {
+      sessionStorage.setItem(SCROLL_KEY, JSON.stringify({ lang: next, y: window.scrollY }));
+    } catch {
+      // Storage unavailable (private mode): the switch still works, from the top.
+    }
+    router.push(`/${next}`, { scroll: false });
   };
 
   return (

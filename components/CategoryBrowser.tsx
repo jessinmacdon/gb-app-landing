@@ -1,10 +1,14 @@
 'use client';
 
-import { useRef } from 'react';
-import { ImageSlot } from '@/components/ImageSlot';
+import { useEffect, useRef } from 'react';
+import { GetAppLink } from '@/components/GetAppLink';
+import { StarIcon } from '@/components/Icons';
+import { ImageSlot, Monogram } from '@/components/ImageSlot';
 import type { RankingModeId } from '@/lib/content/types';
 import { formatDays, formatRating, formatXAF } from '@/lib/format';
 import { rankProducts } from '@/lib/ranking';
+import { onRovingKeyDown } from '@/lib/rovingTabs';
+import { storeMonogram } from '@/lib/stores';
 import { track } from '@/lib/track';
 import { useStickyState } from '@/lib/useStickyState';
 
@@ -28,6 +32,9 @@ type Props = {
   defaultCategoryId: string;
   defaultMode: RankingModeId;
   maxProducts: number;
+  /** Labels the list as examples while products are placeholder data. */
+  sampleData: boolean;
+  appLinks: { googlePlay: string; appStore: string };
   copy: {
     popularIn: string;
     rankBy: string;
@@ -35,17 +42,48 @@ type Props = {
     picksCta: string;
     picksEmpty: string;
     daysUnit: string;
-    photo: string;
+    sampleTag: string;
+    tabsLabel: string;
   };
 };
 
 /** Highlighted chip for the metric the list is currently ranked by. */
 const chip = (active: boolean, extra = '') => `chip${active ? ' chip--hi' : ''}${extra}`;
 
-export function CategoryBrowser({ categories, modes, defaultCategoryId, defaultMode, maxProducts, copy }: Props) {
+export function CategoryBrowser({
+  categories,
+  modes,
+  defaultCategoryId,
+  defaultMode,
+  maxProducts,
+  sampleData,
+  appLinks,
+  copy,
+}: Props) {
   const [catId, setCatId] = useStickyState('ship.category', defaultCategoryId);
   const [mode, setMode] = useStickyState<RankingModeId>('ship.mode', defaultMode);
   const pillRefs = useRef(new Map<string, HTMLButtonElement>());
+  const pillRow = useRef<HTMLDivElement>(null);
+
+  // On the swipeable mobile row, keep the chosen pill fully visible. Only the
+  // row scrolls sideways; the page never moves.
+  const revealPill = (id: string, smooth: boolean) => {
+    const row = pillRow.current;
+    const pill = pillRefs.current.get(id);
+    if (!row || !pill || row.scrollWidth <= row.clientWidth) return;
+    const pad = parseFloat(getComputedStyle(row).paddingLeft) || 0;
+    const r = row.getBoundingClientRect();
+    const p = pill.getBoundingClientRect();
+    if (p.left >= r.left + pad && p.right <= r.right - pad) return;
+    // Align the pill to the row's start: that's also a scroll-snap point, so it stays put.
+    const to = row.scrollLeft + (p.left - r.left) - pad;
+    row.scrollTo({ left: to, behavior: smooth ? 'smooth' : 'auto' });
+  };
+
+  useEffect(() => {
+    // Mount only: later changes come from selectCategory.
+    revealPill(catId, false);
+  }, []);
 
   const category = categories.find((c) => c.id === catId) ?? categories[0];
   const activeMode = modes.find((m) => m.id === mode) ?? modes[0];
@@ -56,13 +94,12 @@ export function CategoryBrowser({ categories, modes, defaultCategoryId, defaultM
   const selectCategory = (id: string) => {
     setCatId(id);
     track({ event: 'category_select', categoryId: id });
-    // On the swipeable mobile row, bring the chosen pill fully into view.
-    pillRefs.current.get(id)?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+    revealPill(id, true);
   };
 
   return (
     <div className="ship__browser">
-      <div className="cat-pills" role="tablist" aria-label="Categories">
+      <div className="cat-pills" ref={pillRow} role="tablist" aria-label={copy.tabsLabel} onKeyDown={onRovingKeyDown}>
         {categories.map((c) => (
           <button
             key={c.id}
@@ -74,6 +111,7 @@ export function CategoryBrowser({ categories, modes, defaultCategoryId, defaultM
             role="tab"
             id={`cat-tab-${c.id}`}
             aria-selected={c.id === category.id}
+            tabIndex={c.id === category.id ? 0 : -1}
             aria-controls="ship-picks"
             className="cat-pill"
             onClick={() => selectCategory(c.id)}
@@ -86,7 +124,10 @@ export function CategoryBrowser({ categories, modes, defaultCategoryId, defaultM
       <div className="picks" id="ship-picks" role="tabpanel" aria-labelledby={`cat-tab-${category.id}`}>
         <div className="picks__head">
           <div className="picks__heading">
-            <span className="picks__kicker">{copy.popularIn}</span>
+            <span className="picks__kicker">
+              {copy.popularIn}
+              {sampleData ? <span className="picks__sample">{copy.sampleTag}</span> : null}
+            </span>
             <h3 className="picks__cat">{category.name}</h3>
             <span className="picks__desc" aria-live="polite">
               {activeMode.description}
@@ -96,13 +137,14 @@ export function CategoryBrowser({ categories, modes, defaultCategoryId, defaultM
             <span className="rank-by__label" id="rank-by-label">
               {copy.rankBy}
             </span>
-            <div className="rank-by__seg" role="radiogroup" aria-labelledby="rank-by-label">
+            <div className="rank-by__seg" role="radiogroup" aria-labelledby="rank-by-label" onKeyDown={onRovingKeyDown}>
               {modes.map((m) => (
                 <button
                   key={m.id}
                   type="button"
                   role="radio"
                   aria-checked={m.id === activeMode.id}
+                  tabIndex={m.id === activeMode.id ? 0 : -1}
                   className="rank-by__opt"
                   onClick={() => {
                     setMode(m.id);
@@ -127,8 +169,7 @@ export function CategoryBrowser({ categories, modes, defaultCategoryId, defaultM
                   src={p.imageUrl}
                   alt={p.imageAlt}
                   className="pick__img"
-                  placeholder="stripes-thumb"
-                  label={copy.photo}
+                  fallback={<Monogram text={storeMonogram(p.store)} className="pick__img" />}
                   sizes="64px"
                 />
                 <div className="pick__body">
@@ -140,7 +181,10 @@ export function CategoryBrowser({ categories, modes, defaultCategoryId, defaultM
                     <span className={chip(activeMode.id === 'price', ' chip--price')}>
                       {formatXAF(p.estimatedTotalXAF)} FCFA
                     </span>
-                    <span className={chip(activeMode.id === 'quality')}>★ {formatRating(p.rating)}</span>
+                    <span className={chip(activeMode.id === 'quality', ' chip--rating')}>
+                      <StarIcon />
+                      {formatRating(p.rating)}
+                    </span>
                     <span className={chip(activeMode.id === 'delivery')}>{formatDays(p.deliveryDays, copy.daysUnit)}</span>
                   </div>
                 </div>
@@ -151,9 +195,9 @@ export function CategoryBrowser({ categories, modes, defaultCategoryId, defaultM
 
         <div className="picks__foot">
           <span className="picks__foot-note">{copy.picksNote}</span>
-          <a className="picks__cta" href="#download">
+          <GetAppLink className="picks__cta" links={appLinks} section="what-we-ship">
             {copy.picksCta}
-          </a>
+          </GetAppLink>
         </div>
       </div>
     </div>

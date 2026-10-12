@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
 import { CategoryBrowserSkeleton } from '@/components/CategoryBrowser';
+import { ScrollRestorer } from '@/components/ScrollRestorer';
+import { StickyDownload } from '@/components/StickyDownload';
 import { Faq } from '@/components/sections/Faq';
 import { FinalCta } from '@/components/sections/FinalCta';
 import { Footer } from '@/components/sections/Footer';
@@ -32,14 +34,15 @@ export default async function LandingPage({ params }: PageProps<'/[lang]'>) {
 
   return (
     <div className="page">
-      <Nav lang={lang} t={t} />
+      <ScrollRestorer lang={lang} />
+      <Nav lang={lang} t={t} appLinks={site.appLinks} />
       <main>
         <Hero lang={lang} t={t} site={site} heroQuote={heroQuote} />
         <Stores t={t} stores={site.stores} />
-        <HowItWorks lang={lang} t={t} steps={site.steps} />
+        <HowItWorks lang={lang} t={t} site={site} quotes={quotes} />
         <WhatWeShip t={t}>
           <Suspense fallback={<CategoryBrowserSkeleton rows={site.whatWeShip.maxProducts} />}>
-            <WhatWeShipBrowser lang={lang} t={t} settings={site.whatWeShip} />
+            <WhatWeShipBrowser lang={lang} t={t} settings={site.whatWeShip} appLinks={site.appLinks} />
           </Suspense>
         </WhatWeShip>
         <Why lang={lang} t={t} site={site} />
@@ -50,6 +53,7 @@ export default async function LandingPage({ params }: PageProps<'/[lang]'>) {
         <FinalCta lang={lang} t={t} site={site} />
       </main>
       <Footer t={t} site={site} />
+      <StickyDownload links={site.appLinks} label={t.nav.download} hint="Google Play · App Store" />
     </div>
   );
 }

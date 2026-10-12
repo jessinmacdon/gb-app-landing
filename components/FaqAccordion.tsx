@@ -1,5 +1,6 @@
 'use client';
 
+import { MinusIcon, PlusIcon } from '@/components/Icons';
 import { InlineLinks } from '@/components/InlineLinks';
 import { track } from '@/lib/track';
 import { useStickyState } from '@/lib/useStickyState';
@@ -30,7 +31,7 @@ export function FaqAccordion({ items, defaultOpenId }: { items: FaqView[]; defau
               >
                 <span className="faq__q-text">{f.question}</span>
                 <span className="faq__icon" aria-hidden="true">
-                  {open ? '−' : '+'}
+                  {open ? <MinusIcon /> : <PlusIcon />}
                 </span>
               </button>
             </h3>

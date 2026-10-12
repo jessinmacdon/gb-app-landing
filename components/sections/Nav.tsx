@@ -1,9 +1,11 @@
+import { GetAppLink } from '@/components/GetAppLink';
 import { LangToggle } from '@/components/LangToggle';
 import { Logo } from '@/components/sections/Logo';
 import type { Dictionary } from '@/lib/content';
+import type { SiteContent } from '@/lib/content/types';
 import type { Locale } from '@/lib/i18n';
 
-export function Nav({ lang, t }: { lang: Locale; t: Dictionary }) {
+export function Nav({ lang, t, appLinks }: { lang: Locale; t: Dictionary; appLinks: SiteContent['appLinks'] }) {
   return (
     <header className="nav">
       <div className="container nav__inner">
@@ -16,9 +18,9 @@ export function Nav({ lang, t }: { lang: Locale; t: Dictionary }) {
         </nav>
         <div className="nav__actions">
           <LangToggle lang={lang} label={t.langLabel} />
-          <a className="nav__cta" href="#download">
+          <GetAppLink className="nav__cta" links={appLinks} section="nav">
             {t.nav.download}
-          </a>
+          </GetAppLink>
         </div>
       </div>
     </header>

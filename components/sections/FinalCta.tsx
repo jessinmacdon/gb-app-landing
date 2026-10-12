@@ -8,7 +8,7 @@ export function FinalCta({ lang, t, site }: { lang: Locale; t: Dictionary; site:
   const img = site.images.cta;
   return (
     <section id="download" className="cta" aria-labelledby="cta-title">
-      <div className="cta__panel">
+      <div className={`cta__panel${img.url ? '' : ' cta__panel--solo'}`}>
         <div className="cta__glow" aria-hidden="true" />
         <div className="cta__copy">
           <h2 className="cta__title" id="cta-title">
@@ -21,8 +21,7 @@ export function FinalCta({ lang, t, site }: { lang: Locale; t: Dictionary; site:
           src={img.url}
           alt={img.alt[lang]}
           className="cta__photo"
-          placeholder="stripes-dark"
-          label={img.placeholderLabel}
+          fallback={null}
           sizes="(min-width: 960px) 660px, 100vw"
         />
       </div>

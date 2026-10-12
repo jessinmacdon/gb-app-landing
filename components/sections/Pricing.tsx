@@ -12,12 +12,21 @@ export function Pricing({ lang, t, quotes }: { lang: Locale; t: Dictionary; quot
             id: q.id,
             tabLabel: q.tabLabel[lang],
             productName: q.productName[lang],
+            store: q.store,
             storeLine: q.storeLine,
+            originalPrice: q.originalPrice,
             breakdownXAF: q.breakdownXAF,
             totalXAF: quoteTotal(q.breakdownXAF),
           }))}
+          defaultQuoteId={(quotes.find((q) => !q.isHeroPhoneExample) ?? quotes[0]).id}
+          lang={lang}
           rows={t.rows}
-          copy={{ priceTry: t.priceTry, exampleTag: t.exampleTag, priceDisclaimer: t.priceDisclaimer }}
+          copy={{
+            priceTry: t.priceTry,
+            exampleTag: t.exampleTag,
+            priceDisclaimer: t.priceDisclaimer,
+            originalPrice: t.originalPrice,
+          }}
         >
           <span className="eyebrow eyebrow--dark-bg">{t.priceEyebrow}</span>
           <h2 className="pricing__title" id="pricing-title">

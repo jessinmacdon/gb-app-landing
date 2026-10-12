@@ -1,8 +1,10 @@
-import { ImageSlot } from '@/components/ImageSlot';
+import { CheckIcon } from '@/components/Icons';
+import { ImageSlot, Monogram } from '@/components/ImageSlot';
 import { StoreBadges } from '@/components/StoreBadges';
 import { quoteTotal, type Dictionary } from '@/lib/content';
 import type { ExampleQuote, SiteContent } from '@/lib/content/types';
 import { formatXAF } from '@/lib/format';
+import { storeMonogram } from '@/lib/stores';
 import type { Locale } from '@/lib/i18n';
 
 type Props = { lang: Locale; t: Dictionary; site: SiteContent; heroQuote: ExampleQuote };
@@ -40,8 +42,7 @@ export function Hero({ lang, t, site, heroQuote: q }: Props) {
             src={site.images.hero.url}
             alt={site.images.hero.alt[lang]}
             className="hero__photo"
-            placeholder="stripes-dark"
-            label={site.images.hero.placeholderLabel}
+            fallback={null}
             sizes="400px"
             priority
           />
@@ -66,8 +67,7 @@ export function Hero({ lang, t, site, heroQuote: q }: Props) {
                   src={q.imageUrl}
                   alt={q.imageAlt[lang]}
                   className="phone__thumb"
-                  placeholder="stripes-thumb"
-                  label={t.photo}
+                  fallback={<Monogram text={storeMonogram(q.store)} className="phone__thumb" />}
                   sizes="62px"
                 />
                 <div className="phone__product-text">
@@ -98,7 +98,9 @@ export function Hero({ lang, t, site, heroQuote: q }: Props) {
           </div>
 
           <div className="hero__notif" aria-hidden="true">
-            <span className="hero__notif-icon">✓</span>
+            <span className="hero__notif-icon">
+              <CheckIcon size={18} />
+            </span>
             <span className="hero__notif-text">
               <span className="hero__notif-title">{t.phone.notifTitle}</span>
               <span className="hero__notif-sub">{t.phone.notifSub}</span>

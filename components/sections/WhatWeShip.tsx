@@ -3,7 +3,12 @@ import { getCategories, getRankingModes, type Dictionary } from '@/lib/content';
 import type { SiteContent } from '@/lib/content/types';
 import type { Locale } from '@/lib/i18n';
 
-type Props = { lang: Locale; t: Dictionary; settings: SiteContent['whatWeShip'] };
+type Props = {
+  lang: Locale;
+  t: Dictionary;
+  settings: SiteContent['whatWeShip'];
+  appLinks: SiteContent['appLinks'];
+};
 
 /** Section frame; renders immediately while the browser's data streams in. */
 export function WhatWeShip({ t, children }: { t: Dictionary; children: React.ReactNode }) {
@@ -27,7 +32,7 @@ export function WhatWeShip({ t, children }: { t: Dictionary; children: React.Rea
 }
 
 /** Loads categories and ranking modes, localizes them, and hands them to the client browser. */
-export async function WhatWeShipBrowser({ lang, t, settings }: Props) {
+export async function WhatWeShipBrowser({ lang, t, settings, appLinks }: Props) {
   const [categories, modes] = await Promise.all([getCategories(), getRankingModes()]);
 
   const categoryViews: CategoryView[] = categories.map((c) => ({
@@ -57,6 +62,8 @@ export async function WhatWeShipBrowser({ lang, t, settings }: Props) {
       defaultCategoryId={settings.defaultCategoryId}
       defaultMode={settings.defaultRankingMode}
       maxProducts={settings.maxProducts}
+      sampleData={settings.sampleData}
+      appLinks={appLinks}
       copy={{
         popularIn: t.popularIn,
         rankBy: t.rankBy,
@@ -64,7 +71,8 @@ export async function WhatWeShipBrowser({ lang, t, settings }: Props) {
         picksCta: t.picksCta,
         picksEmpty: t.picksEmpty,
         daysUnit: t.daysUnit,
-        photo: t.photo,
+        sampleTag: t.picksSampleTag,
+        tabsLabel: t.catTabsLabel,
       }}
     />
   );
