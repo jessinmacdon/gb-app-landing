@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { GetAppLink } from '@/components/GetAppLink';
 
-type Props = { links: { googlePlay: string; appStore: string }; label: string; hint: string };
+type Props = { links: { googlePlay: string; appStore: string | null }; label: string; hint: string };
 
 /**
  * Phone-only download bar within thumb reach. It appears once the hero's own

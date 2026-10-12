@@ -33,7 +33,7 @@ type Props = {
   lang: 'en' | 'fr';
   rows: Dictionary['rows'];
   copy: Dictionary['demo'] & { originalPrice: string };
-  appLinks: { googlePlay: string; appStore: string };
+  appLinks: { googlePlay: string; appStore: string | null };
 };
 
 const ROWS = [

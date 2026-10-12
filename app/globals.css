@@ -204,6 +204,11 @@ section[id] {
 .badge:hover {
   color: #fff;
 }
+.badge--soon {
+  border-style: dashed;
+  color: rgba(255, 255, 255, 0.78);
+  cursor: default;
+}
 .badge__text {
   display: flex;
   flex-direction: column;

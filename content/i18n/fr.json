@@ -9,7 +9,8 @@
   "badge": {
     "gpTop": "DISPONIBLE SUR",
     "asTop": "Télécharger dans",
-    "asBottom": "l'App Store"
+    "asBottom": "l'App Store",
+    "asSoon": "Bientôt dans"
   },
   "heroTitle1": "Achetez partout.",
   "heroTitle2": "Payez par Mobile Money.",
@@ -102,7 +103,7 @@
     "empty": "Collez d'abord un lien, ou essayez un des exemples ci-dessous."
   },
   "picksExampleKicker": "Exemples d'articles à commander",
-  "stickyHint": "Google Play · App Store",
+  "stickyHint": "Google Play · App Store bientôt",
   "menuOpen": "Menu",
   "menuClose": "Fermer le menu"
 }

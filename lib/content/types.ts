@@ -106,7 +106,8 @@ export type SiteContent = {
   stores: string[];
   cities: City[];
   payments: PaymentMethod[];
-  appLinks: { googlePlay: string; appStore: string };
+  /** appStore is null until the iOS app is live ("coming soon"). */
+  appLinks: { googlePlay: string; appStore: string | null };
   /** null hides the icon until the account exists. */
   social: Record<SocialNetwork, string | null>;
   /** null hides the link until the page exists. */

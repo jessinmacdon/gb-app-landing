@@ -9,7 +9,8 @@
   "badge": {
     "gpTop": "GET IT ON",
     "asTop": "Download on the",
-    "asBottom": "App Store"
+    "asBottom": "App Store",
+    "asSoon": "Coming soon to the"
   },
   "heroTitle1": "Shop the world.",
   "heroTitle2": "Pay with Mobile Money.",
@@ -102,7 +103,7 @@
     "empty": "Paste a link first, or try one of the examples below."
   },
   "picksExampleKicker": "Example items you could order",
-  "stickyHint": "Google Play · App Store",
+  "stickyHint": "Google Play · App Store soon",
   "menuOpen": "Menu",
   "menuClose": "Close menu"
 }

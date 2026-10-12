@@ -35,7 +35,7 @@ type Props = {
   maxProducts: number;
   /** Labels the list as examples while products are placeholder data. */
   sampleData: boolean;
-  appLinks: { googlePlay: string; appStore: string };
+  appLinks: { googlePlay: string; appStore: string | null };
   copy: {
     popularIn: string;
     rankBy: string;
