@@ -12,8 +12,8 @@ export function Nav({ lang, t, appLinks }: { lang: Locale; t: Dictionary; appLin
         <Logo />
         <nav className="nav__links" aria-label={t.navLabel}>
           <a href="#how">{t.nav.how}</a>
-          <a href="#why">{t.nav.why}</a>
           <a href="#pricing">{t.nav.pricing}</a>
+          <a href="#why">{t.nav.why}</a>
           <a href="#faq">{t.nav.faq}</a>
         </nav>
         <div className="nav__actions">

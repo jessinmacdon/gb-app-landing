@@ -40,20 +40,20 @@ export default async function LandingPage({ params }: PageProps<'/[lang]'>) {
         <Hero lang={lang} t={t} site={site} heroQuote={heroQuote} />
         <Stores t={t} stores={site.stores} />
         <HowItWorks lang={lang} t={t} steps={site.steps} />
+        <Pricing lang={lang} t={t} site={site} quotes={quotes} />
         <WhatWeShip t={t}>
           <Suspense fallback={<CategoryBrowserSkeleton rows={site.whatWeShip.maxProducts} />}>
             <WhatWeShipBrowser lang={lang} t={t} settings={site.whatWeShip} appLinks={site.appLinks} />
           </Suspense>
         </WhatWeShip>
         <Why lang={lang} t={t} site={site} />
-        <Pricing lang={lang} t={t} site={site} quotes={quotes} />
         <PaymentPickup lang={lang} t={t} site={site} />
         <Testimonials lang={lang} t={t} items={testimonials} />
         <Faq lang={lang} t={t} items={faq} />
         <FinalCta lang={lang} t={t} site={site} />
       </main>
       <Footer t={t} site={site} />
-      <StickyDownload links={site.appLinks} label={t.nav.download} hint="Google Play · App Store" />
+      <StickyDownload links={site.appLinks} label={t.nav.download} hint={t.stickyHint} />
     </div>
   );
 }

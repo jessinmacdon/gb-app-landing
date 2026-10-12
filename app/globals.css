@@ -810,14 +810,6 @@ section[id] {
   font-size: 13px;
   color: var(--meta);
 }
-.picks__sample {
-  font-size: 12px;
-  font-weight: 600;
-  padding: 3px 9px;
-  border-radius: 999px;
-  background: var(--chip);
-  color: var(--ink);
-}
 .picks__cat {
   margin: 0;
   font-family: var(--display);
@@ -1884,4 +1876,32 @@ section[id] {
   .quote-steps__step[data-state='active']::before {
     animation: none;
   }
+}
+.quote-form__hint {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(251, 248, 241, 0.8);
+}
+.why--solo {
+  grid-template-columns: 1fr;
+}
+.why--solo .why__grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+}
+/* Without testimonials, Payment/Pickup runs straight into the FAQ: one gap, not two. */
+.paycity + .faq {
+  padding-top: clamp(24px, 4vw, 48px);
+}
+.phone__tag {
+  margin-left: 6px;
+  vertical-align: middle;
+  font-family: var(--body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0;
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: var(--chip);
+  color: var(--muted);
 }

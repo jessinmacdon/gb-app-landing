@@ -42,7 +42,7 @@ type Props = {
     picksCta: string;
     picksEmpty: string;
     daysUnit: string;
-    sampleTag: string;
+    exampleKicker: string;
     tabsLabel: string;
   };
 };
@@ -85,8 +85,10 @@ export function CategoryBrowser({
     revealPill(catId, false);
   }, []);
 
+  // Sample data has no real delivery times, so delivery isn't shown or ranked on.
+  const visibleModes = sampleData ? modes.filter((m) => m.id !== 'delivery') : modes;
   const category = categories.find((c) => c.id === catId) ?? categories[0];
-  const activeMode = modes.find((m) => m.id === mode) ?? modes[0];
+  const activeMode = visibleModes.find((m) => m.id === mode) ?? visibleModes[0];
   if (!category || !activeMode) return null;
 
   const picks = rankProducts(category.products, activeMode.id).slice(0, maxProducts);
@@ -124,10 +126,7 @@ export function CategoryBrowser({
       <div className="picks" id="ship-picks" role="tabpanel" aria-labelledby={`cat-tab-${category.id}`}>
         <div className="picks__head">
           <div className="picks__heading">
-            <span className="picks__kicker">
-              {copy.popularIn}
-              {sampleData ? <span className="picks__sample">{copy.sampleTag}</span> : null}
-            </span>
+            <span className="picks__kicker">{sampleData ? copy.exampleKicker : copy.popularIn}</span>
             <h3 className="picks__cat">{category.name}</h3>
             <span className="picks__desc" aria-live="polite">
               {activeMode.description}
@@ -138,7 +137,7 @@ export function CategoryBrowser({
               {copy.rankBy}
             </span>
             <div className="rank-by__seg" role="radiogroup" aria-labelledby="rank-by-label" onKeyDown={onRovingKeyDown}>
-              {modes.map((m) => (
+              {visibleModes.map((m) => (
                 <button
                   key={m.id}
                   type="button"
@@ -185,7 +184,9 @@ export function CategoryBrowser({
                       <StarIcon />
                       {formatRating(p.rating)}
                     </span>
-                    <span className={chip(activeMode.id === 'delivery')}>{formatDays(p.deliveryDays, copy.daysUnit)}</span>
+                    {sampleData ? null : (
+                      <span className={chip(activeMode.id === 'delivery')}>{formatDays(p.deliveryDays, copy.daysUnit)}</span>
+                    )}
                   </div>
                 </div>
               </li>

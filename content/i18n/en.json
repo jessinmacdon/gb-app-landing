@@ -14,14 +14,15 @@
   "heroTitle1": "Shop the world.",
   "heroTitle2": "Pay with Mobile Money.",
   "heroSub": "Paste a link from Amazon, SHEIN, Zalando or any online store. GlobalBuy buys it, ships it to Cameroon, clears customs and holds it at a pickup point in your city.",
-  "heroNote": "No international card. No PayPal. One price, upfront.",
+  "heroNote": "Free app. No international card. No PayPal. One price, upfront.",
   "phone": {
     "title": "New order",
     "payMtn": "Pay with MTN MoMo",
     "payOrange": "Pay with Orange Money",
     "notifTitle": "Ready for pickup",
     "notifSub": "Your order is in Douala",
-    "chip": "Customs cleared ✓"
+    "chip": "Customs cleared ✓",
+    "exampleTag": "Example"
   },
   "rows": {
     "product": "Product price",
@@ -83,7 +84,6 @@
   "langLabel": "Language",
   "navLabel": "Main",
   "socialLabel": "Social media",
-  "picksSampleTag": "Examples",
   "catTabsLabel": "Categories",
   "originalPrice": "Price on {store}",
   "footContact": "Contact",
@@ -102,6 +102,9 @@
     "exampleTotal": "Total for this example",
     "rateLabel": "Exchange rate used",
     "demoNote": "Example figures. The app reads the real product page and quotes it exactly.",
-    "cta": "Get the app to order"
-  }
+    "cta": "Get the app to order",
+    "empty": "Paste a link first, or try one of the examples below."
+  },
+  "picksExampleKicker": "Example items people order",
+  "stickyHint": "Google Play · App Store"
 }

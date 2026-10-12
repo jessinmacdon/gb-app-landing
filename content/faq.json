@@ -39,8 +39,34 @@
     "defaultOpen": false
   },
   {
-    "id": "faq-4",
+    "id": "faq-9",
     "order": 4,
+    "question": {
+      "en": "Is the app free?",
+      "fr": "L'application est-elle gratuite ?"
+    },
+    "answer": {
+      "en": "Yes. GlobalBuy is free to download. You only pay for what you order, and your quote shows every cost before you pay.",
+      "fr": "Oui. GlobalBuy est gratuite à télécharger. Vous ne payez que ce que vous commandez, et votre devis affiche chaque coût avant le paiement."
+    },
+    "defaultOpen": false
+  },
+  {
+    "id": "faq-10",
+    "order": 5,
+    "question": {
+      "en": "Can family abroad order for me?",
+      "fr": "Un proche à l'étranger peut-il commander pour moi ?"
+    },
+    "answer": {
+      "en": "Yes. Someone abroad can order and pay in the app, and you collect the order at your city's pickup point.",
+      "fr": "Oui. Un proche à l'étranger peut commander et payer dans l'app, et vous récupérez la commande au point de retrait de votre ville."
+    },
+    "defaultOpen": false
+  },
+  {
+    "id": "faq-4",
+    "order": 6,
     "question": {
       "en": "Where do I collect my order?",
       "fr": "Où récupérer ma commande ?"
@@ -52,8 +78,21 @@
     "defaultOpen": false
   },
   {
+    "id": "faq-11",
+    "order": 7,
+    "question": {
+      "en": "What do I need to collect my order?",
+      "fr": "Que dois-je apporter pour récupérer ma commande ?"
+    },
+    "answer": {
+      "en": "Bring an ID. You'll get a notification when your order reaches your city's pickup point, and you choose when to collect.",
+      "fr": "Apportez une pièce d'identité. Vous êtes notifié quand votre commande arrive au point de retrait de votre ville, et vous choisissez quand passer."
+    },
+    "defaultOpen": false
+  },
+  {
     "id": "faq-5",
-    "order": 5,
+    "order": 8,
     "question": {
       "en": "Are the products authentic?",
       "fr": "Les produits sont-ils authentiques ?"
@@ -66,7 +105,7 @@
   },
   {
     "id": "faq-6",
-    "order": 6,
+    "order": 9,
     "question": {
       "en": "Can I follow my order?",
       "fr": "Puis-je suivre ma commande ?"
@@ -79,7 +118,7 @@
   },
   {
     "id": "faq-8",
-    "order": 7,
+    "order": 10,
     "question": {
       "en": "What if something goes wrong with my order?",
       "fr": "Et si un problème survient avec ma commande ?"
@@ -92,7 +131,7 @@
   },
   {
     "id": "faq-7",
-    "order": 8,
+    "order": 11,
     "question": {
       "en": "Is there anything you won't ship?",
       "fr": "Y a-t-il des articles interdits ?"

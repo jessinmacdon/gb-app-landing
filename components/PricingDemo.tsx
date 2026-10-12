@@ -45,18 +45,27 @@ const ROWS = [
 const STEP_MS = 650;
 const SYMBOL: Record<string, string> = { EUR: '€', USD: '$', GBP: '£' };
 
-/** "€1 = 656 FCFA", derived from the example itself so it always adds up. */
-const rateLine = (q: DemoQuote) =>
-  q.originalPrice
-    ? `${SYMBOL[q.originalPrice.currency] ?? q.originalPrice.currency + ' '}1 = ${formatXAF(
-        q.breakdownXAF.product / q.originalPrice.amount,
-      )} FCFA`
-    : null;
+/**
+ * "€1 = 656 FCFA" (EN) or "1 € = 656 FCFA" (FR), derived from the example
+ * itself so it always adds up.
+ */
+const rateLine = (q: DemoQuote, lang: 'en' | 'fr') => {
+  if (!q.originalPrice) return null;
+  const symbol = SYMBOL[q.originalPrice.currency] ?? q.originalPrice.currency;
+  const fcfa = formatXAF(q.breakdownXAF.product / q.originalPrice.amount);
+  return lang === 'fr' ? `1\u00a0${symbol} = ${fcfa} FCFA` : `${symbol}1 = ${fcfa} FCFA`;
+};
 
-/** Accepts "zalando.com/…" as well as full https:// links. */
-const withScheme = (v: string) => {
-  const t = v.trim();
-  return /^[a-z][a-z0-9+.-]*:\/\//i.test(t) ? t : `https://${t}`;
+/**
+ * Finds the link in what was pasted. Store apps' share buttons paste text like
+ * "Look what I found on SHEIN https://…", and people often drop the https://.
+ */
+export const extractLink = (v: string) => {
+  const text = v.trim();
+  const full = text.match(/https?:\/\/[^\s<>"']+/i);
+  if (full) return full[0];
+  const bare = text.match(/(?:^|\s)((?:[a-z0-9-]+\.)+[a-z]{2,}(?:\/[^\s<>"']*)?)/i);
+  return bare ? `https://${bare[1]}` : text;
 };
 
 /**
@@ -70,7 +79,10 @@ export function PricingDemo({ children, quotes, defaultQuoteId, stores, lang, ro
   const [value, setValue] = useState('');
   const [phase, setPhase] = useState<'idle' | 'error' | 0 | 1>('idle');
   const [notice, setNotice] = useState<string | null>(null);
+  const [pendingId, setPendingId] = useState<string | null>(null);
+  const [hint, setHint] = useState(false);
   const timers = useRef<number[]>([]);
+  const input = useRef<HTMLInputElement>(null);
 
   useEffect(() => () => timers.current.forEach(clearTimeout), []);
 
@@ -79,13 +91,17 @@ export function PricingDemo({ children, quotes, defaultQuoteId, stores, lang, ro
 
   const run = (raw: string, example: DemoQuote | null) => {
     timers.current.forEach(clearTimeout);
-    const link = withScheme(raw);
+    setHint(false);
+    const link = extractLink(raw);
     const found = detectStore(link, stores);
     if (!found) {
+      setNotice(null);
+      setPendingId(null);
       setPhase('error');
       return;
     }
     const target = example ?? quotes.find((q) => q.store === found.store) ?? quotes[0];
+    setPendingId(target.id);
     const isSample = !!example || link === target.sampleUrl;
     const msg = isSample
       ? null
@@ -99,13 +115,15 @@ export function PricingDemo({ children, quotes, defaultQuoteId, stores, lang, ro
       window.setTimeout(() => {
         setQuoteId(target.id);
         setNotice(msg);
+        setPendingId(null);
         setPhase('idle');
       }, STEP_MS * 2),
     ];
   };
 
   const busy = phase === 0 || phase === 1;
-  const rate = rateLine(quote);
+  const rate = rateLine(quote, lang);
+  const pressedId = pendingId ?? (notice ? null : quote.id);
 
   return (
     <>
@@ -117,6 +135,10 @@ export function PricingDemo({ children, quotes, defaultQuoteId, stores, lang, ro
           onSubmit={(e) => {
             e.preventDefault();
             if (value.trim()) run(value, null);
+            else {
+              setHint(true);
+              input.current?.focus();
+            }
           }}
         >
           <label className="quote-form__label" htmlFor="quote-link">
@@ -124,6 +146,7 @@ export function PricingDemo({ children, quotes, defaultQuoteId, stores, lang, ro
           </label>
           <div className="quote-form__field">
             <input
+              ref={input}
               id="quote-link"
               className="quote-form__input"
               type="url"
@@ -133,19 +156,24 @@ export function PricingDemo({ children, quotes, defaultQuoteId, stores, lang, ro
               placeholder={copy.placeholder}
               value={value}
               aria-invalid={phase === 'error'}
-              aria-describedby={phase === 'error' ? 'quote-error' : undefined}
+              aria-describedby={phase === 'error' ? 'quote-error' : hint ? 'quote-hint' : undefined}
               onChange={(e) => {
                 setValue(e.target.value);
+                setHint(false);
                 if (phase === 'error') setPhase('idle');
               }}
             />
-            <button className="quote-form__submit" type="submit" disabled={busy || !value.trim()}>
+            <button className="quote-form__submit" type="submit" disabled={busy}>
               {copy.submit}
             </button>
           </div>
           {phase === 'error' ? (
             <p className="quote-form__error" id="quote-error" role="alert">
               {copy.invalid}
+            </p>
+          ) : hint ? (
+            <p className="quote-form__hint" id="quote-hint">
+              {copy.empty}
             </p>
           ) : null}
         </form>
@@ -157,7 +185,7 @@ export function PricingDemo({ children, quotes, defaultQuoteId, stores, lang, ro
                 key={q.id}
                 type="button"
                 className="quote-tab"
-                aria-pressed={q.id === quote.id && !notice}
+                aria-pressed={q.id === pressedId}
                 disabled={busy}
                 onClick={() => {
                   if (q.sampleUrl) setValue(q.sampleUrl);

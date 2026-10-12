@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { extractLink } from '@/components/PricingDemo';
 import { formatMoney } from '@/lib/format';
 import { detectStore, storeMonogram } from '@/lib/stores';
 
@@ -38,5 +39,16 @@ describe('formatMoney', () => {
     expect(formatMoney({ amount: 99.99, currency: 'EUR' }, 'fr')).toBe('99,99 €');
     expect(formatMoney({ amount: 1379, currency: 'USD' }, 'fr')).toBe('1 379,00 $');
     expect(formatMoney({ amount: 10, currency: 'CHF' }, 'en')).toBe('10.00 CHF');
+  });
+});
+
+describe('extractLink', () => {
+  it('finds links inside pasted share text and adds a missing scheme', () => {
+    expect(extractLink('Look what I found on SHEIN https://m.shein.com/item-p-123.html?share=1')).toBe(
+      'https://m.shein.com/item-p-123.html?share=1',
+    );
+    expect(extractLink('  amazon.com/dp/B0CHX1W1XY ')).toBe('https://amazon.com/dp/B0CHX1W1XY');
+    expect(extractLink('Check this aliexpress.com/item/100500.html cool')).toBe('https://aliexpress.com/item/100500.html');
+    expect(extractLink('nike shoes')).toBe('nike shoes');
   });
 });

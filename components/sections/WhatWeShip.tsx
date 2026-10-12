@@ -71,7 +71,7 @@ export async function WhatWeShipBrowser({ lang, t, settings, appLinks }: Props) 
         picksCta: t.picksCta,
         picksEmpty: t.picksEmpty,
         daysUnit: t.daysUnit,
-        sampleTag: t.picksSampleTag,
+        exampleKicker: t.picksExampleKicker,
         tabsLabel: t.catTabsLabel,
       }}
     />

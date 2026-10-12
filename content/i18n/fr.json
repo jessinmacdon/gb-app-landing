@@ -14,14 +14,15 @@
   "heroTitle1": "Achetez partout.",
   "heroTitle2": "Payez par Mobile Money.",
   "heroSub": "Collez un lien Amazon, SHEIN, Zalando ou de n'importe quelle boutique. GlobalBuy l'achète, l'expédie au Cameroun, gère la douane et le garde dans un point de retrait de votre ville.",
-  "heroNote": "Pas de carte internationale. Pas de PayPal. Un prix, connu d'avance.",
+  "heroNote": "Application gratuite. Pas de carte internationale. Pas de PayPal. Un prix, connu d'avance.",
   "phone": {
     "title": "Nouvelle commande",
     "payMtn": "Payer avec MTN MoMo",
     "payOrange": "Payer avec Orange Money",
     "notifTitle": "Prête à récupérer",
     "notifSub": "Votre commande est à Douala",
-    "chip": "Dédouanée ✓"
+    "chip": "Dédouanée ✓",
+    "exampleTag": "Exemple"
   },
   "rows": {
     "product": "Prix du produit",
@@ -60,8 +61,8 @@
   "testiTitle": "Des commandes bien arrivées.",
   "faqTitle": "Vos questions, nos réponses.",
   "faqSub": "Encore un doute ? Notre équipe répond en français et en anglais dans l'app, avec un chat en direct pour chaque commande en cours.",
-  "ctaTitle1": "Votre prochaine commande est à",
-  "ctaTitle2": "un lien près.",
+  "ctaTitle1": "Votre prochaine commande n'est qu'à",
+  "ctaTitle2": "un lien.",
   "ctaSub": "Téléchargez GlobalBuy, collez un lien et recevez votre devis instantanément.",
   "footTag": "Achetez sur n'importe quelle boutique en ligne. Payez par Mobile Money. Récupérez au Cameroun.",
   "footLegal": "Mentions légales",
@@ -83,7 +84,6 @@
   "langLabel": "Langue",
   "navLabel": "Principal",
   "socialLabel": "Réseaux sociaux",
-  "picksSampleTag": "Exemples",
   "catTabsLabel": "Catégories",
   "originalPrice": "Prix sur {store}",
   "footContact": "Contact",
@@ -102,6 +102,9 @@
     "exampleTotal": "Total de cet exemple",
     "rateLabel": "Taux de change appliqué",
     "demoNote": "Montants d'exemple. L'app lit la vraie page produit et vous donne son devis exact.",
-    "cta": "Commander dans l'app"
-  }
+    "cta": "Commander dans l'app",
+    "empty": "Collez d'abord un lien, ou essayez un des exemples ci-dessous."
+  },
+  "picksExampleKicker": "Exemples d'articles commandés",
+  "stickyHint": "Google Play · App Store"
 }
