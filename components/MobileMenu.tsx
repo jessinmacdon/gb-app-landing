@@ -5,13 +5,15 @@ import { useEffect, useRef, useState } from 'react';
 type Props = {
   links: { href: string; label: string }[];
   labels: { open: string; close: string };
+  /** Shown under the links on phones (the language switch). */
+  footer?: React.ReactNode;
 };
 
 /**
  * Section links for screens where the inline nav is hidden. Closes on link
  * tap, Escape (returning focus to the button) or a tap outside the panel.
  */
-export function MobileMenu({ links, labels }: Props) {
+export function MobileMenu({ links, labels, footer }: Props) {
   const [open, setOpen] = useState(false);
   const root = useRef<HTMLDivElement>(null);
   const button = useRef<HTMLButtonElement>(null);
@@ -65,6 +67,7 @@ export function MobileMenu({ links, labels }: Props) {
             </li>
           ))}
         </ul>
+        {footer}
       </nav>
     </div>
   );

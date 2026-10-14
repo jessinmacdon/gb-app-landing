@@ -39,7 +39,16 @@ export function Nav({ lang, t, appLinks, home }: Props) {
           <GetAppLink className="nav__cta" links={appLinks} section="nav">
             {t.nav.download}
           </GetAppLink>
-          <MobileMenu links={links} labels={{ open: t.menuOpen, close: t.menuClose }} />
+          <MobileMenu
+            links={links}
+            labels={{ open: t.menuOpen, close: t.menuClose }}
+            footer={
+              <div className="menu__lang">
+                <span>{t.langLabel}</span>
+                <LangToggle lang={lang} label={t.langLabel} />
+              </div>
+            }
+          />
         </div>
       </div>
     </header>
