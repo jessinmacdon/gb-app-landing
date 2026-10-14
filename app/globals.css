@@ -24,7 +24,10 @@
 
   --gutter: clamp(20px, 5vw, 48px);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --section-y: clamp(72px, 10vw, 128px);
+  /* Vertical rhythm: space around sections, under section heads, inside grids. */
+  --section-y: clamp(48px, 7.5vw, 104px);
+  --head-gap: clamp(28px, 4vw, 52px);
+  --grid-gap: clamp(32px, 5vw, 72px);
   --display: var(--font-display), 'Bricolage Grotesque', sans-serif;
   --body: var(--font-body), 'Instrument Sans', system-ui, sans-serif;
 }
@@ -233,7 +236,8 @@ section[id] {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(12, 38, 28, 0.88);
+  /* Darker than the forest sections below, so the bar reads as its own layer. */
+  background: rgba(6, 22, 16, 0.96);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -337,11 +341,11 @@ section[id] {
   pointer-events: none;
 }
 .hero__grid {
-  padding-top: clamp(40px, 6vw, 80px);
-  padding-bottom: clamp(64px, 8vw, 112px);
+  padding-top: clamp(32px, 5vw, 72px);
+  padding-bottom: var(--section-y);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr));
-  gap: clamp(48px, 6vw, 80px);
+  gap: var(--grid-gap);
   align-items: center;
   position: relative;
 }
@@ -627,7 +631,7 @@ section[id] {
   border-bottom: 1px solid var(--border);
 }
 .stores__inner {
-  padding-block: 40px;
+  padding-block: clamp(28px, 4vw, 40px);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -660,7 +664,7 @@ section[id] {
   padding-block: var(--section-y);
 }
 .how .section-head {
-  margin-bottom: 56px;
+  margin-bottom: var(--head-gap);
 }
 .how__grid {
   display: grid;
@@ -720,7 +724,7 @@ section[id] {
   padding-block: var(--section-y);
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: var(--head-gap);
 }
 .ship__head {
   display: flex;
@@ -1017,7 +1021,7 @@ section[id] {
   padding-block: var(--section-y);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
-  gap: clamp(40px, 6vw, 80px);
+  gap: var(--grid-gap);
 }
 .why__left {
   display: flex;
@@ -1072,7 +1076,7 @@ section[id] {
   padding-block: var(--section-y);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
-  gap: clamp(40px, 6vw, 80px);
+  gap: var(--grid-gap);
   align-items: center;
 }
 .pricing__copy {
@@ -1407,7 +1411,7 @@ section[id] {
   padding-block: var(--section-y);
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: var(--head-gap);
 }
 .testi__inner .h2 {
   text-wrap: initial;
@@ -1466,7 +1470,7 @@ section[id] {
   padding-block: var(--section-y);
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(32px, 6vw, 80px);
+  gap: var(--grid-gap);
 }
 .faq__head {
   display: flex;
@@ -1588,7 +1592,7 @@ section[id] {
 }
 .cta__copy {
   position: relative;
-  padding: clamp(40px, 7vw, 96px);
+  padding: clamp(32px, 6vw, 88px);
   display: flex;
   flex-direction: column;
   gap: 28px;
@@ -1820,7 +1824,7 @@ section[id] {
 }
 
 .footer {
-  padding-top: 64px;
+  padding-top: clamp(40px, 5vw, 64px);
   padding-bottom: 40px;
   display: flex;
   flex-direction: column;
@@ -1920,7 +1924,7 @@ section[id] {
   justify-content: space-between;
   gap: 12px;
   padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom));
-  background: rgba(12, 38, 28, 0.94);
+  background: rgba(6, 22, 16, 0.96);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -2251,8 +2255,30 @@ section[id] {
     display: block;
   }
 }
-/* Phones: the floating download bar replaces the nav's download button. */
+/* Phones: the language switch lives in the menu, the floating download bar
+   replaces the nav's download button. */
+.menu__lang {
+  display: none;
+}
 @media (max-width: 719px) {
+  .nav__actions > .lang-toggle {
+    display: none;
+  }
+  .menu__lang {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 4px var(--gutter) 20px;
+    color: rgba(251, 248, 241, 0.7);
+    font-size: 15px;
+  }
+  .menu__lang .lang-toggle__opt {
+    padding: 8px 16px;
+    font-size: 15px;
+  }
   /* French runs longer: keeps the closing headline to three lines on phones. */
   .cta__title:lang(fr) {
     font-size: 38px;
@@ -2283,7 +2309,7 @@ section[id] {
   left: 0;
   right: 0;
   top: 100%;
-  background: var(--forest);
+  background: #061610;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
   opacity: 0;
