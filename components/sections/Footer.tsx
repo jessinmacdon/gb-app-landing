@@ -76,7 +76,7 @@ export function Footer({ lang, t, site, home }: { lang: Locale; t: Dictionary; s
       </div>
       <div className="footer__bottom">
         <span>
-          © 2026 GlobalBuy. {t.rights} {t.footOperator}
+          © 2026 GlobalBuy24. {t.rights}
         </span>
       </div>
     </footer>

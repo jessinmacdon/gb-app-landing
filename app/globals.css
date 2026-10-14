@@ -1,4 +1,4 @@
-/* GlobalBuy landing page. Values are taken 1:1 from the Claude Design prototype. */
+/* GlobalBuy24 landing page. Values are taken 1:1 from the Claude Design prototype. */
 
 :root {
   --forest: #0c261c;
@@ -145,6 +145,10 @@ section[id] {
   align-items: center;
   gap: 10px;
 }
+/* The logo is a link, but the pointer is cue enough: it keeps its colours on hover. */
+.logo:hover {
+  color: inherit;
+}
 .logo__mark {
   width: 26px;
   height: 26px;
@@ -258,7 +262,8 @@ section[id] {
   font-size: 15px;
   color: rgba(251, 248, 241, 0.78);
 }
-@media (min-width: 960px) {
+/* From 1080px: room for the links in French too ("Pourquoi GlobalBuy24"). */
+@media (min-width: 1080px) {
   .nav__links {
     display: flex;
   }
@@ -2221,11 +2226,11 @@ section[id] {
   }
 }
 
-/* ───────── MOBILE MENU (below 960px, where the inline links are hidden) ───────── */
+/* ───────── MOBILE MENU (below 1080px, where the inline links are hidden) ───────── */
 .menu {
   display: none;
 }
-@media (max-width: 959px) {
+@media (max-width: 1079px) {
   .menu {
     display: block;
   }
