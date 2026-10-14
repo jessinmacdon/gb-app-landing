@@ -2,8 +2,8 @@
   "title": { "en": "Privacy Policy", "fr": "Politique de confidentialité" },
   "intro": [
     {
-      "en": "This Privacy Policy describes how GlobalBuy collects, uses and discloses your information when you use our app and website. We take your privacy seriously and protect your personal data with care and transparency.",
-      "fr": "Cette politique de confidentialité décrit comment GlobalBuy collecte, utilise et communique vos informations lorsque vous utilisez notre application et notre site. Nous prenons votre vie privée au sérieux et protégeons vos données personnelles avec soin et transparence."
+      "en": "This Privacy Policy describes how GlobalBuy24 collects, uses and discloses your information when you use our app and website. We take your privacy seriously and protect your personal data with care and transparency.",
+      "fr": "Cette politique de confidentialité décrit comment GlobalBuy24 collecte, utilise et communique vos informations lorsque vous utilisez notre application et notre site. Nous prenons votre vie privée au sérieux et protégeons vos données personnelles avec soin et transparence."
     },
     {
       "en": "By using our service, you agree to the collection and use of information in accordance with this policy. This policy complies with the General Data Protection Regulation (GDPR) and other applicable data protection laws.",
@@ -27,15 +27,15 @@
             {
               "term": { "en": "Application", "fr": "Application" },
               "text": {
-                "en": "GlobalBuy, the mobile application provided by the Company.",
-                "fr": "GlobalBuy, l'application mobile fournie par la Société."
+                "en": "GlobalBuy24, the mobile application provided by the Company.",
+                "fr": "GlobalBuy24, l'application mobile fournie par la Société."
               }
             },
             {
               "term": { "en": "Company", "fr": "Société" },
               "text": {
-                "en": "GlobalBuy24, which operates GlobalBuy, with registered office at Huttenstraße 25, 13353 Berlin, Germany. The Company is the data controller under the GDPR.",
-                "fr": "GlobalBuy24, qui exploite GlobalBuy, dont le siège est situé Huttenstraße 25, 13353 Berlin, Allemagne. La Société est le responsable du traitement au sens du RGPD."
+                "en": "GlobalBuy24, with registered office at Huttenstraße 25, 13353 Berlin, Germany. The Company is the data controller under the GDPR.",
+                "fr": "GlobalBuy24, dont le siège est situé Huttenstraße 25, 13353 Berlin, Allemagne. La Société est le responsable du traitement au sens du RGPD."
               }
             },
             {
@@ -48,8 +48,8 @@
             {
               "term": { "en": "Service", "fr": "Service" },
               "text": {
-                "en": "The GlobalBuy application, website and all their features.",
-                "fr": "L'application GlobalBuy, le site web et l'ensemble de leurs fonctionnalités."
+                "en": "The GlobalBuy24 application, website and all their features.",
+                "fr": "L'application GlobalBuy24, le site web et l'ensemble de leurs fonctionnalités."
               }
             },
             {
@@ -118,8 +118,8 @@
         {
           "type": "p",
           "text": {
-            "en": "GlobalBuy does not use advertising cookies. The platforms and services the app is built on may use cookies to:",
-            "fr": "GlobalBuy n'utilise pas de cookies publicitaires. Les plateformes et services sur lesquels repose l'application peuvent utiliser des cookies pour :"
+            "en": "GlobalBuy24 does not use advertising cookies. The platforms and services the app is built on may use cookies to:",
+            "fr": "GlobalBuy24 n'utilise pas de cookies publicitaires. Les plateformes et services sur lesquels repose l'application peuvent utiliser des cookies pour :"
           }
         },
         {
@@ -141,7 +141,7 @@
         {
           "type": "list",
           "items": [
-            { "term": { "en": "Operating the service", "fr": "Fonctionnement du service" }, "text": { "en": "running and maintaining GlobalBuy", "fr": "exploiter et maintenir GlobalBuy" } },
+            { "term": { "en": "Operating the service", "fr": "Fonctionnement du service" }, "text": { "en": "running and maintaining GlobalBuy24", "fr": "exploiter et maintenir GlobalBuy24" } },
             { "term": { "en": "Account management", "fr": "Gestion du compte" }, "text": { "en": "creating and maintaining your profile", "fr": "créer et gérer votre profil" } },
             { "term": { "en": "Performing our contract", "fr": "Exécution du contrat" }, "text": { "en": "processing orders, payments and deliveries", "fr": "traiter les commandes, les paiements et les livraisons" } },
             { "term": { "en": "Customer support", "fr": "Service client" }, "text": { "en": "answering questions and resolving issues", "fr": "répondre à vos questions et résoudre les problèmes" } }
@@ -362,8 +362,8 @@
         {
           "type": "note",
           "text": {
-            "en": "GlobalBuy does not collect or store your payment details. They go directly to Fapshi, whose [privacy policy](https://www.fapshi.com/en/privacy-policy) applies.",
-            "fr": "GlobalBuy ne collecte ni ne conserve vos données de paiement. Elles sont transmises directement à Fapshi, dont la [politique de confidentialité](https://www.fapshi.com/en/privacy-policy) s'applique."
+            "en": "GlobalBuy24 does not collect or store your payment details. They go directly to Fapshi, whose [privacy policy](https://www.fapshi.com/en/privacy-policy) applies.",
+            "fr": "GlobalBuy24 ne collecte ni ne conserve vos données de paiement. Elles sont transmises directement à Fapshi, dont la [politique de confidentialité](https://www.fapshi.com/en/privacy-policy) s'applique."
           }
         }
       ]

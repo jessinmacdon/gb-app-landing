@@ -17,19 +17,19 @@ People in Cameroon who want products from international online stores that won't
 
 ## Product Purpose
 
-GlobalBuy is a mobile app that lets anyone in Cameroon buy from any online store in the world. The user pastes a product link, gets one all-in quote, and pays with mobile money. GlobalBuy buys the item, ships it, clears customs, and holds it at a pickup point in the user's city.
+GlobalBuy24 is a mobile app that lets anyone in Cameroon buy from any online store in the world. The user pastes a product link, gets one all-in quote, and pays with mobile money. GlobalBuy24 buys the item, ships it, clears customs, and holds it at a pickup point in the user's city.
 
 It exists to serve an underserved market by removing three barriers:
 
 1. **Shipping:** most online shops and marketplaces don't ship directly to Africa. Cameroon is the starting market.
 2. **Payment:** those shops don't accept the payment methods the everyday African actually has.
-3. **Opacity:** people who can reach global marketplaces resell to everyone else at steep markups (for example, a paint brush that costs €0.50 on Amazon sells for €5 locally). GlobalBuy shows the real price instead.
+3. **Opacity:** people who can reach global marketplaces resell to everyone else at steep markups (for example, a paint brush that costs €0.50 on Amazon sells for €5 locally). GlobalBuy24 shows the real price instead.
 
 The landing page's main goal is app downloads (Google Play and App Store).
 
 ## Positioning
 
-GlobalBuy gives direct, transparent access to the world's prices: one quote, broken down into what the item costs and what getting it home costs. This replaces the middlemen who profit because buyers can't see the original price.
+GlobalBuy24 gives direct, transparent access to the world's prices: one quote, broken down into what the item costs and what getting it home costs. This replaces the middlemen who profit because buyers can't see the original price.
 
 It is meant to beat what people do today:
 
@@ -42,13 +42,13 @@ It is meant to beat what people do today:
 
 - **How an order works:**
   1. Paste a product link into the app.
-  2. Get a quote covering product price, international shipping, customs and GlobalBuy's service fee.
+  2. Get a quote covering product price, international shipping, customs and GlobalBuy24's service fee.
   3. Pay with MTN Mobile Money or Orange Money.
-  4. GlobalBuy handles shipping and customs and notifies the user when the order reaches their city's pickup point.
+  4. GlobalBuy24 handles shipping and customs and notifies the user when the order reaches their city's pickup point.
 - **Ordering from abroad:** someone abroad can order and pay in the app for a relative, who collects in Cameroon.
 - **Collecting:** the person collecting brings an ID.
 - **Pickup cities live today:** Douala, Yaoundé, Buea, Limbe. More cities are planned.
-- **Support:** in French and English. There's live chat in the app for customers with an active order (on the order confirmation page), and a GlobalBuy community, including support, opens on launch day. There's no WhatsApp support number yet; don't link or promise one.
+- **Support:** in French and English. There's live chat in the app for customers with an active order (on the order confirmation page), and a GlobalBuy24 community, including support, opens on launch day. There's no WhatsApp support number yet; don't link or promise one.
 - **Stores:** any online store with a product URL, including Amazon, eBay, SHEIN, Zalando, About You, Etsy, ASOS, Nike, AliExpress, Walmart, H&M, Sephora, Adidas and Jumia.
 
 ## Capabilities and Constraints
@@ -56,8 +56,8 @@ It is meant to beat what people do today:
 - **The app is free to download.**
 - **Payments:** MTN Mobile Money and Orange Money. No international card is required. Bank card payments are coming soon.
 - **Languages:** the site and app are bilingual, English and French.
-- **Prohibited items:** GlobalBuy does not ship weapons, counterfeits, narcotics, hazardous materials, or items banned under Cameroonian import law.
-- **Authenticity:** GlobalBuy buys only from official retailers and authorised sellers.
+- **Prohibited items:** GlobalBuy24 does not ship weapons, counterfeits, narcotics, hazardous materials, or items banned under Cameroonian import law.
+- **Authenticity:** GlobalBuy24 buys only from official retailers and authorised sellers.
 - **Tracking:** every stage, from purchase through customs to the pickup notification, is visible in the app.
 - **Site stack:** Next.js 16 + TypeScript on Netlify. Dynamic content comes from JSON in `content/`.
 - **Refund policy:** in progress. Don't link to it or describe its terms until it's published.
@@ -65,7 +65,7 @@ It is meant to beat what people do today:
 
 ## Brand Commitments
 
-- **Names:** the product name on the site is **GlobalBuy**. The company, domain and email addresses stay **GlobalBuy24** (globalbuy24.com, contact@globalbuy24.com, support@globalbuy24.com).
+- **Name:** the product, company, domain and email addresses are all **GlobalBuy24** (globalbuy24.com, support@globalbuy24.com). Always write it as one word with the 24; never shorten it to "GlobalBuy". (Decided October 2026; the site briefly used "GlobalBuy" as the product name.)
 - **Bilingual parity:** French and English get equal standing. The current French copy is machine-written and needs a native review.
 
 ## Evidence on Hand
@@ -80,7 +80,7 @@ It is meant to beat what people do today:
 
 1. **Show the real price.** Transparency is the product. Every price shown says what it includes, and nothing hides a markup.
 2. **Work with what people already have:** mobile money, an Android phone, a local pickup point. Don't assume a card, a fast connection or a home address.
-3. **Built for Cameroon, without condescension.** Global access is a right GlobalBuy restores, not a favour.
+3. **Built for Cameroon, without condescension.** Global access is a right GlobalBuy24 restores, not a favour.
 4. **Equal in French and English.** Neither language is the translation.
 5. **Never fake trust.** Proof stays out until it's real.
 

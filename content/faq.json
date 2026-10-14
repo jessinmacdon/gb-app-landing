@@ -20,8 +20,8 @@
       "fr": "L'application est-elle gratuite ?"
     },
     "answer": {
-      "en": "Yes. GlobalBuy is free to download. You only pay for what you order, and your quote shows every cost before you pay.",
-      "fr": "Oui. GlobalBuy est gratuite à télécharger. Vous ne payez que ce que vous commandez, et votre devis affiche chaque coût avant le paiement."
+      "en": "Yes. GlobalBuy24 is free to download. You only pay for what you order, and your quote shows every cost before you pay.",
+      "fr": "Oui. GlobalBuy24 est gratuite à télécharger. Vous ne payez que ce que vous commandez, et votre devis affiche chaque coût avant le paiement."
     },
     "defaultOpen": false
   },
@@ -46,8 +46,8 @@
       "fr": "Comment récupérer ma commande ?"
     },
     "answer": {
-      "en": "At the GlobalBuy pickup point in your city. You get a notification when your order arrives and choose when to collect. Bring an ID.",
-      "fr": "Au point de retrait GlobalBuy de votre ville. Vous êtes notifié à l'arrivée de votre commande et choisissez quand passer. Apportez une pièce d'identité."
+      "en": "At the GlobalBuy24 pickup point in your city. You get a notification when your order arrives and choose when to collect. Bring an ID.",
+      "fr": "Au point de retrait GlobalBuy24 de votre ville. Vous êtes notifié à l'arrivée de votre commande et choisissez quand passer. Apportez une pièce d'identité."
     },
     "defaultOpen": false
   },
@@ -72,8 +72,8 @@
       "fr": "Y a-t-il des articles interdits ?"
     },
     "answer": {
-      "en": "Yes. GlobalBuy doesn't ship weapons, counterfeits, narcotics, hazardous materials, or items banned under Cameroonian import law.",
-      "fr": "Oui. GlobalBuy n'expédie pas d'armes, de contrefaçons, de stupéfiants, de matières dangereuses ni d'articles interdits par la loi camerounaise."
+      "en": "Yes. GlobalBuy24 doesn't ship weapons, counterfeits, narcotics, hazardous materials, or items banned under Cameroonian import law.",
+      "fr": "Oui. GlobalBuy24 n'expédie pas d'armes, de contrefaçons, de stupéfiants, de matières dangereuses ni d'articles interdits par la loi camerounaise."
     },
     "defaultOpen": false
   }

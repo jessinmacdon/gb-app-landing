@@ -6,7 +6,7 @@ import { isLocale, locales } from '@/lib/i18n';
 export async function legalMetadata(lang: string, id: LegalPageId): Promise<Metadata> {
   if (!isLocale(lang)) return {};
   const doc = await getLegalDoc(id);
-  const title = `${doc.title[lang]} · GlobalBuy`;
+  const title = `${doc.title[lang]} · GlobalBuy24`;
   const firstParagraph = doc.sections[0].blocks.find((b) => b.type === 'p');
   return {
     title,

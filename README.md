@@ -1,6 +1,6 @@
-# GlobalBuy landing page
+# GlobalBuy24 landing page
 
-GlobalBuy marketing site: Next.js 16 (App Router) + TypeScript, built from the Claude
+GlobalBuy24 marketing site: Next.js 16 (App Router) + TypeScript, built from the Claude
 Design handoff. Bilingual (EN/FR), statically prerendered, with every dynamic section
 driven by content files. Deployed on Netlify (see `netlify.toml`).
 

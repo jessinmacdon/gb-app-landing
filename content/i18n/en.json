@@ -1,7 +1,7 @@
 {
   "nav": {
     "how": "How it works",
-    "why": "Why GlobalBuy",
+    "why": "Why GlobalBuy24",
     "pricing": "Pricing",
     "faq": "FAQ",
     "download": "Get the app"
@@ -14,7 +14,7 @@
   },
   "heroTitle1": "Shop the world.",
   "heroTitle2": "Pay with Mobile Money.",
-  "heroSub": "Paste a link from Amazon, SHEIN, Zalando or any online store. GlobalBuy buys it, ships it to Cameroon, clears customs and holds it at a pickup point in your city.",
+  "heroSub": "Paste a link from Amazon, SHEIN, Zalando or any online store. GlobalBuy24 buys it, ships it to Cameroon, clears customs and holds it at a pickup point in your city.",
   "heroNote": "Free app. No international card. No PayPal. One price, upfront.",
   "phone": {
     "title": "New order",
@@ -29,7 +29,7 @@
     "product": "Product price",
     "shipping": "International shipping",
     "customs": "Customs & duties",
-    "fee": "GlobalBuy service fee",
+    "fee": "GlobalBuy24 service fee",
     "total": "Total you pay"
   },
   "storesLabel": "Works with any store that has a product link",
@@ -42,7 +42,7 @@
   "picksNote": "Estimated delivered totals in FCFA. Your exact quote is in the app.",
   "picksCta": "Get the app to order",
   "catNote": "Any product legal to import into Cameroon can be ordered, even if its category isn't listed here.",
-  "whyEyebrow": "Why GlobalBuy",
+  "whyEyebrow": "Why GlobalBuy24",
   "whyTitle": "Buy abroad. Collect close to home.",
   "priceEyebrow": "Pricing transparency",
   "priceTitle": "One number. No surprises.",
@@ -60,7 +60,7 @@
   "faqSub": "Can't find your answer? Email us at {email}.",
   "ctaTitle1": "Your next order is",
   "ctaTitle2": "one link away.",
-  "ctaSub": "Download GlobalBuy, paste a link and get your quote instantly.",
+  "ctaSub": "Download GlobalBuy24, paste a link and get your quote instantly.",
   "footTag": "Shop any online store in the world. Pay with Mobile Money. Collect in Cameroon.",
   "footLegal": "Legal",
   "footFollow": "Follow us",
@@ -71,10 +71,9 @@
   },
   "rights": "All rights reserved.",
   "meta": {
-    "title": "GlobalBuy: shop any online store, pay with Mobile Money",
-    "description": "Paste a link from Amazon, SHEIN, Zalando or any online store. GlobalBuy buys it, ships it to Cameroon, clears customs and holds it at a pickup point in your city."
+    "title": "GlobalBuy24: shop any online store, pay with Mobile Money",
+    "description": "Paste a link from Amazon, SHEIN, Zalando or any online store. GlobalBuy24 buys it, ships it to Cameroon, clears customs and holds it at a pickup point in your city."
   },
-  "heroEyebrowPrefix": "Live in",
   "daysUnit": "days",
   "faqEyebrow": "FAQ",
   "picksEmpty": "No picks in this category yet. Paste any product link in the app for a quote.",
@@ -83,7 +82,6 @@
   "catTabsLabel": "Categories",
   "originalPrice": "Price on {store}",
   "footContact": "Contact",
-  "footOperator": "GlobalBuy is operated by GlobalBuy24.",
   "demo": {
     "label": "Paste any product link",
     "placeholder": "zalando.com/…",

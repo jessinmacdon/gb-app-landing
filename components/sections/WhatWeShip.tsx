@@ -15,13 +15,11 @@ export function WhatWeShip({ t, children }: { t: Dictionary; children: React.Rea
   return (
     <section className="ship" aria-labelledby="ship-title">
       <div className="container ship__inner">
-        <div className="ship__head">
-          <div className="section-head">
-            <span className="eyebrow eyebrow--plain">{t.catEyebrow}</span>
-            <h2 className="h2" id="ship-title">
-              {t.catTitle}
-            </h2>
-          </div>
+        <div className="section-head">
+          <span className="eyebrow eyebrow--plain">{t.catEyebrow}</span>
+          <h2 className="h2" id="ship-title">
+            {t.catTitle}
+          </h2>
           <p className="ship__note">{t.catNote}</p>
         </div>
         {children}

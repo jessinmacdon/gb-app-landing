@@ -1,9 +1,9 @@
 /** `href` defaults to the top of the current page; other pages link home. */
 export function Logo({ href = '#top' }: { href?: string }) {
   return (
-    <a href={href} className="logo" aria-label="GlobalBuy">
+    <a href={href} className="logo" aria-label="GlobalBuy24">
       <span className="logo__mark" aria-hidden="true" />
-      <span className="logo__word">GlobalBuy</span>
+      <span className="logo__word">GlobalBuy24</span>
     </a>
   );
 }

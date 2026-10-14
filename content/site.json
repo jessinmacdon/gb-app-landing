@@ -92,8 +92,8 @@
         "fr": "Collez un lien"
       },
       "body": {
-        "en": "Find a product on any online store and copy its link. Paste it into GlobalBuy.",
-        "fr": "Trouvez un produit sur n'importe quelle boutique en ligne et copiez son lien. Collez-le dans GlobalBuy."
+        "en": "Find a product on any online store and copy its link. Paste it into GlobalBuy24.",
+        "fr": "Trouvez un produit sur n'importe quelle boutique en ligne et copiez son lien. Collez-le dans GlobalBuy24."
       }
     },
     {
@@ -103,8 +103,8 @@
         "fr": "Recevez un devis instantané"
       },
       "body": {
-        "en": "GlobalBuy calculates the full cost: the product price, international shipping, customs and its service fee.",
-        "fr": "GlobalBuy calcule le coût total : prix du produit, livraison internationale, douane et frais de service."
+        "en": "GlobalBuy24 calculates the full cost: the product price, international shipping, customs and its service fee.",
+        "fr": "GlobalBuy24 calcule le coût total : prix du produit, livraison internationale, douane et frais de service."
       }
     },
     {
@@ -114,8 +114,8 @@
         "fr": "Payez par Mobile Money"
       },
       "body": {
-        "en": "Confirm the quote and pay instantly using MTN Mobile Money or Orange Money. GlobalBuy then purchases the item on your behalf.",
-        "fr": "Confirmez le devis et payez instantanément avec MTN Mobile Money ou Orange Money. GlobalBuy achète ensuite l'article pour vous."
+        "en": "Confirm the quote and pay instantly using MTN Mobile Money or Orange Money. GlobalBuy24 then purchases the item on your behalf.",
+        "fr": "Confirmez le devis et payez instantanément avec MTN Mobile Money ou Orange Money. GlobalBuy24 achète ensuite l'article pour vous."
       }
     },
     {
@@ -125,8 +125,8 @@
         "fr": "Récupérez près de chez vous"
       },
       "body": {
-        "en": "GlobalBuy handles shipping and customs. When your order arrives at your city's pickup point, you get a notification and choose when to collect.",
-        "fr": "GlobalBuy gère la livraison et la douane. Quand votre commande arrive au point de retrait de votre ville, vous êtes notifié et choisissez quand la récupérer."
+        "en": "GlobalBuy24 handles shipping and customs. When your order arrives at your city's pickup point, you get a notification and choose when to collect.",
+        "fr": "GlobalBuy24 gère la livraison et la douane. Quand votre commande arrive au point de retrait de votre ville, vous êtes notifié et choisissez quand la récupérer."
       }
     }
   ],
@@ -138,8 +138,8 @@
         "fr": "Vendeurs officiels uniquement"
       },
       "body": {
-        "en": "GlobalBuy buys directly from official retailers and authorised sellers only.",
-        "fr": "GlobalBuy achète uniquement auprès de distributeurs officiels et de vendeurs agréés."
+        "en": "GlobalBuy24 buys directly from official retailers and authorised sellers only.",
+        "fr": "GlobalBuy24 achète uniquement auprès de distributeurs officiels et de vendeurs agréés."
       }
     },
     {
@@ -169,8 +169,8 @@
     "hero": {
       "url": null,
       "alt": {
-        "en": "A customer collecting a parcel at a GlobalBuy pickup point in Douala",
-        "fr": "Une cliente récupère un colis au point de retrait GlobalBuy de Douala"
+        "en": "A customer collecting a parcel at a GlobalBuy24 pickup point in Douala",
+        "fr": "Une cliente récupère un colis au point de retrait GlobalBuy24 de Douala"
       }
     },
     "why": {
