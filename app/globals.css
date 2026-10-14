@@ -354,27 +354,12 @@ section[id] {
   flex-direction: column;
   gap: 24px;
 }
-.hero__live {
-  display: inline-flex;
-  align-self: flex-start;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 14px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  font-size: 13px;
-  color: rgba(251, 248, 241, 0.85);
-}
 .live-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: var(--live);
   flex: none;
-}
-.hero__live .live-dot {
-  box-shadow: 0 0 0 4px rgba(95, 208, 140, 0.2);
 }
 .hero__title {
   margin: 0;

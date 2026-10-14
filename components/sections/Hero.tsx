@@ -10,7 +10,6 @@ import type { Locale } from '@/lib/i18n';
 type Props = { lang: Locale; t: Dictionary; site: SiteContent; heroQuote: ExampleQuote };
 
 export function Hero({ lang, t, site, heroQuote: q }: Props) {
-  const liveCities = site.cities.filter((c) => c.live).map((c) => c.name);
   const rows = [
     [t.rows.product, q.breakdownXAF.product],
     [t.rows.shipping, q.breakdownXAF.shipping],
@@ -23,10 +22,6 @@ export function Hero({ lang, t, site, heroQuote: q }: Props) {
       <div className="hero__glow" aria-hidden="true" />
       <div className="container hero__grid">
         <div className="hero__copy">
-          <div className="hero__live">
-            <span className="live-dot" aria-hidden="true" />
-            {t.heroEyebrowPrefix} {liveCities.join(' · ')}
-          </div>
           <h1 className="hero__title">
             {t.heroTitle1}
             <br />
