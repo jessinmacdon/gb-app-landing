@@ -191,7 +191,7 @@
   "whatWeShip": {
     "defaultCategoryId": "electronics-and-gadgets",
     "defaultRankingMode": "price",
-    "maxProducts": 6,
+    "maxProducts": 4,
     "sampleData": true
   },
   "company": {

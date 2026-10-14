@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useLayoutEffect, useRef } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { GetAppLink } from '@/components/GetAppLink';
 import { StarIcon } from '@/components/Icons';
 import { ImageSlot, Monogram } from '@/components/ImageSlot';
@@ -45,8 +45,14 @@ type Props = {
     daysUnit: string;
     exampleKicker: string;
     tabsLabel: string;
+    /** Toggle that reveals the rest of the categories; {n} is how many are hidden. */
+    catMore: string;
+    catLess: string;
   };
 };
+
+/** Categories shown before "+N more"; the rest stay one tap away. */
+const FIRST_CATEGORIES = 4;
 
 /** Highlighted chip for the metric the list is currently ranked by. */
 const chip = (active: boolean, extra = '') => `chip${active ? ' chip--hi' : ''}${extra}`;
@@ -63,6 +69,7 @@ export function CategoryBrowser({
 }: Props) {
   const [catId, setCatId] = useStickyState('ship.category', defaultCategoryId);
   const [mode, setMode] = useStickyState<RankingModeId>('ship.mode', defaultMode);
+  const [showAll, setShowAll] = useState(false);
   const pillRefs = useRef(new Map<string, HTMLButtonElement>());
   const pillRow = useRef<HTMLDivElement>(null);
 
@@ -119,8 +126,16 @@ export function CategoryBrowser({
         el.animate(
           reduce
             ? [{ opacity: 0 }, { opacity: 1 }]
-            : [{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }],
-          { duration: reduce ? 150 : 320, delay: reduce ? 0 : Math.min(i, 5) * 35, easing: EASE_OUT, fill: 'backwards' },
+            : [
+                { opacity: 0, transform: 'translateY(8px)' },
+                { opacity: 1, transform: 'none' },
+              ],
+          {
+            duration: reduce ? 150 : 320,
+            delay: reduce ? 0 : Math.min(i, 5) * 35,
+            easing: EASE_OUT,
+            fill: 'backwards',
+          },
         );
       }
     });
@@ -131,6 +146,12 @@ export function CategoryBrowser({
   const category = categories.find((c) => c.id === catId) ?? categories[0];
   const activeMode = visibleModes.find((m) => m.id === mode) ?? visibleModes[0];
   if (!category || !activeMode) return null;
+
+  // Collapsed, the row shows the first few categories plus the chosen one (a
+  // remembered choice can sit further down the list).
+  const hidden = categories.length - FIRST_CATEGORIES;
+  const shownCategories =
+    showAll || hidden <= 1 ? categories : categories.filter((c, i) => i < FIRST_CATEGORIES || c.id === category.id);
 
   const picks = rankProducts(category.products, activeMode.id).slice(0, maxProducts);
 
@@ -143,26 +164,46 @@ export function CategoryBrowser({
 
   return (
     <div className="ship__browser">
-      <div className="cat-pills" ref={pillRow} role="tablist" aria-label={copy.tabsLabel} onKeyDown={onRovingKeyDown}>
-        {categories.map((c) => (
+      <div className="cat-row">
+        <div
+          className="cat-pills"
+          id="cat-tabs"
+          ref={pillRow}
+          role="tablist"
+          aria-label={copy.tabsLabel}
+          onKeyDown={onRovingKeyDown}
+        >
+          {shownCategories.map((c) => (
+            <button
+              key={c.id}
+              ref={(el) => {
+                if (el) pillRefs.current.set(c.id, el);
+                else pillRefs.current.delete(c.id);
+              }}
+              type="button"
+              role="tab"
+              id={`cat-tab-${c.id}`}
+              aria-selected={c.id === category.id}
+              tabIndex={c.id === category.id ? 0 : -1}
+              aria-controls="ship-picks"
+              className="cat-pill"
+              onClick={() => selectCategory(c.id)}
+            >
+              {c.name}
+            </button>
+          ))}
+        </div>
+        {hidden > 1 ? (
           <button
-            key={c.id}
-            ref={(el) => {
-              if (el) pillRefs.current.set(c.id, el);
-              else pillRefs.current.delete(c.id);
-            }}
             type="button"
-            role="tab"
-            id={`cat-tab-${c.id}`}
-            aria-selected={c.id === category.id}
-            tabIndex={c.id === category.id ? 0 : -1}
-            aria-controls="ship-picks"
-            className="cat-pill"
-            onClick={() => selectCategory(c.id)}
+            className="cat-more"
+            aria-expanded={showAll}
+            aria-controls="cat-tabs"
+            onClick={() => setShowAll((v) => !v)}
           >
-            {c.name}
+            {showAll ? copy.catLess : copy.catMore.replace('{n}', String(categories.length - shownCategories.length))}
           </button>
-        ))}
+        ) : null}
       </div>
 
       <div className="picks" id="ship-picks" role="tabpanel" aria-labelledby={`cat-tab-${category.id}`}>
@@ -228,7 +269,9 @@ export function CategoryBrowser({
                       {formatRating(p.rating)}
                     </span>
                     {sampleData ? null : (
-                      <span className={chip(activeMode.id === 'delivery')}>{formatDays(p.deliveryDays, copy.daysUnit)}</span>
+                      <span className={chip(activeMode.id === 'delivery')}>
+                        {formatDays(p.deliveryDays, copy.daysUnit)}
+                      </span>
                     )}
                   </div>
                 </div>
@@ -254,7 +297,11 @@ export function CategoryBrowserSkeleton({ rows = 6 }: { rows?: number }) {
     <div className="ship__browser" aria-busy="true">
       <div className="cat-pills">
         {Array.from({ length: 6 }, (_, i) => (
-          <span key={i} className="skeleton" style={{ flex: 'none', width: 160, height: 52, borderRadius: 999, background: 'rgba(12,38,28,0.12)' }} />
+          <span
+            key={i}
+            className="skeleton"
+            style={{ flex: 'none', width: 160, height: 52, borderRadius: 999, background: 'rgba(12,38,28,0.12)' }}
+          />
         ))}
       </div>
       <div className="picks">
