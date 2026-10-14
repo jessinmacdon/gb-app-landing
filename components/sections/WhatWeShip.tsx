@@ -70,6 +70,8 @@ export async function WhatWeShipBrowser({ lang, t, settings, appLinks }: Props) 
         daysUnit: t.daysUnit,
         exampleKicker: t.picksExampleKicker,
         tabsLabel: t.catTabsLabel,
+        catMore: t.catMore,
+        catLess: t.catLess,
       }}
     />
   );

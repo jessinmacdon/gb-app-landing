@@ -40,6 +40,8 @@
   "popularIn": "Popular picks in",
   "rankBy": "Rank by",
   "picksNote": "Estimated delivered totals in FCFA. Your exact quote is in the app.",
+  "catMore": "+{n} more",
+  "catLess": "Fewer",
   "picksCta": "Get the app to order",
   "catNote": "Any product legal to import into Cameroon can be ordered, even if its category isn't listed here.",
   "whyEyebrow": "Why GlobalBuy24",
@@ -49,6 +51,7 @@
   "priceSub": "Every quote breaks down the product, international shipping, customs and our service fee. The quote you confirm in the app is the price you pay.",
   "payEyebrow": "Payment",
   "payTitle": "Pay the way you already pay.",
+  "payAlt": "Need another way to pay? [Contact us](mailto:support@globalbuy24.com).",
   "soon": "Coming soon",
   "cityEyebrow": "Pickup locations",
   "cityTitle": "Collect in your city.",
@@ -67,7 +70,7 @@
   "legal": {
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
-    "refund": "Return & Refund Policy"
+    "refund": "Cancellation & Refund Policy"
   },
   "rights": "All rights reserved.",
   "meta": {

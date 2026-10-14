@@ -40,6 +40,8 @@
   "popularIn": "Sélection populaire en",
   "rankBy": "Classer par",
   "picksNote": "Totaux livrés estimés en FCFA. Votre devis exact est dans l'app.",
+  "catMore": "+{n} autres",
+  "catLess": "Moins",
   "picksCta": "Télécharger l'app",
   "catNote": "Tout produit légal à l'importation au Cameroun peut être commandé, même si sa catégorie n'est pas listée ici.",
   "whyEyebrow": "Pourquoi GlobalBuy24",
@@ -49,6 +51,7 @@
   "priceSub": "Chaque devis détaille le produit, la livraison internationale, la douane et nos frais de service. Le devis que vous confirmez dans l'app est le prix que vous payez.",
   "payEyebrow": "Paiement",
   "payTitle": "Payez comme vous payez déjà.",
+  "payAlt": "Besoin d'un autre moyen de paiement ? [Contactez-nous](mailto:support@globalbuy24.com).",
   "soon": "Bientôt",
   "cityEyebrow": "Points de retrait",
   "cityTitle": "Récupérez dans votre ville.",
@@ -67,7 +70,7 @@
   "legal": {
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation",
-    "refund": "Politique de retour et remboursement"
+    "refund": "Politique d'annulation et de remboursement"
   },
   "rights": "Tous droits réservés.",
   "meta": {

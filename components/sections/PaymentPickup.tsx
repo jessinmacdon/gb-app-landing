@@ -1,3 +1,4 @@
+import { InlineLinks } from '@/components/InlineLinks';
 import type { Dictionary } from '@/lib/content';
 import type { SiteContent } from '@/lib/content/types';
 import type { Locale } from '@/lib/i18n';
@@ -38,6 +39,9 @@ export function PaymentPickup({ lang, t, site }: { lang: Locale; t: Dictionary; 
             </li>
           ))}
         </ul>
+        <p className="pay__alt">
+          <InlineLinks text={t.payAlt} />
+        </p>
       </div>
 
       <div className="card-lg cities">

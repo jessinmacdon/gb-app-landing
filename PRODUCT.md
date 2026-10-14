@@ -60,7 +60,8 @@ It is meant to beat what people do today:
 - **Authenticity:** GlobalBuy24 buys only from official retailers and authorised sellers.
 - **Tracking:** every stage, from purchase through customs to the pickup notification, is visible in the app.
 - **Site stack:** Next.js 16 + TypeScript on Netlify. Dynamic content comes from JSON in `content/`.
-- **Refund policy:** in progress. Don't link to it or describe its terms until it's published.
+- **Cancellation and refund policy:** a separate policy, in progress (October 2026). The Terms of Service point to it at `/{lang}/refund-policy`, a placeholder until it's published. Don't describe its terms anywhere else on the site.
+- **Payment:** only MTN Mobile Money and Orange Money work today, through the Fapshi gateway; bank cards are coming soon. Anyone, including family abroad, needs a Cameroon MoMo account to pay. For other payment methods, people contact support.
 - **Undecided:** whether the quote breakdown (product + shipping + customs + service fee) is a permanent, fixed structure. Don't present it as a guarantee beyond "the quote you see is what you pay".
 
 ## Brand Commitments

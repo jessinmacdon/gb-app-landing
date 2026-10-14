@@ -394,7 +394,8 @@ section[id] {
 }
 .hero__visual {
   position: relative;
-  min-height: 620px;
+  /* 50px taller than the phone so the notification overlaps only its top bezel, not the screen. */
+  min-height: 660px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -415,7 +416,7 @@ section[id] {
 .hero__notif {
   position: absolute;
   left: 0;
-  top: 64px;
+  top: 0;
   background: var(--cream);
   color: var(--ink);
   border-radius: 18px;
@@ -728,23 +729,57 @@ section[id] {
   flex-direction: column;
   gap: 20px;
 }
+.cat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+/* Few enough categories to wrap instead of scrolling sideways, so none is cut off. */
 .cat-pills {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 10px;
-  overflow-x: auto;
-  scrollbar-width: none;
-  margin: 0 calc(-1 * var(--gutter));
-  padding: 2px var(--gutter);
-  scroll-snap-type: x proximity;
-  scroll-padding-inline: var(--gutter);
 }
-.cat-pills::-webkit-scrollbar {
-  display: none;
+.cat-more {
+  cursor: pointer;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(17px, 2vw, 24px);
+  letter-spacing: -0.02em;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 2px dashed rgba(12, 38, 28, 0.45);
+  white-space: nowrap;
+  background: transparent;
+  color: var(--forest);
+  transition: border-color 200ms ease-out;
 }
-@media (min-width: 720px) {
+.cat-more:hover {
+  border-color: var(--forest);
+}
+@media (max-width: 719px) {
+  /* Long names ("Electronics & Gadgets") fit one per row at full size; two compact columns keep the list short. */
+  .cat-row {
+    display: block;
+  }
   .cat-pills {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .cat-pills .cat-pill,
+  .cat-more {
+    font-size: 16px;
+    line-height: 1.15;
+    padding: 10px 12px;
+    min-height: 52px;
+    white-space: normal;
+    text-align: center;
+  }
+  .cat-more {
+    width: 100%;
+    margin-top: 8px;
+    min-height: 44px;
   }
 }
 .cat-pill {
@@ -1122,6 +1157,11 @@ section[id] {
   flex-direction: column;
   gap: 20px;
   box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.6);
+  transition: opacity 0.25s var(--ease-out, ease-out);
+}
+/* After an invalid link the old example stays put but steps back, so it isn't read as a result. */
+.receipt[data-stale] {
+  opacity: 0.35;
 }
 .receipt__head {
   display: flex;
@@ -1326,6 +1366,16 @@ section[id] {
   gap: 12px;
   color: var(--muted);
   font-size: 15px;
+}
+.pay__alt {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+.pay__alt a {
+  color: var(--ink);
+  font-weight: 600;
+  text-underline-offset: 3px;
 }
 .soon-tag {
   font-size: 12px;

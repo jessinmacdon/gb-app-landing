@@ -87,17 +87,24 @@ export function PricingDemo({ children, quotes, defaultQuoteId, stores, lang, ro
   const timers = useRef<number[]>([]);
   const input = useRef<HTMLInputElement>(null);
   const totalRef = useRef<HTMLDivElement>(null);
+  const receiptRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => () => timers.current.forEach(clearTimeout), []);
 
-  // On phones the receipt lands below the form: bring the total into view so
-  // the answer to "what will it cost?" isn't off-screen.
+  // On phones the receipt lands below the form: bring it into view, its head
+  // just under the fixed nav, or the total at the bottom of the screen if the
+  // whole receipt doesn't fit, so the answer to "what will it cost?" is visible.
   useEffect(() => {
-    const el = totalRef.current;
-    if (!runKey || !el || !window.matchMedia('(max-width: 719px)').matches) return;
-    const r = el.getBoundingClientRect();
-    if (r.top >= 80 && r.bottom <= window.innerHeight - 16) return;
-    el.scrollIntoView({ block: 'center', behavior: prefersReducedMotion() ? 'auto' : 'smooth' });
+    const box = receiptRef.current;
+    const totalEl = totalRef.current;
+    if (!runKey || !box || !totalEl || !window.matchMedia('(max-width: 719px)').matches) return;
+    const navBottom = document.querySelector('.nav')?.getBoundingClientRect().bottom ?? 72;
+    const top = box.getBoundingClientRect().top;
+    const bottom = totalEl.getBoundingClientRect().bottom;
+    const room = window.innerHeight - 16;
+    if (top >= navBottom && bottom <= room) return;
+    const y = bottom - top + navBottom + 12 <= room ? top - navBottom - 12 : bottom - room;
+    window.scrollBy({ top: y, behavior: prefersReducedMotion() ? 'auto' : 'smooth' });
   }, [runKey]);
 
   const quote = quotes.find((q) => q.id === quoteId) ?? quotes[0];
@@ -225,11 +232,15 @@ export function PricingDemo({ children, quotes, defaultQuoteId, stores, lang, ro
       <p className="sr-only" aria-live="polite">
         {announcement}
       </p>
-      <div className="receipt" aria-busy={busy}>
+      <div className="receipt" ref={receiptRef} aria-busy={busy} data-stale={phase === 'error' || undefined}>
         {busy ? (
           <ol className="quote-steps">
             {[copy.reading, copy.pricing].map((label, i) => (
-              <li key={label} className="quote-steps__step" data-state={i < phase ? 'done' : i === phase ? 'active' : 'todo'}>
+              <li
+                key={label}
+                className="quote-steps__step"
+                data-state={i < phase ? 'done' : i === phase ? 'active' : 'todo'}
+              >
                 {label}
               </li>
             ))}

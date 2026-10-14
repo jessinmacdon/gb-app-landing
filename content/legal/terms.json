@@ -52,13 +52,13 @@
       ]
     },
     {
-      "heading": { "en": "Refunds and cancellations", "fr": "Remboursements et annulations" },
+      "heading": { "en": "Cancellations and refunds", "fr": "Annulations et remboursements" },
       "blocks": [
         {
           "type": "p",
           "text": {
-            "en": "Refund requests must be made within 7 days of payment and are processed within 10 to 15 business days.",
-            "fr": "Les demandes de remboursement doivent être faites dans les 7 jours suivant le paiement et sont traitées sous 10 à 15 jours ouvrables."
+            "en": "Cancellations and refunds are covered by our separate [Cancellation and Refund Policy](/en/refund-policy), which forms part of these Terms of Service.",
+            "fr": "Les annulations et remboursements sont régis par notre [politique d'annulation et de remboursement](/fr/refund-policy), distincte, qui fait partie des présentes conditions d'utilisation."
           }
         }
       ]
