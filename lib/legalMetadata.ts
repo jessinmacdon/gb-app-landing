@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getLegalDoc, type LegalPageId } from '@/lib/content';
-import { isLocale, locales } from '@/lib/i18n';
+import { isLocale } from '@/lib/i18n';
+import { localeAlternates } from '@/lib/site';
 
 /** Title, description and per-language URLs for a legal page. */
 export async function legalMetadata(lang: string, id: LegalPageId): Promise<Metadata> {
@@ -11,10 +12,7 @@ export async function legalMetadata(lang: string, id: LegalPageId): Promise<Meta
   return {
     title,
     description: doc.intro[0]?.[lang] ?? (firstParagraph && 'text' in firstParagraph ? firstParagraph.text[lang] : undefined),
-    alternates: {
-      canonical: `/${lang}/${id}`,
-      languages: Object.fromEntries(locales.map((l) => [l, `/${l}/${id}`])),
-    },
-    openGraph: { title },
+    alternates: localeAlternates(lang, `/${id}`),
+    openGraph: { title, url: `/${lang}/${id}` },
   };
 }
