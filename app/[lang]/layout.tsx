@@ -3,6 +3,7 @@ import { Bricolage_Grotesque, Instrument_Sans } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { getDictionary } from '@/lib/content';
 import { isLocale, locales } from '@/lib/i18n';
+import { localeAlternates, SITE_URL } from '@/lib/site';
 import '../globals.css';
 
 const display = Bricolage_Grotesque({
@@ -29,13 +30,18 @@ export async function generateMetadata({ params }: LayoutProps<'/[lang]'>): Prom
   if (!isLocale(lang)) return {};
   const t = await getDictionary(lang);
   return {
+    metadataBase: new URL(SITE_URL),
     title: t.meta.title,
     description: t.meta.description,
-    alternates: {
-      canonical: `/${lang}`,
-      languages: Object.fromEntries(locales.map((l) => [l, `/${l}`])),
+    alternates: localeAlternates(lang),
+    openGraph: {
+      title: t.meta.title,
+      description: t.meta.description,
+      url: `/${lang}`,
+      siteName: 'GlobalBuy24',
+      type: 'website',
+      locale: lang === 'fr' ? 'fr_CM' : 'en_CM',
     },
-    openGraph: { title: t.meta.title, description: t.meta.description, locale: lang === 'fr' ? 'fr_CM' : 'en_CM' },
   };
 }
 
