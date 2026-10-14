@@ -711,20 +711,10 @@ section[id] {
   flex-direction: column;
   gap: var(--head-gap);
 }
-.ship__head {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 24px;
-}
-.ship__head .section-head {
-  max-width: 760px;
-}
 .ship__note {
   margin: 0;
-  max-width: 340px;
-  font-size: 16px;
+  max-width: 520px;
+  font-size: 18px;
   line-height: 1.55;
   text-wrap: pretty;
 }
