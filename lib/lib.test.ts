@@ -9,6 +9,7 @@ import fr from '@/content/i18n/fr.json';
 import rankingModes from '@/content/ranking-modes.json';
 import site from '@/content/site.json';
 import testimonials from '@/content/testimonials.json';
+import worstCase from '@/content/fixtures/worst-case.json';
 import { getCategories, getExampleQuotes, quoteTotal } from '@/lib/content';
 import type {
   Category,
@@ -103,6 +104,8 @@ describe('content', () => {
     });
 
   it('seed content is valid', () => expect(validateContent(bundle())).toEqual([]));
+  it('worst-case fixture (break-ui) is valid', () =>
+    expect(validateContent({ ...bundle(), ...(worstCase as Partial<ContentBundle>) })).toEqual([]));
 
   it('quote totals are computed from the breakdown', async () => {
     const hero = (await getExampleQuotes()).find((q) => q.isHeroPhoneExample)!;

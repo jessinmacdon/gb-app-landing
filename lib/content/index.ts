@@ -16,6 +16,7 @@ import fr from '@/content/i18n/fr.json';
 import rankingModesJson from '@/content/ranking-modes.json';
 import siteJson from '@/content/site.json';
 import testimonialsJson from '@/content/testimonials.json';
+import worstCaseJson from '@/content/fixtures/worst-case.json';
 import type { Locale } from '@/lib/i18n';
 import type {
   Category,
@@ -47,6 +48,9 @@ function load(): ContentBundle {
     legal: { privacy: privacyJson as LegalDoc, terms: termsJson as LegalDoc },
     dictionaries: { en, fr },
   };
+  // Dev-only stress test (break-ui): CONTENT_FIXTURE=worst npm run build swaps in
+  // realistic worst-case data. Never set in production.
+  if (process.env.CONTENT_FIXTURE === 'worst') Object.assign(next, worstCaseJson as Partial<ContentBundle>);
   const errors = validateContent(next);
   if (errors.length) throw new Error(`Invalid landing page content:\n- ${errors.join('\n- ')}`);
   bundle = next;
