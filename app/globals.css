@@ -510,6 +510,13 @@ section[id] {
   margin-right: clamp(0px, 8vw, 120px);
   transform: rotate(-3deg);
 }
+/* A 320px screen leaves a 280px column: centre the phone and scale it to fit. */
+@media (max-width: 359px) {
+  .phone {
+    margin-right: 0;
+    transform: rotate(-3deg) scale(0.88);
+  }
+}
 .phone__screen {
   width: 100%;
   height: 100%;
@@ -978,6 +985,13 @@ section[id] {
   font-weight: 600;
   font-size: 15px;
   line-height: 1.25;
+  /* Long marketplace titles stop at three lines; the full name is in the title attribute. */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  overflow-wrap: anywhere;
 }
 .pick__store {
   font-size: 13px;
@@ -991,6 +1005,7 @@ section[id] {
   font-size: 13px;
 }
 .chip {
+  white-space: nowrap;
   padding: 4px 9px;
   border-radius: 999px;
   background: var(--chip-lo);
@@ -1249,6 +1264,9 @@ section[id] {
   justify-content: space-between;
   gap: 16px;
 }
+.receipt__origin-row > :last-child {
+  white-space: nowrap;
+}
 .receipt__rate {
   font-size: 13px;
   font-variant-numeric: tabular-nums;
@@ -1301,6 +1319,8 @@ section[id] {
 }
 .receipt__row dd {
   margin: 0;
+  /* Amounts never split across lines; the label wraps instead. */
+  white-space: nowrap;
   font-variant-numeric: tabular-nums;
   font-weight: 500;
 }
@@ -1356,13 +1376,20 @@ section[id] {
 }
 .pay__tiles {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* minmax(0, …): a long tile name ("Express Union") can't push its column wider than half. */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 12px;
   margin: auto 0 0;
   padding: 0;
   list-style: none;
 }
+@media (max-width: 359px) {
+  .pay__tiles {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 .pay__tile {
+  overflow-wrap: anywhere;
   border-radius: 20px;
   padding: 20px;
   display: flex;
@@ -1614,6 +1641,8 @@ section[id] {
   line-height: 1.6;
   color: var(--muted);
   text-wrap: pretty;
+  /* A pasted link has no spaces to wrap at. */
+  overflow-wrap: anywhere;
 }
 .faq__a a {
   text-decoration: underline;
@@ -1780,6 +1809,7 @@ section[id] {
   }
 }
 .legal__body {
+  overflow-wrap: anywhere;
   max-width: 68ch;
   font-size: 17px;
   line-height: 1.65;

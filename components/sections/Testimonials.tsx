@@ -3,14 +3,15 @@ import type { Dictionary } from '@/lib/content';
 import type { Testimonial } from '@/lib/content/types';
 import type { Locale } from '@/lib/i18n';
 
-const initials = (name: string) =>
-  name
-    .split(/\s+/)
-    .map((w) => w[0])
+/** First letters of the first and last word that start with a letter ("Marie-Claire … Mbarga" → "MM"). */
+const initials = (name: string) => {
+  const words = name.split(/\s+/).filter((w) => /^\p{L}/u.test(w));
+  const pick = words.length > 1 ? [words[0], words[words.length - 1]] : words;
+  return pick
+    .map((w) => Array.from(w)[0])
     .join('')
-    .replace(/[^\p{L}]/gu, '')
-    .slice(0, 2)
     .toUpperCase();
+};
 
 /** Renders only real testimonials; the section disappears while none exist. */
 export function Testimonials({ lang, t, items }: { lang: Locale; t: Dictionary; items: Testimonial[] }) {

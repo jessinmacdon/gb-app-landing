@@ -257,17 +257,21 @@ export function CategoryBrowser({
                 />
                 <div className="pick__body">
                   <div className="pick__top">
-                    <span className="pick__name">{p.name}</span>
+                    <span className="pick__name" title={p.name}>
+                      {p.name}
+                    </span>
                     <span className="pick__store">{p.store}</span>
                   </div>
                   <div className="pick__chips">
                     <span className={chip(activeMode.id === 'price', ' chip--price')}>
                       {formatXAF(p.estimatedTotalXAF)} FCFA
                     </span>
-                    <span className={chip(activeMode.id === 'quality', ' chip--rating')}>
-                      <StarIcon />
-                      {formatRating(p.rating)}
-                    </span>
+                    {p.rating > 0 ? (
+                      <span className={chip(activeMode.id === 'quality', ' chip--rating')}>
+                        <StarIcon />
+                        {formatRating(p.rating)}
+                      </span>
+                    ) : null}
                     {sampleData ? null : (
                       <span className={chip(activeMode.id === 'delivery')}>
                         {formatDays(p.deliveryDays, copy.daysUnit)}
