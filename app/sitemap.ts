@@ -2,6 +2,9 @@ import type { MetadataRoute } from 'next';
 import { locales } from '@/lib/i18n';
 import { SITE_URL } from '@/lib/site';
 
+// Generated once at build time (static export).
+export const dynamic = 'force-static';
+
 const PAGES = [
   { path: '', priority: 1 },
   { path: '/privacy', priority: 0.3 },

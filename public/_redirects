@@ -1,0 +1,8 @@
+# The static export writes each page as an .html file next to a folder of the
+# same name (en.html beside en/). Map the clean URLs to those files.
+/en          /en.html          200
+/fr          /fr.html          200
+/en/privacy  /en/privacy.html  200
+/fr/privacy  /fr/privacy.html  200
+/en/terms    /en/terms.html    200
+/fr/terms    /fr/terms.html    200
