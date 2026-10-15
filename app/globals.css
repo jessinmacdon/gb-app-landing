@@ -22,7 +22,8 @@
   --mtn: #ffcb05;
   --orange: #ff7900;
 
-  --gutter: clamp(20px, 5vw, 48px);
+  /* At least the notch inset in landscape (viewport-fit=cover lets the page run under it). */
+  --gutter: max(clamp(20px, 5vw, 48px), env(safe-area-inset-left, 0px), env(safe-area-inset-right, 0px));
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   /* Vertical rhythm: space around sections, under section heads, inside grids. */
   --section-y: clamp(48px, 7.5vw, 104px);
@@ -39,6 +40,25 @@
 }
 html {
   scroll-behavior: smooth;
+  /* No grey flash on tap: every control has its own :active state instead. */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+/* Controls react on touch without the double-tap-zoom wait, and a long press
+   doesn't select their label. Body text stays selectable. */
+button,
+[role='tab'],
+[role='radio'],
+.badge,
+.nav__cta,
+.sticky-dl__btn,
+.picks__cta,
+.receipt__cta {
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 body {
   margin: 0;
@@ -58,8 +78,10 @@ a {
   color: inherit;
   text-decoration: none;
 }
-a:hover {
-  color: var(--mango);
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    color: var(--mango);
+  }
 }
 button {
   font: inherit;
@@ -101,6 +123,7 @@ section[id] {
 
 .page {
   min-height: 100vh;
+  min-height: 100svh;
   overflow-x: clip;
 }
 .container {
@@ -146,8 +169,10 @@ section[id] {
   gap: 10px;
 }
 /* The logo is a link, but the pointer is cue enough: it keeps its colours on hover. */
-.logo:hover {
-  color: inherit;
+@media (hover: hover) and (pointer: fine) {
+  .logo:hover {
+    color: inherit;
+  }
 }
 .logo__mark {
   width: 26px;
@@ -208,8 +233,10 @@ section[id] {
 .badge--apple {
   gap: 10px;
 }
-.badge:hover {
-  color: #fff;
+@media (hover: hover) and (pointer: fine) {
+  .badge:hover {
+    color: #fff;
+  }
 }
 .badge--soon {
   border-style: dashed;
@@ -245,6 +272,8 @@ section[id] {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  /* Clear of the status bar when installed full-screen (viewport-fit=cover). */
+  padding-top: env(safe-area-inset-top, 0px);
 }
 .nav__inner {
   padding-block: 14px;
@@ -307,8 +336,10 @@ section[id] {
   background: transparent;
   color: rgba(251, 248, 241, 0.7);
 }
-.lang-toggle__opt:hover {
-  color: var(--cream);
+@media (hover: hover) and (pointer: fine) {
+  .lang-toggle__opt:hover {
+    color: var(--cream);
+  }
 }
 .lang-toggle__opt[aria-current='true'] {
   background: var(--cream);
@@ -323,9 +354,11 @@ section[id] {
   border-radius: 999px;
   white-space: nowrap;
 }
-.nav__cta:hover {
-  background: var(--cream);
-  color: var(--forest);
+@media (hover: hover) and (pointer: fine) {
+  .nav__cta:hover {
+    background: var(--cream);
+    color: var(--forest);
+  }
 }
 
 /* ───────── HERO ───────── */
@@ -754,8 +787,10 @@ section[id] {
   color: var(--forest);
   transition: border-color 200ms ease-out;
 }
-.cat-more:hover {
-  border-color: var(--forest);
+@media (hover: hover) and (pointer: fine) {
+  .cat-more:hover {
+    border-color: var(--forest);
+  }
 }
 @media (max-width: 719px) {
   /* Long names ("Electronics & Gadgets") fit one per row at full size; two compact columns keep the list short. */
@@ -1009,9 +1044,11 @@ section[id] {
   border-radius: 999px;
   min-height: 44px;
 }
-.picks__cta:hover {
-  background: var(--ink);
-  color: var(--mango);
+@media (hover: hover) and (pointer: fine) {
+  .picks__cta:hover {
+    background: var(--ink);
+    color: var(--mango);
+  }
 }
 
 /* Loading skeleton for the suggestions list */
@@ -1234,9 +1271,11 @@ section[id] {
   font-weight: 600;
   font-size: 15px;
 }
-.receipt__cta:hover {
-  background: var(--ink);
-  color: var(--mango);
+@media (hover: hover) and (pointer: fine) {
+  .receipt__cta:hover {
+    background: var(--ink);
+    color: var(--mango);
+  }
 }
 .receipt__origin-value {
   font-weight: 600;
@@ -1720,9 +1759,11 @@ section[id] {
   color: var(--muted);
   line-height: 1.3;
 }
-.legal__toc a:hover {
-  color: var(--forest);
-  box-shadow: inset 2px 0 0 var(--mango);
+@media (hover: hover) and (pointer: fine) {
+  .legal__toc a:hover {
+    color: var(--forest);
+    box-shadow: inset 2px 0 0 var(--mango);
+  }
 }
 @media (max-width: 959px) {
   .legal__toc ol {
@@ -1753,8 +1794,10 @@ section[id] {
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
-.legal__body a:hover {
-  color: var(--mango-deep);
+@media (hover: hover) and (pointer: fine) {
+  .legal__body a:hover {
+    color: var(--mango-deep);
+  }
 }
 .legal__intro {
   font-size: 19px;
@@ -1927,9 +1970,11 @@ section[id] {
   align-items: center;
   justify-content: center;
 }
-.social__link:hover {
-  background: var(--mango);
-  color: var(--forest);
+@media (hover: hover) and (pointer: fine) {
+  .social__link:hover {
+    background: var(--mango);
+    color: var(--forest);
+  }
 }
 .footer__bottom {
   display: flex;
@@ -1980,9 +2025,11 @@ section[id] {
   font-size: 15px;
   white-space: nowrap;
 }
-.sticky-dl__btn:hover {
-  background: var(--cream);
-  color: var(--forest);
+@media (hover: hover) and (pointer: fine) {
+  .sticky-dl__btn:hover {
+    background: var(--cream);
+    color: var(--forest);
+  }
 }
 @media (min-width: 720px) {
   .sticky-dl {
@@ -2045,8 +2092,10 @@ section[id] {
   font-size: 15px;
   cursor: pointer;
 }
-.quote-form__submit:hover:not(:disabled) {
-  background: var(--cream);
+@media (hover: hover) and (pointer: fine) {
+  .quote-form__submit:hover:not(:disabled) {
+    background: var(--cream);
+  }
 }
 .quote-form__submit:disabled {
   opacity: 0.5;
@@ -2207,21 +2256,33 @@ section[id] {
   transition: background-color 200ms ease-out;
 }
 
-/* Press feedback on the choices people tap. */
+/* Press feedback on everything people tap: it lands with the finger, not on release. */
 .cat-pill,
+.cat-more,
 .rank-by__opt,
 .quote-tab,
 .quote-form__submit,
-.faq__btn .faq__icon {
-  transition-property: background-color, color, box-shadow, transform;
-  transition-duration: 200ms, 200ms, 200ms, 120ms;
+.faq__btn .faq__icon,
+.nav__cta,
+.sticky-dl__btn,
+.picks__cta,
+.receipt__cta,
+.badge {
+  transition-property: background-color, color, border-color, box-shadow, transform;
+  transition-duration: 200ms, 200ms, 200ms, 200ms, 120ms;
   transition-timing-function: ease-out;
 }
 .cat-pill:active,
+.cat-more:active,
 .rank-by__opt:active,
 .quote-tab:active:not(:disabled),
 .quote-form__submit:active:not(:disabled),
-.faq__btn:active .faq__icon {
+.faq__btn:active .faq__icon,
+.nav__cta:active,
+.sticky-dl__btn:active,
+.picks__cta:active,
+.receipt__cta:active,
+.badge:active {
   transform: scale(0.96);
 }
 
@@ -2236,10 +2297,16 @@ section[id] {
     transition: none;
   }
   .cat-pill:active,
+  .cat-more:active,
   .rank-by__opt:active,
   .quote-tab:active:not(:disabled),
   .quote-form__submit:active:not(:disabled),
-  .faq__btn:active .faq__icon {
+  .faq__btn:active .faq__icon,
+  .nav__cta:active,
+  .sticky-dl__btn:active,
+  .picks__cta:active,
+  .receipt__cta:active,
+  .badge:active {
     transform: none;
   }
 }
@@ -2256,7 +2323,7 @@ section[id] {
 }
 
 /* Hover feedback for mouse users (touch devices skip it, so nothing sticks after a tap). */
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .cat-pill[aria-selected='false']:hover {
     background: rgba(12, 38, 28, 0.08);
   }
@@ -2373,8 +2440,10 @@ section[id] {
 .menu__panel li:last-child a {
   border-bottom: 0;
 }
-.menu__panel a:hover {
-  color: var(--mango);
+@media (hover: hover) and (pointer: fine) {
+  .menu__panel a:hover {
+    color: var(--mango);
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .menu__panel,

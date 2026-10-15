@@ -23,7 +23,9 @@ const body = Instrument_Sans({
 export const dynamicParams = false;
 export const generateStaticParams = () => locales.map((lang) => ({ lang }));
 
-export const viewport: Viewport = { themeColor: '#0C261C' };
+// The browser bar takes the nav's colour, and the page may run under the notch;
+// the nav, gutters and sticky bar pad themselves with the safe-area insets.
+export const viewport: Viewport = { themeColor: '#061610', viewportFit: 'cover' };
 
 export async function generateMetadata({ params }: LayoutProps<'/[lang]'>): Promise<Metadata> {
   const { lang } = await params;

@@ -181,6 +181,9 @@ export function PricingDemo({ children, quotes, defaultQuoteId, stores, lang, ro
               className="quote-form__input"
               type="url"
               inputMode="url"
+              enterKeyHint="go"
+              autoCapitalize="none"
+              autoCorrect="off"
               autoComplete="off"
               spellCheck={false}
               placeholder={copy.placeholder}
