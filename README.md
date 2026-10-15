@@ -6,7 +6,7 @@ driven by content files. Deployed on Netlify (see `netlify.toml`).
 
 ```bash
 npm install
-npm run dev        # http://localhost:3000 → redirects to /en or /fr
+npm run dev        # http://localhost:3000/en (the / redirect only runs on Netlify)
 npm test           # ranking, formatting, language detection, content validation
 npm run lint       # type-check
 npm run build      # fails if content is invalid
@@ -18,7 +18,8 @@ The privacy policy and terms live at `/en/privacy`, `/fr/privacy`, `/en/terms` a
 `/fr/terms`. Their text is in `content/legal/*.json` (both languages, validated like the
 rest of the content); company address, phone and email come from `content/site.json`.
 
-`proxy.ts` sends language-less and old static-site URLs to the visitor's language:
+The edge function `netlify/edge-functions/locale.ts` (rules in `lib/localeRoutes.ts`) sends
+language-less and old static-site URLs to the visitor's language:
 `/privacy.html` and `/terms-of-service.html` to the legal pages, `/how-it-works.html`
 and `/contact.html` to the home page's How it works and FAQ sections.
 
@@ -61,12 +62,19 @@ skeleton. Ranking (`lib/ranking.ts`) is a pure function that can move server-sid
 
 ## How it is built
 
-- `app/[lang]/`: one statically generated page per language; `<html lang>` follows the route.
-- `proxy.ts`: `/` redirects to the saved language (`lang` cookie), then to `Accept-Language`, then to English.
+- Static export (`output: 'export'`): `next build` writes plain HTML, CSS and JS to `out/`, which Netlify
+  serves from its CDN. No server function runs on page requests, which matters on slow, high-latency
+  mobile networks. `public/_redirects` maps `/en`, `/fr/privacy` etc. to the exported `.html` files.
+- `app/[lang]/`: one prerendered page per language; `<html lang>` follows the route.
+- `netlify/edge-functions/locale.ts`: `/` redirects to the saved language (`lang` cookie), then to
+  `Accept-Language`, then to English. It runs at Netlify's edge; locally `/` has no
+  redirect, so open `/en` directly.
+- Images: a static export has no image server, so `next/image` runs unoptimized; size remote product
+  photos at the source (or add Netlify Image CDN) when real images arrive.
 - `components/sections/*`: server components, one per page section.
 - `components/{CategoryBrowser,QuoteExplorer,FaqAccordion,LangToggle,StoreBadges}.tsx`: the interactive client parts.
 - `app/globals.css`: design tokens and styles, values taken 1:1 from the prototype.
-  Breakpoints: category pills become a swipe row below 720px, and the nav links show from 960px.
+  Breakpoints: category pills become two columns below 720px, and the nav links show from 1080px.
 - `lib/track.ts`: download clicks, category/ranking/quote selection, FAQ opens and
   language switches are pushed to `window.dataLayer` and dispatched as a
   `globalbuy:track` DOM event. Wire up your analytics there.

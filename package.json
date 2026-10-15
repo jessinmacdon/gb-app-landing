@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "npx serve@14 out",
     "lint": "next typegen && tsc --noEmit",
     "test": "vitest run",
     "validate-content": "tsx scripts/validate-content.ts"

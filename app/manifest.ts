@@ -1,6 +1,9 @@
 import type { MetadataRoute } from 'next';
 
-// One manifest for both languages: start_url '/' lets the proxy pick the visitor's language.
+// Generated once at build time (static export).
+export const dynamic = 'force-static';
+
+// One manifest for both languages: start_url '/' lets the language redirect pick the visitor's language.
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'GlobalBuy24',
