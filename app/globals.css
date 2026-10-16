@@ -790,7 +790,7 @@ section[id] {
   white-space: nowrap;
   background: transparent;
   color: var(--forest);
-  transition: border-color 200ms ease-out;
+  transition: border-color 200ms ease;
 }
 @media (hover: hover) and (pointer: fine) {
   .cat-more:hover {
@@ -2030,10 +2030,12 @@ section[id] {
   background: rgba(6, 22, 16, 0.96);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   transform: translateY(110%);
-  transition: transform 0.28s var(--ease-out);
+  /* Leaves in 180ms, arrives in 280ms. */
+  transition: transform 180ms var(--ease-out);
 }
 .sticky-dl[data-visible='true'] {
   transform: translateY(0);
+  transition-duration: 280ms;
 }
 .sticky-dl__hint {
   font-size: 13px;
@@ -2174,6 +2176,18 @@ section[id] {
     animation: none;
   }
 }
+.quote-form__error,
+.quote-form__hint {
+  transition: opacity 160ms var(--ease-out), transform 160ms var(--ease-out);
+}
+/* The message eases in as the answer to the tap (browsers without @starting-style just show it). */
+@starting-style {
+  .quote-form__error,
+  .quote-form__hint {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
 .quote-form__hint {
   margin: 0;
   font-size: 14px;
@@ -2281,7 +2295,16 @@ section[id] {
   transition: opacity 200ms var(--ease-out), transform 200ms var(--ease-out);
 }
 .faq__icon {
-  transition: background-color 200ms ease-out;
+  transition: background-color 200ms ease;
+}
+/* The plus turns into a minus: its vertical bar rotates flat. */
+.faq__icon .pm-v {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 200ms var(--ease-out), opacity 200ms ease;
+}
+.faq__btn[aria-expanded='true'] .faq__icon .pm-v {
+  transform: rotate(90deg);
 }
 
 /* Press feedback on everything people tap: it lands with the finger, not on release. */
@@ -2297,8 +2320,8 @@ section[id] {
 .receipt__cta,
 .badge {
   transition-property: background-color, color, border-color, box-shadow, transform;
-  transition-duration: 200ms, 200ms, 200ms, 200ms, 120ms;
-  transition-timing-function: ease-out;
+  transition-duration: 200ms, 200ms, 200ms, 200ms, 140ms;
+  transition-timing-function: ease, ease, ease, ease, var(--ease-out);
 }
 .cat-pill:active,
 .cat-more:active,
@@ -2311,7 +2334,7 @@ section[id] {
 .picks__cta:active,
 .receipt__cta:active,
 .badge:active {
-  transform: scale(0.96);
+  transform: scale(0.97);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2323,6 +2346,22 @@ section[id] {
   }
   .faq__panel .faq__a {
     transform: none;
+  }
+  /* Keep the state changes, drop the movement: fade instead of turn or slide. */
+  .faq__btn[aria-expanded='true'] .faq__icon .pm-v {
+    transform: none;
+    opacity: 0;
+  }
+  .menu__line {
+    transition: opacity 120ms ease;
+  }
+  .menu__btn[aria-expanded='true'] .menu__line--top,
+  .menu__btn[aria-expanded='true'] .menu__line--bot {
+    transition: none;
+  }
+  .quote-form__error,
+  .quote-form__hint {
+    transition: opacity 160ms ease;
   }
   .cat-pill:active,
   .cat-more:active,
@@ -2423,11 +2462,26 @@ section[id] {
   background: transparent;
   color: var(--cream);
   cursor: pointer;
-  transition: background-color 200ms ease-out;
+  transition: background-color 200ms ease, color 200ms ease;
 }
 .menu__btn[aria-expanded='true'] {
   background: var(--cream);
   color: var(--forest);
+}
+/* ☰ folds into ✕: outer lines meet in the middle and turn, the middle one fades. */
+.menu__line {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 200ms var(--ease-out), opacity 120ms ease;
+}
+.menu__btn[aria-expanded='true'] .menu__line--top {
+  transform: translateY(4px) rotate(45deg);
+}
+.menu__btn[aria-expanded='true'] .menu__line--mid {
+  opacity: 0;
+}
+.menu__btn[aria-expanded='true'] .menu__line--bot {
+  transform: translateY(-4px) rotate(-45deg);
 }
 .menu__panel {
   position: absolute;
@@ -2440,7 +2494,8 @@ section[id] {
   opacity: 0;
   transform: translateY(-6px);
   visibility: hidden;
-  transition: opacity 180ms ease-out, transform 220ms var(--ease-out), visibility 0s 220ms;
+  /* Closing snaps (140ms); opening below takes its time. */
+  transition: opacity 140ms ease-out, transform 140ms var(--ease-out), visibility 0s 140ms;
 }
 .menu__panel[data-open='true'] {
   opacity: 1;

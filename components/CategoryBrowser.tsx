@@ -141,6 +141,31 @@ export function CategoryBrowser({
     });
   }, [catId, mode]);
 
+  // "+N more": only the newly revealed categories fade in, 30ms apart; the
+  // ones already on screen stay put. Reads the rendered tabs, so it can sit
+  // above the early return with the other hooks.
+  const pillsShown = useRef(new Set<string>());
+  useLayoutEffect(() => {
+    const tabs = Array.from(pillRow.current?.querySelectorAll<HTMLElement>('[role="tab"]') ?? []);
+    const before = pillsShown.current;
+    pillsShown.current = new Set(tabs.map((t) => t.id));
+    if (!showAll || before.size === 0) return;
+    const reduce = prefersReducedMotion();
+    tabs
+      .filter((t) => !before.has(t.id))
+      .forEach((t, i) =>
+        t.animate(
+          reduce
+            ? [{ opacity: 0 }, { opacity: 1 }]
+            : [
+                { opacity: 0, transform: 'scale(0.96)' },
+                { opacity: 1, transform: 'none' },
+              ],
+          { duration: 200, delay: reduce ? 0 : i * 30, easing: EASE_OUT, fill: 'backwards' },
+        ),
+      );
+  }, [showAll]);
+
   // Sample data has no real delivery times, so delivery isn't shown or ranked on.
   const visibleModes = sampleData ? modes.filter((m) => m.id !== 'delivery') : modes;
   const category = categories.find((c) => c.id === catId) ?? categories[0];

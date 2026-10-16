@@ -53,8 +53,20 @@ export function MobileMenu({ links, labels, footer }: Props) {
         aria-label={open ? labels.close : labels.open}
         onClick={() => setOpen((o) => !o)}
       >
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
-          {open ? <path d="M5 5l10 10M15 5L5 15" /> : <path d="M3 6h14M3 10h14M3 14h14" />}
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          aria-hidden="true"
+        >
+          {/* Three lines that fold into an X (CSS, keyed on aria-expanded). */}
+          <path className="menu__line menu__line--top" d="M3 6h14" />
+          <path className="menu__line menu__line--mid" d="M3 10h14" />
+          <path className="menu__line menu__line--bot" d="M3 14h14" />
         </svg>
       </button>
       <nav id="mobile-menu" className="menu__panel" data-open={open} inert={!open} aria-label={labels.open}>

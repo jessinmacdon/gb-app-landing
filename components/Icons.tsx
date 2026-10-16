@@ -70,8 +70,13 @@ const glyph = (d: string, size = 16) => (
   </svg>
 );
 export const CheckIcon = ({ size }: { size?: number }) => glyph('M3 8.5l3.2 3L13 4.5', size);
-export const PlusIcon = ({ size }: { size?: number }) => glyph('M8 3v10M3 8h10', size);
-export const MinusIcon = ({ size }: { size?: number }) => glyph('M3 8h10', size);
+/** Plus that becomes a minus: CSS turns the vertical bar (.pm-v) flat when its control is open. */
+export const PlusMinusIcon = ({ size = 16 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+    <path d="M3 8h10" />
+    <path className="pm-v" d="M8 3v10" />
+  </svg>
+);
 export const StarIcon = ({ size = 12 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
     <path d="M8 1.2l2.1 4.3 4.7.7-3.4 3.3.8 4.7L8 12l-4.2 2.2.8-4.7L1.2 6.2l4.7-.7z" />
