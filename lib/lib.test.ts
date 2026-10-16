@@ -109,7 +109,7 @@ describe('content', () => {
 
   it('quote totals are computed from the breakdown', async () => {
     const hero = (await getExampleQuotes()).find((q) => q.isHeroPhoneExample)!;
-    expect(quoteTotal(hero.breakdownXAF)).toBe(96800);
+    expect(quoteTotal(hero.breakdownXAF)).toBe(96491);
   });
 
   it('reports editor mistakes', () => {

@@ -27,7 +27,7 @@
       "product": 65589,
       "shipping": 14511,
       "customs": 11800,
-      "serviceFee": 4900
+      "serviceFee": 4591
     },
     "isHeroPhoneExample": true
   },
@@ -59,7 +59,7 @@
       "product": 229000,
       "shipping": 18500,
       "customs": 41200,
-      "serviceFee": 12000
+      "serviceFee": 16030
     },
     "isHeroPhoneExample": false
   },
@@ -91,7 +91,7 @@
       "product": 14202,
       "shipping": 6798,
       "customs": 2900,
-      "serviceFee": 2500
+      "serviceFee": 994
     },
     "isHeroPhoneExample": false
   }
