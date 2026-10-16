@@ -6,7 +6,7 @@ import { StarIcon } from '@/components/Icons';
 import { ImageSlot, Monogram } from '@/components/ImageSlot';
 import type { RankingModeId } from '@/lib/content/types';
 import { formatDays, formatRating, formatXAF } from '@/lib/format';
-import { EASE_OUT, prefersReducedMotion } from '@/lib/motion';
+import { EASE_IN_OUT, EASE_OUT, prefersReducedMotion } from '@/lib/motion';
 import { rankProducts } from '@/lib/ranking';
 import { onRovingKeyDown } from '@/lib/rovingTabs';
 import { storeMonogram } from '@/lib/stores';
@@ -119,8 +119,8 @@ export function CategoryBrowser({
         const dy = old.top - now.top;
         if (dx || dy)
           el.animate([{ transform: `translate(${dx}px, ${dy}px)` }, { transform: 'none' }], {
-            duration: 420,
-            easing: EASE_OUT,
+            duration: 300,
+            easing: EASE_IN_OUT,
           });
       } else {
         el.animate(
@@ -131,7 +131,7 @@ export function CategoryBrowser({
                 { opacity: 1, transform: 'none' },
               ],
           {
-            duration: reduce ? 150 : 320,
+            duration: reduce ? 150 : 240,
             delay: reduce ? 0 : Math.min(i, 5) * 35,
             easing: EASE_OUT,
             fill: 'backwards',

@@ -269,8 +269,6 @@ section[id] {
   z-index: 50;
   /* Darker than the forest sections below, so the bar reads as its own layer. */
   background: rgba(6, 22, 16, 0.96);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   /* Clear of the status bar when installed full-screen (viewport-fit=cover). */
   padding-top: env(safe-area-inset-top, 0px);
@@ -2030,8 +2028,6 @@ section[id] {
   gap: 12px;
   padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom));
   background: rgba(6, 22, 16, 0.96);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   transform: translateY(110%);
   transition: transform 0.28s var(--ease-out);
@@ -2237,12 +2233,13 @@ section[id] {
   gap: 20px;
 }
 .receipt__body[data-enter] .receipt__row {
-  animation: receipt-line 380ms var(--ease-out) backwards;
-  animation-delay: calc(var(--i, 0) * 90ms + 60ms);
+  animation: receipt-line 320ms var(--ease-out) backwards;
+  animation-delay: calc(var(--i, 0) * 60ms + 40ms);
 }
 .receipt__body[data-enter] .receipt__total {
-  animation: receipt-line 420ms var(--ease-out) backwards;
-  animation-delay: 420ms;
+  /* Lands after the last line; the JS count-up (useCountUp delayMs) starts with it. */
+  animation: receipt-line 320ms var(--ease-out) backwards;
+  animation-delay: 300ms;
 }
 .receipt__body[data-enter] .receipt__head,
 .receipt__body[data-enter] .receipt__origin,
@@ -2261,11 +2258,11 @@ section[id] {
   }
 }
 
-/* FAQ answers open and close instead of jumping. */
+/* FAQ answers: the space opens at once (animating height re-lays out the page
+   every frame); the answer itself fades and settles into it. */
 .faq__panel {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 300ms var(--ease-out);
 }
 .faq__panel[data-open='true'] {
   grid-template-rows: 1fr;
@@ -2276,11 +2273,12 @@ section[id] {
 }
 .faq__panel .faq__a {
   opacity: 0;
-  transition: opacity 200ms ease-out;
+  transform: translateY(-4px);
 }
 .faq__panel[data-open='true'] .faq__a {
   opacity: 1;
-  transition-delay: 80ms;
+  transform: none;
+  transition: opacity 200ms var(--ease-out), transform 200ms var(--ease-out);
 }
 .faq__icon {
   transition: background-color 200ms ease-out;
@@ -2323,8 +2321,8 @@ section[id] {
     animation-duration: 200ms;
     animation-delay: 0ms;
   }
-  .faq__panel {
-    transition: none;
+  .faq__panel .faq__a {
+    transform: none;
   }
   .cat-pill:active,
   .cat-more:active,

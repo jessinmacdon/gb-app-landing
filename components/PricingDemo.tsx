@@ -108,7 +108,9 @@ export function PricingDemo({ children, quotes, defaultQuoteId, stores, lang, ro
   }, [runKey]);
 
   const quote = quotes.find((q) => q.id === quoteId) ?? quotes[0];
-  const total = useCountUp(quote?.totalXAF ?? 0, runKey);
+  const totalValueRef = useRef<HTMLSpanElement>(null);
+  // Starts as the total fades in (its CSS delay below), so the count is seen.
+  useCountUp(totalValueRef, quote?.totalXAF ?? 0, runKey, formatXAF, { delayMs: 300, durationMs: 600 });
   if (!quote) return null;
 
   const run = (raw: string, example: DemoQuote | null) => {
@@ -286,7 +288,7 @@ export function PricingDemo({ children, quotes, defaultQuoteId, stores, lang, ro
             <div className="receipt__total" ref={totalRef}>
               <span className="receipt__total-label">{copy.exampleTotal}</span>
               <span className="receipt__total-value">
-                {formatXAF(total)} <small>FCFA</small>
+                <span ref={totalValueRef}>{formatXAF(quote.totalXAF)}</span> <small>FCFA</small>
               </span>
             </div>
             <p className="receipt__disclaimer">{copy.demoNote}</p>
