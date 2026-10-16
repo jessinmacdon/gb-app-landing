@@ -127,14 +127,18 @@ export type SiteContent = {
 
 export type LegalBlock =
   | { type: 'p' | 'h3' | 'note'; text: Localized }
-  | { type: 'list'; items: { term?: Localized; text: Localized }[] };
+  /** `plain`: no bullets, for lettered sub-clauses that carry their own "(a)". */
+  | { type: 'list'; plain?: boolean; items: { term?: Localized; text: Localized }[] }
+  | { type: 'table'; head: Localized[]; rows: Localized[][] };
 
-/** A legal page (privacy, terms). Text may contain [label](url) links. */
+/** A legal page (privacy, terms). Text may contain [label](url) links and **bold**. */
 export type LegalDoc = {
   title: Localized;
   effective?: Localized;
   intro: Localized[];
   sections: { heading: Localized; blocks: LegalBlock[] }[];
-  /** Lead-in for the contact details closing the page. */
-  contact: Localized;
+  /** Lead-in for the contact details closing the page. Omit when the document has its own contact section. */
+  contact?: Localized;
+  /** Closing lines after the last section (e.g. "By using GlobalBuy24, you acknowledge…"). */
+  outro?: Localized[];
 };

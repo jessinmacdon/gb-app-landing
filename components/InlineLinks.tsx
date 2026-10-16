@@ -2,11 +2,31 @@ import { Fragment } from 'react';
 
 const LINK = /\[([^\]]+)\]\(((?:https?:\/\/|\/|#|mailto:|tel:)[^\s)]+)\)/g;
 
+const BOLD = /\*\*([^*]+)\*\*/g;
+
 /**
- * Renders plain text, turning [label](url) into links. Lets CMS editors add
- * links to FAQ answers without allowing arbitrary HTML.
+ * Renders plain text, turning [label](url) into links and **text** into bold.
+ * Lets CMS editors add links and emphasis without allowing arbitrary HTML.
  */
 export function InlineLinks({ text }: { text: string }) {
+  if (!text.includes('**')) return <Links text={text} />;
+  const parts: React.ReactNode[] = [];
+  let last = 0;
+  for (const m of text.matchAll(BOLD)) {
+    const i = m.index ?? 0;
+    if (i > last) parts.push(<Links key={`t${i}`} text={text.slice(last, i)} />);
+    parts.push(
+      <strong key={`b${i}`}>
+        <Links text={m[1]} />
+      </strong>,
+    );
+    last = i + m[0].length;
+  }
+  if (last < text.length) parts.push(<Links key="end" text={text.slice(last)} />);
+  return <Fragment>{parts}</Fragment>;
+}
+
+function Links({ text }: { text: string }) {
   const parts: React.ReactNode[] = [];
   let last = 0;
   for (const m of text.matchAll(LINK)) {

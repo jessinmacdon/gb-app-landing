@@ -1,95 +1,1185 @@
 {
   "title": { "en": "Terms of Service", "fr": "Conditions d'utilisation" },
-  "effective": { "en": "Effective 1 January 2025", "fr": "En vigueur depuis le 1er janvier 2025" },
-  "intro": [],
+  "effective": { "en": "Effective 16 October 2026", "fr": "En vigueur depuis le 16 octobre 2026" },
+  "intro": [
+    {
+      "en": "These Terms of Service (\"Terms\") form a legally binding contract between you (\"User\", \"you\", \"your\") and GlobalBuy24 (\"GB24\", \"we\", \"us\", \"our\"). Please read these Terms carefully before using the GB24 platform, mobile application, or any related services (collectively, the \"Service\"). **By accessing or using the Service, you confirm that you have read, understood, and agree to be bound by these Terms.** If you do not agree, you must immediately stop using the Service.",
+      "fr": "Les présentes conditions d'utilisation (les « Conditions ») constituent un contrat juridiquement contraignant entre vous (l'« Utilisateur », « vous », « votre ») et GlobalBuy24 (« GB24 », « nous », « notre »). Veuillez lire attentivement ces Conditions avant d'utiliser la plateforme GB24, l'application mobile ou tout service associé (ensemble, le « Service »). **En accédant au Service ou en l'utilisant, vous confirmez avoir lu et compris ces Conditions et accepter d'y être lié.** Si vous ne les acceptez pas, vous devez cesser immédiatement d'utiliser le Service."
+    }
+  ],
   "sections": [
     {
-      "heading": { "en": "Acceptance of terms", "fr": "Acceptation des conditions" },
+      "heading": { "en": "About GlobalBuy24", "fr": "À propos de GlobalBuy24" },
       "blocks": [
         {
           "type": "p",
           "text": {
-            "en": "By accessing or using the GlobalBuy24 app, website and services, you accept and agree to be bound by these Terms of Service.",
-            "fr": "En accédant à l'application, au site et aux services GlobalBuy24, ou en les utilisant, vous acceptez d'être lié par les présentes conditions d'utilisation."
+            "en": "**1.1** GlobalBuy24 is a **cross-border shopping facilitation service**. We help users located in Cameroon and other supported regions purchase products from international retailers, primarily in Germany and Europe, that are not otherwise available for direct international shipping.",
+            "fr": "**1.1** GlobalBuy24 est un **service de facilitation d'achats transfrontaliers**. Nous aidons les utilisateurs situés au Cameroun et dans d'autres régions desservies à acheter, auprès de distributeurs internationaux, principalement en Allemagne et en Europe, des produits qui ne sont pas disponibles autrement en expédition internationale directe."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**1.2** GB24 acts exclusively as a **facilitator and logistics intermediary**. We are not a seller, retailer, or marketplace. We do not manufacture, hold title to, warrant, or insure any product ordered through the Service. The contract of sale for any product is between you and the relevant retailer.",
+            "fr": "**1.2** GB24 agit exclusivement en tant que **facilitateur et intermédiaire logistique**. Nous ne sommes ni vendeur, ni distributeur, ni place de marché. Nous ne fabriquons, ne détenons la propriété, ne garantissons ni n'assurons aucun produit commandé via le Service. Le contrat de vente de tout produit est conclu entre vous et le distributeur concerné."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**1.3** Our operational hub is located in **Berlin, Germany**. Products are sourced, inspected, consolidated, and forwarded from this hub to our collection centres in Cameroon.",
+            "fr": "**1.3** Notre plateforme opérationnelle est située à **Berlin, en Allemagne**. Les produits y sont réceptionnés, contrôlés, regroupés puis acheminés vers nos centres de retrait au Cameroun."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**1.4** Our current collection centres are located in **Douala, Yaoundé, Bafoussam, and Buea**. Coverage may expand or contract at our discretion, with reasonable notice provided to users.",
+            "fr": "**1.4** Nos centres de retrait actuels se trouvent à **Douala, Yaoundé, Bafoussam et Buea**. Cette couverture peut être étendue ou réduite à notre discrétion, moyennant un préavis raisonnable aux utilisateurs."
           }
         }
       ]
     },
     {
-      "heading": { "en": "Licence and restrictions", "fr": "Licence et restrictions d'utilisation" },
+      "heading": { "en": "Acceptance of Terms", "fr": "Acceptation des Conditions" },
       "blocks": [
         {
           "type": "p",
           "text": {
-            "en": "GlobalBuy24 grants you a limited, non-exclusive, non-transferable licence to use our services for personal, non-commercial purposes.",
-            "fr": "GlobalBuy24 vous accorde une licence limitée, non exclusive et non transférable d'utilisation de nos services à des fins personnelles et non commerciales."
+            "en": "**2.1** By creating an account, placing a shopping request, making a payment, or otherwise using the Service, you enter into a binding agreement governed by these Terms.",
+            "fr": "**2.1** En créant un compte, en soumettant une demande d'achat, en effectuant un paiement ou en utilisant le Service de toute autre manière, vous concluez un accord contraignant régi par les présentes Conditions."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**2.2** These Terms incorporate by reference:",
+            "fr": "**2.2** Les présentes Conditions intègrent par référence :"
+          }
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "text": {
+                "en": "Our **Privacy Policy**, available at [globalbuy24.com/privacy](/en/privacy), which governs all personal data we collect and process;",
+                "fr": "notre **Politique de confidentialité**, disponible sur [globalbuy24.com/privacy](/fr/privacy), qui régit l'ensemble des données personnelles que nous collectons et traitons ;"
+              }
+            },
+            {
+              "text": {
+                "en": "Our **Cancellation & Refund Policy**, available at [globalbuy24.com/refunds](/en/refunds), which governs your rights to cancel orders and request refunds.",
+                "fr": "notre **Politique d'annulation et de remboursement**, disponible sur [globalbuy24.com/refunds](/fr/refunds), qui régit vos droits d'annuler une commande et de demander un remboursement."
+              }
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**2.3** In the event of any conflict between these Terms and the documents incorporated by reference, these Terms shall prevail unless the incorporated document expressly states otherwise.",
+            "fr": "**2.3** En cas de contradiction entre les présentes Conditions et les documents intégrés par référence, les présentes Conditions prévalent, sauf disposition contraire expresse du document intégré."
           }
         }
       ]
     },
     {
-      "heading": { "en": "Product links and quotes", "fr": "Liens produits et devis" },
+      "heading": { "en": "Changes to These Terms", "fr": "Modification des présentes Conditions" },
       "blocks": [
         {
           "type": "p",
           "text": {
-            "en": "When you submit a product link, you confirm that you have the right to use it and that the information you provide is accurate and truthful.",
-            "fr": "En soumettant un lien produit, vous confirmez avoir le droit de l'utiliser et que les informations fournies sont exactes et sincères."
+            "en": "**3.1** We reserve the right to modify these Terms at any time. We will notify you of material changes by:",
+            "fr": "**3.1** Nous nous réservons le droit de modifier les présentes Conditions à tout moment. Nous vous informerons de toute modification importante :"
+          }
+        },
+        {
+          "type": "list",
+          "plain": true,
+          "items": [
+            {
+              "text": {
+                "en": "(a) posting the updated Terms on our website and application with a new \"Last Updated\" date; and",
+                "fr": "(a) en publiant les Conditions mises à jour sur notre site et dans notre application, avec une nouvelle date de « dernière mise à jour » ; et"
+              }
+            },
+            {
+              "text": {
+                "en": "(b) sending an in-app notification or email to your registered address at least **14 calendar days** before the changes take effect for existing users.",
+                "fr": "(b) en envoyant une notification dans l'application ou un e-mail à votre adresse enregistrée au moins **14 jours calendaires** avant l'entrée en vigueur des modifications pour les utilisateurs existants."
+              }
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**3.2** Your continued use of the Service after the effective date of any changes constitutes your acceptance of the revised Terms. If you do not accept the revised Terms, you must cease using the Service before the effective date and may request cancellation of any pending orders in accordance with our Cancellation & Refund Policy.",
+            "fr": "**3.2** La poursuite de votre utilisation du Service après la date d'entrée en vigueur des modifications vaut acceptation des Conditions révisées. Si vous ne les acceptez pas, vous devez cesser d'utiliser le Service avant cette date et pouvez demander l'annulation de vos commandes en cours conformément à notre Politique d'annulation et de remboursement."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**3.3** For new users, changes take effect immediately upon account creation or first use of the Service following the update.",
+            "fr": "**3.3** Pour les nouveaux utilisateurs, les modifications prennent effet dès la création du compte ou la première utilisation du Service suivant la mise à jour."
           }
         }
       ]
     },
     {
-      "heading": { "en": "Payment and transactions", "fr": "Paiement et transactions" },
+      "heading": { "en": "Eligibility", "fr": "Éligibilité" },
       "blocks": [
         {
           "type": "p",
           "text": {
-            "en": "Every transaction through GlobalBuy24 is a binding agreement. By confirming payment, you agree to pay the quoted amount in full.",
-            "fr": "Chaque transaction effectuée via GlobalBuy24 constitue un engagement ferme. En confirmant le paiement, vous acceptez de régler l'intégralité du montant indiqué dans le devis."
+            "en": "**4.1** You must be at least **18 years of age** to use the Service. By creating an account or submitting a shopping request, you represent and warrant that you are 18 or older.",
+            "fr": "**4.1** Vous devez être âgé d'au moins **18 ans** pour utiliser le Service. En créant un compte ou en soumettant une demande d'achat, vous déclarez et garantissez avoir 18 ans ou plus."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**4.2** If you provide false age information, your use of the Service constitutes a **material breach** of these Terms. We reserve the right to immediately terminate your account, cancel all pending orders without refund, and pursue any available legal remedies.",
+            "fr": "**4.2** Si vous fournissez une fausse information sur votre âge, votre utilisation du Service constitue un **manquement grave** aux présentes Conditions. Nous nous réservons le droit de clôturer immédiatement votre compte, d'annuler toutes les commandes en cours sans remboursement et d'exercer tout recours juridique disponible."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**4.3** You must have the legal capacity to enter into binding contracts under the laws of your country of residence. If you are using the Service on behalf of a company or organisation, you represent that you have authority to bind that entity to these Terms.",
+            "fr": "**4.3** Vous devez avoir la capacité juridique de conclure des contrats contraignants selon le droit de votre pays de résidence. Si vous utilisez le Service pour le compte d'une société ou d'une organisation, vous déclarez être habilité à engager cette entité au titre des présentes Conditions."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**4.4** We reserve the right to refuse service to any person or entity at our sole discretion, subject to applicable law.",
+            "fr": "**4.4** Nous nous réservons le droit de refuser le Service à toute personne ou entité, à notre seule discrétion, sous réserve du droit applicable."
           }
         }
       ]
     },
     {
-      "heading": { "en": "Cancellations and refunds", "fr": "Annulations et remboursements" },
+      "heading": { "en": "User Account", "fr": "Compte utilisateur" },
       "blocks": [
         {
           "type": "p",
           "text": {
-            "en": "Cancellations and refunds are covered by our separate [Cancellation and Refund Policy](/en/refund-policy), which forms part of these Terms of Service.",
-            "fr": "Les annulations et remboursements sont régis par notre [politique d'annulation et de remboursement](/fr/refund-policy), distincte, qui fait partie des présentes conditions d'utilisation."
+            "en": "**5.1 Registration.** You must create an account to use the Service. You agree to provide accurate, current, and complete information during registration and to keep this information updated at all times.",
+            "fr": "**5.1 Inscription.** Vous devez créer un compte pour utiliser le Service. Vous vous engagez à fournir des informations exactes, à jour et complètes lors de l'inscription, et à les tenir à jour en permanence."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**5.2 Account Security.** You are solely responsible for maintaining the confidentiality of your login credentials and for all activities that occur under your account. If you suspect any unauthorised access to or use of your account, report it immediately through the GB24 app or by emailing [support@globalbuy24.com](mailto:support@globalbuy24.com).",
+            "fr": "**5.2 Sécurité du compte.** Vous êtes seul responsable de la confidentialité de vos identifiants de connexion et de toutes les activités réalisées depuis votre compte. Si vous soupçonnez un accès ou une utilisation non autorisés de votre compte, signalez-le immédiatement via l'application GB24 ou par e-mail à [support@globalbuy24.com](mailto:support@globalbuy24.com)."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**5.3 One Account Per Person.** You may not create more than one account. Multiple accounts used to circumvent bans, obtain duplicate promotions, or manipulate the Service will result in permanent suspension of all associated accounts.",
+            "fr": "**5.3 Un compte par personne.** Vous ne pouvez pas créer plus d'un compte. L'utilisation de plusieurs comptes pour contourner une interdiction, bénéficier plusieurs fois d'une promotion ou manipuler le Service entraînera la suspension définitive de tous les comptes concernés."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**5.4 Account Termination by User.** You may close your account at any time directly through the GB24 app (Settings → Account → Delete Account). You may also request account deletion by contacting us at [support@globalbuy24.com](mailto:support@globalbuy24.com). Account closure does not affect any rights or obligations arising from orders placed prior to closure.",
+            "fr": "**5.4 Clôture du compte par l'utilisateur.** Vous pouvez clôturer votre compte à tout moment directement dans l'application GB24 (Paramètres → Compte → Supprimer le compte). Vous pouvez également demander la suppression de votre compte en nous écrivant à [support@globalbuy24.com](mailto:support@globalbuy24.com). La clôture du compte n'affecte pas les droits et obligations découlant des commandes passées avant celle-ci."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**5.5 Account Suspension or Termination by GB24.** We may suspend or permanently terminate your account without prior notice if we reasonably believe you have: (a) violated these Terms; (b) provided false information; (c) engaged in fraudulent, abusive, or illegal conduct; or (d) posed a risk to us, our partners, or other users. Suspension or termination does not automatically entitle you to a refund unless required under our Cancellation & Refund Policy.",
+            "fr": "**5.5 Suspension ou clôture du compte par GB24.** Nous pouvons suspendre ou clôturer définitivement votre compte sans préavis si nous avons des motifs raisonnables de penser que vous avez : (a) enfreint les présentes Conditions ; (b) fourni de fausses informations ; (c) adopté un comportement frauduleux, abusif ou illégal ; ou (d) représenté un risque pour nous, nos partenaires ou d'autres utilisateurs. La suspension ou la clôture n'ouvre pas automatiquement droit à un remboursement, sauf si notre Politique d'annulation et de remboursement le prévoit."
           }
         }
       ]
     },
     {
-      "heading": { "en": "Delivery and liability", "fr": "Livraison et responsabilité" },
+      "heading": { "en": "How GlobalBuy24 Works", "fr": "Fonctionnement de GlobalBuy24" },
       "blocks": [
         {
           "type": "p",
           "text": {
-            "en": "We are not liable for delays caused by customs, carriers or events of force majeure.",
-            "fr": "Nous ne sommes pas responsables des retards dus à la douane, aux transporteurs ou à un cas de force majeure."
+            "en": "**6.1 Shopping Request.** You submit a shopping request directly through the GB24 app by providing the product URL, specifications (size, colour, quantity), and any other required information.",
+            "fr": "**6.1 Demande d'achat.** Vous soumettez une demande d'achat directement dans l'application GB24 en indiquant l'URL du produit, ses caractéristiques (taille, couleur, quantité) et toute autre information requise."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**6.2 Quote & Confirmation.** We review your request and provide a quote through the app, including the estimated product cost and our service fee. Delivery costs are estimated separately and are set by our logistics partners (see Section 7). The quote may change if the retailer's price changes before purchase or if the product's actual weight or dimensions differ from specifications. We will notify you of any significant deviation before proceeding.",
+            "fr": "**6.2 Devis et confirmation.** Nous examinons votre demande et vous adressons un devis dans l'application, comprenant le coût estimé du produit et nos frais de service. Les frais de livraison sont estimés séparément et fixés par nos partenaires logistiques (voir l'article 7). Le devis peut évoluer si le prix du distributeur change avant l'achat ou si le poids ou les dimensions réels du produit diffèrent des caractéristiques indiquées. Nous vous informerons de tout écart significatif avant de poursuivre."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**6.3 Payment.** You must pay the full quoted amount before we place your order with the retailer. Payment is initiated through the GB24 app and processed by our designated payment provider, **[Fapshi](https://www.fapshi.com/)**, or such other providers as we may introduce from time to time. Product prices are displayed in your currency of choice (default: FCFA; switchable to EUR or USD) based on live international exchange rates at the time of display. GB24 accepts no liability for exchange rate fluctuations between the time of quote and the time of payment, or between payment and any refund. Our liability in any refund scenario is limited to the amount we actually received in relation to your specific order.",
+            "fr": "**6.3 Paiement.** Vous devez régler l'intégralité du montant du devis avant que nous ne passions votre commande auprès du distributeur. Le paiement est initié dans l'application GB24 et traité par notre prestataire de paiement désigné, **[Fapshi](https://www.fapshi.com/)**, ou par tout autre prestataire que nous pourrions proposer ultérieurement. Les prix des produits sont affichés dans la devise de votre choix (par défaut : FCFA ; possibilité de passer en EUR ou en USD) sur la base des taux de change internationaux en vigueur au moment de l'affichage. GB24 décline toute responsabilité quant aux fluctuations des taux de change entre le devis et le paiement, ou entre le paiement et un éventuel remboursement. En cas de remboursement, notre responsabilité est limitée au montant effectivement reçu au titre de votre commande."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**6.4 Order Placement.** Upon successful receipt of full payment, we place the order with the retailer on your behalf using our German delivery address.",
+            "fr": "**6.4 Passation de la commande.** Dès réception de l'intégralité du paiement, nous passons la commande auprès du distributeur pour votre compte, en utilisant notre adresse de livraison en Allemagne."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**6.5 Berlin Hub Processing.** Upon arrival at our Berlin hub, we: (a) inspect the outer packaging for visible damage; (b) verify that the correct item(s) were delivered; and (c) consolidate multiple items into a single shipment where applicable. We do not open sealed manufacturer packaging unless required by customs or where outer damage necessitates inspection.",
+            "fr": "**6.5 Traitement à la plateforme de Berlin.** À l'arrivée à notre plateforme de Berlin, nous : (a) contrôlons l'emballage extérieur pour détecter tout dommage visible ; (b) vérifions que le ou les bons articles ont été livrés ; et (c) regroupons plusieurs articles en un seul envoi le cas échéant. Nous n'ouvrons pas les emballages scellés du fabricant, sauf exigence douanière ou si un dommage extérieur nécessite une inspection."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**6.6 Shipment to Cameroon.** We ship consolidated packages from Berlin to our collection centres in Cameroon via third-party logistics partners. Estimated transit times are provided as guidance only and are not guaranteed.",
+            "fr": "**6.6 Expédition vers le Cameroun.** Nous expédions les colis regroupés de Berlin vers nos centres de retrait au Cameroun par l'intermédiaire de partenaires logistiques tiers. Les délais d'acheminement estimés sont donnés à titre indicatif et ne sont pas garantis."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**6.7 Collection & Signed Receipt Protocol.** When your package arrives at a collection centre:",
+            "fr": "**6.7 Retrait et reçu signé.** Lorsque votre colis arrive dans un centre de retrait :"
+          }
+        },
+        {
+          "type": "list",
+          "plain": true,
+          "items": [
+            {
+              "text": {
+                "en": "(a) You will be notified via in-app notification, SMS, or other available means. Collection status and updates are visible in real time through the GB24 app.",
+                "fr": "(a) Vous êtes averti par une notification dans l'application, par SMS ou par tout autre moyen disponible. Le statut du retrait et ses mises à jour sont visibles en temps réel dans l'application GB24."
+              }
+            },
+            {
+              "text": {
+                "en": "(b) You must collect your package within the timeframe specified in your collection notice (default: 14 calendar days unless otherwise stated).",
+                "fr": "(b) Vous devez retirer votre colis dans le délai indiqué dans votre avis de retrait (par défaut : 14 jours calendaires, sauf mention contraire)."
+              }
+            },
+            {
+              "text": {
+                "en": "(c) **At the point of collection, you will be required to inspect the outer packaging and sign a collection receipt confirming that the outer packaging arrived without visible damage.** This signed receipt constitutes your acknowledgement of the physical condition of the packaging at the time of collection.",
+                "fr": "(c) **Au moment du retrait, vous devrez contrôler l'emballage extérieur et signer un reçu de retrait confirmant que l'emballage extérieur est arrivé sans dommage visible.** Ce reçu signé vaut reconnaissance de l'état physique de l'emballage au moment du retrait."
+              }
+            },
+            {
+              "text": {
+                "en": "(d) Failure to collect within the specified timeframe may result in storage fees or return of the package at your cost, as set out in Section 9.",
+                "fr": "(d) À défaut de retrait dans le délai indiqué, des frais de stockage ou le retour du colis à vos frais peuvent s'appliquer, comme prévu à l'article 9."
+              }
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**6.8 Uncollected Packages.** If you fail to collect your package within 30 calendar days of the collection notice without making alternative arrangements, we reserve the right to deem the package abandoned and dispose of it without liability or obligation to refund.",
+            "fr": "**6.8 Colis non retirés.** Si vous ne retirez pas votre colis dans les 30 jours calendaires suivant l'avis de retrait sans avoir convenu d'une autre solution, nous nous réservons le droit de considérer le colis comme abandonné et d'en disposer, sans responsabilité ni obligation de remboursement."
           }
         }
       ]
     },
     {
-      "heading": { "en": "Dispute resolution", "fr": "Règlement des litiges" },
+      "heading": { "en": "Fees", "fr": "Frais" },
       "blocks": [
         {
           "type": "p",
           "text": {
-            "en": "Any dispute arising from these Terms of Service will be resolved through good-faith negotiation.",
-            "fr": "Tout litige découlant des présentes conditions d'utilisation sera réglé par une négociation de bonne foi."
+            "en": "**7.1 Service Fee.** GB24 charges a service fee of **7% of the total purchased item value** per order. This fee is capped at:",
+            "fr": "**7.1 Frais de service.** GB24 facture des frais de service de **7 % de la valeur totale des articles achetés** par commande. Ces frais sont plafonnés à :"
+          }
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "text": {
+                "en": "**25,000 FCFA** for orders of **1 to 5 items**;",
+                "fr": "**25 000 FCFA** pour les commandes de **1 à 5 articles** ;"
+              }
+            },
+            {
+              "text": {
+                "en": "**50,000 FCFA** for orders of **6 or more items**.",
+                "fr": "**50 000 FCFA** pour les commandes de **6 articles ou plus**."
+              }
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "The service fee is non-refundable once we have placed the order with the retailer, except as expressly provided in our Cancellation & Refund Policy.",
+            "fr": "Les frais de service ne sont pas remboursables une fois la commande passée auprès du distributeur, sauf disposition expresse de notre Politique d'annulation et de remboursement."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**7.2 Delivery Fee — Pass-Through Only.** Delivery costs from our Berlin hub to a Cameroon collection centre are set and charged by our third-party logistics partners. GB24 collects this fee on the logistics partner's behalf and passes it through to you in full. **GB24 takes no margin on delivery fees and does not profit from them.** Delivery pricing is subject to change based on the logistics partner's own rates, applicable to actual or volumetric weight (whichever is greater), package dimensions, and destination. GB24 accepts no liability for changes in logistics partner pricing, and any disputes regarding delivery charges must be directed to us so that we may liaise with the relevant partner.",
+            "fr": "**7.2 Frais de livraison refacturés à l'identique.** Les frais de livraison entre notre plateforme de Berlin et un centre de retrait au Cameroun sont fixés et facturés par nos partenaires logistiques tiers. GB24 perçoit ces frais pour le compte du partenaire logistique et vous les refacture à l'identique. **GB24 ne prend aucune marge sur les frais de livraison et n'en tire aucun bénéfice.** Les tarifs de livraison peuvent évoluer selon les propres tarifs du partenaire logistique, appliqués au poids réel ou volumétrique (le plus élevé des deux), aux dimensions du colis et à la destination. GB24 décline toute responsabilité quant aux changements de tarifs des partenaires logistiques ; toute contestation relative aux frais de livraison doit nous être adressée afin que nous puissions intervenir auprès du partenaire concerné."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**7.3 Additional Fees.** We reserve the right to charge additional fees for: storage of uncollected packages beyond the free storage period; re-delivery or re-routing requested by the user after dispatch; import duties, taxes, or customs fees levied by Cameroonian authorities (which remain the sole responsibility of the user); and any other charges reasonably incurred on the user's behalf with prior notice.",
+            "fr": "**7.3 Frais supplémentaires.** Nous nous réservons le droit de facturer des frais supplémentaires pour : le stockage des colis non retirés au-delà de la période de stockage gratuite ; une nouvelle livraison ou un changement de destination demandés par l'utilisateur après l'expédition ; les droits d'importation, taxes ou frais de douane perçus par les autorités camerounaises (qui restent à la seule charge de l'utilisateur) ; et tout autre frais raisonnablement engagé pour le compte de l'utilisateur, après information préalable."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**7.4 Fee Changes.** We reserve the right to adjust our service fee. We will provide at least 30 days' notice of any fee changes, and changes will apply only to new orders placed after the effective date of the change.",
+            "fr": "**7.4 Modification des frais.** Nous nous réservons le droit d'ajuster nos frais de service. Toute modification sera annoncée au moins 30 jours à l'avance et ne s'appliquera qu'aux nouvelles commandes passées après sa date d'entrée en vigueur."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**7.5** All GB24 fees are displayed inclusive of any applicable taxes charged by GB24. Duties, import taxes, and VAT levied at the point of import into Cameroon are not included and are the user's responsibility.",
+            "fr": "**7.5** Tous les frais de GB24 sont affichés toutes taxes facturées par GB24 comprises. Les droits, taxes d'importation et la TVA perçus lors de l'importation au Cameroun ne sont pas inclus et sont à la charge de l'utilisateur."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Payment", "fr": "Paiement" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "**8.1 Payment in Full.** Orders are placed only after we receive full payment. We do not offer deferred payment, instalment plans, or credit facilities.",
+            "fr": "**8.1 Paiement intégral.** Les commandes ne sont passées qu'après réception de l'intégralité du paiement. Nous ne proposons ni paiement différé, ni paiement échelonné, ni facilités de crédit."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**8.2 Payment Provider.** Payments are processed through **[Fapshi](https://www.fapshi.com/)** for Cameroon-based mobile money transactions (MTN MoMo, Orange Money). GB24 does not store, process, or access your mobile money credentials, PIN, or account numbers. Any payment disputes, charges, or errors related to the payment network itself must be addressed with your mobile money operator. GB24's liability is limited to the amount received in our Fapshi account in relation to your order.",
+            "fr": "**8.2 Prestataire de paiement.** Les paiements sont traités par **[Fapshi](https://www.fapshi.com/)** pour les transactions mobile money effectuées au Cameroun (MTN MoMo, Orange Money). GB24 ne stocke pas, ne traite pas et n'a pas accès à vos identifiants mobile money, à votre code PIN ni à vos numéros de compte. Toute contestation, tout frais ou toute erreur liés au réseau de paiement lui-même doivent être traités avec votre opérateur mobile money. La responsabilité de GB24 est limitée au montant reçu sur notre compte Fapshi au titre de votre commande."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**8.3 Failed Payments.** If your payment fails or is declined, your order will not be placed. You will be notified and given a reasonable opportunity to retry. GB24 bears no liability for any price changes or stock availability changes that occur between a failed payment attempt and a successful retry.",
+            "fr": "**8.3 Échec de paiement.** Si votre paiement échoue ou est refusé, votre commande n'est pas passée. Vous en êtes informé et disposez d'un délai raisonnable pour réessayer. GB24 décline toute responsabilité quant aux changements de prix ou de disponibilité survenant entre une tentative de paiement échouée et une nouvelle tentative réussie."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**8.4 Currency and Exchange Rates.** Product values are displayed in your currency of choice (default: FCFA; switchable to EUR or USD). All displayed prices reflect live international exchange rates at the time of the transaction. GB24 accepts no liability for fluctuations in exchange rates between the time of quote, payment, or any subsequent refund. Our liability in any refund scenario is limited to the amount we actually received for the specific order in question.",
+            "fr": "**8.4 Devises et taux de change.** La valeur des produits est affichée dans la devise de votre choix (par défaut : FCFA ; possibilité de passer en EUR ou en USD). Tous les prix affichés reflètent les taux de change internationaux en vigueur au moment de la transaction. GB24 décline toute responsabilité quant aux fluctuations des taux de change entre le devis, le paiement ou un éventuel remboursement. En cas de remboursement, notre responsabilité est limitée au montant effectivement reçu pour la commande concernée."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**8.5 Receipts.** We will provide a transaction confirmation for each payment received. This confirmation does not constitute a commercial invoice or proof of purchase from the retailer.",
+            "fr": "**8.5 Reçus.** Nous fournissons une confirmation de transaction pour chaque paiement reçu. Cette confirmation ne constitue ni une facture commerciale ni une preuve d'achat auprès du distributeur."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**8.6 Fraudulent Transactions.** We reserve the right to immediately suspend or cancel any order that we reasonably suspect to involve fraud, money laundering, or other unlawful activity and to report such activity to the relevant authorities. No refund will be issued pending investigation.",
+            "fr": "**8.6 Transactions frauduleuses.** Nous nous réservons le droit de suspendre ou d'annuler immédiatement toute commande que nous soupçonnons raisonnablement d'être liée à une fraude, à du blanchiment d'argent ou à toute autre activité illicite, et de signaler ces faits aux autorités compétentes. Aucun remboursement n'est effectué pendant l'enquête."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Shipping, Delivery & Risk", "fr": "Expédition, livraison et risques" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "**9.1 Weight and Size Limits.** Each individual shipment is subject to a maximum weight of **23 kg** and maximum dimensions of **50 cm × 50 cm × 50 cm** per package. Items exceeding these limits may incur additional shipping surcharges or may be refused. We will notify you before incurring additional charges.",
+            "fr": "**9.1 Limites de poids et de taille.** Chaque envoi est soumis à un poids maximal de **23 kg** et à des dimensions maximales de **50 cm × 50 cm × 50 cm** par colis. Les articles dépassant ces limites peuvent entraîner des suppléments d'expédition ou être refusés. Nous vous préviendrons avant d'engager tout frais supplémentaire."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**9.2 Estimated Transit Times.** Transit times from Berlin to Cameroon collection centres are estimates only and are not guarantees. We are not liable for delays caused by customs, weather, civil unrest, airline cancellations, or any other circumstances beyond our reasonable control.",
+            "fr": "**9.2 Délais d'acheminement estimés.** Les délais d'acheminement de Berlin vers les centres de retrait au Cameroun sont des estimations et ne constituent pas des garanties. Nous ne sommes pas responsables des retards dus à la douane, aux conditions météorologiques, à des troubles civils, à des annulations de vols ou à toute autre circonstance échappant raisonnablement à notre contrôle."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**9.3 Transfer of Risk.** Risk of loss, damage, or destruction of any package transfers to you at the moment you (or your authorised representative) **physically take possession of the package and sign the collection receipt** at our collection centre. Prior to that moment, GB24 assumes logistical responsibility for the package, subject to the limitation of liability in Section 18.",
+            "fr": "**9.3 Transfert des risques.** Les risques de perte, d'endommagement ou de destruction d'un colis vous sont transférés au moment où vous (ou votre représentant autorisé) **prenez physiquement possession du colis et signez le reçu de retrait** dans notre centre de retrait. Jusqu'à ce moment, GB24 assume la responsabilité logistique du colis, sous réserve de la limitation de responsabilité prévue à l'article 18."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**9.4 Customs and Import Duties.** You are solely responsible for compliance with all Cameroonian import laws, regulations, and customs requirements applicable to your order. Import duties, customs fees, and VAT assessed by Cameroonian customs authorities are your sole responsibility and are not included in our fees.",
+            "fr": "**9.4 Douane et droits d'importation.** Vous êtes seul responsable du respect de l'ensemble des lois, règlements et exigences douanières camerounais applicables à votre commande. Les droits d'importation, frais de douane et la TVA fixés par les autorités douanières camerounaises sont à votre seule charge et ne sont pas inclus dans nos frais."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**9.5 Customs Delays or Seizures.** GB24 does not guarantee customs clearance. If a package is delayed, seized, or destroyed by customs due to the nature of the goods, GB24 accepts no liability. A partial refund of delivery fees may be considered at our discretion if no part of the order was successfully delivered.",
+            "fr": "**9.5 Retards ou saisies en douane.** GB24 ne garantit pas le dédouanement. Si un colis est retenu, saisi ou détruit par la douane en raison de la nature des marchandises, GB24 décline toute responsabilité. Un remboursement partiel des frais de livraison peut être envisagé à notre discrétion si aucune partie de la commande n'a pu être livrée."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**9.6 Uncollected Package Policy.** Packages held beyond the free storage period (14 calendar days after the collection notice) may incur daily storage fees as published on our website. After 30 calendar days without collection or contact, the package may be deemed abandoned. GB24 may dispose of abandoned packages without liability.",
+            "fr": "**9.6 Colis non retirés.** Les colis conservés au-delà de la période de stockage gratuite (14 jours calendaires après l'avis de retrait) peuvent donner lieu à des frais de stockage journaliers, tels que publiés sur notre site. Après 30 jours calendaires sans retrait ni contact, le colis peut être considéré comme abandonné. GB24 peut disposer des colis abandonnés sans engager sa responsabilité."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Prohibited and Restricted Items", "fr": "Articles interdits et réglementés" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "**10.1 Absolutely Prohibited Items.** You may not use the Service to purchase or import any of the following (\"Prohibited Items\"):",
+            "fr": "**10.1 Articles strictement interdits.** Vous ne pouvez pas utiliser le Service pour acheter ou importer l'un des articles suivants (les « Articles interdits ») :"
+          }
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "text": {
+                "en": "Controlled substances, narcotics, or precursor chemicals;",
+                "fr": "substances contrôlées, stupéfiants ou précurseurs chimiques ;"
+              }
+            },
+            {
+              "text": {
+                "en": "Firearms, ammunition, explosives, or weapons of any kind;",
+                "fr": "armes à feu, munitions, explosifs ou armes de toute nature ;"
+              }
+            },
+            {
+              "text": {
+                "en": "Counterfeit goods or items infringing intellectual property rights;",
+                "fr": "contrefaçons ou articles portant atteinte à des droits de propriété intellectuelle ;"
+              }
+            },
+            {
+              "text": { "en": "Human remains or body parts;", "fr": "restes humains ou parties du corps humain ;" }
+            },
+            {
+              "text": {
+                "en": "Live animals or animal products requiring CITES permits;",
+                "fr": "animaux vivants ou produits d'origine animale soumis à un permis CITES ;"
+              }
+            },
+            {
+              "text": {
+                "en": "Child sexual abuse material or any content involving the exploitation of minors;",
+                "fr": "contenus pédopornographiques ou tout contenu impliquant l'exploitation de mineurs ;"
+              }
+            },
+            {
+              "text": {
+                "en": "Items embargoed under EU, German, or Cameroonian law;",
+                "fr": "articles frappés d'embargo en vertu du droit de l'UE, allemand ou camerounais ;"
+              }
+            },
+            {
+              "text": { "en": "Radioactive materials;", "fr": "matières radioactives ;" }
+            },
+            {
+              "text": {
+                "en": "Goods whose import or export is prohibited by the laws of Germany or Cameroon.",
+                "fr": "marchandises dont l'importation ou l'exportation est interdite par le droit allemand ou camerounais."
+              }
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**10.2 Restricted Items.** Certain items may be imported only with specific documentation, licences, or prior approval. You are responsible for obtaining all required permits and approvals before placing an order. GB24 reserves the right to refuse any order for restricted items where proper documentation has not been provided.",
+            "fr": "**10.2 Articles réglementés.** Certains articles ne peuvent être importés qu'avec des documents, licences ou autorisations préalables spécifiques. Il vous appartient d'obtenir l'ensemble des permis et autorisations requis avant de passer commande. GB24 se réserve le droit de refuser toute commande d'articles réglementés en l'absence des documents nécessaires."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**10.3 Declaration Accuracy.** You confirm that the items you request are accurately described and do not fall within the Prohibited Items list. Any misrepresentation constitutes a material breach of these Terms.",
+            "fr": "**10.3 Exactitude des déclarations.** Vous confirmez que les articles demandés sont décrits avec exactitude et ne figurent pas dans la liste des Articles interdits. Toute fausse déclaration constitue un manquement grave aux présentes Conditions."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**10.4 Consequences of Breach.** If we discover at any stage that an order includes Prohibited Items:",
+            "fr": "**10.4 Conséquences d'un manquement.** Si nous découvrons, à quelque stade que ce soit, qu'une commande comprend des Articles interdits :"
+          }
+        },
+        {
+          "type": "list",
+          "plain": true,
+          "items": [
+            {
+              "text": {
+                "en": "(a) The order will be immediately cancelled without refund;",
+                "fr": "(a) la commande est immédiatement annulée, sans remboursement ;"
+              }
+            },
+            {
+              "text": {
+                "en": "(b) Your account will be permanently suspended;",
+                "fr": "(b) votre compte est suspendu définitivement ;"
+              }
+            },
+            {
+              "text": {
+                "en": "(c) We reserve the right to report the matter to relevant law enforcement authorities in Germany and/or Cameroon;",
+                "fr": "(c) nous nous réservons le droit de signaler les faits aux autorités répressives compétentes en Allemagne et/ou au Cameroun ;"
+              }
+            },
+            {
+              "text": {
+                "en": "(d) You agree to indemnify GB24 for all costs, fines, legal fees, and losses incurred as a result of your breach.",
+                "fr": "(d) vous vous engagez à indemniser GB24 de l'ensemble des coûts, amendes, frais juridiques et pertes résultant de votre manquement."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Disclaimer of Warranties", "fr": "Exclusion de garanties" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "**11.1** THE SERVICE IS PROVIDED ON AN \"AS IS\" AND \"AS AVAILABLE\" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR UNINTERRUPTED AVAILABILITY.",
+            "fr": "**11.1** LE SERVICE EST FOURNI « EN L'ÉTAT » ET « SELON DISPONIBILITÉ », SANS GARANTIE D'AUCUNE SORTE, EXPRESSE OU IMPLICITE, Y COMPRIS, SANS S'Y LIMITER, LES GARANTIES IMPLICITES DE QUALITÉ MARCHANDE, D'ADÉQUATION À UN USAGE PARTICULIER, D'ABSENCE DE CONTREFAÇON OU DE DISPONIBILITÉ ININTERROMPUE."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**11.2** GB24 does not warrant that: (a) the Service will be uninterrupted, error-free, or secure; (b) products purchased through the Service will meet your expectations; (c) product descriptions, images, or specifications provided by retailers are accurate or complete; or (d) estimated delivery dates will be met.",
+            "fr": "**11.2** GB24 ne garantit pas que : (a) le Service sera ininterrompu, exempt d'erreurs ou sécurisé ; (b) les produits achetés via le Service répondront à vos attentes ; (c) les descriptions, images ou caractéristiques des produits fournies par les distributeurs sont exactes ou complètes ; ou (d) les dates de livraison estimées seront respectées."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**11.3** Any product warranty or guarantee is solely between you and the original retailer. GB24 makes no warranty with respect to any product purchased through the Service.",
+            "fr": "**11.3** Toute garantie relative à un produit relève exclusivement de la relation entre vous et le distributeur d'origine. GB24 n'accorde aucune garantie sur les produits achetés via le Service."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**11.4** Nothing in this Section limits any statutory rights you may have as a consumer under applicable mandatory law.",
+            "fr": "**11.4** Aucune disposition du présent article ne limite les droits légaux dont vous pouvez bénéficier en tant que consommateur en vertu du droit impératif applicable."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Cancellations and Refunds", "fr": "Annulations et remboursements" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "**12.1** Our full policy governing order cancellations, refunds, and returns is set out in our **Cancellation & Refund Policy**, available at **[globalbuy24.com/refunds](/en/refunds)**.",
+            "fr": "**12.1** L'ensemble des règles relatives aux annulations de commandes, aux remboursements et aux retours figure dans notre **Politique d'annulation et de remboursement**, disponible sur **[globalbuy24.com/refunds](/fr/refunds)**."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**12.2** By using the Service, you agree to be bound by the Cancellation & Refund Policy as amended from time to time.",
+            "fr": "**12.2** En utilisant le Service, vous acceptez d'être lié par la Politique d'annulation et de remboursement, telle que modifiée le cas échéant."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**12.3** As a summary (not a substitute for the full policy):",
+            "fr": "**12.3** En résumé (ce résumé ne remplace pas la politique complète) :"
+          }
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "text": {
+                "en": "Orders may be cancelled directly through the GB24 app at no charge before we place the order with the retailer;",
+                "fr": "les commandes peuvent être annulées gratuitement dans l'application GB24 tant que nous ne les avons pas passées auprès du distributeur ;"
+              }
+            },
+            {
+              "text": {
+                "en": "Once an order has been placed with the retailer, cancellation may incur retailer restocking fees and the service fee is non-refundable;",
+                "fr": "une fois la commande passée auprès du distributeur, l'annulation peut entraîner des frais de remise en stock facturés par le distributeur, et les frais de service ne sont pas remboursables ;"
+              }
+            },
+            {
+              "text": {
+                "en": "Refunds are processed within 10 business days of approval;",
+                "fr": "les remboursements sont traités sous 10 jours ouvrables après leur validation ;"
+              }
+            },
+            {
+              "text": {
+                "en": "Delivery fees are non-refundable once a shipment has departed Berlin, except where non-delivery is solely due to GB24's fault.",
+                "fr": "les frais de livraison ne sont pas remboursables une fois l'envoi parti de Berlin, sauf si la non-livraison est exclusivement imputable à GB24."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Damage Claims", "fr": "Réclamations pour dommages" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "**13.1 Inspection at Collection.** You are required to inspect the **outer packaging** of your parcel at the collection centre before signing the collection receipt. If visible damage to the outer packaging is noted at the time of collection, you must record this on the collection receipt before signing. Failure to note visible outer damage on the receipt will be taken as your confirmation that the outer packaging was undamaged at the time of collection.",
+            "fr": "**13.1 Contrôle au retrait.** Vous devez contrôler l'**emballage extérieur** de votre colis au centre de retrait avant de signer le reçu de retrait. Si un dommage visible sur l'emballage extérieur est constaté au moment du retrait, vous devez le mentionner sur le reçu avant de le signer. L'absence de mention d'un dommage extérieur visible sur le reçu vaut confirmation de votre part que l'emballage extérieur était intact au moment du retrait."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**13.2 48-Hour Damage Window.** Once you have signed the collection receipt and taken physical possession of your package, you have a strictly enforced window of **48 hours** to open the package and report any damage to the contents. Damage claims submitted more than 48 hours after the signed collection time will not be accepted under any circumstances. This window begins at the time recorded on the signed collection receipt.",
+            "fr": "**13.2 Délai de 48 heures.** Après avoir signé le reçu de retrait et pris physiquement possession de votre colis, vous disposez d'un délai strict de **48 heures** pour ouvrir le colis et signaler tout dommage subi par son contenu. Aucune réclamation présentée plus de 48 heures après l'heure de retrait signée ne sera acceptée, quelles que soient les circonstances. Ce délai court à partir de l'heure indiquée sur le reçu de retrait signé."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**13.3 How to Submit a Damage Claim.** To submit a valid claim within the 48-hour window, you must:",
+            "fr": "**13.3 Comment présenter une réclamation.** Pour présenter une réclamation recevable dans le délai de 48 heures, vous devez :"
+          }
+        },
+        {
+          "type": "list",
+          "plain": true,
+          "items": [
+            {
+              "text": {
+                "en": "(a) Contact us at [support@globalbuy24.com](mailto:support@globalbuy24.com) with the subject line \"DAMAGE CLAIM – [Your Order Number]\";",
+                "fr": "(a) nous écrire à [support@globalbuy24.com](mailto:support@globalbuy24.com) avec pour objet « DAMAGE CLAIM – [votre numéro de commande] » ;"
+              }
+            },
+            {
+              "text": {
+                "en": "(b) Attach clear photographs of: (i) the outer packaging showing the damage; (ii) the product itself showing the damage; and (iii) a visible image of the signed collection receipt or your order number;",
+                "fr": "(b) joindre des photos nettes : (i) de l'emballage extérieur montrant le dommage ; (ii) du produit lui-même montrant le dommage ; et (iii) du reçu de retrait signé ou de votre numéro de commande, bien lisible ;"
+              }
+            },
+            {
+              "text": {
+                "en": "(c) Provide a written description of the damage.",
+                "fr": "(c) fournir une description écrite du dommage."
+              }
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**13.4 Investigation.** We will acknowledge your claim within 2 business days and complete our investigation within **7 business days** of receiving all required evidence. We may request additional information or photographs during this period.",
+            "fr": "**13.4 Examen.** Nous accusons réception de votre réclamation sous 2 jours ouvrables et achevons notre examen dans un délai de **7 jours ouvrables** à compter de la réception de l'ensemble des justificatifs requis. Nous pouvons vous demander des informations ou photos complémentaires pendant cette période."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**13.5 Outcome.** If the claim is upheld, we will offer one of the following remedies at our discretion: (a) replacement of the damaged item (subject to availability); (b) partial or full refund of the product cost; or (c) a credit to your GB24 account. We are not liable for consequential, incidental, or indirect losses arising from a damaged item.",
+            "fr": "**13.5 Issue.** Si la réclamation est fondée, nous proposons, à notre discrétion, l'une des solutions suivantes : (a) le remplacement de l'article endommagé (sous réserve de disponibilité) ; (b) le remboursement partiel ou total du coût du produit ; ou (c) un avoir sur votre compte GB24. Nous ne sommes pas responsables des pertes consécutives, accessoires ou indirectes résultant d'un article endommagé."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**13.6 Limitations.** GB24's liability for product damage is strictly limited to damage that: (a) occurred while the package was in GB24's care and custody (i.e., between the Berlin hub and the collection centre); and (b) was not noted on the collection receipt as pre-existing outer packaging damage. We accept no liability for damage caused after you take possession, damage caused by improper use, or damage caused by retailer packaging defects.",
+            "fr": "**13.6 Limites.** La responsabilité de GB24 pour les dommages subis par un produit est strictement limitée aux dommages : (a) survenus pendant que le colis était sous la garde de GB24 (c'est-à-dire entre la plateforme de Berlin et le centre de retrait) ; et (b) non mentionnés sur le reçu de retrait comme un dommage préexistant de l'emballage extérieur. Nous déclinons toute responsabilité pour les dommages survenus après votre prise de possession, ceux causés par une utilisation inappropriée ou ceux dus à un défaut d'emballage du distributeur."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**13.7 Fraud Prevention.** We reserve the right to reject damage claims that we reasonably believe are fraudulent. Submitting a false damage claim constitutes a material breach of these Terms and may result in permanent account suspension and referral to authorities.",
+            "fr": "**13.7 Prévention de la fraude.** Nous nous réservons le droit de rejeter les réclamations que nous estimons raisonnablement frauduleuses. Présenter une fausse réclamation constitue un manquement grave aux présentes Conditions et peut entraîner la suspension définitive du compte et un signalement aux autorités."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Acceptable Use", "fr": "Utilisation acceptable" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "**14.1** You agree to use the Service only for lawful purposes and in accordance with these Terms. You must not:",
+            "fr": "**14.1** Vous vous engagez à n'utiliser le Service qu'à des fins licites et conformément aux présentes Conditions. Vous ne devez pas :"
+          }
+        },
+        {
+          "type": "list",
+          "plain": true,
+          "items": [
+            {
+              "text": {
+                "en": "(a) Use the Service for any commercial resale operation without our prior written consent;",
+                "fr": "(a) utiliser le Service pour une activité de revente commerciale sans notre accord écrit préalable ;"
+              }
+            },
+            {
+              "text": {
+                "en": "(b) Submit false, misleading, or fraudulent shopping requests or payment information;",
+                "fr": "(b) soumettre des demandes d'achat ou des informations de paiement fausses, trompeuses ou frauduleuses ;"
+              }
+            },
+            {
+              "text": {
+                "en": "(c) Attempt to circumvent any security feature, access control, or anti-fraud measure;",
+                "fr": "(c) tenter de contourner une fonction de sécurité, un contrôle d'accès ou une mesure antifraude ;"
+              }
+            },
+            {
+              "text": {
+                "en": "(d) Use automated tools (bots, scrapers, scripts) to access or interact with the Service;",
+                "fr": "(d) utiliser des outils automatisés (robots, scrapers, scripts) pour accéder au Service ou interagir avec lui ;"
+              }
+            },
+            {
+              "text": {
+                "en": "(e) Harass, threaten, or abuse our staff or agents;",
+                "fr": "(e) harceler, menacer ou insulter notre personnel ou nos agents ;"
+              }
+            },
+            {
+              "text": {
+                "en": "(f) Use the Service to launder money or fund illegal activities;",
+                "fr": "(f) utiliser le Service pour blanchir de l'argent ou financer des activités illégales ;"
+              }
+            },
+            {
+              "text": {
+                "en": "(g) Attempt to purchase on behalf of a third party who has been banned from the Service.",
+                "fr": "(g) tenter d'acheter pour le compte d'un tiers exclu du Service."
+              }
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**14.2** We reserve the right to monitor use of the Service for compliance with this Section and to take appropriate action, including account suspension, cancellation of orders, and referral to law enforcement.",
+            "fr": "**14.2** Nous nous réservons le droit de contrôler l'utilisation du Service au regard du présent article et de prendre les mesures appropriées, notamment la suspension du compte, l'annulation de commandes et le signalement aux autorités répressives."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Intellectual Property", "fr": "Propriété intellectuelle" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "**15.1** All content, trademarks, logos, software, and materials on the GB24 platform, excluding user-submitted content, are the exclusive property of GlobalBuy24 or its licensors and are protected by applicable intellectual property laws.",
+            "fr": "**15.1** L'ensemble des contenus, marques, logos, logiciels et éléments de la plateforme GB24, à l'exception des contenus soumis par les utilisateurs, sont la propriété exclusive de GlobalBuy24 ou de ses concédants et sont protégés par les lois applicables en matière de propriété intellectuelle."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**15.2** You are granted a limited, non-exclusive, non-transferable, revocable licence to access and use the Service for personal, non-commercial purposes only. Nothing in these Terms transfers to you any ownership of or title to GB24's intellectual property.",
+            "fr": "**15.2** Il vous est accordé une licence limitée, non exclusive, non transférable et révocable d'accès au Service et d'utilisation de celui-ci, à des fins personnelles et non commerciales uniquement. Aucune disposition des présentes Conditions ne vous transfère la propriété de la propriété intellectuelle de GB24, ni aucun droit sur celle-ci."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**15.3** By submitting product URLs, images, descriptions, or other content to the Service, you grant GB24 a worldwide, royalty-free, sublicensable licence to use, reproduce, and display that content solely for the purpose of processing and fulfilling your order.",
+            "fr": "**15.3** En soumettant au Service des URL de produits, des images, des descriptions ou d'autres contenus, vous accordez à GB24 une licence mondiale, gratuite et pouvant faire l'objet de sous-licences, l'autorisant à utiliser, reproduire et afficher ces contenus dans le seul but de traiter et d'exécuter votre commande."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**15.4** You must not reproduce, distribute, modify, create derivative works of, publicly display, or otherwise exploit any GB24 content without our prior written consent.",
+            "fr": "**15.4** Vous ne devez pas reproduire, distribuer, modifier, créer des œuvres dérivées, afficher publiquement ni exploiter de toute autre manière les contenus de GB24 sans notre accord écrit préalable."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Privacy", "fr": "Confidentialité" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "**16.1** We are committed to protecting your personal data. Our collection, use, storage, and disclosure of your personal data is governed by our **Privacy Policy**, available at **[globalbuy24.com/privacy](/en/privacy)**.",
+            "fr": "**16.1** Nous nous engageons à protéger vos données personnelles. La collecte, l'utilisation, la conservation et la communication de vos données personnelles sont régies par notre **Politique de confidentialité**, disponible sur **[globalbuy24.com/privacy](/fr/privacy)**."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**16.2** GB24 operates from Berlin, Germany, and the processing of personal data is subject to the **EU General Data Protection Regulation (GDPR)** and applicable German data protection law. We apply GDPR-standard protections to all users regardless of their country of residence.",
+            "fr": "**16.2** GB24 opère depuis Berlin, en Allemagne, et le traitement des données personnelles est soumis au **Règlement général sur la protection des données de l'UE (RGPD)** et au droit allemand applicable en matière de protection des données. Nous appliquons les protections du RGPD à tous les utilisateurs, quel que soit leur pays de résidence."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**16.3** By using the Service, you consent to the collection and use of your personal data as described in the Privacy Policy.",
+            "fr": "**16.3** En utilisant le Service, vous consentez à la collecte et à l'utilisation de vos données personnelles telles que décrites dans la Politique de confidentialité."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Force Majeure", "fr": "Force majeure" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "**17.1** GB24 shall not be liable for any failure or delay in performing its obligations where such failure or delay results from circumstances beyond our reasonable control, including but not limited to: acts of God; pandemic or epidemic; war, terrorism, civil unrest, or government action; strikes or labour disputes not involving our employees; failure of utility services; customs embargoes; natural disasters; or failure of third-party logistics providers, airlines, or customs authorities.",
+            "fr": "**17.1** GB24 n'est pas responsable d'un manquement ou d'un retard dans l'exécution de ses obligations résultant de circonstances échappant raisonnablement à son contrôle, notamment : catastrophes naturelles et cas fortuits ; pandémie ou épidémie ; guerre, terrorisme, troubles civils ou décision des pouvoirs publics ; grèves ou conflits sociaux ne concernant pas nos salariés ; défaillance des services publics ; embargos douaniers ; ou défaillance de prestataires logistiques tiers, de compagnies aériennes ou des autorités douanières."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**17.2** In the event of a force majeure event, we will: (a) notify you as soon as reasonably practicable; (b) take reasonable steps to mitigate the impact; and (c) resume performance as soon as the event ceases.",
+            "fr": "**17.2** En cas de force majeure, nous nous engageons à : (a) vous en informer dès que raisonnablement possible ; (b) prendre des mesures raisonnables pour en atténuer les effets ; et (c) reprendre l'exécution de nos obligations dès la fin de l'événement."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**17.3** If a force majeure event continues for more than **60 consecutive calendar days**, either party may terminate the affected order(s) by written notice. In such a case, GB24 will refund the full amount paid for the affected order(s), excluding any delivery costs already incurred for shipments that have departed Berlin.",
+            "fr": "**17.3** Si un cas de force majeure se prolonge au-delà de **60 jours calendaires consécutifs**, chaque partie peut résilier la ou les commandes concernées par notification écrite. Dans ce cas, GB24 rembourse l'intégralité du montant payé pour la ou les commandes concernées, à l'exception des frais de livraison déjà engagés pour les envois partis de Berlin."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Limitation of Liability", "fr": "Limitation de responsabilité" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "**18.1** TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, GB24'S TOTAL AGGREGATE LIABILITY TO YOU IN CONNECTION WITH ANY ORDER OR INCIDENT ARISING UNDER OR IN RELATION TO THESE TERMS SHALL NOT EXCEED THE **TOTAL AMOUNT YOU PAID FOR THE SPECIFIC ORDER** TO WHICH THE CLAIM RELATES.",
+            "fr": "**18.1** DANS TOUTE LA MESURE PERMISE PAR LE DROIT APPLICABLE, LA RESPONSABILITÉ TOTALE CUMULÉE DE GB24 ENVERS VOUS AU TITRE DE TOUTE COMMANDE OU DE TOUT INCIDENT DÉCOULANT DES PRÉSENTES CONDITIONS OU S'Y RAPPORTANT NE PEUT EXCÉDER LE **MONTANT TOTAL QUE VOUS AVEZ PAYÉ POUR LA COMMANDE CONCERNÉE** PAR LA RÉCLAMATION."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**18.2** IN NO EVENT SHALL GB24 BE LIABLE FOR ANY: (a) INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES; (b) LOSS OF PROFIT, REVENUE, BUSINESS, OR ANTICIPATED SAVINGS; (c) LOSS OF DATA OR GOODWILL; OR (d) DAMAGES ARISING FROM YOUR RELIANCE ON PRODUCT DESCRIPTIONS, IMAGES, OR SPECIFICATIONS PROVIDED BY THIRD-PARTY RETAILERS, WHETHER OR NOT GB24 HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.",
+            "fr": "**18.2** EN AUCUN CAS GB24 NE PEUT ÊTRE TENUE RESPONSABLE : (a) DE DOMMAGES INDIRECTS, ACCESSOIRES, SPÉCIAUX, CONSÉCUTIFS OU PUNITIFS ; (b) D'UNE PERTE DE BÉNÉFICES, DE CHIFFRE D'AFFAIRES, D'ACTIVITÉ OU D'ÉCONOMIES ESCOMPTÉES ; (c) D'UNE PERTE DE DONNÉES OU DE CLIENTÈLE ; OU (d) DE DOMMAGES RÉSULTANT DE VOTRE CONFIANCE DANS LES DESCRIPTIONS, IMAGES OU CARACTÉRISTIQUES DE PRODUITS FOURNIES PAR DES DISTRIBUTEURS TIERS, QUE GB24 AIT OU NON ÉTÉ INFORMÉE DE LA POSSIBILITÉ DE TELS DOMMAGES."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**18.3** Nothing in this Section limits liability that cannot be excluded by law, including liability for: (a) death or personal injury caused by our negligence; (b) fraud or fraudulent misrepresentation; or (c) any liability that cannot be excluded under mandatory consumer protection laws applicable to you.",
+            "fr": "**18.3** Aucune disposition du présent article ne limite une responsabilité qui ne peut être exclue par la loi, notamment en cas : (a) de décès ou de dommage corporel causé par notre négligence ; (b) de fraude ou de déclaration frauduleuse ; ou (c) de toute responsabilité qui ne peut être exclue en vertu des lois impératives de protection des consommateurs qui vous sont applicables."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**18.4** Where you are a consumer resident in Germany or the EU, your statutory consumer rights under applicable EU or German law are not affected by this Section.",
+            "fr": "**18.4** Si vous êtes un consommateur résidant en Allemagne ou dans l'UE, le présent article ne porte pas atteinte aux droits que vous confère le droit de la consommation de l'UE ou allemand applicable."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Indemnification", "fr": "Indemnisation" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "**19.1** You agree to indemnify, defend, and hold harmless GlobalBuy24, its founders, directors, employees, agents, and partners from and against any claims, liabilities, damages, judgments, awards, losses, costs, and expenses (including reasonable legal fees) arising out of or relating to:",
+            "fr": "**19.1** Vous vous engagez à indemniser, défendre et garantir GlobalBuy24, ses fondateurs, dirigeants, salariés, agents et partenaires contre toute réclamation, responsabilité, dommage, jugement, condamnation, perte, coût et dépense (y compris des frais juridiques raisonnables) découlant ou se rapportant à :"
+          }
+        },
+        {
+          "type": "list",
+          "plain": true,
+          "items": [
+            {
+              "text": {
+                "en": "(a) Your violation of these Terms;",
+                "fr": "(a) votre violation des présentes Conditions ;"
+              }
+            },
+            {
+              "text": { "en": "(b) Your use of the Service;", "fr": "(b) votre utilisation du Service ;" }
+            },
+            {
+              "text": {
+                "en": "(c) Your purchase or attempted importation of Prohibited Items;",
+                "fr": "(c) votre achat ou tentative d'importation d'Articles interdits ;"
+              }
+            },
+            {
+              "text": {
+                "en": "(d) Your violation of any applicable law or third-party rights;",
+                "fr": "(d) votre violation de toute loi applicable ou des droits d'un tiers ;"
+              }
+            },
+            {
+              "text": {
+                "en": "(e) Any false or inaccurate information you provided to GB24; or",
+                "fr": "(e) toute information fausse ou inexacte que vous avez fournie à GB24 ; ou"
+              }
+            },
+            {
+              "text": {
+                "en": "(f) Any damage claim you submitted that is found to be fraudulent.",
+                "fr": "(f) toute réclamation pour dommages que vous avez présentée et qui s'avère frauduleuse."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Dispute Resolution", "fr": "Règlement des litiges" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "**20.1 Informal Resolution First.** Before initiating any formal proceeding, you agree to raise the dispute through the GB24 app's support feature or in writing at [support@globalbuy24.com](mailto:support@globalbuy24.com), describing the dispute in detail and your proposed resolution. We will make good-faith efforts to resolve the dispute informally within **30 calendar days** of receiving your notice.",
+            "fr": "**20.1 Règlement amiable préalable.** Avant d'engager toute procédure formelle, vous vous engagez à nous soumettre le litige via la fonction d'assistance de l'application GB24 ou par écrit à [support@globalbuy24.com](mailto:support@globalbuy24.com), en le décrivant en détail et en indiquant la solution que vous proposez. Nous nous efforcerons de bonne foi de résoudre le litige à l'amiable dans un délai de **30 jours calendaires** à compter de la réception de votre demande."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**20.2 Mediation.** If informal resolution is unsuccessful, the parties agree to submit the dispute to non-binding mediation administered by a mutually agreed mediator or mediation centre before proceeding to litigation. Each party shall bear its own costs of mediation, with mediator fees shared equally.",
+            "fr": "**20.2 Médiation.** À défaut de règlement amiable, les parties conviennent de soumettre le litige à une médiation non contraignante, menée par un médiateur ou un centre de médiation choisi d'un commun accord, avant toute action en justice. Chaque partie supporte ses propres frais de médiation, les honoraires du médiateur étant partagés à parts égales."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**20.3 Governing Law.** These Terms are governed by and construed in accordance with the laws of **Cameroon**. Where GB24 operates from Germany, or where you are resident in Germany or the European Union, applicable German law and EU consumer protection regulations shall apply concurrently to the extent required by mandatory law, and your statutory rights under those laws are not diminished by these Terms.",
+            "fr": "**20.3 Droit applicable.** Les présentes Conditions sont régies par le droit **camerounais** et interprétées conformément à celui-ci. Dans la mesure où GB24 opère depuis l'Allemagne, ou si vous résidez en Allemagne ou dans l'Union européenne, le droit allemand applicable et la réglementation européenne de protection des consommateurs s'appliquent concurremment dans la mesure exigée par le droit impératif, et les présentes Conditions ne réduisent pas les droits que vous tenez de ces législations."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**20.4 Jurisdiction.** Subject to Section 20.3, any dispute not resolved by informal resolution or mediation shall be submitted to the exclusive jurisdiction of the courts of **Cameroon** (specifically, the court of competent jurisdiction in Douala). Where mandatory consumer protection laws require that claims be heard in your country of residence, those laws prevail.",
+            "fr": "**20.4 Juridiction compétente.** Sous réserve de l'article 20.3, tout litige non résolu à l'amiable ou par médiation relève de la compétence exclusive des juridictions **camerounaises** (plus précisément, de la juridiction compétente de Douala). Lorsque des lois impératives de protection des consommateurs exigent que les réclamations soient portées devant les juridictions de votre pays de résidence, ces lois prévalent."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**20.5 No Class Actions.** YOU AND GB24 AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN AN INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS, COLLECTIVE, OR REPRESENTATIVE PROCEEDING. Any arbitrator or court shall not consolidate more than one person's claims and may not preside over any class or representative proceeding without both parties' express written consent.",
+            "fr": "**20.5 Absence d'actions collectives.** VOUS ET GB24 CONVENEZ QUE CHACUNE DES PARTIES NE PEUT AGIR CONTRE L'AUTRE QU'À TITRE INDIVIDUEL, ET NON EN QUALITÉ DE DEMANDEUR OU DE MEMBRE D'UN GROUPE DANS LE CADRE D'UNE ACTION DE GROUPE, COLLECTIVE OU REPRÉSENTATIVE. Aucun arbitre ni tribunal ne peut joindre les réclamations de plusieurs personnes ni connaître d'une action de groupe ou représentative sans l'accord écrit exprès des deux parties."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "**20.6 Limitation Period.** You must bring any claim or cause of action within **12 months** of the date on which the cause of action accrued. Claims brought after this period are permanently barred, except where prohibited by mandatory applicable law.",
+            "fr": "**20.6 Délai de prescription.** Toute réclamation ou action doit être introduite dans un délai de **12 mois** à compter de la date de survenance de son fait générateur. Passé ce délai, elle est définitivement prescrite, sauf disposition contraire du droit impératif applicable."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Unsolicited Deliveries", "fr": "Livraisons non sollicitées" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "**21.1** GB24 does not accept unsolicited deliveries to our Berlin hub or any collection centre. Any package that arrives at our premises without a corresponding confirmed order in our system will be refused or returned to sender at the sender's cost. GB24 accepts no liability for unsolicited packages.",
+            "fr": "**21.1** GB24 n'accepte aucune livraison non sollicitée à sa plateforme de Berlin ni dans ses centres de retrait. Tout colis arrivant dans nos locaux sans commande confirmée correspondante dans notre système sera refusé ou retourné à l'expéditeur, aux frais de celui-ci. GB24 décline toute responsabilité pour les colis non sollicités."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Severability", "fr": "Divisibilité" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "**22.1** If any provision of these Terms is found to be invalid, illegal, or unenforceable by a court of competent jurisdiction, that provision shall be modified to the minimum extent necessary to make it enforceable, or if modification is not possible, it shall be severed from these Terms. The validity, legality, and enforceability of the remaining provisions shall not be affected.",
+            "fr": "**22.1** Si une disposition des présentes Conditions est jugée nulle, illégale ou inapplicable par une juridiction compétente, elle est modifiée dans la mesure strictement nécessaire pour la rendre applicable ou, si cette modification est impossible, elle est retirée des présentes Conditions. La validité, la légalité et l'applicabilité des autres dispositions n'en sont pas affectées."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Entire Agreement", "fr": "Intégralité de l'accord" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "**23.1** These Terms, together with the Privacy Policy ([globalbuy24.com/privacy](/en/privacy)) and the Cancellation & Refund Policy ([globalbuy24.com/refunds](/en/refunds)), constitute the entire agreement between you and GB24 with respect to the subject matter hereof and supersede all prior understandings, representations, negotiations, and agreements, whether written or oral.",
+            "fr": "**23.1** Les présentes Conditions, ainsi que la Politique de confidentialité ([globalbuy24.com/privacy](/fr/privacy)) et la Politique d'annulation et de remboursement ([globalbuy24.com/refunds](/fr/refunds)), constituent l'intégralité de l'accord entre vous et GB24 sur leur objet et remplacent tous accords, déclarations, négociations et ententes antérieurs, écrits ou oraux."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Waiver", "fr": "Renonciation" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "**24.1** Our failure to enforce any right or provision of these Terms on any occasion shall not constitute a waiver of that right or provision on any subsequent occasion. No waiver of any term shall be effective unless made in writing and signed by an authorised representative of GB24.",
+            "fr": "**24.1** Le fait de ne pas faire valoir, à une occasion donnée, un droit ou une disposition des présentes Conditions ne vaut pas renonciation à ce droit ou à cette disposition pour l'avenir. Aucune renonciation n'est valable si elle n'est pas faite par écrit et signée par un représentant habilité de GB24."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Contact Information", "fr": "Coordonnées" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "Most account and order actions — including cancellations, tracking, collection centre selection, and account deletion — can be managed directly through the **GB24 app**. For matters that require human intervention (damage claims, disputes, prohibited item concerns, or anything not handled in-app), contact us:",
+            "fr": "La plupart des actions relatives à votre compte et à vos commandes, notamment les annulations, le suivi, le choix du centre de retrait et la suppression du compte, peuvent être effectuées directement dans l'**application GB24**. Pour les demandes nécessitant une intervention humaine (réclamations pour dommages, litiges, questions sur les articles interdits ou toute demande non traitée dans l'application), contactez-nous :"
+          }
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "term": { "en": "Company", "fr": "Société" },
+              "text": { "en": "GlobalBuy24", "fr": "GlobalBuy24" }
+            },
+            {
+              "term": { "en": "Email", "fr": "E-mail" },
+              "text": {
+                "en": "[support@globalbuy24.com](mailto:support@globalbuy24.com)",
+                "fr": "[support@globalbuy24.com](mailto:support@globalbuy24.com)"
+              }
+            },
+            {
+              "term": { "en": "Website", "fr": "Site web" },
+              "text": { "en": "[globalbuy24.com](/en)", "fr": "[globalbuy24.com](/fr)" }
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "For urgent matters related to a pending order, please include your order number in the subject line of your email.",
+            "fr": "Pour toute demande urgente concernant une commande en cours, veuillez indiquer votre numéro de commande dans l'objet de votre e-mail."
+          }
+        }
+      ]
+    },
+    {
+      "heading": { "en": "Summary of Fees", "fr": "Récapitulatif des frais" },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "The following table summarises the fees applicable to the Service as of the Last Updated date above. This summary does not replace the detailed fee provisions in Sections 7 and 8.",
+            "fr": "Le tableau ci-dessous récapitule les frais applicables au Service à la date de dernière mise à jour indiquée ci-dessus. Ce récapitulatif ne remplace pas les dispositions détaillées des articles 7 et 8."
+          }
+        },
+        {
+          "type": "table",
+          "head": [
+            { "en": "Fee", "fr": "Frais" },
+            { "en": "Amount", "fr": "Montant" },
+            { "en": "Notes", "fr": "Remarques" }
+          ],
+          "rows": [
+            [
+              { "en": "Service Fee", "fr": "Frais de service" },
+              { "en": "7% of purchased item value", "fr": "7 % de la valeur des articles achetés" },
+              {
+                "en": "Capped at 25,000 FCFA (1–5 items) or 50,000 FCFA (6+ items)",
+                "fr": "Plafonnés à 25 000 FCFA (1 à 5 articles) ou 50 000 FCFA (6 articles ou plus)"
+              }
+            ],
+            [
+              { "en": "Delivery Fee", "fr": "Frais de livraison" },
+              { "en": "Set by logistics partner", "fr": "Fixés par le partenaire logistique" },
+              {
+                "en": "Collected by GB24 on behalf of the logistics partner; passed through in full — no GB24 margin",
+                "fr": "Perçus par GB24 pour le compte du partenaire logistique et refacturés à l'identique, sans marge de GB24"
+              }
+            ],
+            [
+              { "en": "Import Duties / Customs", "fr": "Droits d'importation / douane" },
+              {
+                "en": "Variable (set by Cameroon customs)",
+                "fr": "Variables (fixés par la douane camerounaise)"
+              },
+              {
+                "en": "User's sole responsibility; not included in GB24 fees",
+                "fr": "À la seule charge de l'utilisateur ; non inclus dans les frais de GB24"
+              }
+            ],
+            [
+              { "en": "Storage (overdue packages)", "fr": "Stockage (colis en retard)" },
+              { "en": "Published on website", "fr": "Publié sur le site" },
+              {
+                "en": "Applies after 14-day free storage period",
+                "fr": "S'applique après la période de stockage gratuite de 14 jours"
+              }
+            ],
+            [
+              { "en": "Return / Re-routing Fee", "fr": "Frais de retour / changement de destination" },
+              { "en": "At cost", "fr": "Au prix coûtant" },
+              {
+                "en": "If user requests re-routing after dispatch",
+                "fr": "Si l'utilisateur demande un changement de destination après l'expédition"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "note",
+          "text": {
+            "en": "Product values and fees are displayed in your currency of choice (default: FCFA). All conversions use live international exchange rates. GB24 accepts no liability for exchange rate fluctuations.",
+            "fr": "La valeur des produits et les frais sont affichés dans la devise de votre choix (par défaut : FCFA). Toutes les conversions utilisent les taux de change internationaux en vigueur. GB24 décline toute responsabilité quant aux fluctuations des taux de change."
           }
         }
       ]
     }
   ],
-  "contact": {
-    "en": "For questions about these Terms of Service, contact us:",
-    "fr": "Pour toute question sur ces conditions d'utilisation, contactez-nous :"
-  }
+  "outro": [
+    {
+      "en": "By using GlobalBuy24, you acknowledge that you have read, understood, and agree to these Terms of Service.",
+      "fr": "En utilisant GlobalBuy24, vous reconnaissez avoir lu et compris les présentes conditions d'utilisation et les accepter."
+    },
+    { "en": "GlobalBuy24 — Bringing the World to Your Door.", "fr": "GlobalBuy24 — le monde à votre porte." }
+  ]
 }

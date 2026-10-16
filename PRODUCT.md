@@ -60,7 +60,8 @@ It is meant to beat what people do today:
 - **Authenticity:** GlobalBuy24 buys only from official retailers and authorised sellers.
 - **Tracking:** every stage, from purchase through customs to the pickup notification, is visible in the app.
 - **Site stack:** Next.js 16 + TypeScript on Netlify. Dynamic content comes from JSON in `content/`.
-- **Cancellation and refund policy:** a separate policy, in progress (October 2026). The Terms of Service point to it at `/{lang}/refund-policy`, a placeholder until it's published. Don't describe its terms anywhere else on the site.
+- **Cancellation and refund policy:** a separate policy, in progress (October 2026). The Terms of Service link to it at `globalbuy24.com/refunds` (redirects to `/{lang}/refunds`), which 404s until the page is published. Don't describe its terms anywhere else on the site.
+- **Terms of Service (effective 16 October 2026)** are final and are the source of truth for fees, payment, shipping, collection and liability. Key facts: service fee 7% of item value, capped at 25,000 FCFA (1–5 items) or 50,000 FCFA (6+); delivery fees set by logistics partners and passed through with no GB24 margin; Cameroonian import duties and VAT are not included and are the user's responsibility; prices use live exchange rates (FCFA by default, EUR/USD switchable); collection centres in Douala, Yaoundé, Bafoussam and Buea; 14 days' free storage, abandoned after 30; users must be 18+; damage claims within 48 hours of the signed collection receipt.
 - **Payment:** only MTN Mobile Money and Orange Money work today, through the Fapshi gateway; bank cards are coming soon. Anyone, including family abroad, needs a Cameroon MoMo account to pay. For other payment methods, people contact support.
 - **Undecided:** whether the quote breakdown (product + shipping + customs + service fee) is a permanent, fixed structure. Don't present it as a guarantee beyond "the quote you see is what you pay".
 

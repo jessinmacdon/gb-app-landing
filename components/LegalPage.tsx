@@ -18,9 +18,42 @@ function Block({ block, lang }: { block: LegalBlock; lang: Locale }) {
           <InlineLinks text={block.text[lang]} />
         </p>
       );
+    case 'table':
+      return (
+        <div className="legal__table-wrap">
+          <table className="legal__table">
+            <thead>
+              <tr>
+                {block.head.map((h, i) => (
+                  <th key={i} scope="col">
+                    {h[lang]}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {block.rows.map((row, i) => (
+                <tr key={i}>
+                  {row.map((cell, j) =>
+                    j === 0 ? (
+                      <th key={j} scope="row">
+                        <InlineLinks text={cell[lang]} />
+                      </th>
+                    ) : (
+                      <td key={j}>
+                        <InlineLinks text={cell[lang]} />
+                      </td>
+                    ),
+                  )}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
     case 'list':
       return (
-        <ul className="legal__list">
+        <ul className={`legal__list${block.plain ? ' legal__list--plain' : ''}`}>
           {block.items.map((item, i) => (
             <li key={i}>
               {item.term ? <strong>{item.term[lang]}</strong> : null}
@@ -68,9 +101,11 @@ export function LegalPage({ lang, t, site, doc }: Props) {
                   <a href={`#s${i + 1}`}>{s.heading[lang]}</a>
                 </li>
               ))}
-              <li>
-                <a href="#contact">{l.contactTitle}</a>
-              </li>
+              {doc.contact ? (
+                <li>
+                  <a href="#contact">{l.contactTitle}</a>
+                </li>
+              ) : null}
             </ol>
           </nav>
 
@@ -91,37 +126,44 @@ export function LegalPage({ lang, t, site, doc }: Props) {
                 ))}
               </section>
             ))}
-            <section id="contact" className="legal__section">
-              <h2 className="legal__h2">
-                <span className="legal__num">{doc.sections.length + 1}</span>
-                {l.contactTitle}
-              </h2>
-              <p>{doc.contact[lang]}</p>
-              <dl className="legal__contact">
-                {company.supportEmail ? (
+            {doc.contact ? (
+              <section id="contact" className="legal__section">
+                <h2 className="legal__h2">
+                  <span className="legal__num">{doc.sections.length + 1}</span>
+                  {l.contactTitle}
+                </h2>
+                <p>{doc.contact[lang]}</p>
+                <dl className="legal__contact">
+                  {company.supportEmail ? (
+                    <div>
+                      <dt>{l.email}</dt>
+                      <dd>
+                        <a href={`mailto:${company.supportEmail}`}>{company.supportEmail}</a>
+                      </dd>
+                    </div>
+                  ) : null}
+                  {company.phone ? (
+                    <div>
+                      <dt>{l.phone}</dt>
+                      <dd>
+                        <a href={`tel:${company.phone.replace(/\s/g, '')}`}>{company.phone}</a>
+                      </dd>
+                    </div>
+                  ) : null}
                   <div>
-                    <dt>{l.email}</dt>
+                    <dt>{l.address}</dt>
                     <dd>
-                      <a href={`mailto:${company.supportEmail}`}>{company.supportEmail}</a>
+                      {company.legalName}, {company.address[lang]}
                     </dd>
                   </div>
-                ) : null}
-                {company.phone ? (
-                  <div>
-                    <dt>{l.phone}</dt>
-                    <dd>
-                      <a href={`tel:${company.phone.replace(/\s/g, '')}`}>{company.phone}</a>
-                    </dd>
-                  </div>
-                ) : null}
-                <div>
-                  <dt>{l.address}</dt>
-                  <dd>
-                    {company.legalName}, {company.address[lang]}
-                  </dd>
-                </div>
-              </dl>
-            </section>
+                </dl>
+              </section>
+            ) : null}
+            {doc.outro?.map((p, i) => (
+              <p key={i} className="legal__outro">
+                <InlineLinks text={p[lang]} />
+              </p>
+            ))}
           </article>
         </div>
       </main>

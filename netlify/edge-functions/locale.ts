@@ -30,6 +30,7 @@ export const config = {
     '/privacy.html',
     '/terms',
     '/terms-of-service.html',
+    '/refunds',
     '/how-it-works.html',
     '/contact.html',
   ],

@@ -14,6 +14,7 @@ export const LOCALE_ROUTES: Record<string, string> = {
   '/privacy.html': '/privacy',
   '/terms': '/terms',
   '/terms-of-service.html': '/terms',
+  '/refunds': '/refunds',
   '/how-it-works.html': '#how',
   '/contact.html': '#faq',
 };

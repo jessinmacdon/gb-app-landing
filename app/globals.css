@@ -1749,6 +1749,8 @@ section[id] {
 }
 .legal {
   display: grid;
+  /* minmax(0, …): the wide fee table scrolls inside its box instead of widening the text column. */
+  grid-template-columns: minmax(0, 1fr);
   gap: 40px;
   padding-block: clamp(40px, 6vw, 80px) var(--section-y);
 }
@@ -1891,7 +1893,55 @@ section[id] {
   padding: 16px 18px;
   border-radius: 14px;
   background: var(--sand);
-  box-shadow: inset 3px 0 0 var(--mango);
+}
+/* Lettered sub-clauses carry their own "(a)", so no bullet. */
+.legal__list--plain li {
+  padding-left: 0;
+}
+.legal__list--plain li::before {
+  content: none;
+}
+/* Fee summary: scrolls sideways on narrow phones instead of squeezing the columns. */
+.legal__table-wrap {
+  margin: 0 0 16px;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+.legal__table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.5;
+  overflow-wrap: normal;
+}
+.legal__table th,
+.legal__table td {
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+}
+.legal__table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+.legal__table thead th {
+  background: var(--sand);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--meta);
+}
+.legal__table tbody th {
+  font-weight: 600;
+  color: var(--ink);
+}
+.legal__table td {
+  color: var(--muted);
+}
+.legal__outro {
+  font-style: italic;
+  color: var(--muted);
 }
 .legal__contact {
   margin: 0 0 16px;
